@@ -1,0 +1,8 @@
+2018-12-29 11:34:29.393 [provider-console] [main] INFO  [cn.qyd.blogroom.App] -Starting App on linux with PID 16867 (/home/qiuyunduo/IdeaProjects/blogroom/blogroom-project/blogroom-console/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 11:34:29.428 [provider-console] [main] INFO  [cn.qyd.blogroom.App] -No active profile set, falling back to default profiles: default
+2018-12-29 11:34:29.559 [provider-console] [main] INFO  [org.springframework.context.annotation.AnnotationConfigApplicationContext] -Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3a93b025: startup date [Sat Dec 29 11:34:29 CST 2018]; root of context hierarchy
+2018-12-29 11:34:30.003 [provider-console] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 11:34:30.017 [provider-console] [main] INFO  [cn.qyd.blogroom.App] -Started App in 1.803 seconds (JVM running for 2.832)
+2018-12-29 11:34:30.019 [provider-console] [main] INFO  [cn.qyd.blogroom.App] -===================
+2018-12-29 11:34:30.019 [provider-console] [Thread-5] INFO  [org.springframework.context.annotation.AnnotationConfigApplicationContext] -Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3a93b025: startup date [Sat Dec 29 11:34:29 CST 2018]; root of context hierarchy
+2018-12-29 11:34:30.021 [provider-console] [Thread-5] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-project/blogroom-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-project/blogroom-console" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogroom-project/blogroom-front" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provider/article-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provider/user-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provider/website-provider" charset="UTF-8" />
+  </component>
+</project>

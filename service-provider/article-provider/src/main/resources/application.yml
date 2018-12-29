@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: @config.profiles.active@
+
+
+server:
+  port: 8080
+
+
+logging:
+  config:
+    classpath:logback-spring.xml

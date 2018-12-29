@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>service-provider</artifactId>
+        <groupId>cn.qyd.springcloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>user-provider</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.qyd.blogroom</groupId>
+            <artifactId>blogroom-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <finalName>user-provider</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <!-- 资源根目录排除各环境的配置，使用单独的资源目录来指定 -->
+                <excludes>
+
+                    <exclude>dev/*</exclude>
+                    <exclude>test/*</exclude>
+                    <exclude>pre/*</exclude>
+                    <exclude>pro/*</exclude>
+                    <exclude>mapper/*</exclude>
+                </excludes>
+            </resource>
+            <!--<resource>-->
+                <!--<directory>src/main/java</directory>-->
+                <!--<filtering>false</filtering>-->
+                <!--&lt;!&ndash; 包含 &ndash;&gt;-->
+                <!--<includes>-->
+                    <!--<include>**/*.xml</include>-->
+                <!--</includes>-->
+
+            <!--</resource>-->
+            <resource>
+                <directory>src/main/resources/${profiles.active}</directory>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- 开发环境 -->
+            <id>dev</id>
+            <properties>
+                <profiles.active>dev</profiles.active>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+            <build>
+                <filters>
+                    <filter>src/main/resources/config-dev.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <!-- 测式环境 -->
+            <id>test</id>
+            <properties>
+                <profiles.active>test</profiles.active>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+            <build>
+                <filters>
+                    <filter>src/main/resources/config-test.properties</filter>
+                </filters>
+            </build>
+
+        </profile>
+        <!-- 生产环境 -->
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profiles.active>pro</profiles.active>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+            <build>
+                <filters>
+                    <filter>src/main/resources/config-pro.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
+
+
+</project>

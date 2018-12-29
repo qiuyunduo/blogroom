@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: @config.profiles.active@
+
+
+server:
+  port: 8080
+
+User: qiuyunduo
+
+logging:
+  config:
+    classpath:logback-spring.xml

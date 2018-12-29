@@ -1,0 +1,353 @@
+2018-12-29 12:34:24.098 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 12564 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 12:34:24.102 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 12:34:24.150 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 12:34:24 CST 2018]; root of context hierarchy
+2018-12-29 12:34:26.063 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 12:34:26.114 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 12:34:26.291 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 12:34:26.293 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 12:34:26.345 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 12:34:27.381 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 12:34:27.381 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 3231 ms
+2018-12-29 12:34:27.538 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 12:34:27.541 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 12:34:27.541 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 12:34:27.541 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 12:34:27.541 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 12:34:27.807 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:34:28.099 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 12:34:24 CST 2018]; root of context hierarchy
+2018-12-29 12:34:28.134 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 12:34:28.138 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 12:34:28.139 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 12:34:28.160 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:34:28.160 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:34:28.702 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 12:34:28.754 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 12:34:28.774 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 12:34:28.849 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 12:34:28.926 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 5.776 seconds (JVM running for 6.56)
+2018-12-29 12:35:02.379 [user_provider] [http-nio-8080-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-29 12:35:02.440 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-29 12:35:02.564 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization completed in 123 ms
+2018-12-29 12:35:45.419 [user_provider] [Thread-15] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 12:34:24 CST 2018]; root of context hierarchy
+2018-12-29 12:35:45.490 [user_provider] [Thread-15] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 12:35:56.018 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 25822 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 12:35:56.023 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 12:35:56.199 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 12:35:56 CST 2018]; root of context hierarchy
+2018-12-29 12:35:59.432 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 12:35:59.442 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 12:35:59.479 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 12:35:59.479 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 12:35:59.482 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 12:35:59.693 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 12:35:59.694 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 3496 ms
+2018-12-29 12:36:00.021 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 12:36:00.029 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 12:36:00.029 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 12:36:00.030 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 12:36:00.030 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 12:36:00.491 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:36:00.618 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 12:35:56 CST 2018]; root of context hierarchy
+2018-12-29 12:36:00.656 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 12:36:00.659 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 12:36:00.660 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 12:36:00.676 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:36:00.676 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 12:36:00.799 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 12:36:00.865 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 12:36:00.886 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 12:36:00.944 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 12:36:00.952 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 6.352 seconds (JVM running for 7.791)
+2018-12-29 12:36:05.620 [user_provider] [http-nio-8080-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-29 12:36:05.621 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-29 12:36:05.691 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization completed in 70 ms
+2018-12-29 13:28:52.748 [user_provider] [Thread-17] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 12:35:56 CST 2018]; root of context hierarchy
+2018-12-29 13:28:52.814 [user_provider] [Thread-17] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 13:29:05.305 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 16894 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 13:29:05.323 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 13:29:05.425 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 13:29:05 CST 2018]; root of context hierarchy
+2018-12-29 13:29:07.490 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 13:29:07.500 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:29:07.526 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 13:29:07.526 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 13:29:07.529 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 13:29:07.636 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 13:29:07.636 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 2211 ms
+2018-12-29 13:29:07.671 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 13:29:07.674 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 13:29:07.675 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 13:29:07.675 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 13:29:07.675 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 13:29:07.774 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:29:07.895 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 13:29:05 CST 2018]; root of context hierarchy
+2018-12-29 13:29:07.927 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 13:29:07.930 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 13:29:07.931 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 13:29:07.946 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:29:07.946 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:29:08.116 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 13:29:08.217 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:29:08.223 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 13:29:08.276 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 13:29:08.283 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 4.087 seconds (JVM running for 6.023)
+2018-12-29 13:35:51.708 [user_provider] [Thread-12] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@776aec5c: startup date [Sat Dec 29 13:29:05 CST 2018]; root of context hierarchy
+2018-12-29 13:35:51.746 [user_provider] [Thread-12] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 13:36:04.938 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 9426 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 13:36:04.942 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 13:36:05.039 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c46e67a: startup date [Sat Dec 29 13:36:05 CST 2018]; root of context hierarchy
+2018-12-29 13:36:07.152 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 13:36:07.180 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:36:07.187 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 13:36:07.188 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 13:36:07.210 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 13:36:07.325 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 13:36:07.326 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 2287 ms
+2018-12-29 13:36:07.362 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 13:36:07.365 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 13:36:07.365 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 13:36:07.365 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 13:36:07.365 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 13:36:07.539 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:36:07.706 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c46e67a: startup date [Sat Dec 29 13:36:05 CST 2018]; root of context hierarchy
+2018-12-29 13:36:07.742 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 13:36:07.746 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 13:36:07.747 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 13:36:07.763 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:36:07.763 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:36:07.883 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 13:36:08.022 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:36:08.036 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 13:36:08.086 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 13:36:08.096 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 4.442 seconds (JVM running for 5.311)
+2018-12-29 13:36:45.065 [user_provider] [http-nio-8080-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-29 13:36:45.065 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-29 13:36:45.078 [user_provider] [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-12-29 13:39:16.134 [user_provider] [Thread-12] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c46e67a: startup date [Sat Dec 29 13:36:05 CST 2018]; root of context hierarchy
+2018-12-29 13:39:16.170 [user_provider] [Thread-12] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 13:39:28.238 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 2404 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 13:39:28.271 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 13:39:28.356 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 13:39:28 CST 2018]; root of context hierarchy
+2018-12-29 13:39:30.295 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 13:39:30.341 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:39:30.376 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 13:39:30.377 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 13:39:30.411 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 13:39:30.561 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 13:39:30.561 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 2205 ms
+2018-12-29 13:39:30.724 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 13:39:30.732 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 13:39:30.733 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 13:39:30.734 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 13:39:30.734 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 13:39:31.207 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:39:31.468 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 13:39:28 CST 2018]; root of context hierarchy
+2018-12-29 13:39:31.503 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 13:39:31.506 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 13:39:31.507 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 13:39:31.524 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:39:31.524 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:39:31.692 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 13:39:31.761 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:39:31.781 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 13:39:31.811 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 13:39:31.816 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 5.142 seconds (JVM running for 6.304)
+2018-12-29 13:40:40.034 [user_provider] [Thread-14] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 13:39:28 CST 2018]; root of context hierarchy
+2018-12-29 13:40:40.073 [user_provider] [Thread-14] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 13:40:50.521 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 14217 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 13:40:50.526 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: test
+2018-12-29 13:40:50.625 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Sat Dec 29 13:40:50 CST 2018]; root of context hierarchy
+2018-12-29 13:40:52.447 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 13:40:52.469 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:40:52.480 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 13:40:52.481 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 13:40:52.486 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 13:40:52.677 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 13:40:52.677 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 2052 ms
+2018-12-29 13:40:52.742 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 13:40:52.746 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 13:40:52.746 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 13:40:52.747 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 13:40:52.747 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 13:40:53.213 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:40:53.644 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Sat Dec 29 13:40:50 CST 2018]; root of context hierarchy
+2018-12-29 13:40:53.679 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 13:40:53.683 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 13:40:53.684 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 13:40:53.702 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:40:53.702 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 13:40:53.796 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 13:40:53.821 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:40:53.837 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 13:40:53.912 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 13:40:53.925 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 4.275 seconds (JVM running for 5.242)
+2018-12-29 13:52:11.435 [user_provider] [Thread-12] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Sat Dec 29 13:40:50 CST 2018]; root of context hierarchy
+2018-12-29 13:52:11.760 [user_provider] [Thread-12] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 13:52:24.708 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 22153 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 13:52:24.710 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: test
+2018-12-29 13:52:24.827 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 13:52:24 CST 2018]; root of context hierarchy
+2018-12-29 13:52:29.517 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 13:52:29.594 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 13:52:29.622 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 13:52:29.622 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 13:52:29.631 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 13:52:29.752 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 13:52:29.753 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 4926 ms
+2018-12-29 13:52:29.834 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 13:52:29.839 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 13:52:29.839 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 13:52:29.840 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 13:52:29.840 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 13:52:29.996 [user_provider] [main] WARN  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [cn/qyd/blogroom/user/druid/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.druid.pool.DruidDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+2018-12-29 13:52:29.998 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Stopping service [Tomcat]
+2018-12-29 13:52:30.079 [user_provider] [main] INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-29 13:52:30.118 [user_provider] [main] ERROR [org.springframework.boot.SpringApplication] -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [cn/qyd/blogroom/user/druid/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.druid.pool.DruidDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at cn.qyd.blogroom.user.UserServiceProvider.main(UserServiceProvider.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.druid.pool.DruidDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at com.alibaba.druid.filter.logging.Log4jFilter.<init>(Log4jFilter.java:26)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at com.alibaba.druid.filter.FilterManager.loadFilter(FilterManager.java:124)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.addFilters(DruidAbstractDataSource.java:1325)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.setFilters(DruidAbstractDataSource.java:1314)
+	at DruidProperties.config(DruidProperties.java:75)
+	at DataSourceConfig.dataSource(DataSourceConfig.java:29)
+	at DataSourceConfig$$EnhancerBySpringCGLIB$$1211faf2.CGLIB$dataSource$1(<generated>)
+	at DataSourceConfig$$EnhancerBySpringCGLIB$$1211faf2$$FastClassBySpringCGLIB$$5ec0b1c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at DataSourceConfig$$EnhancerBySpringCGLIB$$1211faf2.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 19 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 40 common frames omitted
+2018-12-29 14:18:54.286 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Starting UserServiceProvider on linux with PID 27369 (/home/qiuyunduo/IdeaProjects/blogroom/service-provider/user-provider/target/classes started by qiuyunduo in /home/qiuyunduo/IdeaProjects/blogroom)
+2018-12-29 14:18:54.360 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 14:18:54.579 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 14:18:54 CST 2018]; root of context hierarchy
+2018-12-29 14:19:01.897 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 14:19:02.199 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 14:19:02.233 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 14:19:02.233 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 14:19:02.254 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 14:19:03.044 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 14:19:03.044 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 8465 ms
+2018-12-29 14:19:03.113 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 14:19:03.115 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 14:19:03.116 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 14:19:03.116 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 14:19:03.116 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 14:19:03.414 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 14:19:04.583 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 14:18:54 CST 2018]; root of context hierarchy
+2018-12-29 14:19:04.766 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 14:19:04.782 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 14:19:04.783 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 14:19:04.843 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 14:19:04.843 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 14:19:05.453 [user_provider] [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Registering beans for JMX exposure on startup
+2018-12-29 14:19:05.517 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-8080"]
+2018-12-29 14:19:05.745 [user_provider] [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] -Using a shared selector for servlet write/read
+2018-12-29 14:19:05.904 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-29 14:19:05.966 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -Started UserServiceProvider in 21.376 seconds (JVM running for 35.288)
+2018-12-29 16:22:49.521 [user_provider] [http-nio-8080-exec-3] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-29 16:22:49.532 [user_provider] [http-nio-8080-exec-3] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-29 16:22:49.549 [user_provider] [http-nio-8080-exec-3] INFO  [org.springframework.web.servlet.DispatcherServlet] -FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-12-29 16:22:49.670 [user_provider] [http-nio-8080-exec-3] ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found] with root cause
+org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:831)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2884)
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3232)
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1137)
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-29 16:26:28.360 [user_provider] [http-nio-8080-exec-4] ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found] with root cause
+org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:831)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2884)
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3232)
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1137)
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
