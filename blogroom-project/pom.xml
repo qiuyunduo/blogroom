@@ -12,7 +12,6 @@
     <artifactId>blogroom-project</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>blogroom-common</module>
         <module>blogroom-console</module>
         <module>blogroom-front</module>
     </modules>

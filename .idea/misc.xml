@@ -5,12 +5,21 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-base/server-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/blogroom-base/server-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-base/server-gataway/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-common/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-common/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-project/pom.xml" />
         <option value="$PROJECT_DIR$/project-base/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/bookserver/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/firstrouter/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/pom.xml" />
       </set>
     </option>
   </component>

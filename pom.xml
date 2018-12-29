@@ -12,6 +12,7 @@
         <module>blogroom-base</module>
         <module>blogroom-project</module>
         <module>service-provider</module>
+        <module>blogroom-common</module>
     </modules>
 
     <!-- 继承自spring boot -->

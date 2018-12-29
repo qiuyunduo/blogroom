@@ -351,3 +351,179 @@ org.apache.tomcat.util.http.fileupload.FileUploadException: the request was reje
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2018-12-29 16:58:34.791 [user_provider] [Thread-45] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@557caf28: startup date [Sat Dec 29 14:18:54 CST 2018]; root of context hierarchy
+2018-12-29 16:58:35.195 [user_provider] [Thread-45] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] -Unregistering JMX-exposed beans on shutdown
+2018-12-29 17:40:54.026 [user_provider] [main] INFO  [org.springframework.context.annotation.AnnotationConfigApplicationContext] -Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6ad82709: startup date [Sat Dec 29 17:40:53 CST 2018]; root of context hierarchy
+2018-12-29 17:40:55.426 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:40:55.473 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$edb4d812] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:40:55.960 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 17:40:55.989 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d62fe5b: startup date [Sat Dec 29 17:40:55 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6ad82709
+2018-12-29 17:40:57.286 [user_provider] [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] -No MyBatis mapper was found in '[cn.qyd.blogroom.user]' package. Please check your configuration.
+2018-12-29 17:40:57.597 [user_provider] [main] INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] -Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2018-12-29 17:40:57.724 [user_provider] [main] INFO  [org.springframework.cloud.context.scope.GenericScope] -BeanFactory id=dfef9c82-3a36-3a7f-91c2-facc726b4ef9
+2018-12-29 17:40:57.752 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:40:57.858 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d19ad515] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:40:57.879 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$edb4d812] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:40:58.523 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 17:40:58.544 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 17:40:58.554 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 17:40:58.555 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 17:40:58.558 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 17:40:58.652 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 17:40:58.652 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 2663 ms
+2018-12-29 17:40:58.705 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 17:40:58.709 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 17:40:58.709 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 17:40:58.709 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 17:40:58.709 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 17:40:58.817 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:40:58.817 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:40:58.865 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:40:58.865 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:40:58.963 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:40:59.458 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d62fe5b: startup date [Sat Dec 29 17:40:55 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6ad82709
+2018-12-29 17:40:59.582 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 17:40:59.587 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 17:40:59.588 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 17:40:59.617 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:40:59.618 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:41:00.080 [user_provider] [main] WARN  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scopedTarget.dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2018-12-29 17:41:00.100 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Stopping service [Tomcat]
+2018-12-29 17:41:00.272 [user_provider] [main] INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-29 17:41:00.276 [user_provider] [main] ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2018-12-29 17:43:08.503 [user_provider] [main] INFO  [org.springframework.context.annotation.AnnotationConfigApplicationContext] -Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3d285d7e: startup date [Sat Dec 29 17:43:08 CST 2018]; root of context hierarchy
+2018-12-29 17:43:09.080 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:43:09.134 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed02800e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:43:09.524 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 17:43:09.580 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@76f4b65: startup date [Sat Dec 29 17:43:09 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3d285d7e
+2018-12-29 17:43:11.757 [user_provider] [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] -No MyBatis mapper was found in '[cn.qyd.blogroom.user]' package. Please check your configuration.
+2018-12-29 17:43:12.073 [user_provider] [main] INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] -Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2018-12-29 17:43:12.186 [user_provider] [main] INFO  [org.springframework.cloud.context.scope.GenericScope] -BeanFactory id=dfef9c82-3a36-3a7f-91c2-facc726b4ef9
+2018-12-29 17:43:12.198 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:43:12.324 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0e87d11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:43:12.368 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed02800e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:43:12.935 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 17:43:12.947 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 17:43:12.960 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 17:43:12.960 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 17:43:12.964 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 17:43:13.103 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 17:43:13.103 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 3523 ms
+2018-12-29 17:43:13.171 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 17:43:13.175 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 17:43:13.175 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 17:43:13.175 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 17:43:13.175 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 17:43:13.274 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:43:13.274 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:43:13.288 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:43:13.288 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:43:13.442 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:43:13.893 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@76f4b65: startup date [Sat Dec 29 17:43:09 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3d285d7e
+2018-12-29 17:43:13.971 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 17:43:13.975 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 17:43:13.976 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 17:43:14.005 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:43:14.006 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:43:14.243 [user_provider] [main] WARN  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scopedTarget.dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2018-12-29 17:43:14.299 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Stopping service [Tomcat]
+2018-12-29 17:43:14.496 [user_provider] [main] INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-29 17:43:14.502 [user_provider] [main] ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2018-12-29 17:44:35.344 [user_provider] [main] INFO  [org.springframework.context.annotation.AnnotationConfigApplicationContext] -Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41a2befb: startup date [Sat Dec 29 17:44:35 CST 2018]; root of context hierarchy
+2018-12-29 17:44:36.079 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:44:36.122 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$54171e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:44:36.832 [user_provider] [main] INFO  [cn.qyd.blogroom.user.UserServiceProvider] -The following profiles are active: dev
+2018-12-29 17:44:36.958 [user_provider] [main] INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13330ac6: startup date [Sat Dec 29 17:44:36 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41a2befb
+2018-12-29 17:44:39.154 [user_provider] [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] -No MyBatis mapper was found in '[cn.qyd.blogroom.user]' package. Please check your configuration.
+2018-12-29 17:44:39.306 [user_provider] [main] INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] -Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2018-12-29 17:44:39.455 [user_provider] [main] INFO  [org.springframework.cloud.context.scope.GenericScope] -BeanFactory id=dfef9c82-3a36-3a7f-91c2-facc726b4ef9
+2018-12-29 17:44:39.473 [user_provider] [main] INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] -JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-29 17:44:39.632 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e9276ee9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:44:39.657 [user_provider] [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$54171e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-29 17:44:40.709 [user_provider] [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 8080 (http)
+2018-12-29 17:44:40.776 [user_provider] [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-29 17:44:40.911 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Starting service [Tomcat]
+2018-12-29 17:44:40.912 [user_provider] [main] INFO  [org.apache.catalina.core.StandardEngine] -Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-12-29 17:44:40.954 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.AprLifecycleListener] -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-12-29 17:44:41.879 [user_provider] [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+2018-12-29 17:44:41.880 [user_provider] [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] -Root WebApplicationContext: initialization completed in 4922 ms
+2018-12-29 17:44:41.942 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] -Servlet dispatcherServlet mapped to [/]
+2018-12-29 17:44:41.946 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 17:44:41.947 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 17:44:41.947 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 17:44:41.947 [user_provider] [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] -Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 17:44:42.002 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:44:42.002 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:44:42.006 [user_provider] [main] WARN  [com.netflix.config.sources.URLConfigurationSource] -No URLs will be polled as dynamic configuration sources.
+2018-12-29 17:44:42.006 [user_provider] [main] INFO  [com.netflix.config.sources.URLConfigurationSource] -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-12-29 17:44:42.132 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:44:42.516 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13330ac6: startup date [Sat Dec 29 17:44:36 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41a2befb
+2018-12-29 17:44:42.955 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/getUser],methods=[GET]}" onto public java.lang.String cn.qyd.blogroom.user.controller.UserController.getUser()
+2018-12-29 17:44:42.959 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 17:44:42.960 [user_provider] [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 17:44:42.987 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:44:42.987 [user_provider] [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 17:44:43.354 [user_provider] [main] WARN  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scopedTarget.dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2018-12-29 17:44:43.400 [user_provider] [main] INFO  [org.apache.catalina.core.StandardService] -Stopping service [Tomcat]
+2018-12-29 17:44:43.482 [user_provider] [main] INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-29 17:44:43.490 [user_provider] [main] ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+

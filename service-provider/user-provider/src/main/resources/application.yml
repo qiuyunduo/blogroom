@@ -1,13 +1,24 @@
 spring:
   profiles:
     active: @config.profiles.active@
+  application:
+    name: user-provider
 
 
 server:
   port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://@config.eureka.ip@:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
 
 User: qiuyunduo
 
 logging:
   config:
     classpath:logback-spring.xml
+
