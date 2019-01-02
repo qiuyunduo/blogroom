@@ -17,8 +17,11 @@ public class UserController {
     @Value("${spring.profiles.active}")
     String active;
 
+    @Value("${testurl}")
+    String url;
+
     @GetMapping("/getUser")
     public String getUser(){
-        return user+active;
+        return user+"   "+active+"   "+url;
     }
 }

@@ -22,3 +22,5 @@ logging:
   config:
     classpath:logback-spring.xml
 
+testurl: @config.profiles.active@
+

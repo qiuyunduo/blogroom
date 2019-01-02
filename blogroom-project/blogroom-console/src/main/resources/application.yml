@@ -4,6 +4,8 @@ server:
 spring:
   profiles:
     active: @config.profiles.active@
+  application:
+    name: blogroom-console
 
 eureka:
   client:

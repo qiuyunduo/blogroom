@@ -8,6 +8,5 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 18-12-29 下午2:10
  **/
 @SpringBootApplication
-@MapperScan("cn.qyd.blogroom.*.mapper")
 public class CommonModule {
 }

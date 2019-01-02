@@ -1,6 +1,7 @@
 package cn.qyd.blogroom.common.config.druid;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:db.properties")
+@Slf4j
 public class DataSourceConfig {
 
     /**
@@ -17,6 +19,7 @@ public class DataSourceConfig {
     @Bean("druidProperties")
     @ConfigurationProperties(prefix = "spring.datasource")
     public DruidProperties druidProperties() {
+        log.info("=================");
         return new DruidProperties();
     }
 
@@ -25,6 +28,9 @@ public class DataSourceConfig {
      */
     @Bean(initMethod = "init")
     public DruidDataSource dataSource(@Qualifier("druidProperties") DruidProperties druidProperties) {
+        log.info("=============");
+        log.info(druidProperties.getUrl());
+        log.info(druidProperties.toString());
         DruidDataSource dataSource = new DruidDataSource();
         druidProperties.config(dataSource);
         return dataSource;
