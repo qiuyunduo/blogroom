@@ -1,9 +1,12 @@
-server:
-  port: 8081
-
 spring:
   profiles:
     active: @config.profiles.active@
+  application:
+    name: website-provider
+
+
+server:
+  port: 8092
 
 eureka:
   client:
@@ -13,10 +16,7 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}
 
-
 logging:
   config:
     classpath:logback-spring.xml
 
-author:
-  name: qiuyunduo

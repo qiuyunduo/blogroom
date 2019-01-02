@@ -7,13 +7,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../gataway/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-base/server-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-base/server-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/blogroom-base/server-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-base/server-gataway/pom.xml" />
-        <option value="$PROJECT_DIR$/blogroom-common/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-project/blogroom-common/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-project/pom.xml" />
         <option value="$PROJECT_DIR$/project-base/pom.xml" />

@@ -17,7 +17,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
-	at cn.qyd.blogroom.App.main(App.java:15)
+	at App.main(App.java:15)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'author.name' in value "${author.name}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -50,7 +50,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
-	at cn.qyd.blogroom.App.main(App.java:15)
+	at App.main(App.java:15)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'author.name' in value "${author.name}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -83,7 +83,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
-	at cn.qyd.blogroom.App.main(App.java:15)
+	at App.main(App.java:15)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'author.name' in value "${author.name}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -116,7 +116,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
-	at cn.qyd.blogroom.App.main(App.java:15)
+	at App.main(App.java:15)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'author.name' in value "${author.name}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)

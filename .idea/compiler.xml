@@ -10,6 +10,7 @@
         <module name="blogroom-common" />
         <module name="blogroom-console" />
         <module name="blogroom-front" />
+        <module name="server-eureka" />
         <module name="server-gateway" />
         <module name="server-hystrix" />
         <module name="server-zipkin" />
@@ -18,7 +19,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="blogroom-common" target="1.8" />
       <module name="blogroom-project" target="1.8" />
       <module name="blogroomcommon" target="1.8" />
       <module name="blogroomproject" target="1.8" />
@@ -26,7 +26,6 @@
       <module name="firstrouter" target="1.8" />
       <module name="gataway" target="1.8" />
       <module name="projectbase" target="1.8" />
-      <module name="server-eureka" target="1.8" />
       <module name="server-gataway" target="1.8" />
       <module name="servergataway" target="1.8" />
     </bytecodeTargetLevel>
