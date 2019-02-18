@@ -37,7 +37,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("模块接口文档")
                 .description("API接口列表")
-                .contact(new Contact("mybitt", "", ""))
+                .contact(new Contact("BlogRoom", "", ""))
 				.version("2.0")
                 .build();
 	}

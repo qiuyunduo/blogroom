@@ -1,5 +1,6 @@
 package cn.qyd.blogroom.console.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -16,13 +17,10 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class TestController {
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate getRestTemplate() {
-        return new RestTemplate();
-    }
+    @Autowired
+    private RestTemplate restTemplate;
 
-    @Value("${author.name}")
+    @Value("${User}")
     String name;
 
     @GetMapping("/getAuthor")
@@ -32,9 +30,7 @@ public class TestController {
 
     @GetMapping("/getUser")
     public String getUser() {
-        RestTemplate restTemplate = getRestTemplate();
         String json = restTemplate.getForObject("http://user-provider/getUser",String.class);
-
         return json;
     }
 }
