@@ -11,54 +11,5 @@
 
     <artifactId>blogroom-console</artifactId>
 
-    <profiles>
-        <profile>
-            <!-- 开发环境 -->
-            <id>dev</id>
-            <properties>
-                <profiles.active>dev</profiles.active>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
-                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-            </properties>
-            <build>
-                <filters>
-                    <filter>src/main/resources/config-dev.properties</filter>
-                </filters>
-            </build>
-        </profile>
-        <profile>
-            <!-- 测式环境 -->
-            <id>test</id>
-            <properties>
-                <profiles.active>test</profiles.active>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
-                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-            </properties>
-            <build>
-                <filters>
-                    <filter>src/main/resources/config-test.properties</filter>
-                </filters>
-            </build>
-        </profile>
-        <!-- 生产环境 -->
-        <profile>
-            <id>pro</id>
-            <properties>
-                <profiles.active>pro</profiles.active>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
-                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-            </properties>
-            <build>
-                <filters>
-                    <filter>src/main/resources/config-pro.properties</filter>
-                </filters>
-            </build>
-        </profile>
-    </profiles>
-
-
 
 </project>

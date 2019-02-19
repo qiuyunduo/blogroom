@@ -1,6 +1,6 @@
 package cn.qyd.blogroom.common.exception;
 
-import com.mchain.ckweb.resp.Resp;
+import cn.qyd.blogroom.common.resp.Resp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-import static com.mchain.ckweb.resp.code.RespCodeAndMessageEnum.PARAMS_ERROR;
+import static cn.qyd.blogroom.common.resp.code.RespCodeAndMessageEnum.PARAMS_ERROR;
 
 /**
  * controller抛出异常捕捉

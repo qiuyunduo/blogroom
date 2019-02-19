@@ -28,7 +28,7 @@ public class TestController {
         return name;
     }
 
-    @GetMapping("/getUser")
+    @GetMapping("/user/getUser")
     public String getUser() {
         String json = restTemplate.getForObject("http://user-provider/getUser",String.class);
         return json;
