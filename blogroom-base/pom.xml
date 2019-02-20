@@ -13,9 +13,20 @@
     <packaging>pom</packaging>
     <modules>
         <module>server-eureka</module>
+        <module>server-gateway</module>
         <module>server-hystrix</module>
         <module>server-zipkin</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

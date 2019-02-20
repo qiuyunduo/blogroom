@@ -9,8 +9,6 @@
         <module name="article-provider" />
         <module name="blog-provider" />
         <module name="blogroom-common" />
-        <module name="blogroom-console" />
-        <module name="blogroom-front" />
         <module name="server-eureka" />
         <module name="server-gateway" />
         <module name="server-hystrix" />
@@ -20,6 +18,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="blogroom-console" target="1.8" />
+      <module name="blogroom-front" target="1.8" />
       <module name="blogroom-project" target="1.8" />
       <module name="blogroomcommon" target="1.8" />
       <module name="blogroomproject" target="1.8" />

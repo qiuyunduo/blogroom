@@ -1,4 +1,4 @@
-package cn.qyd.blogroom.console.config;
+package cn.qyd.blogroom.common.config;
 
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;

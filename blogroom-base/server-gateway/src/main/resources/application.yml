@@ -1,2 +1,55 @@
 server:
-  port: 8110
+  port: 8088
+  ssl:
+    enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+spring:
+  application:
+    name: server-gateway
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
+          handshake-timeout-millis: 10000
+          close-notify-flush-timeout-millis: 3000
+          close-notify-read-timeout-millis: 0
+        discovery:
+          locator:
+            enabled: false
+        routes:
+        - id: user-service
+          uri: lb://user-provider
+          predicates:
+          - Path=/user/**
+          filters:
+          - SwaggerHeaderFilter
+          - StripPrefix=1
+        - id: blog-service
+          uri: lb://blog-provider
+          predicates:
+          - Path=/blog/**
+          filters:
+          - SwaggerHeaderFilter
+          - StripPrefix=1
+        - id: article-service
+          uri: lb://article-provider
+          predicates:
+          - Path=/article/**
+          filters:
+          - SwaggerHeaderFilter
+          - StripPrefix=1
+        - id: website-service
+          uri: lb://website-provider
+          predicates:
+          - Path=/website/**
+          filters:
+          - SwaggerHeaderFilter
+          - StripPrefix=1

@@ -1,5 +1,6 @@
-package cn.qyd.blogroom.common.config;
+package cn.qyd.blogroom.gateway.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,48 +19,27 @@ import java.util.List;
 @Configuration
 public class Swagger2Config {
 
-	@Bean
-	public Docket consoleApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("BlogRoom-console")
-				.globalOperationParameters(buildParameters())
-                .apiInfo(apiInfo("网站后台"))
-				.select()
-				.apis(RequestHandlerSelectors.basePackage("cn.qyd.blogroom.console.controller"))
-                .paths(PathSelectors.any())
-                .build();
-	}
+	@Value("${spring.application.name}")
+	private String serviceName;
 
 	@Bean
-	public Docket frontApi() {
+	public Docket createRestApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("BlogRoom-front")
+				.groupName(serviceName)
 				.globalOperationParameters(buildParameters())
-				.apiInfo(apiInfo("网站前台"))
+				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("cn.qyd.blogroom.front.controller"))
+				.apis(RequestHandlerSelectors.withMethodAnnotation(RequestMapping.class))
 				.paths(PathSelectors.any())
 				.build();
 	}
 
-	@Bean
-	public Docket allApi() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("BlogRoom-all")
-				.globalOperationParameters(buildParameters())
-				.apiInfo(apiInfo("所有"))
-				.select()
-				.apis(RequestHandlerSelectors.basePackage("cn.qyd.blogroom"))
-				.paths(PathSelectors.any())
-				.build();
-	}
-
-	private ApiInfo apiInfo(String name) {
+	private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title(name+"模块接口文档")
-                .description("API接口列表")
-                .contact(new Contact("BlogRoom", "", ""))
-				.version("2.0")
+                .title(serviceName +" 模块接口文档")
+                .description(serviceName+" API接口列表")
+                .contact(new Contact("mybitt", "", ""))
+                .version("1.0")
                 .build();
 	}
 
@@ -73,7 +53,7 @@ public class Swagger2Config {
 //		ParameterBuilder appVersionPar = new ParameterBuilder();
 //		appVersionPar.name(Constant.APP_VERSION).description("APP版本号").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
 //		ParameterBuilder tokenPar = new ParameterBuilder();
-//		tokenPar.name(Constant.HEADER_KEY_AUTHORIZATION).description("认证请求头, Bearer +(钱包token)").modelRef(new ModelRef("string")).parameterType("header").required(false).defaultValue(Constant.TOKEN_PREFIX).build();
+//		tokenPar.name(Constant.HEADER_KEY_AUTHORIZATION).description("认证请求头, Bearer +(钱包/用户token)").modelRef(new ModelRef("string")).parameterType("header").required(false).defaultValue(Constant.TOKEN_PREFIX).build();
 //		ParameterBuilder userTokenPar = new ParameterBuilder();
 //		userTokenPar.name(Constant.USER_TOKEN_KEY).description("认证请求头, Bearer +(用户token[测试环境-刷新时间:1分钟, 过期时间:2分钟]), 说明:所有需要带这个token的请求,监听Responses Header->key=" + Constant.REFRESH_TOKEN_KEY + "返回刷新后的Token").modelRef(new ModelRef("string")).parameterType("header").required(false).defaultValue(Constant.TOKEN_PREFIX).build();
 //
