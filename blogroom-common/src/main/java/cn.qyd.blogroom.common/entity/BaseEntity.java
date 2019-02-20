@@ -30,22 +30,8 @@ public class BaseEntity implements Serializable {
     private Long id;
 
     @Getter @Setter
-    @Column(name = "created_user_id", updatable = false,columnDefinition = "DATETIME COMMENT '创建者'")
-    private LocalDateTime createdUserId;
-
-    @Getter @Setter
-    @Column(name = "created_date", updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(name = "add_time", updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
-    private LocalDateTime createdDate = LocalDateTime.now();
-
-    @Getter @Setter
-    @Column(name = "update_user_id", updatable = false,columnDefinition = "DATETIME COMMENT '操作者'")
-    private LocalDateTime updateUserId;
-
-    @Getter @Setter
-    @Column(name = "update_date", updatable = false,columnDefinition = "DATETIME COMMENT '操作时间'")
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    private LocalDateTime updateDate;
+    private LocalDateTime addTime = LocalDateTime.now();
 }

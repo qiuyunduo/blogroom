@@ -6,7 +6,7 @@ spring:
 
 
 server:
-  port: 8091
+  port: 8094
 
 eureka:
   client:
@@ -16,11 +16,7 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}
 
-User: qiuyunduo
-
 logging:
   config:
     classpath:logback-spring.xml
-
-testurl: dev
 

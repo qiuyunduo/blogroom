@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Author qyd
  * @Date 18-12-29 上午11:48
  **/
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "cn.qyd.blogroom")
 @EnableEurekaClient
 @EnableSwagger2
 public class UserServiceProvider {

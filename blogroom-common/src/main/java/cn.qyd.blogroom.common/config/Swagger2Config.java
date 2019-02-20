@@ -2,6 +2,7 @@ package cn.qyd.blogroom.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.RequestMapping;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -20,7 +21,7 @@ public class Swagger2Config {
 	@Bean
 	public Docket consoleApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("BlogRoom")
+				.groupName("BlogRoom-console")
 				.globalOperationParameters(buildParameters())
                 .apiInfo(apiInfo("网站后台"))
 				.select()
@@ -32,11 +33,23 @@ public class Swagger2Config {
 	@Bean
 	public Docket frontApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("BlogRoom")
+				.groupName("BlogRoom-front")
 				.globalOperationParameters(buildParameters())
 				.apiInfo(apiInfo("网站前台"))
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("cn.qyd.blogroom.front.controller"))
+				.paths(PathSelectors.any())
+				.build();
+	}
+
+	@Bean
+	public Docket allApi() {
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("BlogRoom-all")
+				.globalOperationParameters(buildParameters())
+				.apiInfo(apiInfo("所有"))
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("cn.qyd.blogroom"))
 				.paths(PathSelectors.any())
 				.build();
 	}

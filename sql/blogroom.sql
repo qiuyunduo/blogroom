@@ -43,11 +43,7 @@ CREATE TABLE `article` (
   `article_status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '文章状态 (0待审核，1发布)',
   `comment_count` int(11) NOT NULL DEFAULT '0' COMMENT '评论总数',
   `thumbs_count` int(11) NOT NULL DEFAULT '0' COMMENT '点赞总数',
-  PRIMARY KEY (`article_id`),
-  KEY `article_idfk_1` (`article_class_id`),
-  KEY `article_idfk_2` (`article_author_id`),
-  CONSTRAINT `article_ibfk_1` FOREIGN KEY (`article_class_id`) REFERENCES `article_class` (`article_class_id`),
-  CONSTRAINT `article_ibfk_2` FOREIGN KEY (`article_author_id`) REFERENCES `user` (`user_id`)
+  PRIMARY KEY (`article_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -97,11 +93,7 @@ CREATE TABLE `attention` (
   `a_id` mediumint(8) NOT NULL AUTO_INCREMENT COMMENT '关注表的自增ID',
   `attention_id` mediumint(8) NOT NULL COMMENT '用户ID',
   `attentioned_id` mediumint(8) NOT NULL COMMENT '用户关注ID',
-  PRIMARY KEY (`a_id`),
-  KEY `attention_idfk_1` (`attention_id`),
-  KEY `attention_idfk_2` (`attentioned_id`),
-  CONSTRAINT `attention_ibfk_1` FOREIGN KEY (`attention_id`) REFERENCES `user` (`user_id`),
-  CONSTRAINT `attention_ibfk_2` FOREIGN KEY (`attentioned_id`) REFERENCES `user` (`user_id`)
+  PRIMARY KEY (`a_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -129,11 +121,7 @@ CREATE TABLE `comments` (
   `comment_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '评论时间',
   `comment_content` text NOT NULL COMMENT '评论内容',
   `comment_floor` int(11) DEFAULT NULL COMMENT '评论楼层，第几位评论者',
-  PRIMARY KEY (`comment_id`),
-  KEY `comment_idfk_1` (`comment_article_id`),
-  KEY `comment_idfk_2` (`comment_author_id`),
-  CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`comment_article_id`) REFERENCES `article` (`article_id`),
-  CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`comment_author_id`) REFERENCES `user` (`user_id`)
+  PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -184,11 +172,7 @@ CREATE TABLE `replys` (
   `reply_comment_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '对应评论id',
   `reply_author_id` mediumint(8) NOT NULL COMMENT '作者id',
   `reply_content` text NOT NULL COMMENT '评论内容',
-  PRIMARY KEY (`reply_id`),
-  KEY `reply_idfk_1` (`reply_comment_id`),
-  KEY `reply_idfk_2` (`reply_author_id`),
-  CONSTRAINT `replys_ibfk_1` FOREIGN KEY (`reply_comment_id`) REFERENCES `comments` (`comment_id`),
-  CONSTRAINT `replys_ibfk_2` FOREIGN KEY (`reply_author_id`) REFERENCES `user` (`user_id`)
+  PRIMARY KEY (`reply_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -223,9 +207,7 @@ CREATE TABLE `user` (
   `user_lock` tinyint(3) DEFAULT '0' COMMENT '是否锁定，0为不锁定，1为锁定',
   `user_rank_id` mediumint(5) DEFAULT '1' COMMENT '等级',
   `isadmin` tinyint(3) DEFAULT '0' COMMENT '是否为管理员',
-  PRIMARY KEY (`user_id`),
-  KEY `user_idfk_1` (`user_rank_id`),
-  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_rank_id`) REFERENCES `rank` (`rank_id`)
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

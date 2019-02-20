@@ -36,6 +36,8 @@
         <lombok.versin>1.18.4</lombok.versin>
 
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+
+        <commons-lang3.version>3.8.1</commons-lang3.version>
     </properties>
 
     <!-- 声明springcloud版本 -->
@@ -117,6 +119,12 @@
             <version>${fastjson.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
 
 
     </dependencies>

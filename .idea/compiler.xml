@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="article-provider" />
+        <module name="blog-provider" />
         <module name="blogroom-common" />
         <module name="blogroom-console" />
         <module name="blogroom-front" />

@@ -16,6 +16,7 @@
         <module>article-provider</module>
         <module>user-provider</module>
         <module>website-provider</module>
+        <module>blog-provider</module>
     </modules>
 
     <properties>

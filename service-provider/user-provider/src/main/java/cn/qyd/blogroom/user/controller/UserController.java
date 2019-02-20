@@ -1,6 +1,8 @@
 package cn.qyd.blogroom.user.controller;
 
+import cn.qyd.blogroom.user.service.UserService;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class UserController {
+
+    @Autowired
+    private UserService userService;
 
     @Value("${User}")
     String user;
@@ -25,5 +30,11 @@ public class UserController {
     @ApiOperation("测试用例")
     public String getUser(){
         return user+"   "+active+"   "+url;
+    }
+
+    @GetMapping("/user/all")
+    @ApiOperation("获取所有用户")
+    public Object getAll(){
+        return userService.selectAll();
     }
 }

@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支">
+      <change afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/BlogServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-pro.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/enums/SexEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom-base/server-hystrix/server-hystrix.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/website-provider/website-provider.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/CommonModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/CommonModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/druid/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/druid/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/CommonModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/CommonModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/config/Swagger2Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/config/Swagger2Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/config/druid/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/config/druid/DruidConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/entity/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-project/blogroom-console/target/classes/cn/qyd/blogroom/console/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/target/classes/cn/qyd/blogroom/console/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-project/blogroom-console/target/classes/cn/qyd/blogroom/console/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-project/blogroom-console/target/classes/cn/qyd/blogroom/console/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/UserServiceProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/UserServiceProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/target/classes/cn/qyd/blogroom/user/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/blogroom.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/blogroom.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/blogroom-project/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,6 +67,8 @@
     <ignored path="$PROJECT_DIR$/service-provider/user-provider/target/" />
     <ignored path="$PROJECT_DIR$/blogroom-base/server-zipkin/target/" />
     <ignored path="$PROJECT_DIR$/blogroom-base/server-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/service-provider/blog-provider/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,87 +79,135 @@
     <session id="-1892146746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
-          <entry key="xml" value="14" />
+          <entry key="class" value="1" />
+          <entry key="html" value="1" />
+          <entry key="java" value="48" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="5" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="25" />
+          <entry key="yml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
-          <entry key="XML" value="14" />
+          <entry key="CLASS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="48" />
+          <entry key="Properties" value="5" />
+          <entry key="SQL" value="1" />
+          <entry key="XML" value="26" />
+          <entry key="YAML" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1636" />
+          <entry key="properties" value="4" />
+          <entry key="sql" value="2" />
+          <entry key="txt" value="65" />
+          <entry key="xml" value="41" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1636" />
+          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="Properties" value="4" />
+          <entry key="SQL" value="2" />
+          <entry key="XML" value="41" />
+          <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-base/server-zipkin/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-project/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/ConsoleApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/resources/logback-spring.xml">
+        <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="533">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response11.json" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/config/CorsConfiguration.java" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/sql/blogroom.sql" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/entity/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/BlogServiceProvider.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/enums/SexEnum.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/MD5Util.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/CommonModule.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/SpringMVCConfig.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/druid/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/ConsoleApp.java" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/ArticleController.java" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -136,7 +228,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
@@ -162,6 +254,102 @@
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-base" type="462c0819:PsiDirectoryNode" />
+              <item name="server-eureka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-base" type="462c0819:PsiDirectoryNode" />
+              <item name="server-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-base" type="462c0819:PsiDirectoryNode" />
+              <item name="server-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-base" type="462c0819:PsiDirectoryNode" />
+              <item name="server-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-base" type="462c0819:PsiDirectoryNode" />
+              <item name="server-eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="druid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
               <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -184,6 +372,70 @@
               <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-project" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
@@ -194,23 +446,154 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546165906731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550651951035" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$USER_HOME$/gitRepertory/wallet" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.qyd.blogroom.user.config" />
+      <recent name="cn.qyd.blogroom.common.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-provider/blog-provider/src/main" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8081" />
+          <option name="urlPath" value="article/test" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="name" />
+                <option name="value" value="qiuyunduo" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sex" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -224,7 +607,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ArticleServiceProvider">
+  <component name="RunManager" selected="Spring Boot.ConsoleApp">
     <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="blogroom-console" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.App" />
@@ -239,9 +622,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BlogServiceProvider" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog-provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.blog.BlogServiceProvider" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsoleApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blogroom-console" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.console.ConsoleApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.eureka.EurekaServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrontApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blogroom-front" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.front.FrontApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HystrixServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server-hystrix" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.hystrix.HystrixServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceProvider" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-provider" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.user.UserServiceProvider" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebsiteServiceProvider" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="website-provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.qyd.blogroom.website.WebsiteServiceProvider" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,6 +675,12 @@
       <item itemvalue="Spring Boot.ArticleServiceProvider" />
       <item itemvalue="Spring Boot.App" />
       <item itemvalue="Spring Boot.UserServiceProvider" />
+      <item itemvalue="Spring Boot.ConsoleApp" />
+      <item itemvalue="Spring Boot.HystrixServer" />
+      <item itemvalue="Spring Boot.EurekaServer" />
+      <item itemvalue="Spring Boot.FrontApp" />
+      <item itemvalue="Spring Boot.WebsiteServiceProvider" />
+      <item itemvalue="Spring Boot.BlogServiceProvider" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -265,16 +696,17 @@
       <workItem from="1546165035208" duration="971000" />
       <workItem from="1546426099778" duration="27000" />
       <workItem from="1550410553531" duration="236000" />
+      <workItem from="1550625950149" duration="17169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="998000" />
+    <option name="totallyTimeSpent" value="18195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="32" width="1366" height="736" extended-state="7" />
+    <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23333333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25320512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -282,9 +714,11 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" weight="0.4081408" />
+      <window_info anchor="bottom" id="Messages" weight="0.4741474" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40484047" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -306,6 +740,40 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25320512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.4741474" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.23652366" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -313,57 +781,360 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支" />
+    <option name="LAST_COMMIT_MESSAGE" value="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-eureka/src/main/java/cn/qyd/blogroom/eureka/EurekaServer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.4.RELEASE/spring-boot-autoconfigure-2.0.4.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-4728">
+          <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-eureka/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sql/blogroom.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="82" column="14" lean-forward="true" selection-start-line="29" selection-end-line="82" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/config/CorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/pom.xml">
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-gateway/pom.xml">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-hystrix/pom.xml">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="34" column="57" selection-start-line="33" selection-start-column="4" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/enums/SexEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.0.9.RELEASE/spring-data-jpa-2.0.9.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="125" column="52" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="4396" column="29" selection-start-line="4396" selection-start-column="29" selection-end-line="4396" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar!/org/apache/commons/collections/ListUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="52" column="59" lean-forward="true" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/CommonModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/ArticleServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/WebsiteServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/BlogServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="51" column="74" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/CorsConfig.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-zipkin/pom.xml">
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/SpringMVCConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="111" column="1" lean-forward="true" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.10/druid-1.1.10.jar!/support/http/resources/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/com/alibaba/druid-spring-boot-starter/1.1.10/druid-spring-boot-starter-1.1.10.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/config/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="30" column="14" selection-end-line="106" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogroom-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/druid/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/blogroom-project/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/resources/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="-108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="327" column="17" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="111" selection-start-line="23" selection-start-column="111" selection-end-line="23" selection-end-column="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-base/server-eureka/src/main/java/cn/qyd/blogroom/eureka/EurekaServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/ConsoleApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-project/blogroom-console/src/main/java/cn/qyd/blogroom/console/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
