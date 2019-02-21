@@ -24,17 +24,22 @@ public class RouteConfig {
 
         RouteLocatorBuilder.Builder routes = builder.routes();
         map.forEach((k, v) -> {
-            String model = k.replaceFirst("-provider", "");
             Arrays.stream(v).forEach(url -> {
                 if (StringUtils.isBlank(url)) {
                     return;
                 }
                 String id = UUID.randomUUID().toString();
                 routes.route(id, r -> r.path(url)
-//                        .filters(f -> f.rewritePath("/" + model + "/(?<path>.*)", "/${path}"))
                         .uri("lb://" + k));
             });
         });
+        for(Map.Entry<String,String[]> entry : map.entrySet()) {
+            System.err.println(entry.getKey());
+            if(entry.getValue().length > 0) {
+                System.out.println(entry.getValue()[0]);
+            }
+        }
+        System.err.println(routes.toString());
 
         return routes.build();
     }

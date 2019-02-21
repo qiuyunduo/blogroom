@@ -30,7 +30,7 @@ public class SwaggerProvider implements SwaggerResourcesProvider {
     //        resources.add(swaggerResource("Notify-模块", "/notify/v2/api-docs"));
     //        resources.add(swaggerResource("Other-模块", "/other/v2/api-docs"));
     //        resources.add(swaggerResource("Trade-模块", "/trade/v2/api-docs"));
-    //        resources.add(swaggerResource("Wallet-模块", "/wallet/v2/api-docs"));
+//        resources.addddddddddecrde    w3aq1`1`        ｀｀｀｀    ｀１２ＳＥＷＥＳＥＤＷＳＤＥＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＤdd(swaggerResource("Wallet-模块", "/wallet/v2/api-docs"));
     //
     //        return resources;
     //    }
