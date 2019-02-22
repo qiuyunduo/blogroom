@@ -55,9 +55,9 @@ public enum FrontRespEnum implements CodeAndMessage {
     OPINION_CONTAIN_SENSITIVE_WORD(331,"反馈信息包含敏感词汇"),
 
     /**
-     * 意见反馈
+     * 文章模块
      */
-    COOPERATIVE_NEWS_NOT_EXIST(440, "找不到对应合作信息"),
+    ARTICLE_NOT_EXIST(440, "找不到对应文章信息"),
     COOPERATIVE_NEWS_CONTAIN_SENSITIVE_WORD(441,"需求信息包含敏感词汇"),
     COOPERATIVE_NEWS_SUMBIT_OVER(442,"您已达今日提交上限，请明日在试试，或直接电话联系我们"),
 

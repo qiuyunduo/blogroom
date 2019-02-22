@@ -18,7 +18,10 @@ import static cn.qyd.blogroom.common.resp.code.RespCodeAndMessageEnum.PARAMS_ERR
  * controller抛出异常捕捉
  */
 @ControllerAdvice({
-        "com.mchain.ckweb.controller",
+        "cn.qyd.blogroom.user.controller",
+        "cn.qyd.blogroom.blog.controller",
+        "cn.qyd.blogroom.article.controller",
+        "cn.qyd.blogroom.website.controller",
 })
 public class GlobalExceptionHandler {
 

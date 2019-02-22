@@ -3,68 +3,47 @@
 });
 
 function getArticlesByPage(pageNum) {
-    // alert(pageNum);
     $.ajax({
-        url: "/BlogRoom/article/getAll",
+        url: "http:localhost:8088/article/info/all",
         dataType: "json",
-        data: {"pageNum": pageNum},
+        data: {"page": pageNum},
         type: "GET",
         success: function (pagedata) {
-            // alert("sdsd");
-            // alert(pagedata.list.length);
-            // alert("当前页"+pagedata.pageNum);
-            // alert("每页显示数据量"+pagedata.pageSize);
-            // alert("当前页面显示数据量"+pagedata.size);
-            // alert("当前页面第一个元素在数据库中的行号"+pagedata.startRow);
-            // alert("当前页面最后一个元素在数据库中的行号"+pagedata.endRow);
-            // alert("总记录数"+pagedata.total);
-            // alert("总页数"+pagedata.pages);
-            // alert("第一页"+pagedata.firstPage);
-            // alert("前一页"+pagedata.prePage);
-            // alert("后一页"+pagedata.nextPage);
-            // alert("最后一页"+pagedata.lastPage);
-            // alert("是否为第一页"+pagedata.isFirstPage);
-            // alert("是否为最后一页"+pagedata.isLastPage);
-            // alert("是否有前一页"+pagedata.hasPreviousPage);
-            // alert("是否有下一页"+pagedata.hasNextPage);
-            // alert("导航页码数"+pagedata.navigatePages);
-            // alert("所有导航页号"+pagedata.navigatepageNums);
-            var data = pagedata.list;
+            var data = pagedata.pagingData;
             $(".content").empty();
 
             var articlenode;
 
-            for (var i = 0; i < data.length; i++) {
-                var article = data[i].article;
-                var author = data[i].author;
+            for (var i = 0; i < data.item.length; i++) {
+                var article = data.item[i];
                 articlenode = "<article class='excerpt'>" +
-                    "<header><h2><a href='/BlogRoom/apps/article.html?aid=" +
-                    article.articleId +
-                    "'>" + article.articleTitle + "</a></h2></header>" +
-                    "<div class='focus'><a href='/BlogRoom/apps/article.html?aid=" +
-                    article.articleId +
-                    "'><img class='thumb' src='/upload/articlepic/" +
-                    article.articlePic +
+                    "<header><h2><a href='article.html?aid=" +
+                    article.id +
+                    "'>" + article.title + "</a></h2></header>" +
+                    "<div class='focus'><a href='article.html?aid=" +
+                    article.id +
+                    "'><img class='thumb' src='../upload/articlepic/" +
+                    article.headPhoto +
                     "' style='width: 150px;height: 100px'></a></div>" +
                     "<span class='note'>" +
-                    article.articleDescribe +
+                    article.describe +
                     "</span> <p class='auth-span' >" +
-                    "<span class='muted'><i class='fa fa-user'></i> <a href='/BlogRoom/apps/userblog.html?uid=" +
-                    author.userId +
+                    "<span class='muted'><i class='fa fa-user'></i> <a href='userblog.html?uid=" +
+                    article.userId +
                     "'>" +
-                    author.userName +
+                    article.author +
                     "</a></span> <span class='muted'><i class='fa fa-clock-o'></i>" +
-                    article.articleTime +
+                    article.publishTime +
                     "</span><span class='muted'><i class='fa fa-comments-o'></i> " +
                     "<a target='_blank' href='" +
-                    "/BlogRoom/apps/article.html?aid=" +
-                    article.articleId +
+                    "article.html?aid=" +
+                    article.id +
                     "#comment'>" +
-                    article.commentCount +
+                    article.comments +
                     "评论</a>" +
                     "</span><span class='muted'> <a href='javascript:;' data-action='ding' data-id='393' id='Addlike' class='action'><i class='fa fa-heart-o'></i>" +
                     "<span class='count'>" +
-                    article.thumbsCount +
+                    article.thumbs +
                     "</span>喜欢</a></span></p>" +
                     "</article>";
                 $(".content").append(articlenode);
@@ -73,12 +52,14 @@ function getArticlesByPage(pageNum) {
             var pagestart = "<div class='pagination'>" +
                 "<ul>" +
                 "<li class='prev-page'><a href='javascript:;' onclick='getArticlesByPage("+
-                pagedata.prePage+
+                pagedata.pagingData.prePage+
                 ")'>上一页</a></li>";
+
+
             var PageNodes = "";
-            for(var i = 1; i < pagedata.pages+1; i++){
+            for(var i = 1; i <= pagedata.pagingData.totalPage; i++){
                 var onePageNode;
-                if(pagedata.pageNum == i){
+                if(pageNum == i){
                    onePageNode = "<li class='active'><a href='javascript:;' onclick='getArticlesByPage("+i+")'>"+i+"</a></li>";
                 }else {
                     onePageNode = "<li><a href='javascript:;' onclick='getArticlesByPage("+i+")'>"+i+"</a></li>";
@@ -86,7 +67,7 @@ function getArticlesByPage(pageNum) {
                 PageNodes = PageNodes+onePageNode;
             }
             var pageend ="<li class='prev-page'><a href='javascript:(0);' onclick='getArticlesByPage("+
-                pagedata.nextPage+
+                pagedata.pagingData.nextPage+
                 ")'>下一页</a></li>"+
                 "</ul>" +
                 "</div>";
@@ -97,6 +78,10 @@ function getArticlesByPage(pageNum) {
             $(".content").append(pagenode);
         }
     });
+
+    $('body,html').animate({
+        scrollTop: 0
+    }, 100);
 }
 
 function getArticlesOfClass(classid,pageName) {

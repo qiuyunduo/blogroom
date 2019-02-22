@@ -62,8 +62,4 @@ public class User extends BaseEntity {
 
     @Column(name = "last_login_ip",columnDefinition = "varchar(32) COMMENT '最近一次的登录地址'")
     private String lastLoginIp;
-
-    @Column(name = "update_time",columnDefinition = "DATETIME COMMENT '最新更新时间'")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
-    private LocalDateTime updateTime;
 }

@@ -1,13 +1,7 @@
 package cn.qyd.blogroom.common.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,18 +14,19 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @NoArgsConstructor
+@Data
 public class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -1020633525801516817L;
 
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false, updatable = false)
     private Long id;
 
-    @Getter @Setter
     @Column(name = "add_time", updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
     private LocalDateTime addTime = LocalDateTime.now();
+
+    @Column(name = "update_time",columnDefinition = "DATETIME COMMENT '最新更新时间'")
+    private LocalDateTime updateTime;
 }

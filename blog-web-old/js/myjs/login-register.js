@@ -1,22 +1,22 @@
 $(function() {
     //检查用户是否登录，区别显示（登录注册）还是（用户模块）
 
-    $.ajax({
-        url:"/BlogRoom/user/checkLog",
-        dataType:"json",
-        type:"POST",
-        success:function (data) {
-            if(data != null) {
-                $("#log_reg").css("display", "none");
-                $("#log_user").css("display", "block");
-                $("#log_img").attr("src","/upload/userhead/"+data.userImageUrl);
-                $("#myblog").attr("href","/BlogRoom/apps/userblog.html?uid="+data.userId);
-            }
-        },
-        error:function () {
-            alert("请求错误");
-        }
-    },"json");
+    // $.ajax({
+    //     url:"/BlogRoom/user/checkLog",
+    //     dataType:"json",
+    //     type:"POST",
+    //     success:function (data) {
+    //         if(data != null) {
+    //             $("#log_reg").css("display", "none");
+    //             $("#log_user").css("display", "block");
+    //             $("#log_img").attr("src","/upload/userhead/"+data.userImageUrl);
+    //             $("#myblog").attr("href","/BlogRoom/apps/userblog.html?uid="+data.userId);
+    //         }
+    //     },
+    //     error:function () {
+    //         alert("请求错误");
+    //     }
+    // },"json");
     //弹出框
     $(document).on("click", "a[data-pop]", function (e) {
         e.preventDefault();

@@ -23,6 +23,12 @@ public class PagingInfo {
     @ApiModelProperty(notes = "总页数")
     private Integer totalPage;
 
+    @ApiModelProperty(notes = "前一页")
+    private Integer prePage;
+
+    @ApiModelProperty(notes = "下一页")
+    private Integer nextPage;
+
     @ApiModelProperty(notes = "是否为第一页")
     private boolean isFirstPage;
 
@@ -44,22 +50,11 @@ public class PagingInfo {
         info.setTotal(0);
         info.setTotalPage(0);
         info.setPage(1);
+        info.setPrePage(0);
+        info.setNextPage(0);
         info.setPageSize(10);
         return info;
     }
-
-    public static PagingInfo create(int total, List item, int page, int limit){
-        PagingInfo pagingInfo = new PagingInfo();
-        pagingInfo.setFirstPage(page == 1);
-        pagingInfo.setTotal(total);
-        pagingInfo.setTotalPage(total % limit > 0 ? (total / limit) + 1 : total / limit);
-        pagingInfo.setLastPage(page == pagingInfo.getTotalPage());
-        pagingInfo.setPage(page);
-        pagingInfo.setPageSize(item.size());
-        pagingInfo.setItem(item);
-        return pagingInfo;
-    }
-
 
     public Integer getPage() {
         return page;
@@ -115,5 +110,21 @@ public class PagingInfo {
 
     public void setItem(List item) {
         this.item = item;
+    }
+
+    public Integer getPrePage() {
+        return prePage;
+    }
+
+    public void setPrePage(Integer prePage) {
+        this.prePage = prePage;
+    }
+
+    public Integer getNextPage() {
+        return nextPage;
+    }
+
+    public void setNextPage(Integer nextPage) {
+        this.nextPage = nextPage;
     }
 }
