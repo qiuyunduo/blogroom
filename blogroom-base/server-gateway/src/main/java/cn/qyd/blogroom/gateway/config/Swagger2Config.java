@@ -1,5 +1,6 @@
 package cn.qyd.blogroom.gateway.config;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +13,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,7 @@ public class Swagger2Config {
 				.globalOperationParameters(buildParameters())
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.withMethodAnnotation(RequestMapping.class))
+				.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
 				.paths(PathSelectors.any())
 				.build();
 	}
@@ -64,5 +66,5 @@ public class Swagger2Config {
 //		parameterList.add(userTokenPar.build());
 		return parameterList;
 	}
-	
+
 }

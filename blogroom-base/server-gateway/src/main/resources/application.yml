@@ -1,7 +1,5 @@
 server:
   port: 8088
-  ssl:
-    enabled: false
 
 eureka:
   client:
@@ -19,42 +17,38 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-        #      httpclient:
-#        ssl:
-#          useInsecureTrustManager: true
-#          handshake-timeout-millis: 10000
-#          close-notify-flush-timeout-millis: 3000
-#          close-notify-read-timeout-millis: 0
-        routes:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
+          handshake-timeout-millis: 10000
+          close-notify-flush-timeout-millis: 3000
+          close-notify-read-timeout-millis: 0
+      routes:
         #用户信息关服务
         - id: user-service
           uri: lb://user-provider
           predicates:
-          - Path=/user/**
+            - Path=/user/**
           filters:
-#          - SwaggerHeaderFilter
-          - StripPrefix=1
+            - StripPrefix=1
         #博客空间相关服务
         - id: blog-service
           uri: lb://blog-provider
           predicates:
-          - Path=/blog/**
+           - Path=/blog/**
           filters:
-          - SwaggerHeaderFilter
-          - StripPrefix=1
+           - StripPrefix=1
         #博客文章相关服务
         - id: article-service
           uri: lb://article-provider
           predicates:
           - Path=/article/**
           filters:
-          - SwaggerHeaderFilter
-          - StripPrefix=1
+           - StripPrefix=1
         #网站相关服务
         - id: website-service
           uri: lb://website-provider
           predicates:
-          - Path=/website/**
+           - Path=/website/**
           filters:
-          - SwaggerHeaderFilter
-          - StripPrefix=1
+           - StripPrefix=1

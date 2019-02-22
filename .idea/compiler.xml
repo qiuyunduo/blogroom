@@ -11,6 +11,7 @@
         <module name="blogroom-common" />
         <module name="server-eureka" />
         <module name="server-gateway" />
+        <module name="server-gateway1" />
         <module name="server-hystrix" />
         <module name="server-zipkin" />
         <module name="user-provider" />
@@ -28,7 +29,9 @@
       <module name="gataway" target="1.8" />
       <module name="projectbase" target="1.8" />
       <module name="server-gataway" target="1.8" />
+      <module name="server-gateway1" target="1.8" />
       <module name="servergataway" target="1.8" />
+      <module name="servergateway1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

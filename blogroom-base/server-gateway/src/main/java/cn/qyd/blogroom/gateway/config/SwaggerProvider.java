@@ -20,45 +20,37 @@ public class SwaggerProvider implements SwaggerResourcesProvider {
     private final RouteLocator routeLocator;
     private final GatewayProperties gatewayProperties;
 
-    //    @Override
-    //    public List<SwaggerResource> get() {
-    //        List<SwaggerResource> resources = new ArrayList<>();
-    //
-    //        resources.add(swaggerResource("Attach-模块", "/attach/v2/api-docs"));
-    //        resources.add(swaggerResource("Info-模块", "/info/v2/api-docs"));
-    //        resources.add(swaggerResource("Market-模块", "/market/v2/api-docs"));
-    //        resources.add(swaggerResource("Notify-模块", "/notify/v2/api-docs"));
-    //        resources.add(swaggerResource("Other-模块", "/other/v2/api-docs"));
-    //        resources.add(swaggerResource("Trade-模块", "/trade/v2/api-docs"));
-//        resources.addddddddddecrde    w3aq1`1`        ｀｀｀｀    ｀１２ＳＥＷＥＳＥＤＷＳＤＥＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＤdd(swaggerResource("Wallet-模块", "/wallet/v2/api-docs"));
-    //
-    //        return resources;
-    //    }
-
     @Override
     public List<SwaggerResource> get() {
         List<SwaggerResource> resources = new ArrayList<>();
         List<String> routes = new ArrayList<>();
         // 取出gateway的route
         routeLocator.getRoutes().subscribe(route -> routes.add(route.getId()));
-        System.out.println(routes);
+        for (String str : routes) {
+            System.err.println("asdsda"+str);
+        }
         // 结合配置的route-路径(Path)，和route过滤，只获取有效的route节点
+//        gatewayProperties.getRoutes().stream().forEach(routeDefinition -> System.out.println(routeDefinition.getId()));
+//        System.out.println("=====");
+//        gatewayProperties.getRoutes().stream().forEach(routeDefinition -> routeDefinition.getPredicates().stream()
+//                .forEach(predicateDefinition -> System.out.println(predicateDefinition.getArgs()+":Args Name:"+predicateDefinition.getName())));
         gatewayProperties.getRoutes().stream()
                 .filter(routeDefinition -> routes.contains(routeDefinition.getId()))
                 .forEach(routeDefinition -> routeDefinition.getPredicates().stream()
                         .filter(predicateDefinition -> ("Path").equalsIgnoreCase(predicateDefinition.getName()))
-                        .forEach(predicateDefinition -> resources.add(
-                                swaggerResource(routeDefinition.getId(),
+                        .forEach(predicateDefinition -> resources.add(swaggerResource(routeDefinition.getId(),
                                         predicateDefinition
                                                 .getArgs()
                                                 .get(NameUtils.GENERATED_NAME_PREFIX + "0")
                                                 .replace("/**", API_URI)))));
+
         return resources;
     }
 
     private SwaggerResource swaggerResource(String name, String location) {
         SwaggerResource swaggerResource = new SwaggerResource();
         swaggerResource.setName(name);
+        System.err.println(location);
         swaggerResource.setLocation(location);
         swaggerResource.setSwaggerVersion("2.0");
         return swaggerResource;

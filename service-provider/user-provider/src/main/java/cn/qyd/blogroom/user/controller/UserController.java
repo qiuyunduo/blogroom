@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 18-12-29 下午12:31
  **/
 @RestController
+@RequestMapping("/info")
 public class UserController {
 
     @Autowired
@@ -32,7 +34,7 @@ public class UserController {
         return user+"   "+active+"   "+url;
     }
 
-    @GetMapping("/user/all")
+    @GetMapping("/all")
     @ApiOperation("获取所有用户")
     public Object getAll(){
         return userService.selectAll();

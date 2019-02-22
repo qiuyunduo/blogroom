@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人资料-个人中心-博客屋</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../css/user1/skeleton.css">
+    <link href="../css/user1/app.80dc29568d03c38ddf7eaabc81227ba7.css" rel="stylesheet">
+
+    <link href="../css/basestyle.css" rel="stylesheet">
+
+    <link href="../css/pure-highlight.css" rel="stylesheet">
+    <link href="../css/default.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/myjs/mybase.js"></script>
+    <script type="text/javascript" src="../js/myjs/userinfo.js"></script>
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+    <div class="yusi-logo">
+        <a href="/BlogRoom/apps/index.html">
+            <h1 style="z-index: 99">
+                <span class="yusi-mono">博客屋</span>
+                <span class="yusi-bloger">欢迎您</span>
+            </h1>
+        </a>
+
+        <div style="float: right;padding-top: 40px;margin-right:80px;display: block" id="log_user">
+            <img id="log_img" src="../images/default.jpg" style="width: 30px;height: 30px;border-radius:50%">
+            <i id="i_icon" class="fa fa-chevron-up" style="color:#ffffff;"></i>
+
+            <div style="display:none;margin:5px 0;float:left;width:80px;height:150px;border:1px solid black;background-color:#51b485;position: absolute;z-index: 999" id="log_menu">
+                <div ><a target="_blank" style="color: white;" href="#" id="myblog">我的博客</a></div>
+                <div ><a target="_blank" style="color: white;" href="/BlogRoom/apps/userInfo.html">个人中心</a></div>
+                <div><a style="color: white;">消息<span class="toolbar-newsL" style="margin-left: 4px; display: none;">(2)</span></a></div>
+                <div><a style="color: white;">反馈</a></div>
+                <div><a style="color: white;">帮助</a></div>
+                <div><a style="color: white;" href="/BlogRoom/user/quitLog">退出</a></div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<div id="app"><!---->
+    <div data-v-357a65ed="" class="container view">
+        <div data-v-357a65ed="" class="left_box" style="margin-top: 10px;margin-left: -50px">
+            <ul data-v-357a65ed="" class="aside">
+                <li data-v-357a65ed="" class="router-link-exact-active router-link-active"><a data-v-357a65ed="" href="/BlogRoom/apps/userInfo.html" class="zl">个人资料</a></li>
+                <li data-v-357a65ed="" class=""><a data-v-357a65ed="" href="/BlogRoom/apps/myattentions.html" class="zl">我的关注</a></li>
+                <li data-v-357a65ed="" class=""><a data-v-357a65ed="" href="/BlogRoom/apps/myfans.html" class="zl">我的粉丝</a></li>
+            </ul>
+            <ul data-v-357a65ed="" class="aside">
+                <li data-v-357a65ed=""><a data-v-357a65ed="" target="_blank" href="/BlogRoom/apps/add-article.html" class="zl">写博客</a></li>
+                <li data-v-357a65ed=""><a data-v-357a65ed="" href="/BlogRoom/apps/managerblog.html" class="zl">博客管理</a></li>
+                <li data-v-357a65ed=""><a data-v-357a65ed="" href="/BlogRoom/apps/manageraccount.html" class="zl">账号设置</a></li>
+            </ul>
+        </div>
+
+        <div data-v-357a65ed="" class="view-container" id="main_content" style="margin-top: 10px">
+            <div data-v-0d738edb="" data-v-357a65ed="" class="cont view">
+                <div data-v-0d738edb="" class="right_cont">
+                    <h3 data-v-0d738edb="" class="title">个人资料</h3>
+                    <div data-v-0d738edb="" class="user_info">
+                        <div data-v-0d738edb="" class="header">
+                            <img data-v-0d738edb="" src="../images/default.jpg" id="shead" class="head">
+                            <p data-v-0d738edb="" class="modify"><a title="修改头像" data-toggle="modal" data-target="#updatehead">修改头像</a></p>
+                        </div>
+                        <!---->
+                        <div data-v-0d738edb="" class="right_c">
+                            <div data-v-0d738edb="" class="right_info">
+
+                            </div>
+
+                            <div data-v-0d738edb="" class="line"></div>
+
+                            <div data-v-0d738edb="" class="nick">
+                                <span data-v-0d738edb="" class="mod"><a title="查看或修改个人信息" data-toggle="modal" data-target="#seeUserInfo" id="updateInfo">修改资料</a></span>
+                            </div>
+
+                            <ul data-v-0d738edb="" class="self">
+                                <li data-v-0d738edb="" class="comon">
+                                    <span data-v-0d738edb="" class="noWid">用户名：</span>
+                                    <span data-v-0d738edb="" class="cont" id="sname"></span>
+                                </li>
+                                <li data-v-0d738edb="" class="comon">
+                                    <span data-v-0d738edb="" class="noWid">性别：</span>
+                                    <span data-v-0d738edb="" class="cont" id="ssex"></span>
+                                </li>
+                                <li data-v-0d738edb="" class="comon">
+                                    <span data-v-0d738edb="" class="noWid">生日：</span>
+                                    <span data-v-0d738edb="" class="cont" id="sbirthday"></span>
+                                </li>
+                                <li data-v-0d738edb="" class="comon last">
+                                    <span data-v-0d738edb="" class="noWid">邮箱：</span>
+                                    <span data-v-0d738edb="" class="cont" id="semail"></span></li>
+                                <li data-v-0d738edb="" class="intro">
+                                    <span data-v-0d738edb="" class="noWid">简介：</span>
+                                    <span data-v-0d738edb="" class="cont" id="desc">无</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!----> <!---->
+            </div>
+        </div>
+    </div>
+</div>
+<!--个人信息模态框-->
+<div class="modal fade" id="seeUserInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none">
+    <div class="modal-dialog" role="document">
+        <form id="updateInfoForm">
+            <input type="hidden" name="userId" id="userid">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" >个人信息</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table" style="margin-bottom:0px;">
+                        <tbody>
+                        <tr>
+                            <td wdith="20%">用户名:</td>
+                            <td width="80%"><input type="text" class="form-control" name="userName" id="userName" maxlength="10" autocomplete="off" /></td>
+                        </tr>
+                        <tr>
+                            <td wdith="20%">性别:</td>
+                            <td width="80%">
+                                <select id="userSex" name="userSex" style="width: 50px;height: 30px;padding: 0">
+                                    <option id="man" value="男">男</option>
+                                    <option id="woman" value="女">女</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td wdith="20%">生日:</td>
+                            <td width="80%"><input type="date" class="form-control" name="birthday"id="birthday" maxlength="10" autocomplete="off" /></td>
+                        </tr>
+
+                        <tr>
+                            <td wdith="20%">邮箱:</td>
+                            <td width="80%"><input type="text" class="form-control" name="userEmail" id="userEmail" maxlength="18" autocomplete="off" /></td>
+                        </tr>
+                        <tr>
+                            <td wdith="20%">简介:</td>
+                            <td width="80%">
+                                <textarea type="text" class="form-control" name="userDescription" id="userDescription"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="updateInfoBtn" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--修改头像-->
+<div class="modal fade" id="updatehead" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <form id="updateHeadForm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" >更改头像</h4>
+                </div>
+                <div class="modal-body">
+                   <input type="file" name="userhead" style="outline: none;border: none">
+                </div>
+                <div class="modal-footer">
+                    <button id="updateHeadBtn" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

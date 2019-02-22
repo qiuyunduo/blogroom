@@ -1,6 +1,7 @@
 package cn.qyd.blogroom.user.entity;
 
 import cn.qyd.blogroom.common.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
@@ -41,6 +42,7 @@ public class User extends BaseEntity {
     private Integer sex;
 
     @Column(name = "birthday",columnDefinition = "date COMMENT '生日'")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private LocalDate birthday;
 
     @Column(name = "head_image",columnDefinition = "varchar(255) COMMENT '头像地址'")
@@ -62,7 +64,6 @@ public class User extends BaseEntity {
     private String lastLoginIp;
 
     @Column(name = "update_time",columnDefinition = "DATETIME COMMENT '最新更新时间'")
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
     private LocalDateTime updateTime;
 }

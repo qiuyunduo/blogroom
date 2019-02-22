@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>博客屋</title>
+  <link href="/BlogRoom/css/basestyle.css" rel="stylesheet" id="style-css" media="all">
+  <link href="/BlogRoom/css/pure-highlight.css" rel="stylesheet">
+  <link href="/BlogRoom/css/default.css" rel="stylesheet">
+  <link href="/BlogRoom/css/login-register.css" rel="stylesheet">
+  <script type="text/javascript" src="/BlogRoom/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/highlight.pack.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/wp-embed.min.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/wp-emoji-release.min.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/myjs/index.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/myjs/loadright.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/myjs/login-register.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/myjs/mybase.js"></script>
+  <script type="text/javascript" src="/BlogRoom/js/myjs/searchArticles.js"></script>
+
+
+
+</head>
+<body>
+<header id="header" class="header">
+  <div class="container-inner">
+    <div class="yusi-logo">
+      <a href="/BlogRoom/apps/index.html">
+        <h1>
+          <span class="yusi-mono">博客屋</span>
+          <span class="yusi-bloger">欢迎您</span>
+        </h1>
+      </a>
+      <div style="float: right;padding-top: 40px;font-size: 20px" id="log_reg">
+        <a href="javascript:;" data-pop="login"><span style="color: white">登录</span></a>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <a href="javascript:;" data-pop="register"><span style="color: white">注册</span></a>
+      </div>
+
+      <div style="float: right;padding-top: 40px;margin-right:80px;display: none" id="log_user">
+          <img id="log_img" src="/upload/userhead/default.jpg" style="width: 30px;height: 30px;border-radius:50%">
+          <i id="i_icon" class="fa fa-chevron-up" style="color:#ffffff;"></i>
+
+        <div style="display:none;margin:5px 0;float:left;width:80px;height:150px;border:1px solid black;background-color:#51b485;position: absolute;z-index: 999" id="log_menu">
+          <div ><a target="_blank" style="color: white;" href="#" id="myblog">我的博客</a></div>
+          <div ><a target="_blank" style="color: white;" href="/BlogRoom/apps/userInfo.html">个人中心</a></div>
+          <div><a class="#" target="_blank" style="color: white;">消息<span class="toolbar-newsL" style="margin-left: 4px; display: none;">(2)</span></a></div>
+          <div><a target="_blank" style="color: white;">反馈</a></div>
+          <div><a target="_blank" style="color: white;">帮助</a></div>
+          <div><a style="color: white;" href="/BlogRoom/user/quitLog">退出</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="nav-header" class="navbar">
+
+    <ul class="nav">
+      <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/BlogRoom/apps/index.html">首页</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(1,1)">程序人生</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(2,1)">编程</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(3,1)">前端</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(4,1)">数据库</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(5,1)">算法</a></li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="javascript:;" onclick="getArticlesOfClass(6,1)">其他</a></li>
+
+      <li style="float:right;">
+        <div class="toggle-search active" style="width: 50px;"><a id="searchA"><i class="fa fa-search fa-lg"></i></a></div>
+        <div class="search-expand" style="display: block;">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" onkeydown="if(event.keyCode==13)return false;">
+              <div>
+                <input type="text" id="keywords" value="" class="search" name="s" placeholder="search...">
+              </div>
+            </form>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="container"><div class="speedbar">
+  <div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i> </strong> </div>
+</div>
+  <div class="content-wrap">
+    <div class="content">
+      <img src="/BlogRoom/images/loading.gif" style="width: 100% ">
+       <!--所有文章和分页；-->
+    </div>
+  </div>
+
+
+  <aside class="sidebar">
+
+    <div class="widget widget_recent_entries">
+      <div class="title"><h2>时尚博文</h2></div>
+      <ul id="goodarticle">
+        <!--时尚博文-->
+        <img src="/BlogRoom/images/loading.gif" style="width: 100% " >
+      </ul>
+    </div>
+    <div class="widget widget_archive"><div class="title"><h2>时尚博主</h2></div>
+    <ul id="goodauthor">
+      <!--时尚博主-->
+      <img src="/BlogRoom/images/loading.gif" style="width: 100% ">
+    </ul>
+  </div>
+
+
+
+  <div class="widget widget_meta"><div class="title"><h2>友情链接</h2></div>
+    <ul>
+    <li><a href="#">思衡网络</a></li>
+    <li><a href="http://www.welcom212.com/wordpress/wp-login.php">3DST技术网</a></li>
+    <li><a href="#">文章<abbr title="Really Simple Syndication">×××个人博客</abbr></a></li>
+    <li><a href="#">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+      <li>
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare"><a class="bds_tsina"></a><a class="bds_qzone"></a><a class="bds_tqq"></a><a class="bds_renren"></a><span class="bds_more"></span><a class="shareCount"></a></div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+    </script>
+    <!-- Baidu Button END -->
+    <a href="/" class="weixin"> </a>
+      </li>
+    </ul>
+  </div>
+
+  </aside>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright pull-left">
+      Design by DanceSmile <a href="/BlogRoom/apps/index.html">博客屋</a> 保留所有权利
+      <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11002373号-1</a> <a href="/">网站统计</a>
+    </div>
+    <div class="trackcode pull-right">
+      <a href="/BlogRoom/apps/about.html" target="_blank">关于博客屋</a>
+      <a href="/BlogRoom/apps/contact.html" target="_blank">联系我们</a>
+    </div>
+  </div>
+</footer>
+
+<div class="rollto" style="display: none;"><button class="btn btn-inverse" data-type="totop" title="回顶部"><i class="fa fa-arrow-up"></i></button></div>
+<!--登录-->
+<div class="pop" id="login" style="display: none;">
+  <div class="pop-wp" style="left: 50%;">
+    <a href="http://yuedu.fm/article/525/#" rel="nofollow" title="关闭" class="pop-close">×</a>
+    <div class="pop-title">登录</div>
+
+    <form id="loginForm" method="post" action="/BlogRoom/user/login" novalidate="novalidate">
+      <div class="account-form">
+        <div>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="lusername" class="account-input" placeholder="用户名">
+        <div id="error_tip_lusername" class="error-tip"></div>
+        </div>
+
+        <div class="account-line"></div>
+
+        <div>
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="lpassword" class="account-input" placeholder="密码">
+        <div id="error_tip_lpassword" class="error-tip"></div>
+        </div>
+      </div>
+      <div class="account-other">
+        <span class="fr"><a href="http://yuedu.fm/retrieve/" class="red-link" target="_blank">忘记密码</a></span>
+        <label><input type="checkbox" value="1" name="nextauto"> 下次自动登录</label>
+      </div>
+      <button type="submit" class="account-btn">登 录</button>
+    </form>
+  </div>
+</div>
+<!--注册-->
+<div class="pop" id="register" style="display:none;">
+  <div class="pop-wp">
+    <a href="http://yuedu.fm/article/525/#" rel="nofollow" title="关闭" class="pop-close">×</a>
+    <div class="pop-title">注册</div>
+    <form id="registerForm" method="post" action="/BlogRoom/user/register" novalidate="novalidate">
+      <div class="account-form">
+      <div>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="userName" class="account-input" placeholder="昵称">
+        <div id="error_tip_userName" class="error-tip"></div>
+      </div>
+        <div class="account-line"></div>
+        <div>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        <input type="text" name="userEmail" class="account-input" placeholder="邮箱">
+        <div id="error_tip_userEmail" class="error-tip"></div>
+        </div>
+        <div class="account-line"></div>
+        <div>
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="userPwd" id="rpassword" class="account-input" placeholder="密码">
+        <div id="error_tip_userPwd" class="error-tip"></div>
+        </div>
+        <div class="account-line"></div>
+        <div>
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="repassword" class="account-input" placeholder="确认密码">
+        <div id="error_tip_repassword" class="error-tip"></div>
+        </div>
+      </div>
+      <div class="account-other">
+        <label><input type="checkbox" name="angree" id="angree" value="1"> 我已认真阅读并同意博客屋的<a href="http://yuedu.fm/agreement/" class="red-link" target="_blank">《使用协议》</a></label>
+        <div id="error_tip_angree" class="error-tip"></div>
+      </div>
+      <button type="submit" class="account-btn">注册</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
