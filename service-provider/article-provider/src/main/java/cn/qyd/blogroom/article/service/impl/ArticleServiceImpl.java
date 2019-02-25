@@ -63,7 +63,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> fashionArticles() {
-        Pageable pageable = PageRequest.of(1,10);
+        Pageable pageable = PageRequest.of(0,10);
         ArticleQueryParam param = new ArticleQueryParam(new ArticleQueryDto());
         Page<Article> page = articleDao.findAll(param,pageable);
         return page.getContent();
@@ -149,7 +149,7 @@ public class ArticleServiceImpl implements ArticleService {
             }else {
                 criteriaQuery.orderBy(criteriaBuilder.desc(root.get("updateTime").as(LocalDateTime.class)));
             }
-            return criteriaBuilder.and(list.toArray(p));
+            return criteriaQuery.getRestriction();
         }
     }
 

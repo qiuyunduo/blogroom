@@ -3,15 +3,15 @@
 
  Source Server         : mysql
  Source Server Type    : MySQL
- Source Server Version : 50725
+ Source Server Version : 50724
  Source Host           : localhost:3306
  Source Schema         : blogroom_user
 
  Target Server Type    : MySQL
- Target Server Version : 50725
+ Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 22/02/2019 19:12:24
+ Date: 25/02/2019 23:56:33
 */
 
 SET NAMES utf8mb4;

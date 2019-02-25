@@ -2,6 +2,7 @@ package cn.qyd.blogroom.article.entity;
 
 import cn.qyd.blogroom.common.entity.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import javax.persistence.Table;
 @Table(name = "comment")
 @Data
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = true)
 public class Comment extends BaseEntity {
     @Column(name = "article_id",columnDefinition = "mediumint(9) COMMENT '文章id'")
     private Long articleId;
