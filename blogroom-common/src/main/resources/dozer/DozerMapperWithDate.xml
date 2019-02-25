@@ -9,6 +9,11 @@
                 <class-a>java.time.LocalDateTime</class-a>
                 <class-b>java.util.Date</class-b>
             </converter>
+
+            <converter type="cn.qyd.blogroom.common.utils.dozer.DozerConverterWithLocalDateTime">
+                <class-a>java.time.LocalDateTime</class-a>
+                <class-b>java.time.LocalDateTime</class-b>
+            </converter>
         </custom-converters>
     </configuration>
 

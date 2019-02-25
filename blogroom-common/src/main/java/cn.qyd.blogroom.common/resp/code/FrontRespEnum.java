@@ -47,12 +47,8 @@ public enum FrontRespEnum implements CodeAndMessage {
     /**
      * 评论
      */
-
-    /**
-     * 意见反馈
-     */
-    OPINION_NOT_EXIST(330, "评论不存在"),
-    OPINION_CONTAIN_SENSITIVE_WORD(331,"反馈信息包含敏感词汇"),
+    COMMENT_NOT_EXIST(330, "评论不存在"),
+    COMMENT_CONTAIN_SENSITIVE_WORD(331,"您的评论包含敏感词汇"),
 
     /**
      * 文章模块

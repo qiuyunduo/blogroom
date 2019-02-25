@@ -2,6 +2,8 @@ package cn.qyd.blogroom.article.entity;
 
 import cn.qyd.blogroom.common.entity.BaseEntity;
 import lombok.Data;
+import lombok.experimental.Accessors;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "article")
 @Data
+@Accessors(chain = true)
 public class Article extends BaseEntity {
     @Column(name = "class_id",columnDefinition = "mediumint(9) COMMENT '文章类别'")
     private Long classId;

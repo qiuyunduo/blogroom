@@ -1,7 +1,9 @@
 package cn.qyd.blogroom.article.service.impl;
 
 import cn.qyd.blogroom.article.dao.ArticleDao;
+import cn.qyd.blogroom.article.dto.ArticleDto;
 import cn.qyd.blogroom.article.dto.ArticleQueryDto;
+import cn.qyd.blogroom.article.dto.ArticleStatusDto;
 import cn.qyd.blogroom.article.entity.Article;
 import cn.qyd.blogroom.article.service.ArticleService;
 import cn.qyd.blogroom.common.exception.BusinessException;
@@ -12,10 +14,8 @@ import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +27,25 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleDao articleDao;
+
+    @Override
+    public Article save(ArticleDto dto) {
+        Article article = new Article();
+        article.setClassId(dto.getClassId())
+                .setUserId(dto.getUserId())
+                .setAuthor(dto.getAuthor())
+                .setTitle(dto.getTitle())
+                .setDescribe(dto.getDescribe())
+                .setKeyword(dto.getKeyword())
+                .setContent(dto.getContent())
+                .setComments(0)
+                .setThumbs(0)
+                .setStatus(dto.getStatus())
+                .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
+                .setAddTime(LocalDateTime.now());
+        Article result = articleDao.save(article);
+        return result;
+    }
 
     @Override
     public Page<Article> query(ArticleQueryDto dto) {
@@ -42,6 +61,62 @@ public class ArticleServiceImpl implements ArticleService {
                 .orElseThrow(() -> BusinessException.fail(FrontRespEnum.ARTICLE_NOT_EXIST));
     }
 
+    @Override
+    public List<Article> fashionArticles() {
+        Pageable pageable = PageRequest.of(1,10);
+        ArticleQueryParam param = new ArticleQueryParam(new ArticleQueryDto());
+        Page<Article> page = articleDao.findAll(param,pageable);
+        return page.getContent();
+    }
+
+    @Override
+    public Boolean update(ArticleDto dto) {
+        Article article = findById(dto.getId());
+        article.setClassId(dto.getClassId())
+                .setTitle(dto.getTitle())
+                .setDescribe(dto.getDescribe())
+                .setKeyword(dto.getKeyword())
+                .setContent(dto.getContent())
+                .setStatus(dto.getStatus())
+                .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
+                .setAddTime(LocalDateTime.now());
+        articleDao.save(article);
+        return true;
+    }
+
+    @Override
+    public Boolean updateStatus(ArticleStatusDto statusDto) {
+        Article article = findById(statusDto.getId());
+        if(statusDto.getAddComments() != null && statusDto.getAddComments()){
+            article.setComments(article.getComments() + 1);
+        }
+        if(statusDto.getRemoveComments() != null && statusDto.getRemoveComments()){
+            article.setComments(article.getComments() - 1);
+        }
+        if(statusDto.getAddThumbs() != null && statusDto.getAddThumbs()) {
+            article.setThumbs(article.getThumbs() + 1);
+        }
+        if(statusDto.getRemoveThumbs() != null && statusDto.getRemoveThumbs()) {
+            article.setThumbs(article.getThumbs() - 1);
+        }
+
+        if(statusDto.getStatus() != null){
+            article.setStatus(statusDto.getStatus());
+            if(statusDto.getStatus() == 2) {
+                article.setPublishTime(LocalDateTime.now());
+            }
+        }
+
+        articleDao.save(article);
+        return true;
+    }
+
+    @Override
+    public Boolean delete(Long id) {
+        articleDao.deleteById(id);
+        return true;
+    }
+
     /**
      * 查询条件
      */
@@ -54,26 +129,26 @@ public class ArticleServiceImpl implements ArticleService {
         @Override
         public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
             List<Predicate> list = new ArrayList<Predicate>();
-//            if(queryDto.getId()!=null){
-//                list.add(criteriaBuilder.equal(root.get("id").as(Long.class), queryDto.getId()));
-//            }
-//            if(queryDto.getCreatedDate()!=null){
-//                list.add(criteriaBuilder.greaterThanOrEqualTo(root.get("createdDate").as(LocalDate.class), Formater.parseLocalDate(queryDto.getCreatedDate())));
-//            }
             if(StringUtils.isNotEmpty(queryDto.getTitle())){
                 list.add(criteriaBuilder.like(root.get("title").as(String.class), "%"+queryDto.getTitle()+"%"));
             }
-//            if(StringUtils.isNotEmpty(queryDto.getEmail())){
-//                list.add( criteriaBuilder.like(root.get("email").as(String.class), "%"+queryDto.getEmail()+"%"));
-//            }
-//            if(queryDto.getLocation()!=null){
-//                list.add(criteriaBuilder.like(root.get("location").as(String.class), "%"+queryDto.getLocation()+"%"));
-//            }
-//            if(queryDto.getDemand()!=null){
-//                list.add(criteriaBuilder.like(root.get("demand").as(String.class), "%"+queryDto.getDemand()+"%"));
-//            }
+            if(queryDto.getClassId()!=null){
+                list.add(criteriaBuilder.equal(root.get("classId").as(Long.class), queryDto.getClassId()));
+            }
+            if(queryDto.getUserId()!=null){
+                list.add(criteriaBuilder.equal(root.get("userId").as(Long.class), queryDto.getUserId()));
+            }
+            if(queryDto.getStatus() != null){
+                list.add(criteriaBuilder.equal(root.get("status").as(Integer.class), queryDto.getStatus()));
+            }
 
             Predicate[] p = new Predicate[list.size()];
+            criteriaQuery.where(list.toArray(p));
+            if(queryDto.getOrderByUpdateTime() == null || queryDto.getOrderByUpdateTime()) {
+                criteriaQuery.orderBy(criteriaBuilder.desc(root.get("addTime").as(LocalDateTime.class)));
+            }else {
+                criteriaQuery.orderBy(criteriaBuilder.desc(root.get("updateTime").as(LocalDateTime.class)));
+            }
             return criteriaBuilder.and(list.toArray(p));
         }
     }

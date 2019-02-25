@@ -1,5 +1,6 @@
 package cn.qyd.blogroom.article.service;
 
+import cn.qyd.blogroom.article.dto.CommentDto;
 import cn.qyd.blogroom.article.entity.Comment;
 import java.util.List;
 /**
@@ -7,13 +8,13 @@ import java.util.List;
  * @Date 19-2-22 下午4:22
  **/
 public interface CommentService {
-    int deleteByCid(Long commentId);
+    Comment save(CommentDto dto);
 
-    int insertOne(Comment comment);
+    Comment findById(Long id);
 
-    Comment selectOneByCid(Long commentId);
+    List<Comment> articleComments(Long articleId);
 
-    List<Comment> selectAllByAid(Long aid);
+    Boolean update(Long id,String content);
 
-    int updateByComment(Comment comment);
+    Boolean delete(Long id);
 }
