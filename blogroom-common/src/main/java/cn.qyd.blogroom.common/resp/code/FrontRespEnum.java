@@ -30,7 +30,7 @@ public enum FrontRespEnum implements CodeAndMessage {
     USER_ACCOUNT_LOCK(222,"账号已被锁定，请联系平台管理员"),
     PLEASE_AUTH_THE_REAL_NAME_FIRST(223,"请先进行实名认证"),
     THE_ACCOUNT_IS_LOCK_AND_CANNOT_FAIL_MORE_THAN_THREE_TIMES(224,"该账户被锁定，失败次数不能超过3次"),
-    PLEASE_DO_NOT_REPEAT_ADVANCED_AUTH(225,"请不要重复高级认证"),
+    THE_OLD_PASSWORD_ERROR(225,"原密码输入错误"),
     THE_MAIL_HAS_BEEN_USED(226,"邮箱已经被使用"),
 
     THE_PHONE_HAS_BEEN_USED(227,"手机号已经被使用"),

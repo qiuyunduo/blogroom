@@ -1,6 +1,10 @@
 package cn.qyd.blogroom.user.service;
 
+import cn.qyd.blogroom.user.dto.AttentionDto;
+import cn.qyd.blogroom.user.dto.AttentionQueryDto;
 import cn.qyd.blogroom.user.entity.Attention;
+import org.springframework.data.domain.Page;
+
 import java.util.List;
 
 /**
@@ -8,12 +12,9 @@ import java.util.List;
  * @Date 19-2-22 下午4:24
  **/
 public interface AttentionService {
-    int deleteBySelective(Attention attention);
+    Attention save(AttentionDto dto);
 
-    int insertOne(Attention attention);
+    Page<Attention> query(AttentionQueryDto dto);
 
-    //查询某一用户所有关注的用户（关注）
-    List<Integer> selectAllOfGid(Integer Gid);
-    //查询所有关注了某一用户的用户（粉丝）
-    List<Integer> selectAllOfFid(Integer Fid);
+    Boolean delete(Long id);
 }
