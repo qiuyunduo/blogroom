@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    @ApiOperation("测试用例")
+    @ApiOperation("用户登录")
     public Resp login(String name, String password){
         User user = userService.login(name, password);
         return Resp.succeed(user);

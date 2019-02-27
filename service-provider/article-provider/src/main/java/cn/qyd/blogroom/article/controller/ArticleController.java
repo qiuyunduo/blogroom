@@ -77,7 +77,7 @@ public class ArticleController {
     }
 
     @DeleteMapping("/delete/{articleId}")
-    @ApiOperation("修改文章信息状态")
+    @ApiOperation("删除文章")
     public Resp updateArticleStatus(@PathVariable("articleId") Long articleId) {
         Boolean result = articleService.delete(articleId);
         return Resp.succeed(result);

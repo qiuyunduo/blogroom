@@ -37,10 +37,10 @@ public enum FrontRespEnum implements CodeAndMessage {
     THE_USER_NOT_EXIST(228,"用户不存在"),
 
     /**
-     *
+     * 博客
      */
-    TRAVELS_NOT_EXIST(300, "游记不存在"),
-    TRAVELS_PHOTO_SIZE_ERROR(301, "游记上传照片不能超过9张"),
+    BLOG_NOT_ACTIVE(300, "该用户尚未开通博客"),
+    BLOG_NOT_EXIST(301, "博客不存在"),
     TRAVELS_HAS_FINISHED(302, "游记已完成，不能更新"),
     TRAVELS_DRAFT_EXIST(303, "完成草稿前，不能新增游记"),
     TOKEN_NOT_ENOUGH(305, "没子弹了"),
@@ -61,9 +61,15 @@ public enum FrontRespEnum implements CodeAndMessage {
      * 管理员
      */
     ADMIN_NOT_EXIST(450, "管理员不存在"),
-    ADMIM_LOGIN_FAIL_PASSWORD_ERROR(450, "密码错误"),
-    ADMIN_ADD_FAIL(451, "管理员新增失败"),
-    ADMIN_UPDATE_FAIL(452, "管理员更新失败"),
+    ADMIN_LOGIN_FAIL_PASSWORD_ERROR(451, "密码错误"),
+    ADMIN_LOCK(452,"此管理员账锁定"),
+    ADMIN_HAVING_DELETE(452,"此管理员账号已注销"),
+
+    /**
+     * 其他
+     */
+    RANK_ERROR(460,"获取博客等级信息出现错误"),
+    INTEGRAL_CONFIG_ERROR(461,"积分设置获取出错"),
     ;
 
     private Integer code;
