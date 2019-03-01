@@ -17,7 +17,7 @@ public enum FrontRespEnum implements CodeAndMessage {
     GET_WECHAT_SMALL_LOGIN_ERROR(209,"获取微信小程序登录信息异常"),
     WX_USER_CHECK_FAIL(210,"微信用户信息校验失败"),
     INVALID_TOKEN(211,"无效token"),
-    LOGIN_INFO_EXIST(212,"请进行登录"),
+    LOGIN_INFO_EXIST(212,"您还未登录,请进行登录"),
     LOGIN_ACCOUNT_EXIST(213,"账号不存在"),
     LOGIN_PWD_NOT_NULL(214,"登录密码不能为空"),
     LOGIN_PWD_ERROR(215,"账号或密码错误"),
