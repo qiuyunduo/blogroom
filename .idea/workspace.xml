@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/filter/LoginTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/annotations/CheckLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/LoginUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/filter/UrlList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/resp/code/FrontRespEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/target/classes/cn/qyd/blogroom/common/resp/code/FrontRespEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/AttentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/AttentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/blogroom-project/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,7 +37,7 @@
     <session id="-1892146746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -99,7 +87,7 @@
           <entry key="js" value="335" />
           <entry key="properties" value="5" />
           <entry key="sql" value="2" />
-          <entry key="txt" value="266" />
+          <entry key="txt" value="278" />
           <entry key="xml" value="133" />
           <entry key="yml" value="201" />
         </counts>
@@ -109,7 +97,7 @@
           <entry key="HTML" value="53" />
           <entry key="JAVA" value="17429" />
           <entry key="JavaScript" value="335" />
-          <entry key="PLAIN_TEXT" value="266" />
+          <entry key="PLAIN_TEXT" value="278" />
           <entry key="Properties" value="5" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="133" />
@@ -1112,7 +1100,7 @@
       <workItem from="1551318363131" duration="6535000" />
       <workItem from="1551326139967" duration="178000" />
       <workItem from="1551403554799" duration="2307000" />
-      <workItem from="1551431186636" duration="350000" />
+      <workItem from="1551431186636" duration="4360000" />
     </task>
     <task id="LOCAL-00001" summary="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支">
       <created>1550652035778</created>
@@ -1163,11 +1151,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551251114499</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="检查登录">
+      <created>1551431584085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551431584085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132289000" />
+    <option name="totallyTimeSpent" value="136299000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1265,7 +1260,8 @@
     <MESSAGE value="update1" />
     <MESSAGE value="用户模块用户和粉丝关注部分逻辑" />
     <MESSAGE value="完成博客模块中的博客信息,等级，积分，积分日志。网站模块的管理员，友情链接。接下来进行服务之间的联调调用。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成博客模块中的博客信息,等级，积分，积分日志。网站模块的管理员，友情链接。接下来进行服务之间的联调调用。" />
+    <MESSAGE value="检查登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="检查登录" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/dto/AdminDto.java">
@@ -1495,6 +1491,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
