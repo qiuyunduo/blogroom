@@ -8,6 +8,8 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import io.swagger.models.auth.In;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,27 +24,25 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "user")
 @Data
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
 public class User extends BaseEntity {
     @Column(name = "name",columnDefinition = "varchar(32) COMMENT '用户名'")
     private String name;
 
-    @Column(name = "password",columnDefinition = "varchar(32) COMMENT '用户密码'")
+    @Column(name = "password",columnDefinition = "varchar(64) COMMENT '用户密码'")
     private String password;
 
-    @Column(name = "nick_name",columnDefinition = "varchar(32) COMMENT '昵称'")
-    private String nickName;
-
-    @Column(name = "phone",columnDefinition = "varchar(64) COMMENT '电话号码'")
+    @Column(name = "phone",columnDefinition = "varchar(32) COMMENT '电话号码'")
     private String phone;
 
-    @Column(name = "email",columnDefinition = "varchar(64) COMMENT '邮箱'")
+    @Column(name = "email",columnDefinition = "varchar(32) COMMENT '邮箱'")
     private String email;
 
     @Column(name = "sex",columnDefinition = "int(1) COMMENT '性别'")
     private Integer sex;
 
     @Column(name = "birthday",columnDefinition = "date COMMENT '生日'")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private LocalDate birthday;
 
     @Column(name = "head_image",columnDefinition = "varchar(255) COMMENT '头像地址'")

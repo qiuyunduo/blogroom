@@ -17,7 +17,7 @@ public enum FrontRespEnum implements CodeAndMessage {
     GET_WECHAT_SMALL_LOGIN_ERROR(209,"获取微信小程序登录信息异常"),
     WX_USER_CHECK_FAIL(210,"微信用户信息校验失败"),
     INVALID_TOKEN(211,"无效token"),
-    LOGIN_INFO_EXIST(212,"请进行登录"),
+    LOGIN_INFO_EXIST(212,"您还未登录,请进行登录"),
     LOGIN_ACCOUNT_EXIST(213,"账号不存在"),
     LOGIN_PWD_NOT_NULL(214,"登录密码不能为空"),
     LOGIN_PWD_ERROR(215,"账号或密码错误"),
@@ -30,17 +30,17 @@ public enum FrontRespEnum implements CodeAndMessage {
     USER_ACCOUNT_LOCK(222,"账号已被锁定，请联系平台管理员"),
     PLEASE_AUTH_THE_REAL_NAME_FIRST(223,"请先进行实名认证"),
     THE_ACCOUNT_IS_LOCK_AND_CANNOT_FAIL_MORE_THAN_THREE_TIMES(224,"该账户被锁定，失败次数不能超过3次"),
-    PLEASE_DO_NOT_REPEAT_ADVANCED_AUTH(225,"请不要重复高级认证"),
+    THE_OLD_PASSWORD_ERROR(225,"原密码输入错误"),
     THE_MAIL_HAS_BEEN_USED(226,"邮箱已经被使用"),
 
     THE_PHONE_HAS_BEEN_USED(227,"手机号已经被使用"),
     THE_USER_NOT_EXIST(228,"用户不存在"),
 
     /**
-     *
+     * 博客
      */
-    TRAVELS_NOT_EXIST(300, "游记不存在"),
-    TRAVELS_PHOTO_SIZE_ERROR(301, "游记上传照片不能超过9张"),
+    BLOG_NOT_ACTIVE(300, "该用户尚未开通博客"),
+    BLOG_NOT_EXIST(301, "博客不存在"),
     TRAVELS_HAS_FINISHED(302, "游记已完成，不能更新"),
     TRAVELS_DRAFT_EXIST(303, "完成草稿前，不能新增游记"),
     TOKEN_NOT_ENOUGH(305, "没子弹了"),
@@ -61,9 +61,15 @@ public enum FrontRespEnum implements CodeAndMessage {
      * 管理员
      */
     ADMIN_NOT_EXIST(450, "管理员不存在"),
-    ADMIM_LOGIN_FAIL_PASSWORD_ERROR(450, "密码错误"),
-    ADMIN_ADD_FAIL(451, "管理员新增失败"),
-    ADMIN_UPDATE_FAIL(452, "管理员更新失败"),
+    ADMIN_LOGIN_FAIL_PASSWORD_ERROR(451, "密码错误"),
+    ADMIN_LOCK(452,"此管理员账锁定"),
+    ADMIN_HAVING_DELETE(452,"此管理员账号已注销"),
+
+    /**
+     * 其他
+     */
+    RANK_ERROR(460,"获取博客等级信息出现错误"),
+    INTEGRAL_CONFIG_ERROR(461,"积分设置获取出错"),
     ;
 
     private Integer code;
