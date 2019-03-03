@@ -4,8 +4,89 @@
     <bookmark url="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="">
+    <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="移除github中的target">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/build/webpack.base.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/config/dev.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/head.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/addarticle/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/background/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/background/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/background/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/background/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/basestyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/bokeyuan/about.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/bokeyuan/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/login-register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/pure-highlight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/content_toolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/goTop.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/list-e755714c1d.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/paging.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/pub_footer_1.0.3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/sandalstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/skin-ink-29a6f69188.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user/ui_b99a586.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user1/app.80dc29568d03c38ddf7eaabc81227ba7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/css/user1/skeleton.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/backlogo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/default.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/images/weixin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/bootstrap-datetimepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/bootstrap-datetimepicker.zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/geturlParam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/highlight.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/add-article.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/article.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/edit-article.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/loadhead.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/loadright.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/login-register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/managerAccount.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/managerblog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/myattention.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/mybase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/myfens.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/searchArticles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/userBlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/myjs/userinfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/wp-embed.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/style/js/wp-emoji-release.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view/layout/Layout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view/layout/components/AppFoot.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view/layout/components/AppHead.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view/layout/components/AppMain.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view/website/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/provider/user_provider/user_provider_error.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/blogroom-project/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,31 +114,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1892146746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="22" />
-          <entry key="gitignore" value="10" />
+          <entry key="gitignore" value="11" />
           <entry key="html" value="6" />
-          <entry key="java" value="367" />
-          <entry key="js" value="13" />
+          <entry key="java" value="376" />
+          <entry key="js" value="14" />
           <entry key="jsp" value="2" />
           <entry key="pom" value="1" />
           <entry key="properties" value="8" />
@@ -70,10 +171,10 @@
         <counts>
           <entry key="CLASS" value="22" />
           <entry key="HTML" value="6" />
-          <entry key="JAVA" value="367" />
+          <entry key="JAVA" value="376" />
           <entry key="JSP" value="2" />
-          <entry key="JavaScript" value="13" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="JavaScript" value="14" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="Properties" value="8" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="55" />
@@ -85,9 +186,10 @@
           <entry key="html" value="53" />
           <entry key="java" value="17429" />
           <entry key="js" value="335" />
+          <entry key="md" value="31" />
           <entry key="properties" value="5" />
           <entry key="sql" value="2" />
-          <entry key="txt" value="278" />
+          <entry key="txt" value="305" />
           <entry key="xml" value="133" />
           <entry key="yml" value="201" />
         </counts>
@@ -97,7 +199,8 @@
           <entry key="HTML" value="53" />
           <entry key="JAVA" value="17429" />
           <entry key="JavaScript" value="335" />
-          <entry key="PLAIN_TEXT" value="278" />
+          <entry key="Markdown" value="31" />
+          <entry key="PLAIN_TEXT" value="305" />
           <entry key="Properties" value="5" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="133" />
@@ -158,99 +261,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/annotations/CheckLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/LoginUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/AttentionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding>
-                <element signature="e#682#683#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.21/swagger-annotations-1.5.21-sources.jar!/io/swagger/annotations/ApiOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/GatewayServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -281,7 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dao/IntegralLogDao.java" />
         <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dao/IntegralConfigDao.java" />
         <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/entity/IntegralConfig.java" />
         <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dto/IntegralLogDto.java" />
@@ -332,6 +342,7 @@
         <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/LoginUtil.java" />
         <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" />
         <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" />
+        <option value="$PROJECT_DIR$/blog-web-new/blogroom/README.md" />
       </list>
     </option>
   </component>
@@ -364,11 +375,15 @@
       <select />
     </treeState>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/blog-web-new/blogroom/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="y" value="34" />
-    <option name="width" value="960" />
-    <option name="height" value="1046" />
+    <option name="y" value="32" />
+    <option name="width" value="1366" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -376,132 +391,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="blog-web-new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="blog-web-new" type="462c0819:PsiDirectoryNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
-              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,18 +414,22 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551405859619" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551618906877" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../oldProjects/BlogRoom" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/service-provider/website-provider" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/website" />
+      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/article" />
+      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/blog" />
+      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/user" />
+      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.qyd.blogroom.common.utils.dozer" />
@@ -537,12 +438,8 @@
       <recent name="cn.qyd.blogroom.gateway" />
       <recent name="cn.qyd.blogroom.gateway.filter" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/website" />
-      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/article" />
-      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/blog" />
-      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client/user" />
-      <recent name="$PROJECT_DIR$/service-client/src/main/java/cn/qyd/blogroom/client" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-provider/website-provider" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -935,7 +832,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceProvider">
+  <component name="RunManager" selected="Spring Boot.ArticleServiceProvider">
     <configuration name="PagingUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.qyd.blogroom.common.utils.PagingUtil" />
       <module name="blogroom-common" />
@@ -1101,6 +998,12 @@
       <workItem from="1551326139967" duration="178000" />
       <workItem from="1551403554799" duration="2307000" />
       <workItem from="1551431186636" duration="4360000" />
+      <workItem from="1551516988458" duration="288000" />
+      <workItem from="1551533232497" duration="1278000" />
+      <workItem from="1551539927363" duration="81000" />
+      <workItem from="1551616451848" duration="86000" />
+      <workItem from="1551616800003" duration="60000" />
+      <workItem from="1551616962351" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支">
       <created>1550652035778</created>
@@ -1158,11 +1061,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551431584085</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="移除github中的target">
+      <created>1551511090550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551511090550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136299000" />
+    <option name="totallyTimeSpent" value="140693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1174,9 +1084,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
+    <frame x="0" y="32" width="1366" height="736" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2724359" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3151515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1186,15 +1096,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.46666667" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3740374" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.68833333" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32893288" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.37333333" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49924242" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="13" weight="0.4081408" />
@@ -1205,7 +1115,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.51282054" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32954547" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -1261,43 +1171,10 @@
     <MESSAGE value="用户模块用户和粉丝关注部分逻辑" />
     <MESSAGE value="完成博客模块中的博客信息,等级，积分，积分日志。网站模块的管理员，友情链接。接下来进行服务之间的联调调用。" />
     <MESSAGE value="检查登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="检查登录" />
+    <MESSAGE value="移除github中的target" />
+    <option name="LAST_COMMIT_MESSAGE" value="移除github中的target" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/dto/AdminDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" selection-start-line="23" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application-dev.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/WebsiteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1354,13 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1379,9 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,13 +1260,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/BlogServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/ArticleServiceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
@@ -1441,13 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-base/server-eureka/src/main/java/cn/qyd/blogroom/eureka/EurekaServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/config/CrossConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1480,20 +1333,11 @@
     <entry file="file://$PROJECT_DIR$/blog-web-old/ueditor/jsp/controller.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/server/reactive/ServerHttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-554">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/server/reactive/ServerHttpRequest.java" />
     <entry file="file://$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/filter/LoginTokenFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1511,20 +1355,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/HttpHeaders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24354">
-          <caret line="1495" column="24" selection-start-line="1495" selection-start-column="24" selection-end-line="1495" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/HttpRequest.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/http/HttpHeaders.java" />
     <entry file="file://$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/SwaggerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1532,13 +1364,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="489" selection-start-line="489" selection-end-line="489" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/annotation/Pointcut.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1550,9 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1577,28 +1400,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.21/swagger-annotations-1.5.21-sources.jar!/io/swagger/annotations/ApiOperation.java" />
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web-new/blogroom/.postcssrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web-new/blogroom/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/UserServiceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="14">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java">
+    <entry file="file://$PROJECT_DIR$/blogroom-base/server-eureka/src/main/java/cn/qyd/blogroom/eureka/EurekaServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.21/swagger-annotations-1.5.21-sources.jar!/io/swagger/annotations/ApiOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="234">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1609,13 +1435,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/ArticleServiceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/Resp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/paging/PagingInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web-new/blogroom/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="126">
+            <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

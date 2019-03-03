@@ -3,7 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import Layout from '@/view/layout/Layout'
+// import Layout from '@/view/layout/Layout'
+// import HelloWorld from '@/components/HelloWorld'
 
 export const constantRouterMap = [
   // {
@@ -32,14 +33,38 @@ export const constantRouterMap = [
   //   component: () => import('@/views/errorPage/404'),
   //   hidden: true
   // },
-  // {
-  //   path: '/401',
-  //   component: () => import('@/views/errorPage/401'),
-  //   hidden: true
-  // },
   {
-    path: '',
-    component: Layout
+    path: '/test',
+    name: 'layout',
+    component: () => import('@/views/layout/Layout'),
+    redirect: 'noredirect',
+    children: [
+      {
+        path: 'main',
+        component: () => import('@/views/website/index'),
+        name: 'main',
+        meta: { title: 'main', icon: 'main', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('@/components/index')
+  },
+  {
+    path: '/',
+    component: () => import('@/views/layout/Layout'),
+    redirect: 'noredirect',
+    name: 'layout',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/website/index'),
+        name: 'index',
+        meta: { title: '首页', noCache: true }
+      },
+    ]
   },
   // {
   //   path: '',
@@ -58,6 +83,6 @@ export const constantRouterMap = [
 
 export default new Router({
   // mode: 'history', // require service support
-  scrollBehavior: () => ({ y: 0 }),
+  // scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

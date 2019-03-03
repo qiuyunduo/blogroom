@@ -7,3 +7,4 @@ module.exports = merge(prodEnv, {
   ENV_CONFIG: '"dev"',
   BASE_API: '"http://localhost:8088"'
 })
+

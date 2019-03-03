@@ -3,14 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Element from 'element-ui'
 
-import './style/css/background/bootstrap.min.css'
-import './style/css/background/font-awesome.min.css'
-import './style/css/background/login.css'
-import './style/css/background/style.css'
-// import './style/js/bootstrap.min.js'
+import '@/style/basestyle.css'
+import 'element-ui/lib/theme-chalk/index.css'
+
+import '@/style/other/index.scss' // global css
 
 Vue.config.productionTip = false
+
+Vue.use(Element)
 
 /* eslint-disable no-new */
 new Vue({
