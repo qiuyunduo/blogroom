@@ -18,5 +18,5 @@ eureka:
 
 logging:
   config:
-    classpath:logback-spring.xml
+    classpath: logback-spring.xml
 

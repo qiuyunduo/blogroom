@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: pro
   application:
     name: user-provider
 
@@ -20,7 +20,7 @@ User: qiuyunduo
 
 logging:
   config:
-    classpath:logback-spring.xml
+    classpath: logback-spring.xml
 
 testurl: dev
 

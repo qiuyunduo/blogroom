@@ -5,6 +5,7 @@ import cn.qyd.blogroom.article.dto.ArticleQueryDto;
 import cn.qyd.blogroom.article.dto.ArticleStatusDto;
 import cn.qyd.blogroom.article.entity.Article;
 import cn.qyd.blogroom.article.service.ArticleService;
+import cn.qyd.blogroom.article.vo.ArticleDetailVo;
 import cn.qyd.blogroom.article.vo.ArticleVo;
 import cn.qyd.blogroom.common.resp.Resp;
 import cn.qyd.blogroom.common.resp.paging.PagingInfo;
@@ -50,8 +51,8 @@ public class ArticleController {
     @ApiOperation("根据文章id获取文章")
     public Resp all(@PathVariable("id") Long id) {
         Article article = articleService.findById(id);
-        ArticleVo articleVo = BeanMapper.map(article, ArticleVo.class);
-        return Resp.succeed(articleVo);
+        ArticleDetailVo articleDetailVo = BeanMapper.map(article, ArticleDetailVo.class);
+        return Resp.succeed(articleDetailVo);
     }
 
     @GetMapping("/fashion")

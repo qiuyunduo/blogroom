@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import Element from 'element-ui'
 
 import '@/style/basestyle.css'
+import '@/style/default.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import '@/style/other/index.scss' // global css
+// import '@/style/other/index.scss' // global css
 
 Vue.config.productionTip = false
 
@@ -18,6 +20,7 @@ Vue.use(Element)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

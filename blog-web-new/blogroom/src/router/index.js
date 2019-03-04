@@ -33,39 +33,69 @@ export const constantRouterMap = [
   //   component: () => import('@/views/errorPage/404'),
   //   hidden: true
   // },
-  {
-    path: '/test',
-    name: 'layout',
-    component: () => import('@/views/layout/Layout'),
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'main',
-        component: () => import('@/views/website/index'),
-        name: 'main',
-        meta: { title: 'main', icon: 'main', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/test',
-    name: 'test',
-    component: () => import('@/components/index')
-  },
+  // {
+  //   path: '/test',
+  //   name: 'layout',
+  //   component: () => import('@/views/layout/Layout'),
+  //   redirect: 'noredirect',
+  //   children: [
+  //     {
+  //       path: 'main',
+  //       component: () => import('@/views/website/index'),
+  //       name: 'main',
+  //       meta: { title: 'main', icon: 'main', noCache: true }
+  //     }
+  //   ]
+  // },
   {
     path: '/',
-    component: () => import('@/views/layout/Layout'),
-    redirect: 'noredirect',
     name: 'layout',
+    component: () => import('@/views/layout/Layout'),
     children: [
       {
         path: '',
         component: () => import('@/views/website/index'),
-        name: 'index',
-        meta: { title: '首页', noCache: true }
-      },
+        name: 'main',
+        meta: { title: '首页', noCache: true },
+        children: [
+          {
+            path: 'index',
+            component: () => import('@/views/website/list'),
+            name: 'index',
+            meta: { title: '首页', noCache: true }
+          },
+          {
+            path: 'articles',
+            component: () => import('@/views/website/list'),
+            name: 'articles',
+            meta: { title: '文章list', noCache: true }
+          },
+          {
+            path: 'article/:id',
+            component: () => import('@/views/article/article'),
+            name: 'article',
+            meta: { title: '文章详情', noCache: true }
+          },
+        ]
+      }
+
     ]
   },
+  // {
+  //   path: '/',
+  //   redirect: 'index',
+  //   name: 'index',
+  // },
+  // {
+  //   path: '/article',
+  //   redirect: 'index/article',
+  //   name: 'article',
+  // },
+  // {
+  //   path: '/articles',
+  //   redirect: 'index',
+  //   name: 'articles',
+  // },
   // {
   //   path: '',
   //   component: Layout,

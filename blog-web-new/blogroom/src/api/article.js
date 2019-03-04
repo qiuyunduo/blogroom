@@ -7,3 +7,10 @@ export function allArticles(data) {
     params: data
   })
 }
+
+export function readOne(id) {
+  return request({
+    url: '/article/info/'+id,
+    method: 'get'
+  })
+}
