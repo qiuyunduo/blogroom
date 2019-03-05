@@ -26,11 +26,12 @@ public class UserController {
     @PostMapping("/register")
     @ApiOperation("用户注册")
     public Resp register(UserDto userDto){
+
         User user = userService.save(userDto);
         return Resp.succeed(user);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     @ApiOperation("用户登录")
     public Resp login(String name, String password){
         User user = userService.login(name, password);

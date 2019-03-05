@@ -59,6 +59,10 @@ export const constantRouterMap = [
         meta: { title: '首页', noCache: true },
         children: [
           {
+            path: '',
+            redirect: 'index'
+          },
+          {
             path: 'index',
             component: () => import('@/views/website/list'),
             name: 'index',
@@ -77,8 +81,13 @@ export const constantRouterMap = [
             meta: { title: '文章详情', noCache: true }
           },
         ]
+      },
+      {
+        path: 'blog/:id',
+        component: () => import('@/views/blog/index'),
+        name: 'blog',
+        meta: { title: '个人博客空间', noCache: true },
       }
-
     ]
   },
   // {

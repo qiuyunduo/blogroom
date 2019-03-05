@@ -54,7 +54,6 @@ export default {
 
   },
   activated() {
-    //   alert("shouye")
   },
 }
 </script>

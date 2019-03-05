@@ -15,6 +15,6 @@
 
 <script>
 export default {
-  name: 'FashionBloggers'
+  name: 'Attentions'
 }
 </script>

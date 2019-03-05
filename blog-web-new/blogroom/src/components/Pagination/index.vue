@@ -89,6 +89,10 @@ export default {
 </script>
 
 <style scoped>
+
+/* @import "@/style/other/index.scss"; */
+
+
 .pagination-container {
   background: #fff;
   padding: 32px 16px;

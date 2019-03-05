@@ -1,6 +1,7 @@
 <template>
     <div class="content">
-        <simple-article v-for="item in list" :key="item" :baseInfo="item"/>
+        <div class="blankA" v-if="total === 0"></div>
+        <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]"/>
         <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
     </div>
 </template>
@@ -21,6 +22,7 @@ export default {
         return {
             list: null,
             total: 0,
+            pageSize: 0,
             listQuery: {
                 classId: undefined,
                 title: undefined,
@@ -38,16 +40,16 @@ export default {
     },
     methods: {
         getClassId() {
-            alert(this.$route.query.classId)
             var classid = this.$route.query.classId
             this.listQuery.classId = classid
         },
         getList() {
-            // this.listQuery.classId = this.$route.query.classId
             this.getClassId()
             allArticles(this.listQuery).then(response => {
                 this.list = response.data.pagingData.item
                 this.total = response.data.pagingData.total
+                this.pageSize = response.data.pagingData.pageSize
+                console.log(this.list)
             }).catch(response => {
             this.$notify.error({
               title: '错误',
@@ -61,3 +63,16 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.blankA {
+    background-image: url('../../images/timg.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color:rgb(255, 255, 255);
+    width: 100%;
+    height: 700px;
+    align-content: center;
+}
+</style>
+

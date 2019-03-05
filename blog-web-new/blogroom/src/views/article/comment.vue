@@ -31,6 +31,26 @@
             </div>
             <ol class="commentlist" id="comment-content">
                 <!--所有评论-->
+                <div class="blankC" v-if="total === 0">
+                    <p>还没有小伙伴吐槽</p>
+                </div>
+                <div v-else>
+                <!-- <b>4</b>个小伙伴在吐槽; -->
+                <li v-for="index in total" :key="index" class='comment odd alt thread-odd thread-alt depth-1'>
+                    <div class='c-avatar'>
+                        <a target='_blank' href=''>
+                            <img class='avatar avatar-54 photo avatar-default' height='54' width='54' src='@/images/default.jpg' style='display: block;'>
+                        </a>
+                        <div class='c-main'>
+                            {{ list[index-1].content }}
+                            <div class='c-meta'>
+                                <span class='c-author'>{{ list[index-1].nickName }}</span>
+                                {{ list[index-1].addTime }}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                </div>
             </ol>
         </div>
     </div>
@@ -38,7 +58,50 @@
 
 
 <script>
+import { allComments } from '@/api/comment'
 export default {
-  name: 'Comment'
+  name: 'Comment',
+  props: [
+      'id'
+  ],
+  data() {
+      return { 
+        list: null,
+        total: undefined
+      }
+  },
+  watch: {
+      'id': 'getAll'
+  },
+  created() {
+      this.getAll()
+  },
+  methods: {
+      getAll() {
+          allComments(this.id).then(response => {
+              this.list = response.data.data
+              this.total = this.list === null ? 0 : this.list.length
+              console.log(this.list)
+          }).catch(response => {
+              this.$notify.error({
+                title: '异常',
+                message: '获取文章评论错误'
+              })
+          })
+      }
+  }
 }
 </script>
+
+<style scoped>
+.blankC{
+    background-image: url('../../images/timg.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color:rgb(255, 255, 255);
+    width: 100%;
+    height: 300px;
+    align-content: center;
+}
+</style>
+

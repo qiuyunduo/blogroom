@@ -1,4 +1,4 @@
-2019-02-22 13:28:43.819 [server-eureka] [TaskBatchingWorker-target_192.168.1.167-17] ERROR [com.netflix.eureka.cluster.ReplicationTaskProcessor] -It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+2019-03-05 14:02:24.872 [server-eureka] [TaskBatchingWorker-target_192.168.1.167-7] ERROR [com.netflix.eureka.cluster.ReplicationTaskProcessor] -It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
 com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
 	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)
@@ -34,7 +34,7 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
 	... 10 common frames omitted
-2019-02-22 14:00:30.912 [server-eureka] [TaskBatchingWorker-target_192.168.1.167-15] ERROR [com.netflix.eureka.cluster.ReplicationTaskProcessor] -Network level connection to peer 192.168.1.167; retrying after delay
+2019-03-05 14:02:28.135 [server-eureka] [TaskBatchingWorker-target_192.168.1.167-8] ERROR [com.netflix.eureka.cluster.ReplicationTaskProcessor] -Network level connection to peer 192.168.1.167; retrying after delay
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: 网络不可达 (connect failed)
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
 	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)

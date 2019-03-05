@@ -8,9 +8,8 @@ import Element from 'element-ui'
 
 import '@/style/basestyle.css'
 import '@/style/default.css'
-import 'element-ui/lib/theme-chalk/index.css'
-
-// import '@/style/other/index.scss' // global css
+import '@/style/login-register.css'
+import "element-ui/lib/theme-chalk/index.css"
 
 Vue.config.productionTip = false
 

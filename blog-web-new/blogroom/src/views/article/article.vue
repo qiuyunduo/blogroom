@@ -17,7 +17,7 @@
 			</div>
 		</article>
 
-		<comment/>
+		<comment :id="detailInfo.id"/>
    </div>
 </template>
 
@@ -29,22 +29,33 @@ export default {
   name: 'Article',
   data() {
 	  return {
-		  detailInfo: null
+		  detailInfo: {
+			id: undefined,
+			title: undefined,
+			publishTIme: undefined,
+			comments: 0,
+			content: '',
+			thumbs: 0
+		  }
 	  }
   },
   components: {
 	  Comment
   },
   watch: {
-	  '$route':'getDetail'
+	  '$route':'getChange'
   },
   created() {
 	  this.getDetail()
   },
   methods: {
+	  getChange() {
+		  if(this.$route.params.id !== null) {
+			this.getDetail()
+		  }
+	  },
 	  getDetail() {
 		  var id = this.$route.params.id
-		//   alert(id)
 		  readOne(id).then(response => {
 			  this.detailInfo = response.data.data
 			  console.log(this.detailInfo)
@@ -55,6 +66,6 @@ export default {
             })
           })
 	  }
-  },
+  }
 }
 </script>
