@@ -23,10 +23,24 @@ public class LoginHelper {
 
     }
 
+    @Pointcut("execution(* cn.qyd.blogroom.*.controller.*.*(..))")
+    public void login1(){
+
+    }
+
     @Before("login()")
-    public void auth() {
+    public void authUser() {
+
         if(!LoginUtil.isLogin()) {
             throw BusinessException.fail(FrontRespEnum.LOGIN_INFO_EXIST);
+        }
+    }
+
+    @Before("login1()")
+    public void authUser1() {
+
+        if(!LoginUtil.isLogin()) {
+//            throw BusinessException.fail(FrontRespEnum.LOGIN_INFO_EXIST);
         }
     }
 }

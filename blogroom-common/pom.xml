@@ -17,6 +17,7 @@
         <druid.version>1.1.10</druid.version>
         <spring-boot-jpa.version>2.0.3.RELEASE</spring-boot-jpa.version>
         <swagger.version>2.9.2</swagger.version>
+        <jjwt.version>0.9.0</jjwt.version>
     </properties>
 
 
@@ -102,6 +103,13 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+
+        <!-- jwt -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
         </dependency>
 
     </dependencies>

@@ -11,12 +11,15 @@ import cn.qyd.blogroom.user.dto.UserQueryDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
+import cn.qyd.blogroom.user.service.UserTokenService;
+import cn.qyd.blogroom.user.vo.LoginUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -37,6 +40,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private UserTokenService userTokenService;
+
     @Override
     public User save(UserDto dto) {
         User user = new User();
@@ -50,7 +56,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(String name, String password) {
+    public LoginUser login(String name, String password) {
         User user = userDao.findByName(name);
         if(user != null){
             if(!user.getPassword().equals(MD5Util.getMD5(password))){
@@ -60,7 +66,15 @@ public class UserServiceImpl implements UserService {
             throw BusinessException.fail(FrontRespEnum.THE_USER_NOT_EXIST);
         }
 
-        return user;
+        String token = userTokenService.createOrRefreshToken(user.getId());
+
+        LoginUser loginUser = new LoginUser();
+        loginUser.setId(user.getId());
+        loginUser.setName(user.getName());
+        loginUser.setHeadImage(user.getHeadImage());
+        loginUser.setToken(token);
+
+        return loginUser;
     }
 
     @Override

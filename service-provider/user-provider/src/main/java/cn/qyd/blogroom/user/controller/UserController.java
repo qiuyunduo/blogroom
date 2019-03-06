@@ -5,6 +5,8 @@ import cn.qyd.blogroom.user.dto.UserDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
+import cn.qyd.blogroom.user.service.UserTokenService;
+import cn.qyd.blogroom.user.vo.LoginUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,23 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserTokenService tokenService;
+
+    @GetMapping("createToken")
+    @ApiOperation("生成token，过期时间1分钟")
+    public Resp createToken(Long userId) {
+        String token = tokenService.createOrRefreshToken(userId);
+        return Resp.succeed(token);
+    }
+
+    @GetMapping("getUserId")
+    @ApiOperation("测试token过期时间是否自动检查，获得ｔｏｋｅｎ中userid")
+    public Resp validateToken(String token) {
+        Long userId = tokenService.validateToken(token);
+        return Resp.succeed(userId);
+    }
+
     @PostMapping("/register")
     @ApiOperation("用户注册")
     public Resp register(UserDto userDto){
@@ -34,7 +53,7 @@ public class UserController {
     @PostMapping("/login")
     @ApiOperation("用户登录")
     public Resp login(String name, String password){
-        User user = userService.login(name, password);
+        LoginUser user = userService.login(name, password);
         return Resp.succeed(user);
     }
 

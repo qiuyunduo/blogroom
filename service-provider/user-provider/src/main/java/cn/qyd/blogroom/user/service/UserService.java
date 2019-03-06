@@ -5,6 +5,7 @@ import cn.qyd.blogroom.user.dto.UserDto;
 import cn.qyd.blogroom.user.dto.UserQueryDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
+import cn.qyd.blogroom.user.vo.LoginUser;
 import org.springframework.data.domain.Page;
 
 /**
@@ -14,7 +15,7 @@ import org.springframework.data.domain.Page;
 public interface UserService {
     User save(UserDto dto);
 
-    User login(String name, String password);
+    LoginUser login(String name, String password);
 
     User findById(Long id);
 

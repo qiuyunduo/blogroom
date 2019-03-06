@@ -33,7 +33,7 @@ public enum FrontRespEnum implements CodeAndMessage {
     THE_OLD_PASSWORD_ERROR(225,"原密码输入错误"),
     THE_MAIL_HAS_BEEN_USED(226,"邮箱已经被使用"),
 
-    THE_PHONE_HAS_BEEN_USED(227,"手机号已经被使用"),
+    THE_USER_TOKEN_EXPIRE(227,"用户token过期"),
     THE_USER_NOT_EXIST(228,"用户不存在"),
 
     /**
