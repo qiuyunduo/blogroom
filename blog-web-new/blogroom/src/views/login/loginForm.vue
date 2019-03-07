@@ -62,7 +62,8 @@ export default {
                 } else {
                     this.returnUser = Object.assign({},response.data.data)
                     let token = this.returnUser.token
-                    this.$store.dispatch('Login', token, this.returnUser)
+                    this.$store.dispatch('setToken', token)
+                    this.$store.dispatch('setUserInfo', this.returnUser)
                     this.$store.commit('SET_ISLOGIN', true)
                     this.closeLoginForm()
                     this.$notify.success({

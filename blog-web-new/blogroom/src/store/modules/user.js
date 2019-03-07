@@ -20,14 +20,18 @@ const user = {
     }
   },
   actions: {
-    Login({ commit }, token, userInfo) {
-      return new Promise((resolve,reject) => {
-        commit('SET_TOKEN', token)
+    setToken({ commit }, token) {
+      commit('SET_TOKEN', token)
+      setToken(token)
+    },
+    setUserInfo({ commit },userInfo) {
+      // return new Promise((resolve,reject) => {
+      //   commit('SET_TOKEN', token)
         commit('SET_USERINFO',userInfo)
-        setToken(token)
+        // setToken(token)
         setUserInfo(userInfo)
-        resolve()
-      })
+      //   resolve()
+      // })
     },
     // // 用户名登录
     // LoginByUsername({ commit }, userInfo) {

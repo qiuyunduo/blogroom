@@ -84,7 +84,8 @@ export default {
   },
   created() {
     this.isLogin = this.$store.state.user.isLogin
-    // this.returnUser = this.$store.state.user.userInfo
+    this.returnUser = JSON.parse(this.$store.state.user.userInfo)
+    //  = this.$store.state.user.userInfo
   },
   watch: {
     loginStatus(ov, nv){
