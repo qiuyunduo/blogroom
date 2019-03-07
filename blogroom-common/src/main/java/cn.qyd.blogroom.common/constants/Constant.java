@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class Constant {
 
-    public static final String HEADER_KEY_AUTHORIZATION = "Authorization";
+    public static final String REDIS_TOKEN_KEY_PREFIX = "loginUser_";
     // 用户Token key
-    public static final String USER_TOKEN_KEY = "User_Authorization";
+    public static final String USER_TOKEN_KEY = "User_Access_Token";
     // 刷新token
     public static final String REFRESH_TOKEN_KEY = "refresh_token";
     // token 前缀

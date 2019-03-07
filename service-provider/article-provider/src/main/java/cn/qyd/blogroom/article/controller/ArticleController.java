@@ -24,7 +24,7 @@ import java.util.List;
  * @Date 19-2-21 下午6:09
  **/
 @RestController
-@RequestMapping("/info")
+@RequestMapping("/article")
 @Api(tags = "文章模块相关")
 public class ArticleController {
 

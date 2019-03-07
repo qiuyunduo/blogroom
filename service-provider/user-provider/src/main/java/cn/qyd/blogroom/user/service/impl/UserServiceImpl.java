@@ -4,6 +4,7 @@ import cn.qyd.blogroom.common.exception.BusinessException;
 import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
 import cn.qyd.blogroom.common.utils.Formater;
 import cn.qyd.blogroom.common.utils.MD5Util;
+import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.user.dao.UserDao;
 import cn.qyd.blogroom.user.dto.UpdatePwdDto;
 import cn.qyd.blogroom.user.dto.UserDto;
@@ -11,7 +12,6 @@ import cn.qyd.blogroom.user.dto.UserQueryDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
-import cn.qyd.blogroom.user.service.UserTokenService;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -40,8 +39,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    @Autowired
-    private UserTokenService userTokenService;
+    @Autowired(required = false)
+    private TokenUtil tokenUtil;
 
     @Override
     public User save(UserDto dto) {
@@ -66,7 +65,7 @@ public class UserServiceImpl implements UserService {
             throw BusinessException.fail(FrontRespEnum.THE_USER_NOT_EXIST);
         }
 
-        String token = userTokenService.createOrRefreshToken(user.getId());
+        String token = tokenUtil.createOrRefreshToken(user.getId());
 
         LoginUser loginUser = new LoginUser();
         loginUser.setId(user.getId());
@@ -75,6 +74,12 @@ public class UserServiceImpl implements UserService {
         loginUser.setToken(token);
 
         return loginUser;
+    }
+
+    @Override
+    public Boolean logout(String token) {
+        Boolean result = tokenUtil.removeToken(token);
+        return result;
     }
 
     @Override

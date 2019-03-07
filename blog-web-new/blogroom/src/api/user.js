@@ -2,14 +2,14 @@ import request from '@/utils/request'
 
 export function infoAll() {
   return request({
-    url: '/user/info/all',
+    url: '/user/user/all',
     method: 'get'
   })
 }
 
 export function login(data) {
   return request({
-    url: '/user/login',
+    url: '/user/user/login',
     method: 'post',
     params: { 'name': data.userName, 'password': data.password }
   })
@@ -17,7 +17,15 @@ export function login(data) {
 
 export function register(data) {
   return request({
-    url: '/user/register',
+    url: '/user/user/register',
+    method: 'post',
+    params: data
+  })
+}
+
+export function logout(data) {
+  return request({
+    url: '/user/user/logout',
     method: 'post',
     params: data
   })

@@ -19,7 +19,7 @@ import java.util.List;
  * @Date 19-2-22 上午11:40
  **/
 @RestController
-@RequestMapping()
+@RequestMapping("/website")
 @Api(tags = "网站相关模块")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class WebsiteController {

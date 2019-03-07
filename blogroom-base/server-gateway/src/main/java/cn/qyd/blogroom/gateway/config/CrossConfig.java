@@ -50,6 +50,7 @@ public class CrossConfig {
             headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS, "true");
             headers.add(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, ALL);
             headers.add(HttpHeaders.ACCESS_CONTROL_MAX_AGE, MAX_AGE);
+            headers.add(HttpHeaders.CACHE_CONTROL,"no-store");
 
             if (request.getMethod() == HttpMethod.OPTIONS) {
                 response.setStatusCode(HttpStatus.OK);

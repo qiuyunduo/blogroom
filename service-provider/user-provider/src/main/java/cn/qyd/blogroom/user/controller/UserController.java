@@ -1,16 +1,15 @@
 package cn.qyd.blogroom.user.controller;
 
 import cn.qyd.blogroom.common.resp.Resp;
+import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.user.dto.UserDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
-import cn.qyd.blogroom.user.service.UserTokenService;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -18,27 +17,27 @@ import org.springframework.web.bind.annotation.*;
  * @Date 18-12-29 下午12:31
  **/
 @RestController
-@RequestMapping
+@RequestMapping("/user")
 @Api(tags = "用户模块")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private UserTokenService tokenService;
+    @Autowired(required = false)
+    private TokenUtil tokenUtil;
 
     @GetMapping("createToken")
     @ApiOperation("生成token，过期时间1分钟")
     public Resp createToken(Long userId) {
-        String token = tokenService.createOrRefreshToken(userId);
+        String token = tokenUtil.createOrRefreshToken(userId);
         return Resp.succeed(token);
     }
 
     @GetMapping("getUserId")
     @ApiOperation("测试token过期时间是否自动检查，获得ｔｏｋｅｎ中userid")
     public Resp validateToken(String token) {
-        Long userId = tokenService.validateToken(token);
+        Boolean userId = tokenUtil.validateToken(token);
         return Resp.succeed(userId);
     }
 
@@ -55,6 +54,13 @@ public class UserController {
     public Resp login(String name, String password){
         LoginUser user = userService.login(name, password);
         return Resp.succeed(user);
+    }
+
+    @PostMapping("/logout")
+    @ApiOperation("用户登出")
+    public Resp logout(String token){
+        Boolean result = userService.logout(token);
+        return Resp.succeed(result);
     }
 
     @PutMapping("/updateInfo")

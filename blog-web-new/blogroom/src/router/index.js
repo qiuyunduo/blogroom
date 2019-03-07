@@ -7,46 +7,6 @@ Vue.use(Router)
 // import HelloWorld from '@/components/HelloWorld'
 
 export const constantRouterMap = [
-  // {
-  //   path: '/redirect',
-  //   component: Layout,
-  //   hidden: true,
-  //   children: [
-  //     {
-  //       path: '/redirect/:path*',
-  //       component: () => import('@/views/redirect/index')
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/login',
-  //   component: () => import('@/views/login/index'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/auth-redirect',
-  //   component: () => import('@/views/login/authredirect'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/404',
-  //   component: () => import('@/views/errorPage/404'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/test',
-  //   name: 'layout',
-  //   component: () => import('@/views/layout/Layout'),
-  //   redirect: 'noredirect',
-  //   children: [
-  //     {
-  //       path: 'main',
-  //       component: () => import('@/views/website/index'),
-  //       name: 'main',
-  //       meta: { title: 'main', icon: 'main', noCache: true }
-  //     }
-  //   ]
-  // },
   {
     path: '/',
     name: 'layout',
@@ -90,38 +50,10 @@ export const constantRouterMap = [
       }
     ]
   },
-  // {
-  //   path: '/',
-  //   redirect: 'index',
-  //   name: 'index',
-  // },
-  // {
-  //   path: '/article',
-  //   redirect: 'index/article',
-  //   name: 'article',
-  // },
-  // {
-  //   path: '/articles',
-  //   redirect: 'index',
-  //   name: 'articles',
-  // },
-  // {
-  //   path: '',
-  //   component: Layout,
-  //   redirect: 'dashboard',
-  //   children: [
-  //     {
-  //       path: 'dashboard',
-  //       component: () => import('@/views/dashboard/index'),
-  //       name: 'Dashboard',
-  //       meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
-  //     }
-  //   ]
-  // }
 ]
 
 export default new Router({
-  // mode: 'history', // require service support
-  // scrollBehavior: () => ({ y: 0 }),
+  mode: 'history', // require service support
+  scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

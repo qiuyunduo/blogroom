@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function allArticles(data) {
   return request({
-    url: '/article/info/all',
+    url: '/article/article/all',
     method: 'get',
     params: data
   })
@@ -10,7 +10,7 @@ export function allArticles(data) {
 
 export function readOne(id) {
   return request({
-    url: '/article/info/'+id,
+    url: '/article/article/'+id,
     method: 'get'
   })
 }

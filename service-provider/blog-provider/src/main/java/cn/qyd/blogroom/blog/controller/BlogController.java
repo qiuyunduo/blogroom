@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 19-2-21 下午6:12
  **/
 @RestController
-@RequestMapping
+@RequestMapping("/blog")
 @Api(tags = "博客空间相关")
 public class BlogController {
     @Autowired

@@ -17,6 +17,8 @@ public interface UserService {
 
     LoginUser login(String name, String password);
 
+    Boolean logout(String token);
+
     User findById(Long id);
 
     User findByEmail(String email);
