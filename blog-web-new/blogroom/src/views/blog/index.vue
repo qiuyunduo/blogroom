@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
     @import '../../style/blog001.css';
     @import '../../style/blog002.css';
     @import '../../style/blog003.css';

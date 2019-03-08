@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { login } from "@/api/user"
+import { login } from "@/api/login"
 export default {
     name: 'LoginForm',
     data() {
@@ -40,8 +40,7 @@ export default {
             loginInfo: {
                 userName: undefined,
                 password: undefined
-            },
-            returnUser: {}
+            }
         }
     },
     methods: {
@@ -60,10 +59,10 @@ export default {
                     message: response.data.status.msg
                     })
                 } else {
-                    this.returnUser = Object.assign({},response.data.data)
-                    let token = this.returnUser.token
+                    let returnUser = Object.assign({},response.data.data)
+                    let token = returnUser.token
                     this.$store.dispatch('setToken', token)
-                    this.$store.dispatch('setUserInfo', this.returnUser)
+                    this.$store.dispatch('setUserInfo', returnUser)
                     this.$store.commit('SET_ISLOGIN', true)
                     this.closeLoginForm()
                     this.$notify.success({

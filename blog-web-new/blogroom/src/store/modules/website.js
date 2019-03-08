@@ -2,7 +2,6 @@ import Cookies from 'js-cookie'
 
 const website = {
   state: {
-    name: 'asdasd',
     queryList: {
       classId: undefined,
       title: undefined,

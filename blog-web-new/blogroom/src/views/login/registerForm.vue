@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { register } from "@/api/user"
+import { register } from "@/api/login"
 
 export default {
     name: 'RegisterForm',

@@ -4,7 +4,7 @@
             <h3 class="aside-title">个人资料</h3>
             <div class="profile-intro d-flex">
                 <div class="avatar-box d-flex justify-content-center flex-column">
-                    <img src="＠/images/default.jpg" class="avatar_pic" id="user_head">
+                    <img src="@/images/default.jpg" class="avatar_pic" id="user_head">
                 </div>
                 <div class="user-info d-flex justify-content-center flex-column">
                     <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
@@ -69,9 +69,9 @@
             <div style="border-bottom: 1px  gray;padding: 5px 0 10px 10px;">
                 <strong>关注</strong>
             </div>
-            <div style="padding: 5px 0 10px 10px;" id="guanzhu">
-                <p>还没有添加任何关注</p>
-                <!--<img src="../images/001.png" style="float: left">-->
+            <div style="padding: 5px 0 0 10px;" id="guanzhu">
+                <p v-if="isHaveFollowers">还没有添加任何关注</p>
+                <a v-else v-for="index in followers.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
             </div>
         </div>
 
@@ -80,19 +80,113 @@
                 <strong>粉丝</strong>
             </div>
             <div style="padding: 5px 0 10px 10px;" id="fans">
-                <p>还没有一个粉丝</p>
+                <p v-if="isHaveFans">还没有一个粉丝</p>
+                <a v-else v-for="index in fans.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
             </div>
         </div>
     </aside>
 </template>
 
 <script>
+import { detailUser } from "@/api/user"
+import { blogDetail } from "@/api/blog"
+import { allFollowersOfUser, allFansOfUser } from "@/api/attention"
 export default {
     name: 'BaseInfo',
     data() {
         return {
-            
+            userId: undefined,
+            blogInfo: {},
+            userInfo: {},
+            followers: null,
+            fans: null,
+            followerQuery: {
+                user1Id: undefined,
+                page: 1,
+                limit: 8
+            },
+            fansQuery: {
+                user2Id: undefined,
+                page: 1,
+                limit: 8
+            },
         }
+    },
+    created() {     
+        this.getall()
+    },
+    methods: {
+        isHaveFollowers(){
+            return followers === null || followers.length === 0
+        },
+        isHaveFans(){
+            return fans === null || fans.length === 0
+        },
+        getall() {
+            this.getUserId()
+            this.getUser()
+            this.getBlog()
+            this.getFollowers()
+            this.getFans()
+        },
+        getUserId() {
+            alert(1)
+            let id = this.$route.params.id
+            this.userId = id
+            this.followerQuery.user1Id = id
+            this.fansQuery.user2Id = id
+        },
+        getUser() {
+            alert(2)
+            detailUser(this.userId).then(response => {
+                this.userInfo = response.data.data
+                console.log(this.userInfo)
+            }).catch(response => {
+            this.$notify.error({
+              title: '错误',
+              message: '用户信息获取出错'
+            })
+          })
+        },
+        getBlog() {
+            alert(3)
+            blogDetail(this.userId).then(response => {
+                this.blogInfo = response.data.data
+                console.log(this.blogInfo)
+            }).catch(response => {
+            this.$notify.error({
+              title: '错误',
+              message: '用户博客信息获取出错'
+            })
+          })
+        },
+        getFollowers() {
+            alert(4)
+            allFollowersOfUser(this.followerQuery).then(response => {
+                this.followers = response.data.pagingData.item
+                console.log(this.followers)
+            }).catch(response => {
+            this.$notify.error({
+              title: '错误',
+              message: '用户关注获取出错'
+            })
+          })
+        },
+        getFans() {
+            alert(5)
+            allFansOfUser(this.fansQuery).then(response => {
+                this.fans = response.data.pagingData.item
+                console.log(this.fans)
+            }).catch(response => {
+            this.$notify.error({
+              title: '错误',
+              message: '用户粉丝获取出错'
+            })
+          })
+        }
+    },
+    watch: {
+        '$route':'getall'
     },
 }
 </script>

@@ -43,10 +43,64 @@ export const constantRouterMap = [
         ]
       },
       {
-        path: 'blog/:id',
+        path: 'blog/room/:id',
         component: () => import('@/views/blog/index'),
-        name: 'blog',
+        name: 'blogroom',
         meta: { title: '个人博客空间', noCache: true },
+      },
+      {
+        path: 'blog/user/:id',
+        component: () => import('@/views/user/index'),
+        name: 'blogroom',
+        meta: { title: '个人中心', noCache: true },
+        children: [
+          {
+            path: '',
+            redirect: 'info'
+          },
+          {
+            path: 'info',
+            component: () => import('@/views/user/info'),
+            name: 'userInfo',
+            meta: { title: '个人资料', noCache: true }
+          },
+          {
+            path: 'followers',
+            component: () => import('@/views/user/followers'),
+            name: 'followers',
+            meta: { title: '我的关注', noCache: true }
+          },
+          {
+            path: 'fans',
+            component: () => import('@/views/user/fans'),
+            name: 'fans',
+            meta: { title: '我的粉丝', noCache: true }
+          },
+          {
+            path: 'writing',
+            component: () => import('@/views/user/writing'),
+            name: 'writing',
+            meta: { title: '写博客', noCache: true }
+          },
+          {
+            path: 'writing',
+            component: () => import('@/views/user/writing'),
+            name: 'writing',
+            meta: { title: '写博客', noCache: true }
+          },
+          {
+            path: 'mArticles',
+            component: () => import('@/views/user/mArticles'),
+            name: 'mArticles',
+            meta: { title: '博客管理', noCache: true }
+          },
+          {
+            path: 'security',
+            component: () => import('@/views/user/security'),
+            name: 'security',
+            meta: { title: '账号安全', noCache: true }
+          },
+        ]
       }
     ]
   },

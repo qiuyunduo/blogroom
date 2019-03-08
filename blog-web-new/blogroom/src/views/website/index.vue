@@ -2,7 +2,7 @@
     <div>
         <nav-bar/>
         <section class="container">
-            <div class="speedbar" style="height: 18px">
+            <div class="speedbar" style="height: 18px;margin-top:-15px">
                 <website-notice/>
             </div>
             <div class="content-wrap">
@@ -10,7 +10,7 @@
                     <router-view/>
                 </keep-alive>
             </div>
-            <aside class="sidebar">
+            <aside class="sidebar" style="margin-top:-5px">
                 <fashion-articles/>
                 <fashion-bloggers/>
                 <friendly-link/>

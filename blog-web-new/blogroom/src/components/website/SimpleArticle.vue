@@ -69,3 +69,9 @@ export default {
   },
 }
 </script>
+
+<style>
+    @import '../../style/basestyle.css';
+    @import '../../style/default.css';
+</style>
+
