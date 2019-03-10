@@ -5,6 +5,7 @@ import cn.qyd.blogroom.blog.entity.Blog;
 import cn.qyd.blogroom.blog.service.BlogService;
 import cn.qyd.blogroom.common.resp.Resp;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,12 +24,14 @@ public class BlogController {
     private BlogService blogService;
 
     @GetMapping("/create")
+    @ApiOperation("新增博客账号")
     public Resp blogInfo(BlogDto dto) {
         Blog blog = blogService.save(dto);
         return Resp.succeed(blog);
     }
 
     @GetMapping("/room/{userId}")
+    @ApiOperation("根据用户id获取该用户的博客账号")
     public Resp blogInfo(@PathVariable("userId") Long userId) {
         Blog blog = blogService.findByUserId(userId);
         return Resp.succeed(blog);

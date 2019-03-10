@@ -74,7 +74,7 @@ export default {
       isLogin: false,
       loginFormShow: false,
       registerFormShow: false,
-      blogBasePath: '/blog/',
+      blogBasePath: '/blog/room/',
       userBasePath: '/user/',
       returnUser: {
           id: undefined,

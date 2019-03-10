@@ -123,24 +123,30 @@ export default {
             return fans === null || fans.length === 0
         },
         getall() {
-            this.getUserId()
-            this.getUser()
-            this.getBlog()
-            this.getFollowers()
-            this.getFans()
+            let that = this
+            this.getUserId().then(function(data){
+                that.getUser()
+                that.getBlog()
+                that.getFollowers()
+                that.getFans()
+            });
         },
         getUserId() {
-            alert(1)
-            let id = this.$route.params.id
-            this.userId = id
-            this.followerQuery.user1Id = id
-            this.fansQuery.user2Id = id
+            let that = this
+            return new Promise(function(resolve,reject){
+                let id = that.$route.params.id
+                that.userId = id
+                that.followerQuery.user1Id = id
+                that.fansQuery.user2Id = id
+                resolve("sucess")
+            })
         },
         getUser() {
-            alert(2)
             detailUser(this.userId).then(response => {
-                this.userInfo = response.data.data
+
+                this.userInfo = response.data
                 console.log(this.userInfo)
+                alert(this.userInfo.id)
             }).catch(response => {
             this.$notify.error({
               title: '错误',
@@ -149,9 +155,8 @@ export default {
           })
         },
         getBlog() {
-            alert(3)
             blogDetail(this.userId).then(response => {
-                this.blogInfo = response.data.data
+                this.blogInfo = response.data
                 console.log(this.blogInfo)
             }).catch(response => {
             this.$notify.error({
@@ -161,7 +166,6 @@ export default {
           })
         },
         getFollowers() {
-            alert(4)
             allFollowersOfUser(this.followerQuery).then(response => {
                 this.followers = response.data.pagingData.item
                 console.log(this.followers)
@@ -173,7 +177,6 @@ export default {
           })
         },
         getFans() {
-            alert(5)
             allFansOfUser(this.fansQuery).then(response => {
                 this.fans = response.data.pagingData.item
                 console.log(this.fans)
