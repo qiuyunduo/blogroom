@@ -8,7 +8,7 @@
                 </div>
                 <div class="user-info d-flex justify-content-center flex-column">
                     <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
-                        <span id="user_name">风吹起的落叶</span>
+                        <span id="user_name">{{ blogInfo.blogName }}</span>
                     </p>
                 </div>
                 <input id="AttentionBtn" type="button" value="关注" onclick="addAttention()" 
@@ -18,37 +18,39 @@
             <div class="data-info d-flex item-tiling">
                 <dl class="text-center" title="0">
                     <dt>文章</dt>
-                    <dd><span class="count" id="wenzhang">0</span></dd>
+                    <dd><span class="count" id="wenzhang">{{ blogInfo.articleNumber }}</span></dd>
                 </dl>
                  <dl class="text-center" title="0">
                     <dt>粉丝</dt>
-                    <dd><span class="count" id="fensi">0</span></dd>
+                    <dd><span class="count" id="fensi">{{ blogInfo.fansNumber }}</span></dd>
                 </dl>
                 <dl class="text-center" title="0">
                     <dt>喜欢</dt>
-                    <dd><span class="count" id="xihuan">0</span></dd>
+                    <dd><span class="count" id="xihuan">{{ blogInfo.likeNumber }}</span></dd>
                 </dl>
                 <dl class="text-center" title="0">
                     <dt>评论</dt>
-                    <dd><span class="count" id="pinglun">0</span></dd>
+                    <dd><span class="count" id="pinglun">{{ blogInfo.commentNumber }}</span></dd>
                 </dl>
             </div>
             <div class="grade-box clearfix">
                 <dl>
                     <dt>等级：</dt>
                     <dd id="dengji">
-                        1
+                        {{ this.rankInfo.level }}
                     </dd>
                 </dl>
                 <dl>
                     <dt>称号：</dt>
                     <dd title="0" id="chenghao">
-                        见习会员           </dd>
+                        {{ this.rankInfo.name }}           
+                    </dd>
                 </dl>
                 <dl>
                     <dt>积分：</dt>
                     <dd title="2" id="jifen">
-                        2            </dd>
+                        {{ blogInfo.integral }}            
+                    </dd>
                 </dl>
                 <dl title="2978609">
                     <dt>排名：</dt>
@@ -61,7 +63,9 @@
                 <strong>用户简介</strong>
             </div>
             <div style="padding: 5px 0 10px 10px;">
-                <p id="jianjie">还没有添加任何语录</p>
+                <p v-if="userInfo.description !== null" id="jianjie">{{ userInfo.description}}</p>
+                <p v-else id="jianjie">还没有添加任何语录</p>
+                
             </div>
         </div>
 
@@ -70,7 +74,7 @@
                 <strong>关注</strong>
             </div>
             <div style="padding: 5px 0 0 10px;" id="guanzhu">
-                <p v-if="isHaveFollowers">还没有添加任何关注</p>
+                <p v-if="isHaveFollowers()">还没有添加任何关注</p>
                 <a v-else v-for="index in followers.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
             </div>
         </div>
@@ -80,7 +84,7 @@
                 <strong>粉丝</strong>
             </div>
             <div style="padding: 5px 0 10px 10px;" id="fans">
-                <p v-if="isHaveFans">还没有一个粉丝</p>
+                <p v-if="isHaveFans()">还没有一个粉丝</p>
                 <a v-else v-for="index in fans.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
             </div>
         </div>
@@ -90,6 +94,7 @@
 <script>
 import { detailUser } from "@/api/user"
 import { blogDetail } from "@/api/blog"
+import { rankDetail } from "@/api/rank"
 import { allFollowersOfUser, allFansOfUser } from "@/api/attention"
 export default {
     name: 'BaseInfo',
@@ -98,6 +103,7 @@ export default {
             userId: undefined,
             blogInfo: {},
             userInfo: {},
+            rankInfo: {},
             followers: null,
             fans: null,
             followerQuery: {
@@ -117,10 +123,10 @@ export default {
     },
     methods: {
         isHaveFollowers(){
-            return followers === null || followers.length === 0
+            return this.followers === null || this.followers.length === 0
         },
         isHaveFans(){
-            return fans === null || fans.length === 0
+            return this.fans === null || this.fans.length === 0
         },
         getall() {
             let that = this
@@ -145,8 +151,8 @@ export default {
             detailUser(this.userId).then(response => {
 
                 this.userInfo = response.data
-                console.log(this.userInfo)
-                alert(this.userInfo.id)
+                // console.log(this.userInfo)
+                // alert(this.userInfo.id)
             }).catch(response => {
             this.$notify.error({
               title: '错误',
@@ -156,19 +162,27 @@ export default {
         },
         getBlog() {
             blogDetail(this.userId).then(response => {
-                this.blogInfo = response.data
-                console.log(this.blogInfo)
+                this.blogInfo = response.data.data
+                rankDetail(this.blogInfo.rankId).then(response1 => {
+                    this.rankInfo = response1.data.data
+                }).catch(response1 => {
+                    this.$notify.error({
+                    title: '错误',
+                    message: '用户博客等级获取出错'
+                    })
+                })
+                // console.log(this.blogInfo)
             }).catch(response => {
-            this.$notify.error({
-              title: '错误',
-              message: '用户博客信息获取出错'
+                this.$notify.error({
+                title: '错误',
+                message: '用户博客信息获取出错'
+                })
             })
-          })
         },
         getFollowers() {
             allFollowersOfUser(this.followerQuery).then(response => {
                 this.followers = response.data.pagingData.item
-                console.log(this.followers)
+                // console.log(this.followers)
             }).catch(response => {
             this.$notify.error({
               title: '错误',
@@ -179,7 +193,7 @@ export default {
         getFans() {
             allFansOfUser(this.fansQuery).then(response => {
                 this.fans = response.data.pagingData.item
-                console.log(this.fans)
+                // console.log(this.fans)
             }).catch(response => {
             this.$notify.error({
               title: '错误',

@@ -71,7 +71,7 @@ export default {
                 this.list = response.data.pagingData.item
                 this.total = response.data.pagingData.total
                 this.pageSize = response.data.pagingData.pageSize
-                console.log(this.list)
+                // console.log(this.list)
             }).catch(response => {
             this.$notify.error({
               title: '错误',

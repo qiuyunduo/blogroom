@@ -19,6 +19,10 @@ export function setUserInfo(userInfo) {
     return Cookies.set(userInfoKey,userInfo)
 }
 
+export function removeUserInfo() {
+    return Cookies.remove(userInfoKey)
+}
+
 export function getToken() {
     return Cookies.get(tokenKey)
 }

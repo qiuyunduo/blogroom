@@ -21,11 +21,11 @@
                   <span style="display:block;">我的博客</span>
                   </el-dropdown-item>
                 </router-link>
-                <router-link :to="userBasePath+returnUser.id">
-                <el-dropdown-item >
-                    <span style="display:block;">个人中心</span>
+                <!-- <router-link :to="userBasePath+returnUser.id+'/info'"> -->
+                <el-dropdown-item>
+                    <span style="display:block;" @click="personal()">个人中心</span>
                 </el-dropdown-item>
-                </router-link>
+                <!-- </router-link> -->
                 <el-dropdown-item divided>
                     消息
                 </el-dropdown-item>
@@ -75,7 +75,7 @@ export default {
       loginFormShow: false,
       registerFormShow: false,
       blogBasePath: '/blog/room/',
-      userBasePath: '/user/',
+      userBasePath: '/blog/user/',
       returnUser: {
           id: undefined,
           name: undefined,
@@ -95,7 +95,11 @@ export default {
   methods: {
     checkLogin() {
       this.isLogin = this.$store.state.user.isLogin
-      this.returnUser = JSON.parse(this.$store.state.user.userInfo)
+      if(this.$store.state.user.userInfo.id === undefined) {
+        this.returnUser = JSON.parse(this.$store.state.user.userInfo)
+      } else {
+        this.returnUser = this.$store.state.user.userInfo
+      }
     },
     showLoginForm() {
       this.$refs.loginForm.openLoginForm()
@@ -109,7 +113,8 @@ export default {
     },
 
     personal() {
-      this.$router.push('/user'+this.returnUser.id)
+      history.go(0)
+      this.$router.push('/blog/user/'+this.returnUser.id+'/info')
     },
 
     logout() {

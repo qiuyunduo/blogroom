@@ -2,6 +2,9 @@
     <!--单个文章显示组件-->
     <article class='excerpt'>
         <header>
+            <slot name="statusLabel">
+                
+            </slot>
             <h2><a @click="readOne(id)">{{ title }}</a></h2>
         </header>
 
@@ -14,27 +17,29 @@
             {{  describe }}
         </span>
 
-        <p class='auth-span'>
-            <span class='muted'>
-                <i class='fa fa-user'></i>
-                <a href='/BlogRoom/apps/userblog.html'>{{  author }}</a>
-            </span> 
-            <span class='muted'>
-                <i class='fa fa-clock-o'></i>
-                {{  publishTime }}
-            </span>
-            <span class='muted'>
-                <i class='fa fa-comments-o'></i>
-                <a target='_blank' href="/BlogRoom/apps/article.html评论">{{  comments }}评论</a>
-            </span>
-            <span class='muted'> 
-                <a href='javascript:;' data-action='ding' data-id='393' id='Addlike' class='action'>
-                    <i class='fa fa-heart-o'></i>
-                    <span class='count'>{{  thumbs }}</span>
-                    喜欢
-                </a>
-            </span>
-        </p>
+        <slot name="functionMenu">
+            <p class='auth-span'>
+                <span class='muted'>
+                    <i class='fa fa-user'></i>
+                    <a href='/BlogRoom/apps/userblog.html'>{{  author }}</a>
+                </span> 
+                <span class='muted'>
+                    <i class='fa fa-clock-o'></i>
+                    {{  publishTime }}
+                </span>
+                <span class='muted'>
+                    <i class='fa fa-comments-o'></i>
+                    <a target='_blank' href="/BlogRoom/apps/article.html评论">{{  comments }}评论</a>
+                </span>
+                <span class='muted'> 
+                    <a href='javascript:;' data-action='ding' data-id='393' id='Addlike' class='action'>
+                        <i class='fa fa-heart-o'></i>
+                        <span class='count'>{{  thumbs }}</span>
+                        喜欢
+                    </a>
+                </span>
+            </p>
+        </slot>
     </article>
 </template>
 

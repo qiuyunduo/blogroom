@@ -42,22 +42,20 @@ export const constantRouterMap = [
           },
         ]
       },
+
       {
         path: 'blog/room/:id',
         component: () => import('@/views/blog/index'),
         name: 'blogroom',
         meta: { title: '个人博客空间', noCache: true },
       },
+
       {
         path: 'blog/user/:id',
         component: () => import('@/views/user/index'),
         name: 'blogroom',
         meta: { title: '个人中心', noCache: true },
         children: [
-          {
-            path: '',
-            redirect: 'info'
-          },
           {
             path: 'info',
             component: () => import('@/views/user/info'),
@@ -77,18 +75,6 @@ export const constantRouterMap = [
             meta: { title: '我的粉丝', noCache: true }
           },
           {
-            path: 'writing',
-            component: () => import('@/views/user/writing'),
-            name: 'writing',
-            meta: { title: '写博客', noCache: true }
-          },
-          {
-            path: 'writing',
-            component: () => import('@/views/user/writing'),
-            name: 'writing',
-            meta: { title: '写博客', noCache: true }
-          },
-          {
             path: 'mArticles',
             component: () => import('@/views/user/mArticles'),
             name: 'mArticles',
@@ -101,7 +87,13 @@ export const constantRouterMap = [
             meta: { title: '账号安全', noCache: true }
           },
         ]
-      }
+      },
+      {
+        path: 'blog/article/create',
+        component: () => import('@/views/article/create'),
+        name: 'writing',
+        meta: { title: '撰写博客', noCache: true },
+      },
     ]
   },
 ]

@@ -1,4 +1,5 @@
 import { isLogin, getUserInfo, setUserInfo, getToken, setToken, removeToken } from '@/utils/auth'
+import { removeUserInfo } from '../../utils/auth';
 // import { logout } from '@/api/user'
 
 const user = {
@@ -77,6 +78,7 @@ const user = {
           commit('SET_TOKEN', '')
           // commit('SET_ROLES', [])
           removeToken()
+          removeUserInfo()
           commit('SET_ISLOGIN',false)
           // resolve()
         // }).catch(error => {
