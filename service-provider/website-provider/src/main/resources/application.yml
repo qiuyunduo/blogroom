@@ -15,7 +15,10 @@ eureka:
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}
-
+blogroom:
+  storage:
+    local:
+      storagePath: /home/qiuyunduo/IdeaProjects/blogroom/blog-web-new/blogroom/static/storage/
 logging:
   config:
     classpath:logback-spring.xml

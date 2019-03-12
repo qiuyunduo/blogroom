@@ -57,6 +57,10 @@ export const constantRouterMap = [
         meta: { title: '个人中心', noCache: true },
         children: [
           {
+            path: '',
+            redirect: 'info'
+          },
+          {
             path: 'info',
             component: () => import('@/views/user/info'),
             name: 'userInfo',

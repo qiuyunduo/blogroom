@@ -1,95 +1,114 @@
 <template>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
-      <div class="row">
-        <form id="pulicForm" class="add-article-form" onkeydown="if(event.keyCode==13){return false;}">
-            <input type="hidden" name="articleAuthorId" id="userid">
-            <input type="hidden" name="articleId" id="aid">
-            <div class="col-md-9">
-                <h1 class="page-header">撰写新文章</h1>
-                <div class="form-group">
-                    <label for="article-title" class="sr-only">标题</label>
-                    <input type="text" id="article-title" name="articleTitle" class="form-control" placeholder="在此处输入标题" required autofocus autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <label for="update-editor" class="sr-only">内容</label>
-                    <script id="update-editor" name="articleContent" type="text/plain"></script>
-                </div>
-                <div class="add-article-box">
-                    <h2 class="add-article-box-title"><span>关键字</span></h2>
-                    <div class="add-article-box-content">
-                        <input type="text" class="form-control" placeholder="请输入关键字" name="articleKeyword" id="articleKeyword" autocomplete="off">
-                        <span class="prompt-text">多个标签请用英文逗号,隔开。</span>
-                    </div>
-                </div>
-            </div>
+  <div>
+    <img src="blob:file:///home/qiuyunduo/myHome/blogroom/k6rn32ic4mixm6f7ckuz.png" style="width:300px;height:300px"/>
+    <h1 class="page-header">撰写新文章</h1>
 
-            <div class="col-md-3">
-                <h1 class="page-header">操作</h1>
-                <div class="add-article-box">
-                    <h2 class="add-article-box-title"><span>栏目</span></h2>
-                    <div class="add-article-box-content">
-                        <ul class="category-list">
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="1" checked="checked">
-                            程序人生
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="2">
-                            编程</label>
-                        </li>
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="3">
-                            前端</label>
-                        </li>
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="4">
-                        数据库</label>
-                        </li>
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="5">
-                            算法</label>
-                        </li>
-                        <li>
-                            <label>
-                            <input name="articleClassId" type="radio" value="6">
-                            其他</label>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
+    <el-form class="form-wrapper padding" ref="addForm" :model="newArticle" label-width="110px">
 
-                <div class="add-article-box">
-                    <h2 class="add-article-box-title">
-                        <span>标题图片</span>
-                    </h2>
-
-                    <div style="float:left;height: 60px;margin-top: 10px">
-                        <img src="" alt="原图片" id="old-pic" style="height: 150px">
-                    </div>
-                    <div style="float:left;margin-top: 100px">
-                        <label>更改图片</label>
-                        <input type="file" id="articlePic" name="articlePic" style="width: 250px;outline: none;border:0">
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center">
-                <input class="btn btn-primary" id="publicbtn" name="publicarticle" onclick="updateArt()" type="button" value="提交修改"/>
-            </div>
-        </form>
+    <div class="myLeftDiv">
+      <el-input v-model="newArticle.title" clearable class="filter-item" style="width: 1000px;" placeholder="文章标题"/>
+      <div id="editor" style="width:1000px;height:500px"></div>
+      <div style="margin-top:5px">
+        <!-- <label>关键词：</label> -->
+        <el-input v-model="newArticle.content" clearable class="filter-item" style="width: 1000px;" placeholder="关键字，多个标签请用英文逗号；隔开"/>
       </div>
     </div>
+
+    
+
+    <div class="myRightDiv">
+      <div>
+        <!-- <label>文章栏目：</label> -->
+        <el-select v-model="newArticle.classId" style="width: 500px" class="filter-item" placeholder="文章分类">
+          <el-option v-for="(key, value) in classList" :key="key" :label="key" :value="value"/>
+        </el-select>
+      </div>
+       <div style="padding: 50px;">
+
+      <!-- <el-form-item label="文章标题图片：" prop="headPhoto"> -->
+          <el-upload
+          v-show="isShow"
+          ref="upload"
+          action="http://localhost:8088/website/storage/upload"
+          accept="image/png,image/gif,image/jpg,image/jpeg"
+          :limit=1
+          :on-success="onSuccessUpload"
+          :on-remove="handleRemove">
+          <i class="el-icon-plus"></i>
+        </el-upload>
+      <!-- </el-form-item> -->
+  </div>
+
+        <div style="margin-top:300px">
+          <el-button type="danger">保存为草稿</el-button>
+          <el-button type="danger">发布博客</el-button>
+          <el-button>返回</el-button>
+        </div>
+    </div>
+
+
+    </el-form>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Create'
+    name: 'Create',
+    data() {
+        return {
+          classList: null,
+          editor: null,
+          isShow: true,
+          newArticle: {
+            userId: undefined,
+            classId: undefined,
+            headPhoto: undefined,
+            title: '',
+            describe: '',
+            content: '',
+          }
+        }
+    },
+    watch: {
+      imageList:'changeShow'
+    },
+    mounted() {
+      this.classList = {1:'程序人生',2:'编程',3:'前端',4:'数据库',5:'算法',6:'其他'}
+      this.editor = UE.getEditor('editor')
+    },
+    methods: {
+      handleRemove(file) {
+        alert("ssd")
+        this.isHavePhoto = true
+      },
+      onSuccessUpload(response, file, fileList) {
+        alert(response.data)
+        alert(file)
+        alert(fileList)
+      }
+    },
+    destroyed() {
+        this.editor.destroy()
+    },
 }
 </script>
+
+<style scoped>
+
+.myLeftDiv{
+  width:500px;
+  height: 763px;
+  margin-left:200px
+}
+.myRightDiv{
+  width:500px;
+  height: 723px;
+  margin-left: 1300px;
+  margin-top: -760px;
+}
+.disabled {
+    display: none;
+}
+</style>
+
 

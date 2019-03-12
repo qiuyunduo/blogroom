@@ -25,7 +25,7 @@ export default {
     },
     watch: {
         '$route':function () {
-            alert(this.$route.path)
+            
         }
     },
     created() {
@@ -42,3 +42,7 @@ export default {
 }
 </script>
 
+<style scoped>
+    @import '../../style/user001.css';
+    @import '../../style/user002.css';
+</style>

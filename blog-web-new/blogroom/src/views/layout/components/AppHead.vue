@@ -6,6 +6,7 @@
         <a href="">
           <h1>
             <span class="yusi-mono">博客屋</span>
+            <img src="file:///home/qiuyunduo/myHome/blogroom/k6rn32ic4mixm6f7ckuz.png"/>
             <span class="yusi-bloger">欢迎您</span>
           </h1>
         </a>
@@ -113,7 +114,7 @@ export default {
     },
 
     personal() {
-      history.go(0)
+      // this.$router.go(0)
       this.$router.push('/blog/user/'+this.returnUser.id+'/info')
     },
 

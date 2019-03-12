@@ -56,8 +56,7 @@ export default {
 }
 </script>
 
-
-<style>
-
+<style scoped>
+    @import '../../style/user001.css';
+    @import '../../style/user002.css';
 </style>
-

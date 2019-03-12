@@ -207,3 +207,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+    @import '../../style/blog001.css';
+    @import '../../style/blog002.css';
+    @import '../../style/blog003.css';
+</style>
