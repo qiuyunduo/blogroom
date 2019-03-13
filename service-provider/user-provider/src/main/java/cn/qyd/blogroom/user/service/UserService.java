@@ -7,6 +7,7 @@ import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.springframework.data.domain.Page;
+import java.util.List;
 
 /**
  * @Author qyd
@@ -26,6 +27,8 @@ public interface UserService {
     User findByPhone(String phone);
 
     Page<User> query(UserQueryDto queryDto);
+
+    List<User> fashionUser();
 
     Boolean updatePassword(UpdatePwdDto dto);
 

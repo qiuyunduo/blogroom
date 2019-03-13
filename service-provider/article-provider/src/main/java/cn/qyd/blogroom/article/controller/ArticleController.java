@@ -7,6 +7,7 @@ import cn.qyd.blogroom.article.entity.Article;
 import cn.qyd.blogroom.article.service.ArticleService;
 import cn.qyd.blogroom.article.vo.ArticleDetailVo;
 import cn.qyd.blogroom.article.vo.ArticleVo;
+import cn.qyd.blogroom.article.vo.SimpleArticleVo;
 import cn.qyd.blogroom.common.resp.Resp;
 import cn.qyd.blogroom.common.resp.paging.PagingInfo;
 import cn.qyd.blogroom.common.utils.PagingUtil;
@@ -59,7 +60,7 @@ public class ArticleController {
     @ApiOperation("获取时尚博文")
     public Resp fashionArticles() {
         List<Article> articles = articleService.fashionArticles();
-        List<ArticleVo> articleVos = BeanMapper.mapList(articles, ArticleVo.class);
+        List<SimpleArticleVo> articleVos = BeanMapper.mapList(articles, SimpleArticleVo.class);
         return Resp.succeed(articleVos);
     }
 

@@ -14,3 +14,11 @@ export function readOne(id) {
     method: 'get'
   })
 }
+
+export function createOne(data) {
+  return request({
+    url: '/article/article/save',
+    method: 'post',
+    params: data
+  })
+}

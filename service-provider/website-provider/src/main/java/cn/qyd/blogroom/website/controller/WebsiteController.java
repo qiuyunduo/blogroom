@@ -19,20 +19,13 @@ import java.util.List;
  * @Date 19-2-22 上午11:40
  **/
 @RestController
-@RequestMapping("/website")
-@Api(tags = "网站相关模块")
+@RequestMapping("/friendly/links")
+@Api(tags = "网站友情链接模块")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class WebsiteController {
-    private final UserClient userClient;
     private final FriendlyLinkService linkService;
 
-    @GetMapping("/info")
-    @ApiOperation("获取网站相关信息")
-    public String siteInfo() {
-        return "网站的基本信息";
-    }
-
-    @GetMapping("/friendly/links")
+    @GetMapping("/all")
     @ApiOperation("获取所有友情链接")
     public Resp friendlyLinks() {
         List<FriendlyLink> friendlyLinks = linkService.allLinks();

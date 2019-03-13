@@ -100,6 +100,56 @@ export const constantRouterMap = [
       },
     ]
   },
+  {
+    path: '/admin',
+    redirect: '/admin/login'
+  },
+
+  {
+    path: '/admin/login',
+    component: () => import('@/view_admin/login'),
+    name: 'admin',
+    meta: { title: '管理员登录', noCache: true },
+  },
+
+  {
+    path: '/admin/manage',
+    component: () => import('@/view_admin/layout/index'),
+    name: 'adminManage',
+    meta: { title: '管理员登录', noCache: true },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/view_admin/index'),
+        name: 'adminIndex',
+        meta: { title: '首页', noCache: true }
+      },
+      {
+        path: 'user',
+        component: () => import('@/view_admin/userManager/index'),
+        name: 'manageUser',
+        meta: { title: '用户管理', noCache: true }
+      },
+      {
+        path: 'article/all',
+        component: () => import('@/view_admin/articleManager/index'),
+        name: 'manageArticle',
+        meta: { title: '文章管理', noCache: true }
+      },
+      {
+        path: 'article/check',
+        component: () => import('@/view_admin/articleManager/checkArticles'),
+        name: 'manageArticle',
+        meta: { title: '已审核文章管理', noCache: true }
+      },
+      {
+        path: 'article/uncheck',
+        component: () => import('@/view_admin/articleManager/uncheckArticles'),
+        name: 'manageArticle',
+        meta: { title: '待审核文章管理', noCache: true }
+      },
+    ]
+  }
 ]
 
 export default new Router({

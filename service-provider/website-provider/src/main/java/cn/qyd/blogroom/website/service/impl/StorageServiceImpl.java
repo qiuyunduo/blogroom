@@ -20,6 +20,9 @@ import java.nio.file.StandardCopyOption;
 public class StorageServiceImpl implements StorageService {
 
     @Value("${blogroom.storage.local.storagePath}")
+    private String localPath;
+
+    @Value("${blogroom.storage.local.address}")
     private String address;
 
     private Path rootLocation;
@@ -35,8 +38,8 @@ public class StorageServiceImpl implements StorageService {
     public String store(InputStream inputStream, long contentLength, String contentType, String fileName) {
         String key = generateKey(fileName);
         try {
-            System.out.println(address);
-            rootLocation = Paths.get(address);
+            System.out.println(localPath);
+            rootLocation = Paths.get(localPath);
             Files.copy(inputStream, rootLocation.resolve(key), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException("Failed to store file " + key, e);

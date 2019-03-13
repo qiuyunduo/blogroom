@@ -5,8 +5,8 @@
                 <a @click="articlesOfClass(0)">首页</a>
             </li>
 
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === value}" v-for="(key, value) in classMap" :key="key" :value="value" >
-                <a @click="articlesOfClass(value)">{{key}}</a>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === classMap[index-1].id}" v-for="index in classMap.length" :key="index">
+                <a @click="articlesOfClass(classMap[index-1].id)">{{ classMap[index-1].name }}</a>
             </li>
 
             <li style="float:left;margin-top:10px;margin-left:300px; ">
@@ -25,26 +25,31 @@
 </template>
 
 <script>
-
-const classMap = {
-    1: '程序人生',
-    2: '编程',
-    3: '前端',
-    4: '数据库',
-    5: '算法',
-    6: '其他'
-}
-
+import { getAllClass } from '@/api/articleClass'
 export default {
     name: 'NavBar',
     data() {
         return {
             classId: 0,
-            classMap,
+            classMap: null,
             title: undefined
         }
     },
+    mounted() {
+        this.getClassMap()
+    },
     methods: {
+        getClassMap() {
+            getAllClass().then(response => {
+                this.classMap = response.data.data
+                this.$store.commit('SET_CLASSMAP',this.classMap)
+            }).catch(() => {
+                this.$notify.error({
+                    title: '异常',
+                    message: '获取文章类别出错'
+                })
+            })
+        },
         articlesOfClass(id) {
             this.classId = id
             if(id === 0 ){

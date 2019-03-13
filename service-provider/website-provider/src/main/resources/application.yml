@@ -19,6 +19,7 @@ blogroom:
   storage:
     local:
       storagePath: /home/qiuyunduo/IdeaProjects/blogroom/blog-web-new/blogroom/static/storage/
+      address: http://localhost:9000/static/storage/
 logging:
   config:
     classpath:logback-spring.xml

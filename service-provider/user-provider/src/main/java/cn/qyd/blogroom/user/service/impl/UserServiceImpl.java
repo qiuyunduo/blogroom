@@ -107,6 +107,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<User> fashionUser() {
+        Pageable pageable = PageRequest.of(0,10);
+        UserQueryParam param = new UserQueryParam(new UserQueryDto());
+        Page<User> page = userDao.findAll(param,pageable);
+        return page.getContent();
+    }
+
+    @Override
     public Boolean updatePassword(UpdatePwdDto dto) {
         User user = findById(dto.getId());
         if(MD5Util.getMD5(dto.getOldPassword()).equals(user.getPassword())){

@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 import Element from 'element-ui'
 
+import './icons' // icon
 import '../static/Ue-Utf8-Jsp/ueditor.config.js'　　　　
 import '../static/Ue-Utf8-Jsp/ueditor.all.min.js'
 import '../static/Ue-Utf8-Jsp/lang/zh-cn/zh-cn.js'
