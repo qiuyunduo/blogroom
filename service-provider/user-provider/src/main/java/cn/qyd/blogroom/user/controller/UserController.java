@@ -97,6 +97,7 @@ public class UserController {
     public Resp query(UserQueryDto queryDto) {
         Page<User> resultPage = userService.query(queryDto);
         PagingInfo pageInfo = PagingUtil.page(resultPage);
+        pageInfo.setItem(BeanMapper.mapList(pageInfo.getItem(),UserVo.class));
         return Resp.succeedPaging(pageInfo);
     }
 }

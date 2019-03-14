@@ -16,6 +16,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @Author qyd
@@ -43,7 +44,7 @@ public class User extends BaseEntity {
     private Integer sex;
 
     @Column(name = "birthday",columnDefinition = "date COMMENT '生日'")
-    private LocalDate birthday;
+    private Date birthday;
 
     @Column(name = "head_image",columnDefinition = "varchar(255) COMMENT '头像地址'")
     private String headImage;

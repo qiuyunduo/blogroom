@@ -1,9 +1,11 @@
 package cn.qyd.blogroom.user.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -29,6 +31,7 @@ public class UserVo {
     private Integer sex;
 
     @ApiModelProperty("生日")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date birthday;
 
     @ApiModelProperty("头像地址")
@@ -45,4 +48,11 @@ public class UserVo {
 
     @ApiModelProperty("最近一次的登录地址")
     private String lastLoginIp;
+
+    @ApiModelProperty("用户状态")
+    private Integer status;
+
+    @ApiModelProperty("添加时间")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private LocalDateTime addTime;
 }

@@ -6,14 +6,14 @@
           <input type="hidden" name="articleAuthorId" id="userid">
           <input type="hidden" name="articleId" id="aid">
           <div class="col-md-9">
-            <h1 class="page-header">撰写新文章</h1>
+            <h1 class="page-header">添加/编辑文章</h1>
             <div class="form-group">
               <label for="article-title" class="sr-only">标题</label>
               <input type="text" id="article-title" name="articleTitle" class="form-control" placeholder="在此处输入标题" required autofocus autocomplete="off">
             </div>
             <div class="form-group">
               <label for="update-editor" class="sr-only">内容</label>
-              <script id="update-editor" name="articleContent" type="text/plain"></script>
+              <div id="editor" style="height: 500px"></div>
             </div>
             <div class="add-article-box">
               <h2 class="add-article-box-title"><span>关键字</span></h2>
@@ -88,3 +88,25 @@
       </div>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'Index',
+  data() {
+    return {
+      editor: undefined
+    }
+  },
+  mounted() {
+    UE.delEditor('editor')
+    this.editor = window.UE.getEditor('editor')
+  },
+}
+</script>
+
+
+
+<style scoped>
+@import '../../style/adminStyle.css';
+@import '../../style/bootstrap.min.css';
+</style>

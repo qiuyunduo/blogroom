@@ -57,15 +57,6 @@ export default {
                         {
                             entity: {
                                 id: 2,
-                                name: 'allArticle',
-                                icon: "el-icon-edit",
-                                alias: "全部",
-                                value: { path: "/admin/manage/article/all" }
-                            }
-                        },
-                        {
-                            entity: {
-                                id: 3,
                                 name: 'checkArticle',
                                 icon: "el-icon-edit",
                                 alias: "已审核",
@@ -74,11 +65,20 @@ export default {
                         },
                         {
                             entity: {
-                                id: 4,
+                                id: 3,
                                 name: 'uncheckArticle',
                                 icon: "el-icon-edit",
                                 alias: "待审核",
                                 value: "/admin/manage/article/uncheck"
+                            }
+                        },
+                        {
+                            entity: {
+                                id: 4,
+                                name: 'edit',
+                                icon: "el-icon-edit",
+                                alias: "添加/编辑",
+                                value: { path: "/admin/manage/article/edit" }
                             }
                         },
                     ]

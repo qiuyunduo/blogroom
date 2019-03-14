@@ -131,9 +131,9 @@ export const constantRouterMap = [
         meta: { title: '用户管理', noCache: true }
       },
       {
-        path: 'article/all',
-        component: () => import('@/view_admin/articleManager/index'),
-        name: 'manageArticle',
+        path: 'article/edit',
+        component: () => import('@/view_admin/articleManager/edit'),
+        name: 'edit',
         meta: { title: '文章管理', noCache: true }
       },
       {

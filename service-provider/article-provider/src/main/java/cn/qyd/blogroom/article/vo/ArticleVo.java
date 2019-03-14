@@ -17,6 +17,9 @@ public class ArticleVo {
     @ApiModelProperty("ID")
     private Long id;
 
+    @ApiModelProperty("文章类别id")
+    private Long classId;
+
     @ApiModelProperty("文章作者id")
     private Long userId;
 
@@ -28,6 +31,9 @@ public class ArticleVo {
 
     @ApiModelProperty("文章简介")
     private String describe;
+
+    @ApiModelProperty("文章关键词")
+    private String keyword;
 
     @ApiModelProperty("文章标题图片")
     private String headPhoto;

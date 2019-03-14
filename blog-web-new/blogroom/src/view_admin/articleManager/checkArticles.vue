@@ -1,37 +1,142 @@
 <template>
-     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
-      <form action="/Article/checkAll" method="post" >
-        <h1 class="page-header">管理 <span class="badge">7</span></h1>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th><span class="glyphicon glyphicon-file"></span> <span class="visible-lg">标题</span></th>
-                <th><span class="glyphicon glyphicon-list"></span> <span class="visible-lg">栏目</span></th>
-                <th class="hidden-sm"><span class="glyphicon glyphicon-tag"></span> <span class="visible-lg">标签</span></th>
-                <th class="hidden-sm"><span class="glyphicon glyphicon-comment"></span> <span class="visible-lg">评论</span></th>
-                <th><span class="glyphicon glyphicon-time"></span> <span class="visible-lg">日期</span></th>
-                <th><span class="glyphicon glyphicon-pencil"></span> <span class="visible-lg">操作</span></th>
-              </tr>
-            </thead>
-            <tbody id="allArticles">
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
+    <h1 class="page-header">已审核文章管理 </h1>
+    <div class="table-responsive" style="width:1400px">
+      <!-- 查询和其他操作 -->
+      <div class="filter-container">
+        <el-input v-model="listQuery.title" clearable class="filter-item" style="width: 200px" placeholder="文章标题"/>
+         <el-input v-model="listQuery.userId" clearable class="filter-item" style="width: 200px" placeholder="作者id"/>
+        <el-select v-model="listQuery.classId" style="width: 200px" class="filter-item" placeholder="文章类别">
+          <el-option v-for="(key, value) in classMap" :key="key" :label="key" :value="value"/>
+        </el-select>
 
-            </tbody>
-          </table>
-        </div>
-        <footer class="message_footer" style="padding-right: 500px">
-          <nav>
-            <ul class="pagination pagenav" id="pages">
-              <li class="disabled"><a aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-            </ul>
-          </nav>
-        </footer>
-      </form>
+        <el-button class="filter-item" type="primary" icon="el-icon-search" @click="queryAll" style="margin-left: 20px;margin-top: -10px">查找</el-button>
+        <el-button class="filter-item" type="primary" @click="resetQuery" style="margin-left: 20px;margin-top: -10px">重置</el-button>
+      </div>
+
+      <!-- 查询结果 -->
+      <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
+        <el-table-column align="center" width="100px" label="ID" prop="id"/>
+
+        <el-table-column align="center" width="100px" label="标题" prop="title"/>
+
+        <el-table-column align="center" label="作者" prop="author"/>
+
+        <el-table-column align="center" label="文章类别" prop="classId">
+          <template slot-scope="scope">
+            <el-tag>{{ classMap[scope.row.classId] }}</el-tag>
+          </template>
+        </el-table-column>
+
+        <el-table-column align="center" label="关键词" prop="keyword"/>
+        
+        <el-table-column align="center" label="评论数" prop="comments"/>
+
+        <el-table-column align="center" label="点赞数" prop="thumbs"/>
+
+        <el-table-column align="center" label="发布时间" prop="publishTime"/>
+
+        <el-table-column align="center" label="状态" prop="status">
+          <template>
+            <el-tag>已发布</el-tag>
+          </template>
+        </el-table-column>
+
+        <el-table-column align="center" label="操作" width="200" class-name="small-padding fixed-width">
+          <template slot-scope="scope">
+            <el-button type="primary" size="mini" @click="getDetail(scope.row)">编辑</el-button>
+            <el-button type="primary" size="mini" @click="getDetail(scope.row)">详情</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+
+      <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
     </div>
+  </div>
 </template>
+
+<script>
+import { allArticles } from '@/api/article'
+import Pagination from '@/components/Pagination'
+import { getAllClass } from '@/api/articleClass'
+
+const statusMap = {
+  0: '待审核',
+  1: '审核通过',
+  2: '审核失败'
+}
+
+export default {
+  name: 'CheckArticle',
+  data() {
+    return {
+      list: null,
+      total: 0,
+      listLoading: true,
+      statusMap,
+      classMap: {},
+      listQuery: {
+        page: 1,
+        limit: 10,
+        title: undefined,
+        classId: undefined,
+        userId: undefined,
+        status: 2
+      },
+    }
+  },
+  components: {
+    Pagination
+  },
+  mounted() {
+    this.getClassMap()
+    this.getList()
+  },
+  methods: {
+    getList() {
+      this.listLoading = true
+      allArticles(this.listQuery).then(response => {
+        this.list = response.data.pagingData.item
+        this.total = response.data.pagingData.total
+        this.listLoading = false
+      }).catch(() => {
+        this.list = []
+        this.total = 0
+        this.listLoading = false
+      })
+    },
+    queryAll() {
+      this.listQuery.page = 1
+      this.getList()
+    },
+    resetQuery() {
+      this.listQuery.title = undefined
+      this.listQuery.userId = undefined
+      this.listQuery.classId = undefined
+    },
+    getDetail() {
+
+    },
+    getClassMap() {
+      getAllClass().then(response => {
+            let classMap = response.data.data
+            for(let index in classMap) {
+              this.classMap[classMap[index].id] = classMap[index].name
+            }
+        }).catch(() => {
+            this.$notify.error({
+                title: '异常',
+                message: '获取文章类别出错'
+            })
+        })
+    },
+  },
+}
+</script>
+
+
+<style scoped>
+@import '../../style/adminStyle.css';
+@import '../../style/bootstrap.min.css';
+@import "element-ui/lib/theme-chalk/index.css"
+</style>

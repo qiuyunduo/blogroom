@@ -138,7 +138,7 @@ public class UserServiceImpl implements UserService {
     public Boolean update(UserUpdateInfoDto infoDto) {
         User user = findById(infoDto.getId());
         user.setSex(infoDto.getSex())
-                .setBirthday(Formater.parseLocalDate(infoDto.getBirthday()))
+                .setBirthday(Formater.parseDate(infoDto.getBirthday()))
                 .setOccupation(infoDto.getOccupation())
                 .setArea(infoDto.getArea())
                 .setDescription(infoDto.getDescription())
