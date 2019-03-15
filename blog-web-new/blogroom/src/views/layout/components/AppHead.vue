@@ -16,16 +16,16 @@
             <img id="log_img" src="@/images/default.jpg" style="width: 30px;height: 30px;border-radius:50%">
             <i class="el-icon-caret-bottom"/>
               <el-dropdown-menu slot="dropdown">
-                <router-link :to="blogBasePath+returnUser.id">
+                <a :href="blogBasePath+returnUser.id">
                   <el-dropdown-item>
-                  <span style="display:block;">我的博客</span>
+                    <span style="display:block;">我的博客</span>
                   </el-dropdown-item>
-                </router-link>
-                <!-- <router-link :to="userBasePath+returnUser.id+'/info'"> -->
-                <el-dropdown-item>
-                    <span style="display:block;" @click="personal()">个人中心</span>
-                </el-dropdown-item>
-                <!-- </router-link> -->
+                </a>
+                <a :href="userBasePath+returnUser.id">
+                  <el-dropdown-item>
+                      <span style="display:block;">个人中心</span>
+                  </el-dropdown-item>
+                </a>
                 <el-dropdown-item divided>
                     消息
                 </el-dropdown-item>

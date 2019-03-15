@@ -1,5 +1,5 @@
 <template>
-    <div id="app" style="height:820px"><!---->
+    <div id="app" style="min-height:811px"><!---->
         <div data-v-357a65ed="" class="container view">
             <left-menu/>
             <router-view></router-view>

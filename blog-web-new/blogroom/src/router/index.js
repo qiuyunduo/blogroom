@@ -1,21 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '@/store'
 
 Vue.use(Router)
-
-// import Layout from '@/view/layout/Layout'
-// import HelloWorld from '@/components/HelloWorld'
 
 export const constantRouterMap = [
   {
     path: '/',
-    name: 'layout',
     component: () => import('@/views/layout/Layout'),
     children: [
       {
         path: '',
         component: () => import('@/views/website/index'),
-        name: 'main',
         meta: { title: '首页', noCache: true },
         children: [
           {
@@ -53,7 +49,6 @@ export const constantRouterMap = [
       {
         path: 'blog/user/:id',
         component: () => import('@/views/user/index'),
-        name: 'blogroom',
         meta: { title: '个人中心', noCache: true },
         children: [
           {
@@ -101,6 +96,14 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: '/about',
+    component: () => import('@/views/website/about'),
+  },
+  {
+    path: '/contact',
+    component: () => import('@/views/website/contact'),
+  },
+  {
     path: '/admin',
     redirect: '/admin/login'
   },
@@ -139,21 +142,44 @@ export const constantRouterMap = [
       {
         path: 'article/check',
         component: () => import('@/view_admin/articleManager/checkArticles'),
-        name: 'manageArticle',
+        name: 'checkArticle',
         meta: { title: '已审核文章管理', noCache: true }
       },
       {
         path: 'article/uncheck',
         component: () => import('@/view_admin/articleManager/uncheckArticles'),
-        name: 'manageArticle',
+        name: 'unCheckArticle',
         meta: { title: '待审核文章管理', noCache: true }
       },
     ]
+  },
+  {
+    path: "*",
+    component: () => import('@/components/errorPage/404.vue'),
   }
 ]
 
-export default new Router({
+let router = new Router({
   mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
+
+router.beforeEach((to, from, next) => {
+  // alert(to.path)
+  if(to.path.startsWith("/admin")) {
+    if(to.path === '/admin/login') {
+      next()
+    } else {
+      if(store.state.website.isLogin) {
+        next()
+      } else {
+        next('/admin/login')
+      }
+    }
+  } else {
+    next()
+  }
+})
+
+export default router

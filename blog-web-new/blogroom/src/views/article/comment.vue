@@ -81,7 +81,7 @@ export default {
           allComments(this.id).then(response => {
               this.list = response.data.data
               this.total = this.list === null ? 0 : this.list.length
-              console.log(this.list)
+            //   console.log(this.list)
           }).catch(response => {
               this.$notify.error({
                 title: '异常',

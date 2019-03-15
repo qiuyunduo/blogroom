@@ -5,7 +5,7 @@
                 <a @click="articlesOfClass(0)">首页</a>
             </li>
 
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === classMap[index-1].id}" v-for="index in classMap.length" :key="index">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === classMap[index-1].id}" v-for="index in classMapSize" :key="index">
                 <a @click="articlesOfClass(classMap[index-1].id)">{{ classMap[index-1].name }}</a>
             </li>
 
@@ -32,6 +32,7 @@ export default {
         return {
             classId: 0,
             classMap: null,
+            classMapSize: 0,
             title: undefined
         }
     },
@@ -42,6 +43,7 @@ export default {
         getClassMap() {
             getAllClass().then(response => {
                 this.classMap = response.data.data
+                this.classMapSize = this.classMap.length
                 this.$store.commit('SET_CLASSMAP',this.classMap)
             }).catch(() => {
                 this.$notify.error({

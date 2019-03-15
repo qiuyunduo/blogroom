@@ -47,7 +47,7 @@ export default {
       getAllLinks() {
           all().then(response => {
               this.linkList = response.data.data
-              this,linkSize = this.linkList.length
+              this.linkSize = this.linkList.length
           }).catch(() => {
               this.$notify.error({
                   title: '异常',

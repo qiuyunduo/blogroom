@@ -93,6 +93,75 @@ export default {
                         alias: "用户管理"
                     }
                 },
+                {
+                //一级
+                    entity: {
+                        id: 6,
+                        name: 'website',
+                        icon: "el-icon-message",
+                        alias: "网站管理"
+                    },
+                //二级
+                    childs: [
+                        {
+                            entity: {
+                                id: 7,
+                                name: 'fashionArticle',
+                                icon: "el-icon-edit",
+                                alias: "时尚博文管理",
+                                value: "/admin/manage/website/fashionArticle"
+                            }
+                        },
+                        {
+                            entity: {
+                                id: 8,
+                                name: 'edit',
+                                icon: "el-icon-edit",
+                                alias: "时尚博主管理",
+                                value: { path: "/admin/manage/website/fashionBlogger" }
+                            }
+                        },
+                        {
+                            entity: {
+                                id: 9,
+                                name: 'friendlyLink',
+                                icon: "el-icon-edit",
+                                alias: "友情链接",
+                                value: "/admin/manage/website/friendlyLink"
+                            }
+                        },
+                    ]
+                },
+                {
+                //一级
+                    entity: {
+                        id: 10,
+                        name: 'config',
+                        icon: "el-icon-message",
+                        alias: "积分等级管理"
+                    },
+                //二级
+                    childs: [
+                        {
+                            entity: {
+                                id: 11,
+                                name: 'rankConfig',
+                                icon: "el-icon-edit",
+                                alias: "等级管理",
+                                value: "/admin/manage/website/rankConfig"
+                            }
+                        },
+                        {
+                            entity: {
+                                id: 12,
+                                name: 'integralConfig',
+                                icon: "el-icon-edit",
+                                alias: "积分配置",
+                                value: { path: "/admin/manage/website/integralConfig" }
+                            }
+                        }
+                    ]
+                },
             ]
         }
     },

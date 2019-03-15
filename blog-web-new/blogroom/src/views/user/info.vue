@@ -1,5 +1,5 @@
 <template>
-    <div data-v-357a65ed="" class="view-container" id="main_content" style="margin-top: 10px">
+    <div data-v-357a65ed="" class="view-container" id="main_content" style="margin-top: 10px;min-height: 800px;">
         <div data-v-0d738edb="" data-v-357a65ed="" class="cont view">
             <div data-v-0d738edb="" class="right_cont">
                 <h3 data-v-0d738edb="" class="title">个人资料</h3>

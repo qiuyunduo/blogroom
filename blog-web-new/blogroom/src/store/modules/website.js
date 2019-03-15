@@ -1,6 +1,10 @@
+import { isLogin, getAdminInfo, setAdminInfo, removeAdminInfo } from '@/utils/adminAuth'
+
 const website = {
   state: {
-    classMap: null
+    classMap: null,
+    isLogin: isLogin(),
+    adminInfo: getAdminInfo()
     // queryList: {
     //   classId: undefined,
     //   title: undefined,
@@ -12,21 +16,32 @@ const website = {
     // }
   },
   mutations: {
+    SET_ISLOGIN: (state, data) => {
+      state.isLogin = data
+    },
     SET_CLASSMAP: (state, data) => {
       state.classMap = data
-    }
-    // TOGGLE_SIDEBAR: state => {
-    //   if (state.sidebar.opened) {
-    //     Cookies.set('sidebarStatus', 1)
-    //   } else {
-    //     Cookies.set('sidebarStatus', 0)
-    //   }
-    //   state.sidebar.opened = !state.sidebar.opened
-    //   state.sidebar.withoutAnimation = false
-    // }
+    },
+    SET_ADMININFO: (state, adminInfo) => {
+      state.adminInfo = adminInfo
+    },
   },
   actions: {
-    
+    setAdminInfo({ commit },adminInfo) {
+      return new Promise((resolve,reject) => {
+        commit('SET_ISLOGIN',true)
+        commit('SET_ADMININFO',adminInfo)
+        setAdminInfo(adminInfo)
+        resolve()
+      })
+    },
+    adminLogout({ commit, state }) {
+      return new Promise((resolve, reject) => {
+          removeAdminInfo()
+          commit('SET_ISLOGIN',false)
+          resolve()
+      })
+    },
   }
 }
 

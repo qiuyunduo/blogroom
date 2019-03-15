@@ -21,7 +21,7 @@ export default {
     data() {
         return {
             list: null,
-            total: 0,
+            total: 10000,
             pageSize: 0,
             listQuery: {
                 classId: undefined,

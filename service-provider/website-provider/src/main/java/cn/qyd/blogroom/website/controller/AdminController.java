@@ -32,7 +32,7 @@ public class AdminController {
         return Resp.succeed(admin);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     @ApiOperation("管理员登录")
     public Resp login(String name,String password) {
         Admin loginUser = adminService.login(name, password);

@@ -16,7 +16,7 @@
                                 <li><a title="查看您的登录记录" data-toggle="modal" data-target="#seeUserLoginlog">登录记录</a></li>
                             </ul>
                         </li>
-                        <li><a href="/BlogRoom/user/backQuitLog" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a></li>
+                        <li><a href="" @click="adminLogout">退出登录</a></li>
                         <li><a data-toggle="modal" data-target="#WeChat">帮助</a></li>
                     </ul>
                     <form action="" method="post" class="navbar-form navbar-right" role="search">
@@ -35,7 +35,17 @@
 
 <script>
 export default {
-    name: 'AdminHead'
+    name: 'AdminHead',
+    methods: {
+        adminLogout() {
+            if(confirm('确认退出登录')){
+                this.$router.push("/admin/login")
+                this.$store.dispatch('adminLogout')
+            } else {
+                return
+            }
+        }
+    },
 }
 </script>
 

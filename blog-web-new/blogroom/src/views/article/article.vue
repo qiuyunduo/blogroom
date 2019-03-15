@@ -6,7 +6,7 @@
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><span id="article_keyword" style="padding-left: 10px">java</span></span>				<span class="muted"><i class="fa fa-user"></i> <a href="#" id="article_author">匿名</a></span>
 				<time class="muted"><i class="fa fa-clock-o"></i> <span id="article_time">{{ detailInfo.publishTime }}</span></time>
-				<span class="muted"><i class="fa fa-comments-o"></i> <a><span id="comment_count">{{ detailInfo.comments }}</span>评论</a></span>							
+				<span class="muted"><i class="fa fa-comments-o"></i> <a href="javaScript:;" @click="goComment"><span id="comment_count">{{ detailInfo.comments }}</span>评论</a></span>							
 			</div>
 		</header>
 
@@ -58,14 +58,22 @@ export default {
 		  var id = this.$route.params.id
 		  readOne(id).then(response => {
 			  this.detailInfo = response.data.data
-			  console.log(this.detailInfo)
+			  // console.log(this.detailInfo)
 		  }).catch(response => {
             this.$notify.error({
               title: '异常',
               message: '获取该文章出错'
             })
           })
-	  }
+		},
+		goComment() {
+			document.getElementById("respond").scrollIntoView();
+			document.getElementById("comment").focus();
+      // // Firefox
+      // document.documentElement.scrollTop = 10800
+      // // Safari
+      // window.pageYOffset = total[index] + 108
+		}
   }
 }
 </script>

@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { adminLogin } from '@/api/login'
 export default {
   name: 'Login',
   data() {
@@ -39,16 +40,16 @@ export default {
       }
     }
     const validatePassword = (rule, value, callback) => {
-      if (value.length < 6) {
-        callback(new Error('管理员密码长度应大于6'))
+      if (value.length < 5) {
+        callback(new Error('管理员密码长度应大于5'))
       } else {
         callback()
       }
     }
     return {
       loginForm: {
-        username: 'admin123',
-        password: 'admin123'
+        username: 'admin',
+        password: 'admin'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -57,21 +58,6 @@ export default {
       passwordType: 'password',
       loading: false
     }
-  },
-  watch: {
-    $route: {
-      handler: function(route) {
-        this.redirect = route.query && route.query.redirect
-      },
-      immediate: true
-    }
-
-  },
-  created() {
-    // window.addEventListener('hashchange', this.afterQRScan)
-  },
-  destroyed() {
-    // window.removeEventListener('hashchange', this.afterQRScan)
   },
   methods: {
     showPwd() {
@@ -85,9 +71,15 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid && !this.loading) {
           this.loading = true
-          this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
+          adminLogin(this.loginForm).then(response => {
             this.loading = false
-            this.$router.push({ path: this.redirect || '/' })
+            this.$store.dispatch('setAdminInfo',response.data.data)
+            console.log(response.data.data)
+            this.$router.push("/admin/manage/index")
+            this.$notify.success({
+              title: '登录成功',
+              message: "欢迎登录，管理员："+this.loginForm.username
+            })
           }).catch(response => {
             this.$notify.error({
               title: '失败',
