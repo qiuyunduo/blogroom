@@ -41,10 +41,10 @@ public class AttentionServiceImpl implements AttentionService {
         Attention attention = new Attention();
         attention.setUser1Id(dto.getUser1Id())
                 .setUser1Image(user1.getHeadImage())
-                .setUser1Name(user1.getName())
+                .setUser1Name(user1.getNickName())
                 .setUser2Id(dto.getUser2Id())
                 .setUser2Image(user2.getHeadImage())
-                .setUser2Name(user2.getName())
+                .setUser2Name(user2.getNickName())
                 .setAddTime(LocalDateTime.now());
 
         Attention result = attentionDao.save(attention);

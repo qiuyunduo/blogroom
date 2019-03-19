@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @ApiModel("查询用户条件")
 public class UserQueryDto {
-    private String name;
+    private String nickName;
 
     private Integer status;
 

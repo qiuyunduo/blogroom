@@ -23,7 +23,7 @@ public class ArticleQueryDto {
      */
     private Boolean orderByUpdateTime;
 
-    private Integer status;
+    private Integer status = 2;
 
     @NotNull
     private Integer page;

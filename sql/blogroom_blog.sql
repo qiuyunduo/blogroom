@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/03/2019 14:20:50
+ Date: 19/03/2019 19:07:28
 */
 
 SET NAMES utf8mb4;
@@ -23,7 +23,6 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog`  (
   `id` mediumint(9) NOT NULL AUTO_INCREMENT,
-  `blog_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '博客名称',
   `user_id` mediumint(9) NULL DEFAULT NULL COMMENT '用户id',
   `rank_id` mediumint(9) NULL DEFAULT NULL COMMENT '等级id',
   `integral` int(8) NULL DEFAULT NULL COMMENT '博客积分',
@@ -42,20 +41,20 @@ CREATE TABLE `blog`  (
 -- ----------------------------
 -- Records of blog
 -- ----------------------------
-INSERT INTO `blog` VALUES (1, 'admin', 1, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (2, 'qyd2', 2, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (3, '苏宏鹏', 15, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (4, 'test1', 16, 2, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (5, 'test2', 17, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (6, 'shp', 18, 7, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (7, 'qiuyunduo', 19, 8, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (8, '1', 20, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (9, 'asd', 21, 5, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (10, 'testuser1', 22, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (11, 'testuser11', 23, 4, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (12, 'testuser2', 24, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (13, 'testuser3', 25, 4, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
-INSERT INTO `blog` VALUES (14, '123', 26, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (1, 1, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (2, 2, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (3, 15, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (4, 16, 2, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (5, 17, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (6, 18, 7, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (7, 19, 8, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (8, 20, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (9, 21, 5, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (10, 22, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (11, 23, 4, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (12, 24, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (13, 25, 4, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
+INSERT INTO `blog` VALUES (14, 26, 1, 0, 3, 4, 5, 6, 7, 1450000, 1, '2019-03-08 13:46:57', NULL);
 
 -- ----------------------------
 -- Table structure for integral_config

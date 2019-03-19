@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/03/2019 14:20:58
+ Date: 19/03/2019 19:07:36
 */
 
 SET NAMES utf8mb4;
@@ -83,13 +83,13 @@ INSERT INTO `user` VALUES (15, '苏宏鹏', '1234', '1518060478', 'suhongpeng@al
 INSERT INTO `user` VALUES (16, 'test1', '123', '1518060478', '123@qq.com', 1, '2019-03-10', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', '帅', 0, '192.168.1.168', '2018-08-21 21:54:14', NULL);
 INSERT INTO `user` VALUES (17, 'test2', 'test2', '1518060478', 'test2@aliyun.com', 1, '2019-03-14', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2018-08-21 21:55:24', NULL);
 INSERT INTO `user` VALUES (18, 'shp', '123', '1518060478', 'suhongpen@xinlang.com', 1, '2019-02-25', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', '苏宏鹏小号', 0, '192.168.1.168', '2018-08-22 08:54:14', NULL);
-INSERT INTO `user` VALUES (19, 'qiuyunduo', '202cb962ac59075b964b07152d234b70', '1518060478', 'qiuyunduo@aliyun.com', 1, '2019-03-12', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', '已经是博客屋的一名老将了', 0, '192.168.1.168', '2018-08-22 21:40:14', NULL);
+INSERT INTO `user` VALUES (19, 'qiuyunduo', '202cb962ac59075b964b07152d234b70', '1518060478', 'qiuyunduo@aliyun.com', 1, '2019-03-12', 'http://localhost:9000/static/storage/azyprxyby73hztp3rx5z.png', '深圳', 'java程序员', '已经是博客屋的一名老将了', 0, '192.168.1.168', '2018-08-22 21:40:14', NULL);
 INSERT INTO `user` VALUES (20, '1', '1', '1518060478', '123@qq.com', 1, '2019-03-03', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', '', 0, '192.168.1.168', '2018-08-23 10:26:31', NULL);
 INSERT INTO `user` VALUES (21, 'asd', '7815696ecbf1c96e6894b779456d330e', '1518060478', 'asd', 0, '2019-03-04', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-05 17:01:43', NULL);
 INSERT INTO `user` VALUES (22, 'testuser1', '41da76f0fc3ec62a6939e634bfb6a342', '1518060478', 'testuser1@qq.com', 0, '2019-03-14', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-05 17:16:13', NULL);
 INSERT INTO `user` VALUES (23, 'testuser11', '41da76f0fc3ec62a6939e634bfb6a342', '1518060478', 'testuser1@qq.com', 0, '2019-03-25', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-05 17:16:14', NULL);
 INSERT INTO `user` VALUES (24, 'testuser2', '58dd024d49e1d1b83a5d307f09f32734', '1518060478', 'testuser2@qq.com', 0, '2019-03-04', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-05 17:22:36', NULL);
 INSERT INTO `user` VALUES (25, 'testuser3', '1e4332f65a7a921075fbfb92c7c60cce', '1518060478', 'testuser3@qq.com', 0, '2019-03-04', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-05 17:24:30', NULL);
-INSERT INTO `user` VALUES (26, '123', '202cb962ac59075b964b07152d234b70', '1518060478', '123', 0, '2019-02-25', 'http://localhost:9000/static/images/default.jpg', '深圳', 'java程序员', NULL, 0, '192.168.1.168', '2019-03-07 17:36:55', NULL);
+INSERT INTO `user` VALUES (26, '123', '202cb962ac59075b964b07152d234b70', '1518060478', '123', 1, '2019-02-03', 'http://localhost:9000/static/storage/vr0ybfgopxespfos66th.jpg', '深圳', 'java程序员', '我是在进行项目重构时测试用户，如何', 0, '192.168.1.168', '2019-03-07 17:36:55', '2019-03-19 16:37:55');
 
 SET FOREIGN_KEY_CHECKS = 1;

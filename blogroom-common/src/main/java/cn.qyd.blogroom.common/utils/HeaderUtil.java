@@ -1,6 +1,8 @@
 package cn.qyd.blogroom.common.utils;
 
 import cn.qyd.blogroom.common.constants.Constant;
+import cn.qyd.blogroom.common.exception.BusinessException;
+import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -31,15 +33,15 @@ public class HeaderUtil {
     /**
      * 获取用户id
      */
-//    public static Long getUserId() {
-//        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-//        HttpServletRequest request = attributes.getRequest();
-//        Object userId = request.getAttribute("userId");
-//        if (userId != null) {
-//            return Long.valueOf(userId.toString());
-//        }
-//        throw UserServiceException.create(UserErrorEnum.USER_NOT_LOGIN);
-//    }
+    public static Long getUserId() {
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = attributes.getRequest();
+        String userId = request.getHeader(Constant.USER_ID_KEY);
+        if (StringUtils.isNotBlank(userId)) {
+            return Long.valueOf(userId);
+        }
+        throw BusinessException.fail(FrontRespEnum.LOGIN_INFO_EXIST);
+    }
 
     /**
      * 获取用户id，没有则返回null
@@ -53,46 +55,6 @@ public class HeaderUtil {
         }
         return null;
     }
-
-    /**
-     * 获取当前系统
-     */
-    public static String getSystem() {
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        return request.getHeader(Constant.APP_SYSTEM);
-    }
-
-//    public static SystemEnum getSystemEnum() {
-//        SystemEnum systemEnum = SystemEnum.get(getSystem());
-//        return systemEnum;
-//    }
-
-    /**
-     * 获取当前APP版本
-     */
-    public static String getVersion() {
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        return request.getHeader(Constant.APP_VERSION);
-    }
-
-    /**
-     * 获取当前语言CODE
-     */
-    public static String getCurrentLanguage() {
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        return request.getHeader(Constant.APP_LOCALE);
-    }
-
-//    public static LanguageEnum getLanguage() {
-//        return LanguageEnum.get(getCurrentLanguage());
-//    }
-//
-//    public static Integer getCurrentLanguageId() {
-//        return getLanguage().getId();
-//    }
 
 }
 

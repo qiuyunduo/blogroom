@@ -30,12 +30,12 @@ export default {
   data() {
 	  return {
 		  detailInfo: {
-			id: undefined,
-			title: undefined,
-			publishTIme: undefined,
-			comments: 0,
-			content: '',
-			thumbs: 0
+				id: undefined,
+				title: undefined,
+				publishTIme: undefined,
+				comments: 0,
+				content: '',
+				thumbs: 0
 		  }
 	  }
   },
@@ -43,10 +43,25 @@ export default {
 	  Comment
   },
   watch: {
-	  '$route':'getChange'
+		'$route':'getChange',
+		detailInfo: function(){
+			this.$nextTick(function() {
+				let action = this.$route.query.action
+				if(action !== undefined) {
+					if(action === 'comment') {
+						document.getElementById("respond").scrollIntoView();
+						document.getElementById("comment").focus();
+					}
+
+					if(action === 'thumb') {
+						document.getElementById("Addlike").scrollIntoView();
+					}
+				}
+			})
+		}
   },
-  created() {
-	  this.getDetail()
+  mounted() {
+		this.getDetail()
   },
   methods: {
 	  getChange() {
@@ -60,11 +75,13 @@ export default {
 			  this.detailInfo = response.data.data
 			  // console.log(this.detailInfo)
 		  }).catch(response => {
-            this.$notify.error({
-              title: '异常',
-              message: '获取该文章出错'
-            })
-          })
+            // this.$notify.error({
+            //   title: '异常',
+            //   message: '获取该文章出错'
+            // })
+			})
+
+			
 		},
 		goComment() {
 			document.getElementById("respond").scrollIntoView();

@@ -7,7 +7,7 @@ import cn.qyd.blogroom.blog.dto.BlogStatusDto;
 import cn.qyd.blogroom.blog.entity.Blog;
 
 public interface BlogService {
-    Blog save(BlogDto dto);
+    Blog save(Long userid);
 
     Blog findByUserId(Long userid);
 

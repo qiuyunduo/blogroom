@@ -2,25 +2,12 @@ import { isLogin, getAdminInfo, setAdminInfo, removeAdminInfo } from '@/utils/ad
 
 const website = {
   state: {
-    classMap: null,
     isLogin: isLogin(),
     adminInfo: getAdminInfo()
-    // queryList: {
-    //   classId: undefined,
-    //   title: undefined,
-    //   userId: undefined,
-    //   orderByUpdateTime: false,
-    //   status: 2,
-    //   page: 1,
-    //   limit: 10
-    // }
   },
   mutations: {
     SET_ISLOGIN: (state, data) => {
       state.isLogin = data
-    },
-    SET_CLASSMAP: (state, data) => {
-      state.classMap = data
     },
     SET_ADMININFO: (state, adminInfo) => {
       state.adminInfo = adminInfo
@@ -35,7 +22,7 @@ const website = {
         resolve()
       })
     },
-    adminLogout({ commit, state }) {
+    adminLogout({ commit }) {
       return new Promise((resolve, reject) => {
           removeAdminInfo()
           commit('SET_ISLOGIN',false)

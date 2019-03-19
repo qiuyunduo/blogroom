@@ -1,5 +1,6 @@
 package cn.qyd.blogroom.user.vo;
 
+import cn.qyd.blogroom.user.entity.User;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -11,14 +12,8 @@ import lombok.Data;
 @Data
 @ApiModel("登录用户")
 public class LoginUser {
-    @ApiModelProperty("用户id")
-    private Long id;
-
-    @ApiModelProperty("用户名")
-    private String name;
-
-    @ApiModelProperty("头像地址")
-    private String headImage;
+    @ApiModelProperty("用户")
+    private User user;
 
     @ApiModelProperty("登录token")
     private String token;

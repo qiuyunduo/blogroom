@@ -1,33 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" line="28" />
+    <bookmark url="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" line="30" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="移除github中的target">
+      <change afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ThumbController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/ThumbDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Thumb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/ThumbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ThumbServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/blog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FashionArticles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FashionArticles.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FashionBloggers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FashionBloggers.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FriendlyLink.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/FriendlyLink.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/SimpleArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/SimpleArticle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/store/modules/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/store/modules/website.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/store/modules/website.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/layout/AdminHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/layout/AdminHead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/layout/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/view_admin/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/article.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/comment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppFoot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppFoot.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/fans.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/fans.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/followers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/followers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/baseInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/baseInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppHead.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/login/loginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/login/loginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/login/registerForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/login/registerForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/info.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/mArticles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/mArticles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/security.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/about.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/SpringMVCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/SpringMVCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/constants/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/constants/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/HeaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/HeaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/TokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/TokenUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/blogroom_article.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/blogroom_article.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/entity/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserUpdateInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserUpdateInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/LoginUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/blogroom_blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/blogroom_blog.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/blogroom_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/blogroom_user.sql" afterDir="false" />
     </list>
@@ -75,7 +106,7 @@
     <session id="-1892146746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.102" value="1" />
@@ -90,11 +121,11 @@
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.59" value="1" />
@@ -102,53 +133,55 @@
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="25" />
+          <entry key="class" value="55" />
           <entry key="css" value="13" />
           <entry key="gitignore" value="12" />
           <entry key="html" value="35" />
-          <entry key="java" value="572" />
+          <entry key="http" value="1" />
+          <entry key="java" value="692" />
           <entry key="js" value="22" />
           <entry key="jsp" value="2" />
           <entry key="log" value="3" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="19" />
+          <entry key="properties" value="21" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="1" />
           <entry key="xml" value="69" />
-          <entry key="yml" value="30" />
+          <entry key="yml" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="25" />
+          <entry key="CLASS" value="55" />
           <entry key="CSS" value="13" />
           <entry key="HTML" value="35" />
-          <entry key="JAVA" value="572" />
+          <entry key="JAVA" value="692" />
           <entry key="JSP" value="2" />
           <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Properties" value="19" />
+          <entry key="Properties" value="21" />
           <entry key="RNG Compact" value="1" />
           <entry key="SQL" value="1" />
+          <entry key="Scratch" value="1" />
           <entry key="XML" value="70" />
-          <entry key="YAML" value="30" />
+          <entry key="YAML" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
           <entry key="html" value="108" />
-          <entry key="java" value="22019" />
+          <entry key="java" value="25689" />
           <entry key="js" value="335" />
           <entry key="md" value="31" />
           <entry key="properties" value="13" />
           <entry key="sql" value="2" />
-          <entry key="txt" value="305" />
+          <entry key="txt" value="392" />
           <entry key="xml" value="200" />
           <entry key="yml" value="444" />
         </counts>
@@ -156,10 +189,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="108" />
-          <entry key="JAVA" value="22019" />
+          <entry key="JAVA" value="25689" />
           <entry key="JavaScript" value="335" />
           <entry key="Markdown" value="31" />
-          <entry key="PLAIN_TEXT" value="310" />
+          <entry key="PLAIN_TEXT" value="397" />
           <entry key="Properties" value="13" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="200" />
@@ -230,87 +263,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleDetailVo.java">
+        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="41" column="100" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="100" />
+            <state relative-caret-position="132">
+              <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java">
+        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/service/impl/AdminServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/entity/Admin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog-web-old/apps/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="29" selection-start-line="29" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="378">
+              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blog-web-old/apps/managerblog.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog-web-old/apps/contact.html">
+        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="39" column="12" selection-start-line="29" selection-end-line="43" selection-end-column="6" />
+            <state relative-caret-position="217">
+              <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java">
+        <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="144">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -333,6 +316,7 @@
       <find>用户</find>
       <find>url</find>
       <find>body</find>
+      <find>Password</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -349,31 +333,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blogroom-common/pom.xml" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserTokenServiceImpl.java" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/LoginTokenUtil.java" />
-        <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application-dev.properties" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/application-dev.properties" />
-        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application-dev.properties" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/HeaderUtil.java" />
-        <option value="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/config/CrossConfig.java" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/TokenUtil.java" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java" />
-        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/SpringMVCConfig.java" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/LoginUser.java" />
-        <option value="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/BlogController.java" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/test/BlogServideTest.java" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dao/BlogDao.java" />
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/RankController.java" />
-        <option value="$PROJECT_DIR$/blog-web-old/apps/userInfo.html" />
-        <option value="$PROJECT_DIR$/blog-web-new/blogroom/src/style/addArticlestyle.css" />
-        <option value="$PROJECT_DIR$/blog-web-new/blogroom/src/style/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/blog-web-old/apps/add-article.html" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/service/StorageService.java" />
         <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/CharUtil.java" />
@@ -386,7 +345,6 @@
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleClassVo.java" />
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleClassServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleClassController.java" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/SimpleUserVo.java" />
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/SimpleArticleVo.java" />
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java" />
@@ -394,12 +352,38 @@
         <option value="$PROJECT_DIR$/blog-web-old/admin/manage-user.html" />
         <option value="$PROJECT_DIR$/blog-web-old/admin/manage-article.html" />
         <option value="$PROJECT_DIR$/blog-web-old/admin/index.html" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" />
-        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/UserVo.java" />
         <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/aop/LoginHelper.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/SpringMVCConfig.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/HeaderUtil.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/constants/Constant.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/RedisUtils.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Thumb.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/ThumbDao.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/ThumbService.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ThumbServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ThumbController.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java" />
+        <option value="$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/TokenUtil.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/LoginUser.java" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/BlogService.java" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/entity/Blog.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserDto.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserUpdateInfoDto.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -447,6 +431,365 @@
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogroom" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="article-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -463,7 +806,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552561554582" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552996546479" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$USER_HOME$/gitRepertory/MchainWeb" />
@@ -495,6 +838,706 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJxMmFvNHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNzkyLCJpYXQiOjE1NTI4ODA3MzJ9._wablNX95gFtgKfaeAXCyBVHHh4ugtFyf2GodhWJUOgRCBDLxs1YFz-rPIU45PQprrXy54XSWtG3Gwww510g1A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="UserId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJxMmFvNHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNzkyLCJpYXQiOjE1NTI4ODA3MzJ9._wablNX95gFtgKfaeAXCyBVHHh4ugtFyf2GodhWJUOgRCBDLxs1YFz-rPIU45PQprrXy54XSWtG3Gwww510g1A" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI2eHJoZXUiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNjIwLCJpYXQiOjE1NTI4ODA1NjB9.Y6R7c-P6fZL4gBlQ_UAz0pXBDVl0Np6TLi4nVHZmeFGWK24yabDRIbscgWyTvwmUoZ3dqAB7ZoU_B5JLeUJpoQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="UserId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI2eHJoZXUiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNjIwLCJpYXQiOjE1NTI4ODA1NjB9.Y6R7c-P6fZL4gBlQ_UAz0pXBDVl0Np6TLi4nVHZmeFGWK24yabDRIbscgWyTvwmUoZ3dqAB7ZoU_B5JLeUJpoQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ2bTMxdzgiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNDYzLCJpYXQiOjE1NTI4ODA0MDN9.-u7SnUHJEl7afmAYqXgNMVfiuMow8z-7Ek9_db8Y5uxWvaOmKw5BgypAC3z1_VUZPN1QCQj1RjRilVYl-Vu_Fw" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="UserId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ2bTMxdzgiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODgwNDYzLCJpYXQiOjE1NTI4ODA0MDN9.-u7SnUHJEl7afmAYqXgNMVfiuMow8z-7Ek9_db8Y5uxWvaOmKw5BgypAC3z1_VUZPN1QCQj1RjRilVYl-Vu_Fw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="UserId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJnemt3aHMiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc5NDE3LCJpYXQiOjE1NTI4NzkzNTd9.XBCMsUPjzzublWelP-PKz-R8juburYvBOXO2mauWXI4C4Tz0Bb43Wcz-WTBYWaH1oJBH_HX2kSPqdiaWDbeTug" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user-Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiI5ZHM2anMiLCJzdWIiOiIxMSIsImV4cCI6MTU1Mjg3ODgxNiwiaWF0IjoxNTUyODc4NzU2fQ.wGRt0vVo_GOV6Waimp_Kvy1n16dLUioWnH9lVZN-UZAJrRpZoi8No6F3UTBjs4Bl9hk2jclcUTI4GaC3CEpbEg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="11" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User_Access_Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/getUserId" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Access-Token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJyYW5kb21LZXkiOiJ6aDNpemkiLCJzdWIiOiIxIiwiZXhwIjoxNTUyODc3ODY3LCJpYXQiOjE1NTI4Nzc4MDd9.CjscT6Zw9SCemu3K3ZHFvIgBZkGIkJ-oCnhwSZTo9BK9s0EoWDPBKdC0WyqDQTdxHIPudUobWwWIq23OYR5MAw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8091" />
+          <option name="urlPath" value="user/createToken" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8088" />
@@ -882,21 +1925,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceProvider">
-    <configuration name="BlogServideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog-provider" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BlogServideTest" />
+  <component name="RunManager" selected="Spring Boot.BlogServiceProvider">
+    <configuration name="TokenCheckInterceptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.qyd.blogroom.common.interceptors.TokenCheckInterceptor" />
+      <module name="blogroom-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.qyd.blogroom.common.interceptors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BlogServideTest.getBlogByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlogServideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blog-provider" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BlogServideTest" />
-      <option name="METHOD_NAME" value="getBlogByUserId" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -980,16 +2026,16 @@
       <item itemvalue="Spring Boot.GatewayServer" />
       <item itemvalue="Spring Boot.EurekaServer" />
       <item itemvalue="Spring Boot.UserServiceProvider" />
-      <item itemvalue="JUnit.BlogServideTest.getBlogByUserId" />
       <item itemvalue="JUnit.BlogServideTest" />
+      <item itemvalue="Application.TokenCheckInterceptor" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UserServiceProvider" />
         <item itemvalue="Spring Boot.GatewayServer" />
         <item itemvalue="Spring Boot.EurekaServer" />
+        <item itemvalue="Application.TokenCheckInterceptor" />
         <item itemvalue="JUnit.BlogServideTest" />
-        <item itemvalue="JUnit.BlogServideTest.getBlogByUserId" />
       </list>
     </recent_temporary>
   </component>
@@ -1036,6 +2082,8 @@
       <workItem from="1552548817514" duration="9796000" />
       <workItem from="1552614732569" duration="1802000" />
       <workItem from="1552630533450" duration="7694000" />
+      <workItem from="1552873700146" duration="30205000" />
+      <workItem from="1552959239343" duration="24794000" />
     </task>
     <task id="LOCAL-00001" summary="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支">
       <created>1550652035778</created>
@@ -1112,7 +2160,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271381000" />
+    <option name="totallyTimeSpent" value="326380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1125,26 +2173,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.31410256" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49703264" visible="true" weight="0.32158118" />
       <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.31036323" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5007032" side_tool="true" weight="0.30662394" />
+      <window_info id="Favorites" order="5" sideWeight="0.50296736" side_tool="true" weight="0.32158118" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.46666667" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.29812983" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25412542" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.30363035" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.25852585" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.37333333" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49924242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49924242" weight="0.32893288" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="13" weight="0.4081408" />
@@ -1215,365 +2264,380 @@
     <option name="LAST_COMMIT_MESSAGE" value="移除github中的target" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog-web-new/blogroom/src/style/bootstrap.min.css">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="4" column="3057" selection-start-line="4" selection-start-column="3057" selection-end-line="4" selection-end-column="3057" />
+        <state relative-caret-position="267">
+          <caret line="934" selection-start-line="934" selection-end-line="934" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/WebsiteServiceProvider.java">
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/net/PlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="23" />
+        <state relative-caret-position="150">
+          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application-dev.properties">
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/RespStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/service/impl/StorageServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/HeaderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="612">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/StorageController.java">
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="576">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/RedisUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="594">
+          <caret line="33" column="68" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Comment.java">
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/config/RedisConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="36" selection-start-line="15" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/ArticleClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="1530">
+          <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3671#3672#0" expanded="true" />
+            <element signature="e#3717#3718#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/ArticleClassDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/ArticleClassService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleClassServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleClassController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="68" column="33" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="68" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/SimpleUserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/SimpleArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/admin/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-new/blogroom/src/style/adminStyle.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5382">
-          <caret line="299" column="10" selection-start-line="161" selection-start-column="4" selection-end-line="299" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/WebsiteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/entity/FriendlyLink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="47" column="44" selection-start-line="45" selection-start-column="8" selection-end-line="47" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/admin/checked-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/admin/manage-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="132" column="27" lean-forward="true" selection-start-line="132" selection-start-column="27" selection-end-line="132" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/admin/manage-user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="983">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="102" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/Resp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="198">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/paging/PagingInfo.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="396">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="26" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Thumb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="64" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleStatusDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ThumbServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/ThumbService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dao/ThumbDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ThumbController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/SimpleUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/SimpleArticleVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Jedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/constants/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/LoginUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/FanVo.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/BlogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dto/BlogBaseInfoDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/AttentionVo.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dto/BlogDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="99" column="77" selection-start-line="99" selection-start-column="77" selection-end-line="99" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/utils/dozer/BeanMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
-          <caret line="140" column="43" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserUpdateInfoDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/entity/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/vo/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleClassVo.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/dto/BlogStatusDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/entity/Blog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/controller/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleDetailVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="41" column="100" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="-72">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/service/impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/apps/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="12" selection-start-line="29" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/apps/about.html">
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="29" selection-start-line="29" selection-end-line="37" selection-end-column="6" />
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-web-old/apps/managerblog.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserUpdateInfoDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/AttentionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

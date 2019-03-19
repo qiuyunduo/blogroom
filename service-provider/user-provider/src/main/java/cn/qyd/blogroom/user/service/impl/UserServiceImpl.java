@@ -45,7 +45,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User save(UserDto dto) {
         User user = new User();
-        user.setName(dto.getName())
+        user.setAccount(dto.getAccount())
+                .setNickName(dto.getNickName())
                 .setPassword(MD5Util.getMD5(dto.getPassword()))
                 .setEmail(dto.getEmail())
                 .setStatus(0)
@@ -55,8 +56,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public LoginUser login(String name, String password) {
-        User user = userDao.findByName(name);
+    public LoginUser login(String account, String password) {
+        User user = userDao.findByAccount(account);
         if(user != null){
             if(!user.getPassword().equals(MD5Util.getMD5(password))){
                 throw BusinessException.fail(FrontRespEnum.LOGIN_PWD_ERROR);
@@ -68,17 +69,25 @@ public class UserServiceImpl implements UserService {
         String token = tokenUtil.createOrRefreshToken(user.getId());
 
         LoginUser loginUser = new LoginUser();
-        loginUser.setId(user.getId());
-        loginUser.setName(user.getName());
-        loginUser.setHeadImage(user.getHeadImage());
+        loginUser.setUser(user);
         loginUser.setToken(token);
 
         return loginUser;
     }
 
     @Override
-    public Boolean logout(String token) {
-        Boolean result = tokenUtil.removeToken(token);
+    public LoginUser register(UserDto dto) {
+        User user = save(dto);
+        String token = tokenUtil.createOrRefreshToken(user.getId());
+        LoginUser loginUser = new LoginUser();
+        loginUser.setUser(user);
+        loginUser.setToken(token);
+        return loginUser;
+    }
+
+    @Override
+    public Boolean logout(Long userId) {
+        Boolean result = tokenUtil.removeToken(userId);
         return result;
     }
 
@@ -112,6 +121,14 @@ public class UserServiceImpl implements UserService {
         UserQueryParam param = new UserQueryParam(new UserQueryDto());
         Page<User> page = userDao.findAll(param,pageable);
         return page.getContent();
+    }
+
+    @Override
+    public Boolean updateImage(Long userId, String newImage) {
+        User user = findById(userId);
+        user.setHeadImage(newImage);
+        userDao.save(user);
+        return true;
     }
 
     @Override
@@ -173,8 +190,8 @@ public class UserServiceImpl implements UserService {
         @Override
         public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
             List<Predicate> list = new ArrayList<Predicate>();
-            if(StringUtils.isNotEmpty(queryDto.getName())){
-                list.add(criteriaBuilder.like(root.get("name").as(String.class), "%"+queryDto.getName()+"%"));
+            if(StringUtils.isNotEmpty(queryDto.getNickName())){
+                list.add(criteriaBuilder.like(root.get("name").as(String.class), "%"+queryDto.getNickName()+"%"));
             }
             if(queryDto.getStatus() != null){
                 list.add(criteriaBuilder.equal(root.get("status").as(Integer.class), queryDto.getStatus()));

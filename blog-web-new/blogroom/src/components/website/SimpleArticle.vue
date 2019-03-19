@@ -5,7 +5,7 @@
             <slot name="statusLabel">
                 
             </slot>
-            <h2><a @click="readOne(id)">{{ title }}</a></h2>
+            <h2><a :href="'/article/'+id">{{ title }}</a></h2>
         </header>
 
         <div class='focus'><a @click="readOne(id)">
@@ -21,7 +21,7 @@
             <p class='auth-span'>
                 <span class='muted'>
                     <i class='fa fa-user'></i>
-                    <a href='/BlogRoom/apps/userblog.html'>{{  author }}</a>
+                    <a :href="'/blog/room/'+userId">{{  author }}</a>
                 </span> 
                 <span class='muted'>
                     <i class='fa fa-clock-o'></i>
@@ -29,10 +29,10 @@
                 </span>
                 <span class='muted'>
                     <i class='fa fa-comments-o'></i>
-                    <a target='_blank' href="/BlogRoom/apps/article.html评论">{{  comments }}评论</a>
+                    <a :href="'/article/'+id+'?action=comment'">{{  comments }}评论</a>
                 </span>
                 <span class='muted'> 
-                    <a href='javascript:;' data-action='ding' data-id='393' id='Addlike' class='action'>
+                    <a :href="'/article/'+id+'?action=thumb'" data-action='ding' data-id='393' id='Addlike' class='action' @click="toThumb(id)">
                         <i class='fa fa-heart-o'></i>
                         <span class='count'>{{  thumbs }}</span>
                         喜欢
@@ -49,6 +49,7 @@ export default {
   name: 'SimpleArticle',
   props: [
     'id',
+    'userId',
     'title',
     'describe',
     'author',
@@ -62,15 +63,8 @@ export default {
       }
   },
   created() {
-    //   alert(this.id)
-    //   alert(title)
-    //   alert(author)
-    //   alert(thumbs)
   },
   methods: {
-      readOne(id) {
-          this.$router.push("/article/"+id)
-      }
   },
 }
 </script>

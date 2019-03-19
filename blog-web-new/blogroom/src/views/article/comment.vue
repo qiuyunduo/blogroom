@@ -13,7 +13,7 @@
                     <input type="hidden" name="commentArticleId" id="commentArticleId">
                     <input type="hidden" name="commentAuthorId" id="commentAuthorId">
                     <div class="comt-box">
-                        <textarea placeholder="写点什么..." class="input-block-level comt-area" name="commentContent" id="comment" cols="100%" rows="3" tabindex="1"></textarea>
+                        <textarea v-model="myComment" placeholder="写点什么..." class="input-block-level comt-area" name="commentContent" id="comment" cols="100%" rows="3" tabindex="1"></textarea>
                         <div class="comt-ctrl">
                             <input class="btn btn-primary pull-right" type="button" id="addCommentBtn" tabindex="5" value="提交评论"/>
                             <div class="comt-tips pull-right">
@@ -60,36 +60,32 @@
 <script>
 import { allComments } from '@/api/comment'
 export default {
-  name: 'Comment',
-  props: [
-      'id'
-  ],
-  data() {
-      return { 
-        list: null,
-        total: undefined
-      }
-  },
-  watch: {
-      'id': 'getAll'
-  },
-  created() {
-      this.getAll()
-  },
-  methods: {
-      getAll() {
-          allComments(this.id).then(response => {
-              this.list = response.data.data
-              this.total = this.list === null ? 0 : this.list.length
-            //   console.log(this.list)
-          }).catch(response => {
-              this.$notify.error({
-                title: '异常',
-                message: '获取文章评论错误'
-              })
-          })
-      }
-  }
+    name: 'Comment',
+    props: [
+        'id'
+    ],
+    data() {
+        return { 
+            list: null,
+            total: 0,
+            myComment: undefined
+        }
+    },
+    watch: {
+        'id': 'getList'
+    },
+    methods: {
+        getList() {
+            allComments(this.id).then(response => {
+                // alert(JSON.stringify(response.data))
+                this.list = response.data.data
+                this.total = this.list === null ? 0 : this.list.length
+                //   console.log(this.list)
+            }).catch(response => {
+                // alert(JSON.stringify(response.data))
+            })
+        }
+    }
 }
 </script>
 

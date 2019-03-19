@@ -13,9 +13,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserDao extends JpaRepository<User,Long> {
     Page<User> findAll(Specification<User> specification, Pageable pageable);
 
-    User findByNameAndPassword(String name, String password);
+    User findByAccountAndPassword(String account, String password);
 
-    User findByName(String name);
+    User findByAccount(String account);
 
     User findByPhone(String phone);
 

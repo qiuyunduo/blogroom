@@ -34,13 +34,7 @@ public class SpringMVCConfig extends WebMvcConfigurationSupport {
         // 可添加多个
 //        if (abstractInterceptors != null && abstractInterceptors.size() > 0) {
 //            abstractInterceptors.forEach(abstractInterceptor -> {
-//        String[] path = tokenCheckInterceptor.path();
-//        String[] excludePath = tokenCheckInterceptor.excludePath();
-//        InterceptorRegistration registration = registry.addInterceptor(tokenCheckInterceptor);
-//        registration.addPathPatterns(path);
-//        if (excludePath != null) {
-//            registration.excludePathPatterns(excludePath);
-//        }
+        registry.addInterceptor(tokenCheckInterceptor);
     }
 
 }

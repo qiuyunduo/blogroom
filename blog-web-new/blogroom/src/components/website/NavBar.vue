@@ -2,11 +2,11 @@
     <div id="nav-header" class="navbar">
         <ul class="nav">
             <li class="menu-item menu-item-home" :class="{'current_page_item':classId === 0}">
-                <a @click="articlesOfClass(0)">首页</a>
+                <a href="javascript:;" @click="articlesOfClass(0)">首页</a>
             </li>
 
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === classMap[index-1].id}" v-for="index in classMapSize" :key="index">
-                <a @click="articlesOfClass(classMap[index-1].id)">{{ classMap[index-1].name }}</a>
+                <a href="javascript:;" @click="articlesOfClass(classMap[index-1].id)">{{ classMap[index-1].name }}</a>
             </li>
 
             <li style="float:left;margin-top:10px;margin-left:300px; ">
@@ -46,10 +46,10 @@ export default {
                 this.classMapSize = this.classMap.length
                 this.$store.commit('SET_CLASSMAP',this.classMap)
             }).catch(() => {
-                this.$notify.error({
-                    title: '异常',
-                    message: '获取文章类别出错'
-                })
+                // this.$notify.error({
+                //     title: '异常',
+                //     message: '获取文章类别出错'
+                // })
             })
         },
         articlesOfClass(id) {

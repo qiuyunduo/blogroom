@@ -19,10 +19,6 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 public class Blog extends BaseEntity {
-
-    @Column(name = "blog_name",columnDefinition = "varchar(32) COMMENT '博客名称'")
-    private String blogName;
-
     @Column(name = "user_id",columnDefinition = "mediumint(9) COMMENT '拥有该博客的用户id'")
     private Long userId;
 

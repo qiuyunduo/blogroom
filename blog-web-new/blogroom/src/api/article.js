@@ -8,6 +8,13 @@ export function allArticles(data) {
   })
 }
 
+export function fashionArticles() {
+  return request({
+    url: '/article/article/fashion',
+    method: 'get'
+  })
+}
+
 export function readOne(id) {
   return request({
     url: '/article/article/'+id,

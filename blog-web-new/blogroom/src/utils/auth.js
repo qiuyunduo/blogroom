@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie'
+import user from '../store/modules/user';
 
 const tokenKey = 'User_Access_Token'
-const userInfoKey = "User_Info"
+const userInfoKey = "Blogroom_User_Info"
 
 export function isLogin() {
     let token = getToken()
@@ -12,7 +13,12 @@ export function isLogin() {
 }
 
 export function getUserInfo() {
-    return Cookies.get(userInfoKey)
+    let userInfo = Cookies.get(userInfoKey)
+    if(userInfo !== undefined) {
+        return JSON.parse(userInfo)
+    } else {
+        return {}
+    }
 }
 
 export function setUserInfo(userInfo) {
@@ -25,6 +31,10 @@ export function removeUserInfo() {
 
 export function getToken() {
     return Cookies.get(tokenKey)
+}
+
+export function refreshToken(refreshToken) {
+    return Cookies.set(tokenKey,refreshToken)
 }
 
 export function setToken(token) {

@@ -16,9 +16,11 @@ import java.util.List;
 public interface UserService {
     User save(UserDto dto);
 
-    LoginUser login(String name, String password);
+    LoginUser login(String account, String password);
 
-    Boolean logout(String token);
+    LoginUser register(UserDto dto);
+
+    Boolean logout(Long userId);
 
     User findById(Long id);
 
@@ -29,6 +31,8 @@ public interface UserService {
     Page<User> query(UserQueryDto queryDto);
 
     List<User> fashionUser();
+
+    Boolean updateImage(Long userId, String newImage);
 
     Boolean updatePassword(UpdatePwdDto dto);
 

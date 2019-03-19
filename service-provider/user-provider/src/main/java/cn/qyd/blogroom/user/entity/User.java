@@ -1,12 +1,6 @@
 package cn.qyd.blogroom.user.entity;
 
 import cn.qyd.blogroom.common.entity.BaseEntity;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import io.swagger.models.auth.In;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -14,8 +8,6 @@ import lombok.experimental.Accessors;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -28,11 +20,14 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 public class User extends BaseEntity {
-    @Column(name = "name",columnDefinition = "varchar(32) COMMENT '用户名'")
-    private String name;
+    @Column(name = "account",columnDefinition = "varchar(32) COMMENT '账号'")
+    private String account;
 
     @Column(name = "password",columnDefinition = "varchar(64) COMMENT '用户密码'")
     private String password;
+
+    @Column(name = "nick_name",columnDefinition = "varchar(32) COMMENT '用户昵称'")
+    private String nickName;
 
     @Column(name = "phone",columnDefinition = "varchar(32) COMMENT '电话号码'")
     private String phone;

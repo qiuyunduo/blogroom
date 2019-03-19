@@ -49,10 +49,10 @@ export default {
               this.linkList = response.data.data
               this.linkSize = this.linkList.length
           }).catch(() => {
-              this.$notify.error({
-                  title: '异常',
-                  message: '友情链接获取出错'
-              })
+            //   this.$notify.error({
+            //       title: '异常',
+            //       message: '友情链接获取出错'
+            //   })
           })
       }
   },

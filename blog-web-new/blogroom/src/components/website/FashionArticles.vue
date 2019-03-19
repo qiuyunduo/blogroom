@@ -4,16 +4,37 @@
             <ul id="goodarticle">
             <!--时尚博文-->
             <!-- <img src="/BlogRoom/images/loading.gif" style="width: 100% " > -->
-            <li v-for="a in 10" :key="a">
-                <a href='/BlogRoom/apps/article.htmll'>时尚文章标题{{a}}</a>
-            </li>
+                <li v-for="index in total" :key="index">
+                    <a :href="'/article/'+list[index-1].id">{{ list[index-1].title }}</a>
+                </li>
             </ul>
     </div>
 </template>
 
 
 <script>
+import { fashionArticles } from '@/api/article'
+
 export default {
-  name: 'FashionArticles'
+    name: 'FashionArticles',
+    data() {
+        return {
+            list: null,
+            total: 0
+        }
+    },
+    mounted() {
+        this.getList()
+    },
+    methods: {
+        getList() {
+            fashionArticles().then(response => {
+                this.list = response.data.data
+                this.total = this.list === null ? 0 : this.list.length
+            }).catch(() => {
+                
+            })
+        }
+    },
 }
 </script>

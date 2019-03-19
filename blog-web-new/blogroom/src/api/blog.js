@@ -6,3 +6,11 @@ export function blogDetail(userId) {
     method: 'get'
   })
 }
+
+export function addBlog(userId) {
+  return request({
+    url: '/blog/blog/create',
+    method: 'post',
+    params: userId
+  })
+}

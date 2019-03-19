@@ -58,24 +58,31 @@ public class UserController {
         return Resp.succeed(simpleUserVos);
     }
 
-    @PostMapping("/register")
-    @ApiOperation("用户注册")
-    public Resp register(UserDto userDto){
+    @PostMapping("/create")
+    @ApiOperation("添加用户")
+    public Resp addOne(UserDto userDto){
         User user = userService.save(userDto);
         return Resp.succeed(user);
     }
 
+    @PostMapping("/register")
+    @ApiOperation("用户注册")
+    public Resp register(UserDto userDto){
+        LoginUser loginUser = userService.register(userDto);
+        return Resp.succeed(loginUser);
+    }
+
     @PostMapping("/login")
     @ApiOperation("用户登录")
-    public Resp login(String name, String password){
-        LoginUser user = userService.login(name, password);
+    public Resp login(String account, String password){
+        LoginUser user = userService.login(account, password);
         return Resp.succeed(user);
     }
 
     @PostMapping("/logout")
     @ApiOperation("用户登出")
-    public Resp logout(String token){
-        Boolean result = userService.logout(token);
+    public Resp logout(Long userId){
+        Boolean result = userService.logout(userId);
         return Resp.succeed(result);
     }
 
@@ -86,10 +93,25 @@ public class UserController {
         return Resp.succeed(result);
     }
 
+    @PutMapping("/updateHeadImage")
+    @ApiOperation("修改用户头像")
+    public Resp updateHeadImage(Long userId, String newImage) {
+        Boolean result = userService.updateImage(userId, newImage);
+        return Resp.succeed(result);
+    }
+
     @GetMapping("/client/user/{id}")
     @ApiOperation("根据用户id获取用户信息")
     public User findOne(@PathVariable("id")Long id){
         return userService.findById(id);
+    }
+
+    @GetMapping("/{id}")
+    @ApiOperation("根据用户id获取用户信息")
+    public Resp selectOne(@PathVariable("id")Long id){
+        User user = userService.findById(id);
+        UserVo userVo = BeanMapper.map(user, UserVo.class);
+        return Resp.succeed(userVo);
     }
 
     @GetMapping("/query")

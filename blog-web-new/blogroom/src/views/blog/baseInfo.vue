@@ -4,7 +4,7 @@
             <h3 class="aside-title">个人资料</h3>
             <div class="profile-intro d-flex">
                 <div class="avatar-box d-flex justify-content-center flex-column">
-                    <img src="@/images/default.jpg" class="avatar_pic" id="user_head">
+                    <img :src="userInfo.headImage" class="avatar_pic" id="user_head">
                 </div>
                 <div class="user-info d-flex justify-content-center flex-column">
                     <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
@@ -118,7 +118,7 @@ export default {
             },
         }
     },
-    created() {     
+    mounted() {
         this.getall()
     },
     methods: {
@@ -148,17 +148,11 @@ export default {
             })
         },
         getUser() {
-            detailUser(this.userId).then(response => {
+            detailUser(this.userId).then(res => {
+                this.userInfo = res.data.data
+            }).catch(() => {
 
-                this.userInfo = response.data
-                // console.log(this.userInfo)
-                // alert(this.userInfo.id)
-            }).catch(response => {
-            this.$notify.error({
-              title: '错误',
-              message: '用户信息获取出错'
             })
-          })
         },
         getBlog() {
             blogDetail(this.userId).then(response => {

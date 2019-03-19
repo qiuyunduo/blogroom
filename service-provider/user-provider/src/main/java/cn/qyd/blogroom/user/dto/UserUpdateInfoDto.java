@@ -14,6 +14,9 @@ public class UserUpdateInfoDto {
     @ApiModelProperty("用户id")
     private Long id;
 
+    @ApiModelProperty("用户昵称")
+    private String nickName;
+
     @ApiModelProperty("性别")
     private Integer sex;
 

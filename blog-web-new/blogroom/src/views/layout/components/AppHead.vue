@@ -11,17 +11,17 @@
         </a>
         </router-link>
 
-        <div v-if="isLogin" style="float: right;padding-top: 40px;margin-right:80px;" id="log_user">
+        <div v-if="loginStatus" style="float: right;padding-top: 40px;margin-right:80px;" id="log_user">
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
-            <img id="log_img" src="@/images/default.jpg" style="width: 30px;height: 30px;border-radius:50%">
+            <img id="log_img" :src="loginUser.headImage" style="width: 30px;height: 30px;border-radius:50%">
             <i class="el-icon-caret-bottom"/>
               <el-dropdown-menu slot="dropdown">
-                <a :href="blogBasePath+returnUser.id">
+                <a :href="blogBasePath+loginUser.id">
                   <el-dropdown-item>
                     <span style="display:block;">我的博客</span>
                   </el-dropdown-item>
                 </a>
-                <a :href="userBasePath+returnUser.id">
+                <a :href="userBasePath+loginUser.id">
                   <el-dropdown-item>
                       <span style="display:block;">个人中心</span>
                   </el-dropdown-item>
@@ -67,40 +67,27 @@ export default {
   computed: {
     loginStatus() {
       return this.$store.state.user.isLogin
+    },
+    loginUser() {
+      return this.$store.state.user.userInfo
     }
   },
   data() {
     return {
-      isLogin: false,
       loginFormShow: false,
       registerFormShow: false,
       blogBasePath: '/blog/room/',
-      userBasePath: '/blog/user/',
-      returnUser: {
-          id: undefined,
-          name: undefined,
-          headImage: undefined,
-          token: undefined
-      },
+      userBasePath: '/blog/user/'
     }
   },
-  created() {
-    this.checkLogin()
+  mounted() {
   },
-  watch: {
-    loginStatus(ov, nv){
-      this.checkLogin()
-    }
-  },
+  // watch: {
+  //   loginStatus(ov, nv){
+  //     this.checkLogin()
+  //   }
+  // },
   methods: {
-    checkLogin() {
-      this.isLogin = this.$store.state.user.isLogin
-      if(this.$store.state.user.userInfo.id === undefined) {
-        this.returnUser = JSON.parse(this.$store.state.user.userInfo)
-      } else {
-        this.returnUser = this.$store.state.user.userInfo
-      }
-    },
     showLoginForm() {
       this.$refs.loginForm.openLoginForm()
     },
@@ -108,17 +95,9 @@ export default {
       this.$refs.registerForm.openRegisterForm()
     },
 
-    myBlog() {
-      this.$router.push('/blog'+this.returnUser.id)
-    },
-
-    personal() {
-      // this.$router.go(0)
-      this.$router.push('/blog/user/'+this.returnUser.id+'/info')
-    },
-
     logout() {
       this.$store.dispatch('LogOut')
+      window.location.href = "http://localhost:9000/index"
     }
 
   }

@@ -25,10 +25,9 @@ public class BlogServiceImpl implements BlogService {
     private BlogDao blogDao;
 
     @Override
-    public Blog save(BlogDto dto) {
+    public Blog save(Long userId) {
         Blog blog = new Blog();
-        blog.setUserId(dto.getUserId())
-                .setBlogName(StringUtils.isEmpty(dto.getBlogName()) ? "qiuyunduo" : dto.getBlogName())
+        blog.setUserId(userId)
                 .setFansNumber(0)
                 .setArticleNumber(0)
                 .setCommentNumber(0)
@@ -94,9 +93,6 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Boolean updateBlogStatus(BlogStatusDto dto) {
         Blog blog = findById(dto.getId());
-        if(dto.getBlogName() != null) {
-            blog.setBlogName(dto.getBlogName());
-        }
         if(dto.getStatus() != null) {
             blog.setStatus(dto.getStatus());
         }

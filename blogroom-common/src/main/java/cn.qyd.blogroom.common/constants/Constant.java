@@ -13,16 +13,12 @@ public class Constant {
     public static final String REDIS_TOKEN_KEY_PREFIX = "loginUser_";
     // 用户Token key
     public static final String USER_TOKEN_KEY = "User_Access_Token";
+    // 用户id
+    public static final String USER_ID_KEY = "User_Id";
     // 刷新token
     public static final String REFRESH_TOKEN_KEY = "refresh_token";
     // token 前缀
     public static final String TOKEN_PREFIX = "Bearer ";
-    //app系统
-    public static final String APP_SYSTEM = "system";
-    //app版本号
-    public static final String APP_VERSION = "version";
-    //语言类型
-    public static final String APP_LOCALE = "locale";
 
 
     public static final String RIPPLE_ERROR = "error";
@@ -49,6 +45,8 @@ public class Constant {
     public static final Long TOKEN_EXPIRATION = 15 * 24 * 60 * 60 * 1000L;
     // token 刷新时间 7天
     public static final Long TOKEN_REFRESH = 7 * 24 * 60 * 60 * 1000L;
+    //存储当前是否已经刷新token的过期时间 半分钟
+    public static final Long REFRESH_TOKEN_EXPIRATION = 30 * 1000L;
     // 测试环境token过期时间 2分钟
     public static final Long TEST_TOKEN_EXPIRATION = 2 * 60 * 1000L;
     // 测试环境token 刷新时间 1分钟

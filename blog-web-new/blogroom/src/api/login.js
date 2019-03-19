@@ -4,7 +4,7 @@ export function login(data) {
   return request({
     url: '/user/user/login',
     method: 'post',
-    params: { 'name': data.userName, 'password': data.password }
+    params: { 'account': data.account, 'password': data.password }
   })
 }
 

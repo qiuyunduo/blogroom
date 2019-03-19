@@ -11,8 +11,11 @@ import lombok.Data;
 @Data
 @ApiModel("用户注册")
 public class UserDto {
+    @ApiModelProperty("用户账号")
+    private String account;
+
     @ApiModelProperty("用户名称")
-    private String name;
+    private String nickName;
 
     @ApiModelProperty("用户密码")
     private String password;

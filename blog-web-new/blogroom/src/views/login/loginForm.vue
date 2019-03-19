@@ -8,7 +8,7 @@
             <div class="account-form">
                 <div>
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" name="lusername" class="account-input" placeholder="用户名" v-model="loginInfo.userName">
+                <input type="text" name="lusername" class="account-input" placeholder="账号" v-model="loginInfo.account">
                 <div id="error_tip_lusername" class="error-tip"></div>
                 </div>
 
@@ -22,7 +22,6 @@
             </div>
             <div class="account-other">
                 <span class="fr"><a href="http://yuedu.fm/retrieve/" class="red-link" target="_blank">忘记密码</a></span>
-                <label><input type="checkbox" value="1" name="nextauto"> 下次自动登录</label>
             </div>
             <button type="button" class="account-btn" @click="doLogin()">登 录</button>
             </form>
@@ -38,7 +37,7 @@ export default {
         return {
             loginFormShow: false,
             loginInfo: {
-                userName: undefined,
+                account: undefined,
                 password: undefined
             }
         }
@@ -48,35 +47,31 @@ export default {
             this.resetLoginInfo()
             this.loginFormShow = true
         },
+
         closeLoginForm() {
             this.loginFormShow = false
         },
         doLogin() {
             login(this.loginInfo).then(response => {
-                if(response.data.data === null) {
-                    this.$notify.error({
-                    title: '失败',
-                    message: response.data.status.msg
-                    })
-                } else {
-                    let returnUser = Object.assign({},response.data.data)
-                    let token = returnUser.token
-                    this.$store.dispatch('setToken', token)
-                    this.$store.dispatch('setUserInfo', returnUser)
-                    this.$store.commit('SET_ISLOGIN', true)
-                    this.closeLoginForm()
-                    this.$notify.success({
+                let data = Object.assign({},response.data.data)
+                let token = data.token
+                let userInfo = data.user
+                this.$store.dispatch('setToken', token)
+                this.$store.dispatch('setUserInfo', userInfo)
+                this.$store.commit('SET_ISLOGIN', true)
+                this.closeLoginForm()
+                this.$notify.success({
                     title: '成功',
-                    message: '登录成功'
-                    })
-                }
+                    message: '登录成功',
+                    duration: 1 * 1000
+                })
             }).catch(response => {
                 this.$notify.error({
-                    title: '请求异常',
-                    message: response.data
+                    title: '登录失败',
+                    message: response.status.msg,
+                    duration: 1 * 1000
                 })
             })
-            
         },
         resetLoginInfo() {
             this.loginInfo.userName = undefined

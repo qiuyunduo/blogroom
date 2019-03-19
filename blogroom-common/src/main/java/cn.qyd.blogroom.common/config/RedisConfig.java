@@ -1,10 +1,10 @@
 package cn.qyd.blogroom.common.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisPassword;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
@@ -13,11 +13,14 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.time.Duration;
 
 @Configuration
+@Slf4j
 public class RedisConfig extends CachingConfigurerSupport {
 
     @Value("${spring.redis.database}")
@@ -85,10 +88,20 @@ public class RedisConfig extends CachingConfigurerSupport {
         jedisPoolConfig.setMaxWaitMillis(maxWait);
         jedisPoolConfig.setMaxTotal(maxActive);
         jedisPoolConfig.setMinIdle(minIdle);
-//        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout, password);
-//        log.info("JedisPool注入成功！！jedisPool={}",jedisPool);
-//        log.info("redis地址：" + host + ":" + port);
         return jedisPoolConfig;
+    }
+
+    @Bean
+    public JedisPool jedisPool(JedisPoolConfig jedisPoolConfig) {
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout, password);
+        log.info("JedisPool注入成功！！jedisPool={}",jedisPool);
+        log.info("redis地址：" + host + ":" + port);
+        return jedisPool;
+    }
+
+    @Bean
+    public Jedis jedis(JedisPool jedisPool) {
+        return jedisPool.getResource();
     }
 
     /**
