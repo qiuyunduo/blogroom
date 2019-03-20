@@ -24,10 +24,10 @@ export function register(data) {
   })
 }
 
-export function logout(data) {
+export function logout(userId) {
   return request({
     url: '/user/user/logout',
     method: 'post',
-    params: data
+    params: { 'userId':userId }
   })
 }

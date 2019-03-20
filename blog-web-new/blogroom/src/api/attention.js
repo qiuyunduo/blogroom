@@ -1,5 +1,29 @@
 import request from '@/utils/request'
 
+export function findOne(data) {
+  return request({
+    url: '/user/attention/find',
+    method: 'get',
+    params: data
+  })
+}
+
+export function attention(data) {
+  return request({
+    url: '/user/attention/save',
+    method: 'post',
+    params: data
+  })
+}
+
+export function removeAttention(data) {
+  return request({
+    url: '/user/attention/remove',
+    method: 'post',
+    params: data
+  })
+}
+
 export function allFollowersOfUser(data) {
   return request({
     url: '/user/attention/attentions',
@@ -10,7 +34,7 @@ export function allFollowersOfUser(data) {
 
 export function allFansOfUser(data) {
     return request({
-      url: '/user/attention/attentions',
+      url: '/user/attention/fans',
       method: 'get',
       params: data
     })

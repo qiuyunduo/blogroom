@@ -11,13 +11,10 @@ import lombok.Data;
 @Data
 @ApiModel("关注Vo")
 public class AttentionVo {
-    @ApiModelProperty("id")
-    private Long id;
-
     @ApiModelProperty("被关注者id")
     private Long user2Id;
 
-    @ApiModelProperty("被关注者姓名")
+    @ApiModelProperty("被关注者昵称")
     private String user2Name;
 
     @ApiModelProperty("被关注者头像")

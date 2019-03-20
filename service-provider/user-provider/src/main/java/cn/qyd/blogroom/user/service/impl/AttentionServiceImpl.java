@@ -52,6 +52,11 @@ public class AttentionServiceImpl implements AttentionService {
     }
 
     @Override
+    public Attention selectOne(AttentionDto dto) {
+        return attentionDao.findByUser1IdAndUser2Id(dto.getUser1Id(),dto.getUser2Id());
+    }
+
+    @Override
     public Page<Attention> query(AttentionQueryDto dto) {
         Pageable pageable = PageRequest.of(dto.getPage()-1,dto.getLimit());
         AttentionQueryParam param = new AttentionQueryParam(dto);
@@ -60,9 +65,8 @@ public class AttentionServiceImpl implements AttentionService {
     }
 
     @Override
-    public Boolean delete(Long id) {
-        attentionDao.deleteById(id);
-        return true;
+    public void delete(AttentionDto dto) {
+        attentionDao.deleteByUser1IdAndUser2Id(dto.getUser1Id(),dto.getUser2Id());
     }
 
     /**

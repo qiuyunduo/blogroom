@@ -24,35 +24,35 @@
                         </div>
                             <table>
                                 <tr>
-                                    <td>用户名：</td>
-                                    <td>{{ userInfo.name }}</td>
-                                <td colspan="4"/>
-                                    <td>性别：</td>
-                                    <td>{{ sexMap[userInfo.sex] }}</td>
-                                </tr>
-                                <tr>
-                                    <td>生日：</td>
-                                    <td>{{ userInfo.birthday }}</td>
+                                    <td class="leftTd">昵称：</td>
+                                    <td class="rightTd">{{ userInfo.nickName }}</td>
                                     <td colspan="4"/>
-                                    <td>邮箱：</td>
-                                    <td>{{ userInfo.email }}</td>
+                                    <td class="leftTd">性别：</td>
+                                    <td class="rightTd">{{ sexMap[userInfo.sex] }}</td>
                                 </tr>
                                 <tr>
-                                    <td>地区：</td>
-                                    <td>{{ userInfo.area }}</td>
+                                    <td class="leftTd">生日：</td>
+                                    <td class="rightTd">{{ userInfo.birthday }}</td>
                                     <td colspan="4"/>
-                                    <td>职业：</td>
-                                    <td>{{ userInfo.occupation }}</td>
+                                    <td class="leftTd">邮箱：</td>
+                                    <td class="rightTd">{{ userInfo.email }}</td>
                                 </tr>
                                 <tr>
-                                    <td>注册时间：</td>
-                                    <td>{{ userInfo.addTime }}</td>
+                                    <td class="leftTd">地区：</td>
+                                    <td class="rightTd">{{ userInfo.area }}</td>
                                     <td colspan="4"/>
-                                    <td>最近一次登录的ip：</td>
-                                    <td>{{ userInfo.lastLoginIp }}</td>
+                                    <td class="leftTd">注册时间：</td>
+                                    <td class="rightTd">{{ userInfo.addTime }}</td>
                                 </tr>
                                 <tr>
-                                    <td>简介：</td>
+                                    <td class="leftTd">职业：</td>
+                                    <td class="rightTd">{{ userInfo.occupation }}</td>
+                                    <td colspan="4"/>
+                                    <td class="leftTd">最近一次登录的ip：</td>
+                                    <td class="rightTd">{{ userInfo.lastLoginIp }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="leftTd">简介：</td>
                                     <td colspan="4">{{ userInfo.description }}</td>
                                 </tr>
                             </table>
@@ -85,8 +85,8 @@
         <!-- 编辑对话框 -->
         <el-dialog :title="'修改信息'" :visible.sync="updateDialog">
             <el-form :rules="rules" :model="updateInfo" status-icon label-position="left" label-width="100px" style="width: 400px; margin-left:50px;">
-                <el-form-item label="用户名" prop="name">
-                    <el-input v-model="updateInfo.name"/>
+                <el-form-item label="昵称" prop="nickName">
+                    <el-input v-model="updateInfo.nickName"/>
                 </el-form-item>
                 <el-form-item label="性别" prop="sex">
                     <el-select v-model="updateInfo.sex">
@@ -131,19 +131,6 @@ export default {
     data() {
         return {
             sexMap,
-            // userInfo: {
-            //     id: undefined,
-            //     name: undefined,
-            //     email: undefined,
-            //     sex: undefined,
-            //     birthday: undefined,
-            //     headImage: undefined,
-            //     area: undefined,
-            //     occupation: undefined,
-            //     description: undefined,
-            //     addTime: undefined,
-            //     lastLoginIp: undefined
-            // },
             userInfo: {},
             uploadPath,
             newHeadImage: undefined,
@@ -151,6 +138,7 @@ export default {
             updateDialog: false,
             updateInfo: {
                 id: undefined,
+                nickName: undefined,
                 sex: undefined,
                 birthday: undefined,
                 area: undefined,
@@ -158,7 +146,7 @@ export default {
                 description: undefined
             },
             rules: {
-                name: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
+                nickName: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
                 sex: [{ required: true, message: '手机号码不能为空', trigger: 'blur' }],
                 email: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
             },
@@ -174,7 +162,14 @@ export default {
         },
         showUpdateDialog() {
             this.updateDialog = true
-            this.updateInfo = this.userInfo
+
+            this.updateInfo.id = this.userInfo.id
+            this.updateInfo.nickName = this.userInfo.nickName
+            this.updateInfo.sex = this.userInfo.sex
+            this.updateInfo.birthday = this.userInfo.birthday
+            this.updateInfo.area = this.userInfo.area
+            this.updateInfo.occupation = this.userInfo.occupation
+            this.updateInfo.description = this.userInfo.description
         },
         openUpdateImage() {
             this.imageDialog = true
@@ -194,7 +189,15 @@ export default {
         },
         updateData() {
             updateUserBaseInfo(this.updateInfo).then(res => {
+                this.userInfo.nickName = this.updateInfo.nickName
+                this.userInfo.sex = this.updateInfo.sex
+                this.userInfo.birthday = this.updateInfo.birthday
+                this.userInfo.area = this.updateInfo.area
+                this.userInfo.occupation = this.updateInfo.occupation
+                this.userInfo.description = this.updateInfo.description
+                this.$store.dispatch('setUserInfo', this.userInfo)
                 this.getUserInfo()
+
                 this.updateDialog = false
                 this.$notify.success({
                     title: '成功',
@@ -202,7 +205,7 @@ export default {
                     duration: 1 * 1000
                 })
             }).catch(() => {
-
+                alert("chuxian ")
             })
         },
         updateImage() {
@@ -214,8 +217,10 @@ export default {
                 })
             }
             updateHeadImage(this.userInfo.id,this.newHeadImage).then(res => {
-                this.imageDialog = false
+                this.userInfo.headImage = this.newHeadImage
+                this.$store.dispatch('setUserInfo', this.userInfo)
                 this.getUserInfo()
+                this.imageDialog = false
                 this.$notify.success({
                     title: '成功',
                     message: '修改信息成功',
@@ -224,7 +229,7 @@ export default {
             }).catch(res => {
                 alert("图片地址保存到数据库失败")
             })
-        }
+        },
     },  
 }
 </script>
@@ -233,13 +238,18 @@ export default {
 @import '../../style/user001.css';
 @import '../../style/user002.css';
 table {
-    width: 700px;
+    width: 800px;
 }
 tr {
     height: 50px;
 }
-td {
-    width: 140px;
+.leftTd {
+    text-align: right;
+    margin-left: -100px;
+}
+
+.rightTd {
+    width: 250px;
 }
 .myLeftDiv{
   width:500px;

@@ -15,6 +15,7 @@ import cn.qyd.blogroom.user.service.UserService;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -42,6 +43,9 @@ public class UserServiceImpl implements UserService {
     @Autowired(required = false)
     private TokenUtil tokenUtil;
 
+    @Value("${user.default.headImage}")
+    private String defaultImage;
+
     @Override
     public User save(UserDto dto) {
         User user = new User();
@@ -49,6 +53,7 @@ public class UserServiceImpl implements UserService {
                 .setNickName(dto.getNickName())
                 .setPassword(MD5Util.getMD5(dto.getPassword()))
                 .setEmail(dto.getEmail())
+                .setHeadImage(defaultImage)
                 .setStatus(0)
                 .setAddTime(LocalDateTime.now());
         User result = userDao.save(user);
@@ -154,7 +159,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public Boolean update(UserUpdateInfoDto infoDto) {
         User user = findById(infoDto.getId());
-        user.setSex(infoDto.getSex())
+        user.setNickName(infoDto.getNickName())
+                .setSex(infoDto.getSex())
                 .setBirthday(Formater.parseDate(infoDto.getBirthday()))
                 .setOccupation(infoDto.getOccupation())
                 .setArea(infoDto.getArea())

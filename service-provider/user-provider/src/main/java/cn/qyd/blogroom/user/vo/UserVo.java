@@ -19,7 +19,7 @@ public class UserVo {
     private Long id;
 
     @ApiModelProperty("用户名")
-    private String name;
+    private String nickName;
 
     @ApiModelProperty("电话号码")
     private String phone;

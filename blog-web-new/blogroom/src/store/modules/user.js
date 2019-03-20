@@ -1,5 +1,6 @@
 import { isLogin, getToken, setToken, removeToken } from '@/utils/auth'
 import { getUserInfo, setUserInfo,removeUserInfo } from '../../utils/auth';
+import { logout } from '@/api/login'
 
 const user = {
   state: {
@@ -29,11 +30,18 @@ const user = {
     },
 
     // 登出
-    LogOut({ commit }) {
-          commit('SET_TOKEN', '')
-          removeToken()
-          removeUserInfo()
-          commit('SET_ISLOGIN',false)
+    LogOut({ commit, state }) {
+      let userId = state.userInfo.id
+      logout(userId).then(() => {
+        commit('SET_TOKEN', '')
+        removeToken()
+        removeUserInfo()
+        commit('SET_ISLOGIN',false)
+        window.location.href = "http://localhost:9000/index"
+      }).catch(() => {
+        alert('登出出现异常')
+      })
+          
     },
   }
 }

@@ -5,7 +5,8 @@
         <!--时尚博主-->
             <li v-for="index in total" :key="index">
                 <a :href="'/blog/room/'+list[index-1].id">
-                    <img :src='list[index-1].headImage' alt='博主头像' style='height: 60px;width: 60px'/>
+                    <img :src='list[index-1].headImage' alt='博主头像' style='height: 50px;width: 50px;border-radius:50%'/>
+                    <span style="height: 20px">{{ splitText(list[index-1].nickName) }}</span>
                 </a>
             </li>
         </ul>
@@ -34,6 +35,13 @@ export default {
             }).catch(() => {
                 
             })
+        },
+        splitText(str) {
+            if(str.length > 3) {
+                str = str.substr(0,3) + "..."
+            }
+
+            return str
         }
     },
 }

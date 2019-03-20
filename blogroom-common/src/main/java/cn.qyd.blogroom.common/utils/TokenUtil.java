@@ -55,7 +55,7 @@ public class TokenUtil {
     }
 
     public Boolean removeToken(Long userId) {
-        valueOperations.getOperations().delete(userId.toString());
+        valueOperations.getOperations().delete(Constant.REDIS_TOKEN_KEY_PREFIX+userId);
         return true;
     }
 

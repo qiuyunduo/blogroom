@@ -14,7 +14,9 @@ import java.util.List;
 public interface AttentionService {
     Attention save(AttentionDto dto);
 
+    Attention selectOne(AttentionDto dto);
+
     Page<Attention> query(AttentionQueryDto dto);
 
-    Boolean delete(Long id);
+    void delete(AttentionDto dto);
 }

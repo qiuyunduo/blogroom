@@ -42,7 +42,7 @@ public class LoginHelper {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String token = request.getHeader(Constant.USER_TOKEN_KEY);
         if(StringUtils.isEmpty(token)) {
-            throw BusinessException.fail(FrontRespEnum.LOGIN_INFO_EXIST);
+            throw BusinessException.fail(FrontRespEnum.LOGIN_ACCOUNT_EXIST);
         }
     }
 

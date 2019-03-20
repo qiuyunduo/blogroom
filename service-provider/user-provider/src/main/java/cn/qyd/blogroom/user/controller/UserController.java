@@ -5,6 +5,7 @@ import cn.qyd.blogroom.common.resp.paging.PagingInfo;
 import cn.qyd.blogroom.common.utils.PagingUtil;
 import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.common.utils.dozer.BeanMapper;
+import cn.qyd.blogroom.user.dto.UpdatePwdDto;
 import cn.qyd.blogroom.user.dto.UserDto;
 import cn.qyd.blogroom.user.dto.UserQueryDto;
 import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
@@ -86,14 +87,21 @@ public class UserController {
         return Resp.succeed(result);
     }
 
-    @PutMapping("/updateInfo")
+    @PostMapping("/updateInfo")
     @ApiOperation("修改用户基本信息")
     public Resp updateBaseInfo(UserUpdateInfoDto infoDto) {
         Boolean result = userService.update(infoDto);
         return Resp.succeed(result);
     }
 
-    @PutMapping("/updateHeadImage")
+    @PostMapping("/updatePwd")
+    @ApiOperation("修改用户密码")
+    public Resp updatePwd(UpdatePwdDto dto) {
+        Boolean result = userService.updatePassword(dto);
+        return Resp.succeed(result);
+    }
+
+    @PostMapping("/updateHeadImage")
     @ApiOperation("修改用户头像")
     public Resp updateHeadImage(Long userId, String newImage) {
         Boolean result = userService.updateImage(userId, newImage);

@@ -36,7 +36,7 @@
                     帮助
                 </el-dropdown-item>
                 <el-dropdown-item >
-                  <span style="display:block;" @click="logout">退出</span>
+                  <span style="display:block;" @click="logoutEven">退出</span>
                 </el-dropdown-item>
               </el-dropdown-menu>
           </el-dropdown>
@@ -57,6 +57,7 @@
 <script>
 import LoginForm from '@/views/login/loginForm'
 import RegisterForm from '@/views/login/registerForm'
+import { logout } from '@/api/login'
 
 export default {
   name: 'AppHead',
@@ -95,9 +96,8 @@ export default {
       this.$refs.registerForm.openRegisterForm()
     },
 
-    logout() {
+    logoutEven() {
       this.$store.dispatch('LogOut')
-      window.location.href = "http://localhost:9000/index"
     }
 
   }

@@ -8,12 +8,18 @@
                 </div>
                 <div class="user-info d-flex justify-content-center flex-column">
                     <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
-                        <span id="user_name">{{ blogInfo.blogName }}</span>
+                        <span id="user_name">{{ userInfo.nickName }}</span>
                     </p>
                 </div>
-                <input id="AttentionBtn" type="button" value="关注" onclick="addAttention()" 
-                style="background-color: white;color: red;border: 1px solid red;height: 30px;width: 70px;
-                text-align: center;font-size: 10px;float: right;margin-right: -10px;display: none">
+                <div v-if="isLogin" style="width: 120px">
+                    <div v-if="isOther">
+                    <el-button v-if="isFollow" @click="cancelAttention" style="background-color: white;color: red;border: 1px solid red;width:100px;height:40px">取消关注</el-button>
+                    <el-button v-else @click="addAttention" style="background-color: white;color: red;border: 1px solid red;width:70px;height:40px">关注</el-button>
+                    </div>
+                </div>
+                <div v-else style="width: 120px">
+                    <el-button @click="addAttention" style="background-color: white;color: red;border: 1px solid red;width:70px;height:40px">关注</el-button>
+                </div>
             </div>
             <div class="data-info d-flex item-tiling">
                 <dl class="text-center" title="0">
@@ -70,12 +76,17 @@
         </div>
 
         <div style="background-color: white;margin-top: 1px;height: 220px">
-            <div style="border-bottom: 1px  gray;padding: 5px 0 10px 10px;">
+            <div style="border-bottom: 1px  gray;padding: 3px 0 10px 10px;">
                 <strong>关注</strong>
             </div>
-            <div style="padding: 5px 0 0 10px;" id="guanzhu">
-                <p v-if="isHaveFollowers()">还没有添加任何关注</p>
-                <a v-else v-for="index in followers.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
+            <div id="guanzhu">
+                <p v-if="isHaveFollowers()" style="padding-left: 10px">还没有添加任何关注</p>
+                <a v-else v-for="index in followersLength" :key="index" :href="'/blog/room/'+followers[index-1].user2Id" style="float: left">
+                    <div style="padding-left:20px;padding-top:8px">
+                        <img :src="followers[index-1].user2Image" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
+                    </div>
+                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(followers[index-1].user2Name) }}</div>
+                </a>
             </div>
         </div>
 
@@ -83,9 +94,14 @@
             <div style="border-bottom: 1px  gray;padding: 5px 0 10px 10px;">
                 <strong>粉丝</strong>
             </div>
-            <div style="padding: 5px 0 10px 10px;" id="fans">
-                <p v-if="isHaveFans()">还没有一个粉丝</p>
-                <a v-else v-for="index in fans.length" :key="index" href=''><img src="@/images/default.jpg" alt="博主头像" style='float: left;width: 60px;height: 60px;padding: 5px 5px'/></a>
+            <div id="fans">
+                <p v-if="isHaveFans()" style="padding-left: 10px">还没有一个粉丝</p>
+                <a v-else v-for="index in fansLength" :key="index" :href="'/blog/room/'+fans[index-1].user1Id" style="float: left;">
+                    <div style="padding-left:20px;padding-top:8px">
+                        <img :src="fans[index-1].user1Image" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
+                    </div>
+                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(fans[index-1].user1Name) }}</div>
+                </a>
             </div>
         </div>
     </aside>
@@ -95,7 +111,7 @@
 import { detailUser } from "@/api/user"
 import { blogDetail } from "@/api/blog"
 import { rankDetail } from "@/api/rank"
-import { allFollowersOfUser, allFansOfUser } from "@/api/attention"
+import { allFollowersOfUser, allFansOfUser, findOne, attention, removeAttention } from "@/api/attention"
 export default {
     name: 'BaseInfo',
     data() {
@@ -105,23 +121,52 @@ export default {
             userInfo: {},
             rankInfo: {},
             followers: null,
+            followersLength: 0,
             fans: null,
+            fansLength: 0,
+            isOther: true,
+            isFollow: false,
             followerQuery: {
                 user1Id: undefined,
                 page: 1,
-                limit: 8
+                limit: 6
             },
             fansQuery: {
                 user2Id: undefined,
                 page: 1,
-                limit: 8
+                limit: 6
             },
+            attentionDate: {
+                user1Id: undefined,
+                user2Id: undefined
+            }
+        }
+    },
+    computed: {
+        isLogin() {
+            return this.$store.state.user.isLogin
         }
     },
     mounted() {
         this.getall()
     },
     methods: {
+        addAttention() {
+            attention(this.attentionDate).then(res => {
+                this.getall()
+                this.isFollow = true
+            }).catch(() => {
+                alert("关注失败")
+            })
+        },
+        cancelAttention() {
+            removeAttention(this.attentionDate).then(res => {
+                this.getall()
+                this.isFollow = false
+            }).catch(() => {
+                alert("取消关注失败")
+            })
+        },
         isHaveFollowers(){
             return this.followers === null || this.followers.length === 0
         },
@@ -137,11 +182,30 @@ export default {
                 that.getFans()
             });
         },
+        checkIsFollow() {
+            findOne(this.attentionDate).then(res => {
+                if(res.data.data !== null && res.data.data !== undefined) {
+                        this.isFollow = true
+                }
+            }).catch(() => {
+                alert("获取双方关系发生异常")
+            })
+        },
+        
         getUserId() {
             let that = this
+            let userInfo = this.$store.state.user.userInfo
             return new Promise(function(resolve,reject){
                 let id = that.$route.params.id
                 that.userId = id
+                if(that.isLogin) {
+                    if(id === userInfo.id.toString()) {
+                        that.isOther = false
+                    }
+                    that.attentionDate.user1Id = userInfo.id.toString()
+                    that.attentionDate.user2Id = id
+                    that.checkIsFollow()
+                }
                 that.followerQuery.user1Id = id
                 that.fansQuery.user2Id = id
                 resolve("sucess")
@@ -176,7 +240,7 @@ export default {
         getFollowers() {
             allFollowersOfUser(this.followerQuery).then(response => {
                 this.followers = response.data.pagingData.item
-                // console.log(this.followers)
+                this.followersLength = this.followers !== null ? this.followers.length : 0
             }).catch(response => {
             this.$notify.error({
               title: '错误',
@@ -187,13 +251,19 @@ export default {
         getFans() {
             allFansOfUser(this.fansQuery).then(response => {
                 this.fans = response.data.pagingData.item
-                // console.log(this.fans)
+                this.fansLength = this.fans !== null ? this.fans.length : 0
             }).catch(response => {
             this.$notify.error({
               title: '错误',
               message: '用户粉丝获取出错'
             })
           })
+        },
+        splitText(str) {
+            if(str.length > 5) {
+                str = str.substr(0,5) + "..."
+            }
+            return str
         }
     },
     watch: {

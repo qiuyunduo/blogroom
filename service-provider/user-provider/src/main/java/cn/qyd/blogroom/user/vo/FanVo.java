@@ -11,12 +11,12 @@ import lombok.Data;
 @Data
 @ApiModel("粉丝Vo")
 public class FanVo {
-    @ApiModelProperty("关注者id")
+    @ApiModelProperty("粉丝id")
     private Long user1Id;
 
-    @ApiModelProperty("关注者姓名")
+    @ApiModelProperty("粉丝昵称")
     private String user1Name;
 
-    @ApiModelProperty("关注者头像")
+    @ApiModelProperty("粉丝头像")
     private String user1Image;
 }

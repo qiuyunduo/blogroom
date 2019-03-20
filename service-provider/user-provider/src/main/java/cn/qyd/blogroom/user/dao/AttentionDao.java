@@ -11,5 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date 19-2-26 下午1:11
  **/
 public interface AttentionDao extends JpaRepository<Attention, Long> {
+    Attention findByUser1IdAndUser2Id(Long user1Id, Long user2Id);
+    void deleteByUser1IdAndUser2Id(Long user1Id, Long user2Id);
     Page<Attention> findAll(Specification<Attention> specification, Pageable pageable);
 }

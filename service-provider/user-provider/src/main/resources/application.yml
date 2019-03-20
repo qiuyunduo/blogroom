@@ -16,11 +16,12 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}
 
-User: qiuyunduo
+user:
+  default:
+    headImage: http://localhost:9000/static/images/default.jpg
 
 logging:
   config:
     classpath: logback-spring.xml
 
-testurl: dev
 

@@ -12,7 +12,7 @@ import lombok.Data;
 public class SimpleUserVo {
     private Long id;
 
-    private String name;
+    private String nickName;
 
     private String headImage;
 }

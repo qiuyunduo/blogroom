@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-head/>
+    <app-head ref="apphead"/>
     <app-main/>
     <app-foot/>
   </div>

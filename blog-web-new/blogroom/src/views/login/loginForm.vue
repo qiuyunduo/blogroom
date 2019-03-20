@@ -65,6 +65,7 @@ export default {
                     message: '登录成功',
                     duration: 1 * 1000
                 })
+                window.setTimeout("location.reload()",700);
             }).catch(response => {
                 this.$notify.error({
                     title: '登录失败',

@@ -44,7 +44,6 @@ export default {
             getAllClass().then(response => {
                 this.classMap = response.data.data
                 this.classMapSize = this.classMap.length
-                this.$store.commit('SET_CLASSMAP',this.classMap)
             }).catch(() => {
                 // this.$notify.error({
                 //     title: '异常',

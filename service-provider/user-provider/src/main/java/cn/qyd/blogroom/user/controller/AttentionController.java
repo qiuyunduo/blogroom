@@ -40,6 +40,22 @@ public class AttentionController {
         return Resp.succeed(result);
     }
 
+    @GetMapping("/find")
+    @ApiOperation("获取一条关注记录")
+    @CheckLogin
+    public Resp findOne(AttentionDto dto) {
+        Attention result = attentionService.selectOne(dto);
+        return Resp.succeed(result);
+    }
+
+    @PostMapping("/remove")
+    @ApiOperation("用户移除关注")
+    @CheckLogin
+    public Resp removeAttention(AttentionDto dto) {
+        attentionService.delete(dto);
+        return Resp.succeed(true);
+    }
+
     @GetMapping("/fans")
     @ApiOperation("获取某用户所有粉丝")
     public Resp fans(AttentionQueryDto dto) {

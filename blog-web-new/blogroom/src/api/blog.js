@@ -11,6 +11,6 @@ export function addBlog(userId) {
   return request({
     url: '/blog/blog/create',
     method: 'post',
-    params: userId
+    params: { 'userId':userId }
   })
 }

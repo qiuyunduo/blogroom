@@ -26,7 +26,7 @@ export function detailUser(userId) {
 export function updateUserBaseInfo(data) {
   return request({
     url: '/user/user/updateInfo',
-    method: 'put',
+    method: 'post',
     params: data
   })
 }
@@ -34,7 +34,15 @@ export function updateUserBaseInfo(data) {
 export function updateHeadImage(userId,newImage) {
   return request({
     url: '/user/user/updateHeadImage',
-    method: 'put',
+    method: 'post',
     params: { 'userId':userId, 'newImage':newImage}
+  })
+}
+
+export function updatePwd(data) {
+  return request({
+    url: '/user/user/updatePwd',
+    method: 'post',
+    params: data
   })
 }
