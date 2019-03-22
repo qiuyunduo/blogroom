@@ -6,332 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ac10031-2834-46bd-aff2-18565d9e2f1d" name="Default Changelist" comment="移除github中的target">
-      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ActionEnter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/Encoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/PathFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/ActionMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/ActionState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/AppInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/BaseState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/FileType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/MIMEType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/MultiState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/hunter/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/hunter/ImageHunter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Base64Uploader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/StorageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Uploader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/api/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/SimpleArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/components/website/SimpleArticle.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/article/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/articles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/articles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/baseInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/blog/baseInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/layout/components/AppHead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/fans.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/fans.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/followers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/followers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/leftMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/leftMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/mArticles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/user/mArticles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/src/views/website/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/anchor/anchor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/attachment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/attachment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/attachment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_chm.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_doc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_exe.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_jpg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_mp3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_mv.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_pdf.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_ppt.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_psd.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_rar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_txt.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/fileTypeImages/icon_xls.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/alignicon.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/alignicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/file-icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/file-icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/progress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/success.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/attachment/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/background/background.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/background/background.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/background/background.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/background/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/background/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/chart.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/charts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/charts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/charts/images/charts5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/emotion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/emotion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/emotion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/bface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/cface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/fface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/jxface2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/neweditor-tab-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/tface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/wface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/emotion/images/yface.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/gmap/gmap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/help/help.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/help/help.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/help/help.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/image.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/alignicon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/progress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/success.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/image/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/insertframe/insertframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/internal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/link/link.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/map/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/map/show.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/music/music.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/music/music.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/music/music.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/preview/preview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/addimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/brush.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/delimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/delimgH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/empty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/emptyH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/eraser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/redo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/redoH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/scale.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/scaleH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/size.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/undo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/images/undoH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/scrawl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/scrawl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/scrawl/scrawl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/searchreplace/searchreplace.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/searchreplace/searchreplace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/snapscreen/snapscreen.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/spechars/spechars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/spechars/spechars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/dragicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/edittable.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/edittable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/edittable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/edittd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/table/edittip.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/pre0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/pre1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/pre2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/pre3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/images/pre4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/template.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/template/template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/center_focus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/file-icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/file-icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/left_focus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/none_focus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/progress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/right_focus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/success.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/video.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/video.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/video/video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/webapp/webapp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/wordimage/fClipboard_ueditor.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/wordimage/imageUploader.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/wordimage/tangram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/wordimage/wordimage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/dialogs/wordimage/wordimage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/controller.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/lib/commons-codec-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/lib/commons-io-2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/lib/json.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/jsp/lib/ueditor-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/addimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/alldeletebtnhoverskin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/alldeletebtnupskin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/deletedisable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/deleteenable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/listbackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/localimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/rotateleftdisable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/rotateleftenable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/rotaterightdisable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/rotaterightenable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/en/images/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/zh-cn/images/copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/zh-cn/images/localimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/zh-cn/images/music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/zh-cn/images/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/lang/zh-cn/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/css/ueditor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/css/ueditor.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/dialogbase.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/anchor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/arrow_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/arrow_up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/button-bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/cancelbutton.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/charts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/cursor_h.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/cursor_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/cursor_v.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/cursor_v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/dialog-title-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/filescan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/highlighted.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/icons-all.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/loaderror.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/lock.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/neweditor-tab-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/pagebreak.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/scale.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/sortable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/sparator_v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/table-cell-align.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/tangram-colorpicker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/toolbar_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/unhighlighted.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/videologo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/word.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/default/images/wordpaste.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/themes/iframe.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/SyntaxHighlighter/shCoreDefault.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/codemirror/codemirror.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/codemirror/codemirror.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/highcharts-more.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/highcharts-more.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/highcharts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/highcharts.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/annotations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/annotations.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/data.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/drilldown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/exporting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/exporting.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/funnel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/funnel.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/heatmap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/map.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/themes/dark-blue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/themes/dark-green.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/themes/gray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/themes/grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/highcharts/themes/skies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/jquery-1.10.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/jquery-1.10.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/jquery-1.10.2.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/snapscreen/UEditorSnapscreen.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/font/vjs.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/font/vjs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/font/vjs.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/font/vjs.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/video-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/video-js.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/video-js.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/video.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/video-js/video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/Uploader.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.html5only.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/xss.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/third-party/zeroclipboard/ZeroClipboard.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/ueditor.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/ueditor.all.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/ueditor.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/ueditor.parse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-Utf8-Jsp/ueditor.parse.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/config/CrossConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogroom-base/server-gateway/src/main/java/cn/qyd/blogroom/gateway/config/CrossConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-utf-jsp/ueditor.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-utf-jsp/ueditor.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-utf-jsp/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web-new/blogroom/static/Ue-utf-jsp/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/base/server-eureka/server-eureka_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/dto/ArticleQueryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/entity/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/java/cn/qyd/blogroom/article/vo/ArticleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/article-provider/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/blogroom_article.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/blogroom_article.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/blogroom-project/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -405,20 +89,21 @@
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
+          <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="89" />
+          <entry key="class" value="142" />
           <entry key="css" value="13" />
           <entry key="gitignore" value="12" />
           <entry key="html" value="41" />
           <entry key="http" value="1" />
-          <entry key="java" value="825" />
+          <entry key="java" value="879" />
           <entry key="js" value="31" />
-          <entry key="json" value="6" />
+          <entry key="json" value="9" />
           <entry key="jsp" value="4" />
           <entry key="log" value="3" />
           <entry key="pom" value="1" />
@@ -431,11 +116,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="89" />
+          <entry key="CLASS" value="142" />
           <entry key="CSS" value="13" />
           <entry key="HTML" value="41" />
-          <entry key="JAVA" value="825" />
-          <entry key="JSON" value="6" />
+          <entry key="JAVA" value="879" />
+          <entry key="JSON" value="9" />
           <entry key="JSP" value="4" />
           <entry key="JavaScript" value="31" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -451,8 +136,9 @@
         <counts>
           <entry key="dummy" value="5" />
           <entry key="html" value="108" />
-          <entry key="java" value="27105" />
+          <entry key="java" value="27286" />
           <entry key="js" value="335" />
+          <entry key="json" value="118" />
           <entry key="md" value="31" />
           <entry key="properties" value="13" />
           <entry key="sql" value="2" />
@@ -464,7 +150,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="108" />
-          <entry key="JAVA" value="27105" />
+          <entry key="JAVA" value="27286" />
+          <entry key="JSON" value="118" />
           <entry key="JavaScript" value="335" />
           <entry key="Markdown" value="31" />
           <entry key="PLAIN_TEXT" value="397" />
@@ -538,22 +225,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ConfigManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="99">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -562,46 +237,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+        <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="954">
+              <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/ResponseFacade.class">
+        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ActionEnter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/Response.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="163" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="148">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
-                <element signature="e#3987#3988#0" expanded="true" />
-                <element signature="e#4029#4030#0" expanded="true" />
-                <element signature="e#10140#10141#0" expanded="true" />
-                <element signature="e#10201#10202#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/Response.class">
+        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="-258">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/PathFormat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
-                <element signature="e#3262#3263#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -627,10 +319,16 @@
       <find>Password</find>
       <find>conte</find>
       <find>request.getConte</find>
+      <find>/static/articleImages/{yyyy}{mm}{dd}/{time}{rand:6}</find>
+      <find>articleImages</find>
+      <find>//static/ueditorUpload/</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
       <replace />
+      <replace>{yyyy}{mm}{dd}/{time}{rand:6}</replace>
+      <replace>ueditorUpload</replace>
+      <replace>/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/service-provider/website-provider/src/main/resources/ueditor/exec</dir>
@@ -647,7 +345,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service-provider/blog-provider/src/main/java/cn/qyd/blogroom/blog/service/impl/BlogServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/entity/User.java" />
         <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserDto.java" />
         <option value="$PROJECT_DIR$/service-provider/user-provider/src/main/java/cn/qyd/blogroom/user/dto/UserQueryDto.java" />
@@ -687,7 +384,6 @@
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/Base64Uploader.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Base64Uploader.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Uploader.java" />
-        <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ActionEnter.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/hunter/FileManager.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/BaseState.java" />
@@ -697,6 +393,8 @@
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/MultiState.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/test.java" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ConfigManager.java" />
+        <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java" />
+        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java" />
       </list>
     </option>
@@ -737,7 +435,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -748,7 +445,110 @@
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web-new" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web-new" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web-new" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="blogroom-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.qyd.blogroom.common" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
               <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="user-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
@@ -814,13 +614,27 @@
             </path>
             <path>
               <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="service-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="website-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="ueditor" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogroom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogroom" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -832,7 +646,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553237337230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553256425217" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/" />
@@ -1954,7 +1768,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceProvider">
+  <component name="RunManager" selected="Application.UeditorController">
     <configuration name="UeditorController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.qyd.blogroom.website.controller.UeditorController" />
       <module name="website-provider" />
@@ -2065,11 +1879,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceProvider" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.UeditorController" />
-        <item itemvalue="Spring Boot.GatewayServer" />
         <item itemvalue="Spring Boot.EurekaServer" />
+        <item itemvalue="Application.UeditorController" />
+        <item itemvalue="Spring Boot.UserServiceProvider" />
+        <item itemvalue="Spring Boot.GatewayServer" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -2121,6 +1935,7 @@
       <workItem from="1553045970968" duration="24918000" />
       <workItem from="1553132337126" duration="25054000" />
       <workItem from="1553218772321" duration="14092000" />
+      <workItem from="1553237918748" duration="16806000" />
     </task>
     <task id="LOCAL-00001" summary="发现问题console和front这两个项目可以不要,转到dev_qyd开发分支">
       <created>1550652035778</created>
@@ -2197,7 +2012,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390444000" />
+    <option name="totallyTimeSpent" value="407250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2211,7 +2026,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49703264" visible="true" weight="0.33279914" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49703264" visible="true" weight="0.33653846" />
       <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.31036323" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2221,8 +2036,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.46644664" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.5863586" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7370737" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.5830583" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.6160616" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" />
@@ -2303,431 +2118,286 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/ConfigManager.class</url>
           <line>36</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileUploadBase.class</url>
+          <line>608</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileUploadBase.class</url>
+          <line>607</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileUploadBase.class</url>
+          <line>606</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/net/PlainSocketImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+        <state relative-caret-position="1944">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/context/support/WebApplicationContextUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONTokener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="327" selection-start-line="327" selection-end-line="327" />
+        <state relative-caret-position="170">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
-            <element signature="e#15145#15146#0" expanded="true" />
+            <element signature="e#8920#8921#0" expanded="true" />
+            <element signature="e#9010#9011#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/AutowireUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="304" selection-start-line="304" selection-end-line="304" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/ConfigManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="170" column="1" selection-start-line="7" selection-end-line="170" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5014#5015#0" expanded="true" />
-            <element signature="e#5085#5086#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/Encoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" selection-start-line="7" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/Encoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/PathFormat.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/ActionMap$1.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/AppInfo$1.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/ActionEnter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/ActionMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" selection-start-line="7" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/ActionState.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/AppInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="57" lean-forward="true" selection-start-line="7" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/FileType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" selection-start-line="7" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/MIMEType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="7" selection-start-line="7" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/State.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/MultiState.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="84" lean-forward="true" selection-start-line="8" selection-end-line="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/hunter/FileManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="97" lean-forward="true" selection-start-line="11" selection-end-line="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/hunter/ImageHunter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="119" lean-forward="true" selection-start-line="13" selection-end-line="119" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/upload/BinaryUploader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="85" lean-forward="true" selection-start-line="11" selection-end-line="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/upload/StorageManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="140" lean-forward="true" selection-start-line="9" selection-end-line="140" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/upload/Uploader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" lean-forward="true" selection-start-line="8" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/upload/Base64Uploader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/service-provider/website-provider/src/main/resources/lib/ueditor-1.1.2.jar!/com/baidu/ueditor/define/BaseState.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/ActionMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="444">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/ActionState.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/http/Parameters.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="220">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/AppInfo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11-sources.jar!/org/apache/commons/codec/binary/Base64.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="202">
+          <caret line="692" selection-start-line="692" selection-end-line="692" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#30860#30861#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/FileType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="306">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/MIMEType.java">
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="193">
+          <caret line="1338" column="19" selection-start-line="1338" selection-start-column="19" selection-end-line="1338" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Base64Uploader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="260">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#6214#6215#0" expanded="true" />
+            <element signature="e#6279#6280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/disk/DiskFileItemFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/buf/AbstractChunk.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/RequestFacade.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/servlet/ServletRequestContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/MultipartStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="197" column="19" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
+          <folding>
+            <element signature="e#3447#3448#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/AppInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1838#1839#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/Uploader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="290">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java">
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/Encoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/hunter/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/hunter/ImageHunter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/BaseState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        <state relative-caret-position="58">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1755#1756#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1903#1904#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/StorageManager.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/Request.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        <state relative-caret-position="328">
+          <caret line="342" selection-start-line="342" selection-end-line="342" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#12603#12604#0" expanded="true" />
+            <element signature="e#20055#20056#0" expanded="true" />
+            <element signature="e#20113#20114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/PathFormat.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/core/StandardContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
+        <state relative-caret-position="156">
+          <caret line="339" selection-start-line="339" selection-end-line="339" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#15540#15541#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/AdminController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/buf/B2CConverter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ActionEnter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="14" column="82" lean-forward="true" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/define/MultiState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/Response.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-          <folding>
-            <element signature="e#3262#3263#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/Response.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        <state relative-caret-position="138">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
           <folding>
             <element signature="e#3987#3988#0" expanded="true" />
             <element signature="e#4029#4030#0" expanded="true" />
+            <element signature="e#4064#4065#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#6901#6902#0" expanded="true" />
             <element signature="e#10140#10141#0" expanded="true" />
             <element signature="e#10201#10202#0" expanded="true" />
           </folding>
@@ -2736,32 +2406,252 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/ResponseFacade.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="210">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/CoyoteWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#2029#2030#0" expanded="true" />
+            <element signature="e#2081#2082#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/connector/OutputBuffer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#2025#2026#0" expanded="true" />
+            <element signature="e#2062#2063#0" expanded="true" />
+            <element signature="e#16455#16456#0" expanded="true" />
+            <element signature="e#16513#16514#0" expanded="true" />
+            <element signature="e#16559#16560#0" expanded="true" />
+            <element signature="e#16614#16615#0" expanded="true" />
+            <element signature="e#16661#16662#0" expanded="true" />
+            <element signature="e#16740#16741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/AbstractProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="228">
+          <caret line="253" selection-start-line="253" selection-end-line="253" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/buf/ByteChunk.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/net/AbstractEndpoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+          <folding>
+            <element signature="e#8077#8078#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/Request.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="303" selection-start-line="303" selection-end-line="303" />
+          <folding>
+            <element signature="e#4392#4393#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#9168#9169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+          <folding>
+            <element signature="e#2319#2320#0" expanded="true" />
+            <element signature="e#2354#2355#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+            <element signature="e#2960#2961#0" expanded="true" />
+            <element signature="e#3226#3227#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#5780#5781#0" expanded="true" />
+            <element signature="e#5823#5824#0" expanded="true" />
+            <element signature="e#6347#6348#0" expanded="true" />
+            <element signature="e#6392#6393#0" expanded="true" />
+            <element signature="e#6427#6428#0" expanded="true" />
+            <element signature="e#6462#6463#0" expanded="true" />
+            <element signature="e#8197#8198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/http/MimeHeaderField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/buf/MessageBytes.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+          <folding>
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/http11/filters/ChunkedOutputFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#2544#2545#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/http11/Http11OutputBuffer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2323#2324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/coyote/http11/Http11Processor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="809" selection-start-line="809" selection-end-line="809" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/tomcat/util/http/MimeHeaders.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ActionEnter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/ConfigManager.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileUploadBase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="210">
+          <caret line="559" column="24" selection-start-line="559" selection-start-column="24" selection-end-line="559" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="107" selection-start-line="101" selection-start-column="16" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.0.4.RELEASE/spring-boot-actuator-2.0.4.RELEASE.jar!/org/springframework/boot/actuate/web/trace/servlet/HttpTraceFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/interceptors/TokenCheckInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogroom-common/src/main/java/cn.qyd.blogroom.common/resp/code/FrontRespEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/PathFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/multipart/support/AbstractMultipartHttpServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="e#2639#2640#0" expanded="true" />
+            <element signature="e#2687#2688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/StorageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/ueditor/upload/BinaryUploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-provider/website-provider/src/main/java/cn/qyd/blogroom/website/controller/UeditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

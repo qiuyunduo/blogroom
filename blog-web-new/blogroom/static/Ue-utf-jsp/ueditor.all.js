@@ -24515,30 +24515,30 @@ UE.plugin.register('simpleupload', function (){
                 me.focus();
                 me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
 
-                function callback(){
-                    try{
-                        var link, json, loader,
-                            body = (iframe.contentDocument || iframe.contentWindow.document).body,
-                            result = body.innerText || body.textContent || '';
-                        json = (new Function("return " + result))();
-                        link = me.options.imageUrlPrefix + json.url;
-                        if(json.state == 'SUCCESS' && json.url) {
-                            loader = me.document.getElementById(loadingId);
-                            loader.setAttribute('src', link);
-                            loader.setAttribute('_src', link);
-                            loader.setAttribute('title', json.title || '');
-                            loader.setAttribute('alt', json.original || '');
-                            loader.removeAttribute('id');
-                            domUtils.removeClasses(loader, 'loadingclass');
-                        } else {
-                            showErrorLoader && showErrorLoader(json.state);
-                        }
-                    }catch(er){
-                        showErrorLoader && showErrorLoader(me.getLang('simpleupload.loadError'));
-                    }
-                    form.reset();
-                    domUtils.un(iframe, 'load', callback);
-                }
+                // function callback(){
+                //     try{
+                //         var link, json, loader,
+                //             body = (iframe.contentDocument || iframe.contentWindow.document).body,
+                //             result = body.innerText || body.textContent || '';
+                //         json = (new Function("return " + result))();
+                //         link = me.options.imageUrlPrefix + json.url;
+                //         if(json.state == 'SUCCESS' && json.url) {
+                //             loader = me.document.getElementById(loadingId);
+                //             loader.setAttribute('src', link);
+                //             loader.setAttribute('_src', link);
+                //             loader.setAttribute('title', json.title || '');
+                //             loader.setAttribute('alt', json.original || '');
+                //             loader.removeAttribute('id');
+                //             domUtils.removeClasses(loader, 'loadingclass');
+                //         } else {
+                //             showErrorLoader && showErrorLoader(json.state);
+                //         }
+                //     }catch(er){
+                //         showErrorLoader && showErrorLoader(me.getLang('simpleupload.loadError'));
+                //     }
+                //     form.reset();
+                //     domUtils.un(iframe, 'load', callback);
+                // }
                 function showErrorLoader(title){
                     if(loadingId) {
                         var loader = me.document.getElementById(loadingId);
@@ -24550,6 +24550,11 @@ UE.plugin.register('simpleupload', function (){
                             'timeout': 4000
                         });
                     }
+                }
+
+                function test() {
+                    alert("Sdsd")
+                    alert(JSON.stringify(me.document.getElementById(loadingId)));
                 }
 
                 /* 判断后端配置是否没有加载成功 */
@@ -24565,9 +24570,47 @@ UE.plugin.register('simpleupload', function (){
                     return;
                 }
 
-                domUtils.on(iframe, 'load', callback);
-                form.action = utils.formatUrl(imageActionUrl + (imageActionUrl.indexOf('?') == -1 ? '?':'&') + params);
-                form.submit();
+                // domUtils.on(iframe, 'load', callback);
+                // form.action = utils.formatUrl(imageActionUrl + (imageActionUrl.indexOf('?') == -1 ? '?':'&') + params);
+                // form.submit();
+
+                var formdata = new FormData(form);
+                var xhr= new XMLHttpRequest();
+                xhr.open("POST", me.getOpt('serverUrl')+'?action=uploadimage', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4)
+                        if ((xhr.status >=200 && xhr.status < 300) || xhr.status == 304)
+                        alert(JSON.stringify(me.document.getElementById(loadingId)));
+                            alert(xhr.responseText);
+                }
+                xhr.send(formdata);
+                var loader
+                xhr.onreadystatechange = function () {
+                    
+                    if(xhr.readyState == 4) {
+                        // me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
+                        console.log(xhr.responseText);
+                        var response = JSON.parse(xhr.responseText);
+                        if(response.state === 'SUCCESS' ){
+                            console.log(loadingId);
+                            alert("asd");
+                            alert(JSON.parse/*  */(me.document.getElementById(loadingId)));
+                            // me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
+                            alert("1223");
+                            me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
+                            loader = me.document.getElementById(loadingId);
+                            // loader.setAttribute('src', response.data.url);
+                            // loader.setAttribute('_src', response.data.url);
+                            // loader.setAttribute('title', response.data.title || '');
+                            // loader.setAttribute('alt', response.data.original || '');
+                            loader.removeAttribute('id');
+                            domUtils.removeClasses(loader, 'loadingclass');
+                        }else
+                        {
+                            showErrorLoader && showErrorLoader(response.state);
+                        }
+                    }
+                }
             });
 
             var stateTimer;

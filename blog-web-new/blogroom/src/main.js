@@ -8,9 +8,9 @@ import Element from 'element-ui'
 
 import './icons' // icon
 import '../static/Ue-utf-jsp/ueditor.config.js'　　　　
-import '../static/Ue-utf-jsp/ueditor.all.min.js'
+import '../static/Ue-utf-jsp/ueditor.all.js'
 import '../static/Ue-utf-jsp/lang/zh-cn/zh-cn.js'
-import '../static/Ue-utf-jsp/ueditor.parse.min.js'
+import '../static/Ue-utf-jsp/ueditor.parse.js'
 
 import '@/style/basestyle.css'
 import '@/style/default.css'

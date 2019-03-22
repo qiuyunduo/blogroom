@@ -1,3 +1,5 @@
+import { truncate } from "fs";
+
 /**
  * ueditor完整配置项
  * 可以在这里配置整个编辑器的特性
@@ -276,7 +278,7 @@
         //,maxInputCount:1
 
         //autoHeightEnabled
-        // 是否自动长高,默认true
+        // 是否自动长高,默认truetruncate
         ,autoHeightEnabled:false
 
         //scaleEnabled
@@ -294,7 +296,7 @@
         //,toolbarTopOffset:400
 
         //设置远程图片是否抓取到本地保存
-        // ,catchRemoteImageEnable: true //设置是否抓取远程图片
+        ,catchRemoteImageEnable: true //设置是否抓取远程图片
 
         //pageBreakTag
         //分页标识符,默认是_ueditor_page_break_tag_

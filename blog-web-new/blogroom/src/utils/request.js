@@ -42,7 +42,14 @@ service.interceptors.response.use(
 
     if (res.status.code !== 0){
 
-      if (res.status.code === 212) {
+      if (res.status.code === 211) {
+        MessageBox.alert('您的账号已在其他地方登录，请重新登录', '错误', {
+          confirmButtonText: '确定',
+          type: 'error'
+        }).then(() => {
+          store.dispatch('LogOut')
+        })
+      }　else if (res.status.code === 212) {
         MessageBox.alert('系统未登录，请重新登录', '错误', {
           confirmButtonText: '确定',
           type: 'error'

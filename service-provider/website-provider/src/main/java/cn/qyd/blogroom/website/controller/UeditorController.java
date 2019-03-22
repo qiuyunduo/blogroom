@@ -21,8 +21,8 @@ public class UeditorController {
     @RequestMapping("/exec")
     @ApiOperation("test")
     public void getUEditorConfig( HttpServletRequest request,HttpServletResponse response){
-        response.setContentType("application/json");
-        String rootPath = request.getSession().getServletContext().getRealPath("/");
+//        response.setContentType("application/json");
+        String rootPath = "./blog-web-new/blogroom/static/ueditorUpload/";
         try {
             String exec = new ActionEnter(request, rootPath).exec();
             PrintWriter writer = response.getWriter();
@@ -32,5 +32,15 @@ public class UeditorController {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        File file = new File("./20190322/1553239844504030200.jpg");
+        System.out.println((new File("./").getAbsolutePath()));
+        String absoluteFile = file.getAbsolutePath();
+        System.out.println(absoluteFile);
+        File parentPath = file.getParentFile();
+        boolean mkdirs = parentPath.mkdirs();
+        System.out.println(mkdirs);
     }
 }
