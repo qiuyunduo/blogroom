@@ -12,18 +12,17 @@ import javax.validation.constraints.NotNull;
 @Data
 @ApiModel("文章查询条件Dto")
 public class ArticleQueryDto {
-    private String title;
+    private String keyWord;
 
     private Long classId;
 
     private Long userId;
-
     /**
      * 是否按照文章修改时间排序
      */
     private Boolean orderByUpdateTime;
 
-    private Integer status = 2;
+    private Integer status;
 
     @NotNull
     private Integer page;

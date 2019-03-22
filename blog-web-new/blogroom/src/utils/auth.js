@@ -1,5 +1,4 @@
 import Cookies from 'js-cookie'
-import user from '../store/modules/user';
 
 const tokenKey = 'User_Access_Token'
 const userInfoKey = "Blogroom_User_Info"
@@ -24,7 +23,7 @@ export function getUserInfo() {
 export function setUserInfo(userInfo) {
     userInfo.addTime = transTIme(userInfo.addTime)
     userInfo.birthday = transBirthday(userInfo.birthday)
-    return Cookies.set(userInfoKey,userInfo)
+    return Cookies.set(userInfoKey,userInfo,{expires: 8})
 }
 
 export function removeUserInfo() {
@@ -40,7 +39,7 @@ export function refreshToken(refreshToken) {
 }
 
 export function setToken(token) {
-    return Cookies.set(tokenKey,token)
+    return Cookies.set(tokenKey,token,{expires: 8})
 }
 
 export function removeToken() {

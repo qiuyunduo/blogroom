@@ -34,7 +34,7 @@ public class ArticleController {
 
     @PostMapping("/save")
     @ApiOperation("添加文章")
-    public Resp addArticle(ArticleDto dto){
+    public Resp addArticle(@RequestBody ArticleDto dto){
         Article result = articleService.save(dto);
         return Resp.succeed(result);
     }
@@ -78,7 +78,7 @@ public class ArticleController {
         return Resp.succeed(result);
     }
 
-    @DeleteMapping("/delete/{articleId}")
+    @PostMapping("/delete/{articleId}")
     @ApiOperation("删除文章")
     public Resp updateArticleStatus(@PathVariable("articleId") Long articleId) {
         Boolean result = articleService.delete(articleId);

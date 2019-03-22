@@ -15,8 +15,11 @@ service.interceptors.request.use(
     // Do something before request is sent
     if (store.state.user.isLogin) {
       // 让每个请求携带token
+      // alert(getToken())
+      // alert(getUserInfo())
       config.headers['User_Access_Token'] = getToken()
       config.headers['User_Id'] = getUserInfo().id
+      // alert(config.method)
     }
     return config
   },

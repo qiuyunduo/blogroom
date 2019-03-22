@@ -3,6 +3,8 @@ spring:
     active: dev
   application:
     name: article-provider
+  jpa:
+    show-sql: true
 
 
 server:

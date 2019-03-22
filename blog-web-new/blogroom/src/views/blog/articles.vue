@@ -23,7 +23,7 @@
                         <p>该博主很懒,什么文章都没有留下</p>
                     </div>
                     <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]" style="width: 865px"/>
-                    <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" style="margin-top:-8px;width: 865px"/>
+                    <pagination v-show="total>10" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" style="margin-top:-8px;width: 865px"/>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ export default {
             pageSize: 0,
             listQuery: {
                 classId: undefined,
-                title: undefined,
+                keyWord: undefined,
                 userId: undefined,
                 orderByUpdateTime: false,
                 status: 2,

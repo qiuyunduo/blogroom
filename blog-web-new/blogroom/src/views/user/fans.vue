@@ -7,7 +7,18 @@
             </div>
             <div style="width: 900px">
                 <ul data-v-0c56b7f6="" class="watch_list" id="myfens">
-                    还没有任何人关注您！！！
+                    <div v-if="total === 0" >您还没有一位粉丝。。。！！！</div>
+                    <div v-else>
+                        <li data-v-0c56b7f6='' class='item_cont' v-for="i in pageSize" :key="i" @mouseenter="enter" @mouseleave="level">
+                            <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user1Id" target='_blank' class='fans'>
+                                <img data-v-0c56b7f6='' :src='list[i-1].user1Image' class='header'>
+                            </a>
+                            <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user1Id" target='' class='nick'>
+                                {{ list[i-1].user1Name }}
+                            </a>
+                        </li>
+                        <pagination v-show="total>10" :total="total" :page.sync="fansQuery.page" :limit.sync="fansQuery.limit" @pagination="getList" />
+                    </div>
                 </ul> <!----> <!---->
             </div>
         </div>
@@ -15,8 +26,57 @@
 </template>
 
 <script>
+import { allFansOfUser } from '@/api/attention'
+import Pagination from '@/components/Pagination'
+
 export default {
     name: 'Fans',
+    data() {
+        return {
+            list: null,
+            total: 0,
+            pageSize: 0,
+            fansQuery: {
+                user2Id: undefined,
+                page: 1,
+                limit: 10
+            },
+        }
+    },
+    computed: {
+        loginUser() {
+            return this.$store.state.user.userInfo
+        }
+    },
+    components: {
+        Pagination
+    },
+    mounted() {
+        this.getList()
+    },
+    methods: {
+        getList() {
+            this.fansQuery.user2Id = this.loginUser.id
+            allFansOfUser(this.fansQuery).then(response => {
+                this.list = response.data.pagingData.item
+                this.total = this.list !== null ? this.list.length : 0
+                this.pageSize = response.data.pagingData.pageSize
+            }).catch(response => {
+                this.$notify.error({
+                title: '错误',
+                message: '用户粉丝获取出错'
+                })
+            })
+        },
+        enter() {
+            let tareget = event.target
+            tareget.style.background = '#f3f3f3'
+        },
+        level(){
+              let tareget = event.target
+            tareget.style.background = ''
+        },
+    },
 }
 </script>
 

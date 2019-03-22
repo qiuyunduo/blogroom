@@ -30,7 +30,7 @@ public class ArticleVo {
     private String title;
 
     @ApiModelProperty("文章简介")
-    private String describe;
+    private String introduction;
 
     @ApiModelProperty("文章关键词")
     private String keyword;
@@ -50,5 +50,9 @@ public class ArticleVo {
     @ApiModelProperty("文章时间")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private LocalDateTime publishTime;
+
+    @ApiModelProperty("文章更新时间")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private LocalDateTime updateTime;
 
 }

@@ -26,6 +26,13 @@ export function createOne(data) {
   return request({
     url: '/article/article/save',
     method: 'post',
-    params: data
+    data
+  })
+}
+
+export function deleteOne(id) {
+  return request({
+    url: '/article/article/delete/'+id,
+    method: 'post'
   })
 }

@@ -29,16 +29,16 @@ public class Article extends BaseEntity {
     @Column(name = "author",columnDefinition = "varchar(20) COMMENT '文章作者'")
     private String author;
 
-    @Column(name = "describe",columnDefinition = "varchar(200) COMMENT '文章简介'")
-    private String describe;
+    @Column(name = "introduction",columnDefinition = "varchar(200) COMMENT '文章简介'")
+    private String introduction;
 
     @Column(name = "content",columnDefinition = "longtext COMMENT '文章正文'")
     private String content;
 
-    @Column(name = "title",columnDefinition = "text COMMENT '标题'")
+    @Column(name = "title",columnDefinition = "VARCHAR COMMENT '标题'")
     private String title;
 
-    @Column(name = "keyword",columnDefinition = "text COMMENT '关键词'")
+    @Column(name = "keyword",columnDefinition = "VARCHAR COMMENT '关键词'")
     private String keyword;
 
     @Column(name = "head_photo",columnDefinition = "varchar(100) COMMENT '文章标题图片'")

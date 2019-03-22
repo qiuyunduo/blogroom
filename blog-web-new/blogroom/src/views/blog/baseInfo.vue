@@ -13,12 +13,13 @@
                 </div>
                 <div v-if="isLogin" style="width: 120px">
                     <div v-if="isOther">
-                    <el-button v-if="isFollow" @click="cancelAttention" style="background-color: white;color: red;border: 1px solid red;width:100px;height:40px">取消关注</el-button>
-                    <el-button v-else @click="addAttention" style="background-color: white;color: red;border: 1px solid red;width:70px;height:40px">关注</el-button>
+                        <a v-if="isFollow" data-v-0c56b7f6='' href="javascript:;" class='watch_btn' @click="cancelAttention">取消关注</a>
+                        <a v-else data-v-0c56b7f6='' href="javascript:;" class='watch_btn' @click="addAttention">关注</a>
                     </div>
                 </div>
                 <div v-else style="width: 120px">
-                    <el-button @click="addAttention" style="background-color: white;color: red;border: 1px solid red;width:70px;height:40px">关注</el-button>
+                    <!-- <a data-v-0c56b7f6='' class='watch_btn' onclick=''>关注</a> -->
+                    <a data-v-0c56b7f6='' href="javascript:;" class='watch_btn' @click="addAttention">关注</a>
                 </div>
             </div>
             <div class="data-info d-flex item-tiling">
@@ -276,4 +277,7 @@ export default {
     @import '../../style/blog001.css';
     @import '../../style/blog002.css';
     @import '../../style/blog003.css';
+    .watch_btn[data-v-0c56b7f6]{float:right;border:1px solid #999;border-radius:4px;font-size:14px;color:#999;width:90px;height:32px;margin-top:10px;background:#fff;text-align:center;line-height:32px}
+    .watch_btn[data-v-0c56b7f6]:hover{color:#ca0c16;background:#fde3e4;border:1px solid #ca0c16}
+    .watch_btn[data-v-0c56b7f6]:active{color:#ca0c16;background:#fcc7ca;border:1px solid #ca0c16}
 </style>

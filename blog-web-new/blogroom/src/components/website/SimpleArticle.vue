@@ -5,16 +5,16 @@
             <slot name="statusLabel">
                 
             </slot>
-            <h2><a :href="'/article/'+id">{{ title }}</a></h2>
+            <h2><a :href="'/article/'+id" target="_blank">{{ title }}</a></h2>
         </header>
 
-        <div class='focus'><a @click="readOne(id)">
+        <div class='focus'><a :href="'/article/'+id" target="_blank">
             <!-- <img class='thumb' :src=' headPhoto' style='width: 150px;height: 100px'></a> -->
             <img class='thumb' src='@/images/001.png' style='width: 150px;height: 100px'></a>
         </div>
 
-        <span class='note' @click="readOne(id)">
-            {{  describe }}
+        <span class='note'>
+            {{  introduction }}
         </span>
 
         <slot name="functionMenu">
@@ -51,7 +51,7 @@ export default {
     'id',
     'userId',
     'title',
-    'describe',
+    'introduction',
     'author',
     'publishTime',
     'comments',

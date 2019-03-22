@@ -30,19 +30,21 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Article save(ArticleDto dto) {
+        LocalDateTime now = LocalDateTime.now();
         Article article = new Article();
         article.setClassId(dto.getClassId())
                 .setUserId(dto.getUserId())
                 .setAuthor(dto.getAuthor())
+                .setHeadPhoto(dto.getHeadPhoto())
                 .setTitle(dto.getTitle())
-                .setDescribe(dto.getDescribe())
+                .setIntroduction(dto.getIntroduction())
                 .setKeyword(dto.getKeyword())
                 .setContent(dto.getContent())
                 .setComments(0)
                 .setThumbs(0)
                 .setStatus(dto.getStatus())
                 .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
-                .setAddTime(LocalDateTime.now());
+                .setUpdateTime(now);
         Article result = articleDao.save(article);
         return result;
     }
@@ -74,12 +76,12 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = findById(dto.getId());
         article.setClassId(dto.getClassId())
                 .setTitle(dto.getTitle())
-                .setDescribe(dto.getDescribe())
+                .setIntroduction(dto.getIntroduction())
                 .setKeyword(dto.getKeyword())
                 .setContent(dto.getContent())
                 .setStatus(dto.getStatus())
                 .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
-                .setAddTime(LocalDateTime.now());
+                .setUpdateTime(LocalDateTime.now());
         articleDao.save(article);
         return true;
     }
@@ -129,8 +131,8 @@ public class ArticleServiceImpl implements ArticleService {
         @Override
         public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
             List<Predicate> list = new ArrayList<Predicate>();
-            if(StringUtils.isNotEmpty(queryDto.getTitle())){
-                list.add(criteriaBuilder.like(root.get("title").as(String.class), "%"+queryDto.getTitle()+"%"));
+            if(StringUtils.isNotEmpty(queryDto.getKeyWord())){
+                list.add(criteriaBuilder.or(criteriaBuilder.like(root.get("title").as(String.class), "%"+queryDto.getKeyWord()+"%"),criteriaBuilder.like(root.get("author").as(String.class), "%"+queryDto.getKeyWord()+"%")));
             }
             if(queryDto.getClassId()!=null){
                 list.add(criteriaBuilder.equal(root.get("classId").as(Long.class), queryDto.getClassId()));

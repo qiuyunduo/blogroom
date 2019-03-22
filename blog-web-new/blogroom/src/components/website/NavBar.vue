@@ -2,7 +2,7 @@
     <div id="nav-header" class="navbar">
         <ul class="nav">
             <li class="menu-item menu-item-home" :class="{'current_page_item':classId === 0}">
-                <a href="javascript:;" @click="articlesOfClass(0)">首页</a>
+                <a href="javascript:;" @click="articlesOfClass(0)">全部</a>
             </li>
 
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category" :class="{'current_page_item':classId === classMap[index-1].id}" v-for="index in classMapSize" :key="index">
@@ -10,7 +10,7 @@
             </li>
 
             <li style="float:left;margin-top:10px;margin-left:300px; ">
-                <input style="width:230px; height:25px" type="text" name="searchInput" placeholder="请输入搜索关键词" :value="title">
+                <input style="width:230px; height:25px" type="text"  placeholder="搜索博主文章" v-model="keyWord">
             </li>
 
             <li style="float:right;" @click="search">
@@ -33,7 +33,7 @@ export default {
             classId: 0,
             classMap: null,
             classMapSize: 0,
-            title: undefined
+            keyWord: undefined
         }
     },
     mounted() {
@@ -53,15 +53,15 @@ export default {
         },
         articlesOfClass(id) {
             this.classId = id
-            if(id === 0 ){
-                this.$router.push( '/index')    
-            } else {
-                this.$router.push({ path: '/articles', query: {classId:id}})    
-            }
+            this.search()
             
         },
         search() {
-            alert("sdsds")
+            if(this.classId === 0) {
+                this.$router.push({ path: '/index', query: {keyWord: this.keyWord}})   
+            } else {
+                this.$router.push({ path: '/articles', query: {classId:this.classId,keyWord: this.keyWord}})    
+            }   
         }
     },
 }

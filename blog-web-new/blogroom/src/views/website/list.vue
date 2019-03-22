@@ -2,7 +2,7 @@
     <div class="content">
         <div class="blankA" v-if="total === 0"></div>
         <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]"/>
-        <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
+        <pagination v-show="total>10" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
     </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
             pageSize: 0,
             listQuery: {
                 classId: undefined,
-                title: undefined,
+                keyWord: undefined,
                 userId: undefined,
                 orderByUpdateTime: false,
                 status: 2,
@@ -40,8 +40,10 @@ export default {
     },
     methods: {
         getClassId() {
-            var classid = this.$route.query.classId
+            let classid = this.$route.query.classId
+            let keyWord = this.$route.query.keyWord
             this.listQuery.classId = classid
+            this.listQuery.keyWord = keyWord
         },
         getList() {
             this.getClassId()

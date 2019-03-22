@@ -24,7 +24,7 @@ public class ArticleDto {
     private String author;
 
     @ApiModelProperty("文章简介")
-    private String describe;
+    private String introduction;
 
     @ApiModelProperty("文章正文")
     private String content;

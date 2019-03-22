@@ -2,14 +2,12 @@
   <header id="header" class="header">
     <div class="container-inner">
       <div class="yusi-logo">
-        <router-link to="/index">
-        <a href="">
+        <a href="/index">
           <h1>
             <span class="yusi-mono">博客屋</span>
             <span class="yusi-bloger">欢迎您</span>
           </h1>
         </a>
-        </router-link>
 
         <div v-if="loginStatus" style="float: right;padding-top: 40px;margin-right:80px;" id="log_user">
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
