@@ -10,6 +10,7 @@ import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -65,6 +66,7 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
+    @Transactional
     public Boolean delete(Long id) {
         commentDao.deleteById(id);
         return true;

@@ -21,6 +21,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -123,7 +124,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> fashionUser() {
         Pageable pageable = PageRequest.of(0,10);
-        UserQueryParam param = new UserQueryParam(new UserQueryDto());
+        UserQueryDto queryDto = new UserQueryDto();
+        queryDto.setStatus(0);
+        UserQueryParam param = new UserQueryParam(queryDto);
         Page<User> page = userDao.findAll(param,pageable);
         return page.getContent();
     }
@@ -179,6 +182,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public Boolean delete(Long id) {
         userDao.deleteById(id);
         return true;

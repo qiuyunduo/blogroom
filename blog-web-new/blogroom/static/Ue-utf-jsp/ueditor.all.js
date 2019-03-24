@@ -24580,7 +24580,6 @@ UE.plugin.register('simpleupload', function (){
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4)
                         if ((xhr.status >=200 && xhr.status < 300) || xhr.status == 304)
-                        alert(JSON.stringify(me.document.getElementById(loadingId)));
                             alert(xhr.responseText);
                 }
                 xhr.send(formdata);
@@ -24589,20 +24588,21 @@ UE.plugin.register('simpleupload', function (){
                     
                     if(xhr.readyState == 4) {
                         // me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
-                        console.log(xhr.responseText);
+                        // console.log(xhr.responseText);
                         var response = JSON.parse(xhr.responseText);
                         if(response.state === 'SUCCESS' ){
-                            console.log(loadingId);
-                            alert("asd");
-                            alert(JSON.parse/*  */(me.document.getElementById(loadingId)));
+                            // console.log(loadingId);
+                            var url = "http://localhost:9000/static/ueditorUpload/" + response.url;
+                            // me.execCommand('inserthtml', '<img id="' + loadingId + '" src="http://localhost:9000/static/ueditorUpload/' + response.url + '" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
+                            // console.log(me.document.getElementById(loadingId));
                             // me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
-                            alert("1223");
-                            me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
                             loader = me.document.getElementById(loadingId);
-                            // loader.setAttribute('src', response.data.url);
-                            // loader.setAttribute('_src', response.data.url);
-                            // loader.setAttribute('title', response.data.title || '');
-                            // loader.setAttribute('alt', response.data.original || '');
+                            loader.setAttribute('src', url);
+                            loader.setAttribute('_src', url);
+                            loader.setAttribute('title', response.title || '');
+                            loader.setAttribute('alt', response.original || '');
+                            loader.setAttribute('width', "300px");
+                            loader.setAttribute('height', "300px");
                             loader.removeAttribute('id');
                             domUtils.removeClasses(loader, 'loadingclass');
                         }else

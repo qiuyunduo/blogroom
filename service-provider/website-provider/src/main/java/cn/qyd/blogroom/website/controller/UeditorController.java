@@ -2,7 +2,6 @@ package cn.qyd.blogroom.website.controller;
 
 import cn.qyd.blogroom.website.ueditor.ActionEnter;
 import io.swagger.annotations.ApiOperation;
-import org.json.JSONException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,7 +28,7 @@ public class UeditorController {
             writer.write(exec);
             writer.flush();
             writer.close();
-        } catch (IOException | JSONException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

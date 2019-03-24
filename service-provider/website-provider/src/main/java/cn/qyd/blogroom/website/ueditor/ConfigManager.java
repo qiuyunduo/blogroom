@@ -1,7 +1,9 @@
 package cn.qyd.blogroom.website.ueditor;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,8 +11,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public final class ConfigManager {
     private final String rootPath;
@@ -93,12 +93,12 @@ public final class ConfigManager {
             case 6:
                 conf.put("allowFiles", this.getArray("fileManagerAllowFiles"));
                 conf.put("dir", this.jsonConfig.getString("fileManagerListPath"));
-                conf.put("count", this.jsonConfig.getInt("fileManagerListSize"));
+                conf.put("count", this.jsonConfig.getInteger("fileManagerListSize"));
                 break;
             case 7:
                 conf.put("allowFiles", this.getArray("imageManagerAllowFiles"));
                 conf.put("dir", this.jsonConfig.getString("imageManagerListPath"));
-                conf.put("count", this.jsonConfig.getInt("imageManagerListSize"));
+                conf.put("count", this.jsonConfig.getInteger("imageManagerListSize"));
         }
 
         conf.put("savePath", savePath);
@@ -116,7 +116,7 @@ public final class ConfigManager {
         String configContent = this.readFile(configFileName);
 
         try {
-            JSONObject jsonConfig = new JSONObject(configContent);
+            JSONObject jsonConfig = JSONObject.parseObject(configContent);
             this.jsonConfig = jsonConfig;
         } catch (Exception var4) {
             this.jsonConfig = null;
@@ -130,10 +130,10 @@ public final class ConfigManager {
 
     private String[] getArray(String key) {
         JSONArray jsonArray = this.jsonConfig.getJSONArray(key);
-        String[] result = new String[jsonArray.length()];
+        String[] result = new String[jsonArray.size()];
         int i = 0;
 
-        for(int len = jsonArray.length(); i < len; ++i) {
+        for(int len = jsonArray.size(); i < len; ++i) {
             result[i] = jsonArray.getString(i);
         }
 

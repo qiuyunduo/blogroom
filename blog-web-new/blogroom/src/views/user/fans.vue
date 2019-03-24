@@ -16,6 +16,8 @@
                             <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user1Id" target='' class='nick'>
                                 {{ list[i-1].user1Name }}
                             </a>
+                            <a v-if="checkIsFollow(list[i-1].user1Id)" data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="cancelAttention(list[i-1].user1Id)">取消关注</a>
+                            <a v-else data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="addAttention(list[i-1].user1Id)">关注</a>
                         </li>
                         <pagination v-show="total>10" :total="total" :page.sync="fansQuery.page" :limit.sync="fansQuery.limit" @pagination="getList" />
                     </div>
@@ -26,7 +28,7 @@
 </template>
 
 <script>
-import { allFansOfUser } from '@/api/attention'
+import { allFansOfUser, findOne, attention, removeAttention } from "@/api/attention"
 import Pagination from '@/components/Pagination'
 
 export default {
@@ -41,6 +43,10 @@ export default {
                 page: 1,
                 limit: 10
             },
+            attentionDate: {
+                user1Id: undefined,
+                user2Id: undefined
+            }
         }
     },
     computed: {
@@ -59,6 +65,7 @@ export default {
             this.fansQuery.user2Id = this.loginUser.id
             allFansOfUser(this.fansQuery).then(response => {
                 this.list = response.data.pagingData.item
+                console.log(this.list)
                 this.total = this.list !== null ? this.list.length : 0
                 this.pageSize = response.data.pagingData.pageSize
             }).catch(response => {
@@ -75,6 +82,36 @@ export default {
         level(){
               let tareget = event.target
             tareget.style.background = ''
+        },
+        checkIsFollow(user1Id) {
+            let isFollow = false
+            this.attentionDate.user2Id = this.loginUser.id
+            this.attentionDate.user1Id = user1Id
+            findOne(this.attentionDate).then(res => {
+                if(res.data.data !== null && res.data.data !== undefined) {
+                    return true
+                }
+            }).catch(() => {
+                alert("获取双方关系发生异常")
+            })
+        },
+        addAttention(user1Id) {
+            this.attentionDate.user1Id = this.loginUser.id
+            this.attentionDate.user2Id = user1Id
+            attention(this.attentionDate).then(res => {
+                this.getList()
+            }).catch(() => {
+                alert("关注失败")
+            })
+        },
+        cancelAttention(user1Id) {
+            this.attentionDate.user1Id = this.loginUser.id
+            this.attentionDate.user2Id = user1Id
+            removeAttention(this.attentionDate).then(res => {
+                this.getList()
+            }).catch(() => {
+                alert("取消关注失败")
+            })
         },
     },
 }

@@ -16,7 +16,7 @@
                         <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user2Id" target='' class='nick'>
                             {{ list[i-1].user2Name }}
                         </a>
-                        <a data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" onclick=''>取消关注</a>
+                        <a data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="cancelAttention(list[i-1].user2Id)">取消关注</a>
                     </li>
                     <pagination v-show="total>10" :total="total" :page.sync="followerQuery.page" :limit.sync="followerQuery.limit" @pagination="getList" />
                 </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { allFollowersOfUser } from '@/api/attention'
+import { allFollowersOfUser , attention, removeAttention } from "@/api/attention"
 import Pagination from '@/components/Pagination'
 
 export default {
@@ -42,6 +42,11 @@ export default {
                 page: 1,
                 limit: 10
             },
+            isFollow: true,
+            attentionDate: {
+                user1Id: undefined,
+                user2Id: undefined
+            }
         }
     },
     computed: {
@@ -76,6 +81,15 @@ export default {
         level(){
               let tareget = event.target
             tareget.style.background = ''
+        },
+        cancelAttention(user2Id) {
+            this.attentionDate.user1Id = this.loginUser.id
+            this.attentionDate.user2Id = user2Id
+            removeAttention(this.attentionDate).then(res => {
+                this.getList()
+            }).catch(() => {
+                alert("取消关注失败")
+            })
         },
     },
 }

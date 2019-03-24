@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.*;
 import java.time.LocalDateTime;
@@ -66,7 +67,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<Article> fashionArticles() {
         Pageable pageable = PageRequest.of(0,10);
-        ArticleQueryParam param = new ArticleQueryParam(new ArticleQueryDto());
+        ArticleQueryDto queryDto = new ArticleQueryDto();
+        queryDto.setStatus(2);
+        ArticleQueryParam param = new ArticleQueryParam(queryDto);
         Page<Article> page = articleDao.findAll(param,pageable);
         return page.getContent();
     }
@@ -114,6 +117,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional
     public Boolean delete(Long id) {
         articleDao.deleteById(id);
         return true;

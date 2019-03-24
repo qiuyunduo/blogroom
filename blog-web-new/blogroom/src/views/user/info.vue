@@ -26,28 +26,28 @@
                                 <tr>
                                     <td class="leftTd">昵称：</td>
                                     <td class="rightTd">{{ userInfo.nickName }}</td>
-                                    <td colspan="4"/>
+                                    <td/>
                                     <td class="leftTd">性别：</td>
                                     <td class="rightTd">{{ sexMap[userInfo.sex] }}</td>
                                 </tr>
                                 <tr>
                                     <td class="leftTd">生日：</td>
                                     <td class="rightTd">{{ userInfo.birthday }}</td>
-                                    <td colspan="4"/>
+                                    <td/>
                                     <td class="leftTd">邮箱：</td>
                                     <td class="rightTd">{{ userInfo.email }}</td>
                                 </tr>
                                 <tr>
                                     <td class="leftTd">地区：</td>
                                     <td class="rightTd">{{ userInfo.area }}</td>
-                                    <td colspan="4"/>
+                                    <td/>
                                     <td class="leftTd">注册时间：</td>
                                     <td class="rightTd">{{ userInfo.addTime }}</td>
                                 </tr>
                                 <tr>
                                     <td class="leftTd">职业：</td>
                                     <td class="rightTd">{{ userInfo.occupation }}</td>
-                                    <td colspan="4"/>
+                                    <td/>
                                     <td class="leftTd">最近一次登录的ip：</td>
                                     <td class="rightTd">{{ userInfo.lastLoginIp }}</td>
                                 </tr>
@@ -206,6 +206,7 @@ export default {
                 })
             }).catch(() => {
                 alert("chuxian ")
+                
             })
         },
         updateImage() {

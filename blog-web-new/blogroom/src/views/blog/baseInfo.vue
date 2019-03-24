@@ -261,7 +261,8 @@ export default {
           })
         },
         splitText(str) {
-            if(str.length > 5) {
+            let size = str !== undefined && str !== null ? str.length : 0
+            if(size > 5) {
                 str = str.substr(0,5) + "..."
             }
             return str
