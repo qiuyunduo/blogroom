@@ -29,7 +29,7 @@
                                 </span>
                                 <span class='muted'>
                                     <i class='fa fa-edit'></i>
-                                    <a :href="'/article/'+list[index-1].userId">编辑</a>
+                                    <a :href="'/blog/article/edit/'+list[index-1].id">编辑</a>
                                 </span>
                                 <span class='muted'> 
                                     <i class='fa fa-trash-o'></i>
@@ -38,7 +38,7 @@
                             </p>
                         </div>
                     </simple-article>
-                    <pagination v-show="total>5" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
+                    <pagination v-show="total>10" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@ export default {
                 orderByUpdateTime: true,
                 status: undefined,
                 page: 1,
-                limit: 5
+                limit: 10
             }
         }
     },
@@ -119,6 +119,7 @@ export default {
                 type: 'warning'
             }).then(() => {
                 deleteOne(article.id).then(res => {
+                    this.getList()
                     this.$notify.success({
                         title: '成功',
                         message: '删除文章'+article.title

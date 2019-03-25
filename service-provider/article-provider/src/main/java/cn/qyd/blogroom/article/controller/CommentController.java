@@ -26,7 +26,7 @@ public class CommentController {
 
     @PostMapping("/save")
     @ApiOperation("用户添加评论")
-    public Resp addComment(CommentDto commentDto) {
+    public Resp addComment(@RequestBody CommentDto commentDto) {
         Comment comment = commentService.save(commentDto);
         return Resp.succeed(comment);
     }

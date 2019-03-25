@@ -9,7 +9,7 @@ export function isLogin() {
     }
     return true
 }
-
+//因为是后台管理所以对管理员信息cookies不设置过期时间，既在关闭浏览器后默认清楚cookies
 export function getAdminInfo() {
     return Cookies.get(adminInfoKey)
 }

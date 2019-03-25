@@ -9,8 +9,8 @@
         </header>
 
         <div class='focus'><a :href="'/article/'+id" target="_blank">
-            <!-- <img class='thumb' :src=' headPhoto' style='width: 150px;height: 100px'></a> -->
-            <img class='thumb' src='@/images/001.png' style='width: 150px;height: 100px'></a>
+            <img class='thumb' :src='headPhoto' style='width: 150px;height: 100px'></a>
+            <!-- <img class='thumb' src='@/images/001.png' style='width: 150px;height: 100px'></a> -->
         </div>
 
         <span class='note'>
@@ -51,6 +51,7 @@ export default {
     'id',
     'userId',
     'title',
+    'headPhoto',
     'introduction',
     'author',
     'publishTime',

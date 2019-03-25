@@ -138,5 +138,5 @@ export default {
 <style scoped>
 @import '../../style/adminStyle.css';
 @import '../../style/bootstrap.min.css';
-@import "element-ui/lib/theme-chalk/index.css"
+@import "element-ui/lib/theme-chalk/index.css";
 </style>

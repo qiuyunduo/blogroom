@@ -82,11 +82,11 @@
             </div>
             <div id="guanzhu">
                 <p v-if="isHaveFollowers()" style="padding-left: 10px">还没有添加任何关注</p>
-                <a v-else v-for="index in followersLength" :key="index" :href="'/blog/room/'+followers[index-1].user2Id" style="float: left">
+                <a v-else v-for="index in followersLength" :key="index" :href="'/blog/room/'+followers[index-1].id" style="float: left">
                     <div style="padding-left:20px;padding-top:8px">
-                        <img :src="followers[index-1].user2Image" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
+                        <img :src="followers[index-1].headImage" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
                     </div>
-                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(followers[index-1].user2Name) }}</div>
+                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(followers[index-1].nickName) }}</div>
                 </a>
             </div>
         </div>
@@ -97,11 +97,11 @@
             </div>
             <div id="fans">
                 <p v-if="isHaveFans()" style="padding-left: 10px">还没有一个粉丝</p>
-                <a v-else v-for="index in fansLength" :key="index" :href="'/blog/room/'+fans[index-1].user1Id" style="float: left;">
+                <a v-else v-for="index in fansLength" :key="index" :href="'/blog/room/'+fans[index-1].id" style="float: left;">
                     <div style="padding-left:20px;padding-top:8px">
-                        <img :src="fans[index-1].user1Image" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
+                        <img :src="fans[index-1].headImage" alt="博主头像" style='width: 65px;height: 60px;border-radius:50%'/>
                     </div>
-                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(fans[index-1].user1Name) }}</div>
+                    <div style="height: 20px;text-align:center;width:90px">{{ splitText(fans[index-1].nickName) }}</div>
                 </a>
             </div>
         </div>
@@ -127,13 +127,8 @@ export default {
             fansLength: 0,
             isOther: true,
             isFollow: false,
-            followerQuery: {
-                user1Id: undefined,
-                page: 1,
-                limit: 6
-            },
-            fansQuery: {
-                user2Id: undefined,
+            attentionQuery: {
+                userId: undefined,
                 page: 1,
                 limit: 6
             },
@@ -207,8 +202,7 @@ export default {
                     that.attentionDate.user2Id = id
                     that.checkIsFollow()
                 }
-                that.followerQuery.user1Id = id
-                that.fansQuery.user2Id = id
+                that.attentionQuery.userId = id
                 resolve("sucess")
             })
         },
@@ -239,7 +233,7 @@ export default {
             })
         },
         getFollowers() {
-            allFollowersOfUser(this.followerQuery).then(response => {
+            allFollowersOfUser(this.attentionQuery).then(response => {
                 this.followers = response.data.pagingData.item
                 this.followersLength = this.followers !== null ? this.followers.length : 0
             }).catch(response => {
@@ -250,7 +244,7 @@ export default {
           })
         },
         getFans() {
-            allFansOfUser(this.fansQuery).then(response => {
+            allFansOfUser(this.attentionQuery).then(response => {
                 this.fans = response.data.pagingData.item
                 this.fansLength = this.fans !== null ? this.fans.length : 0
             }).catch(response => {

@@ -10,15 +10,16 @@
                 <div v-if="total === 0" >您还没有关注任何人。。。！！！</div>
                 <div v-else>
                     <li data-v-0c56b7f6='' class='item_cont' v-for="i in pageSize" :key="i" @mouseenter="enter" @mouseleave="level">
-                        <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user2Id" target='_blank' class='fans'>
-                            <img data-v-0c56b7f6='' :src='list[i-1].user2Image' class='header'>
+                        <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].id" target='_blank' class='fans'>
+                            <img data-v-0c56b7f6='' :src='list[i-1].headImage' class='header'>
                         </a>
-                        <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].user2Id" target='' class='nick'>
-                            {{ list[i-1].user2Name }}
+                        <a data-v-0c56b7f6='' :href="'/blog/room/'+list[i-1].id" target='' class='nick'>
+                            {{ list[i-1].nickName }}
                         </a>
-                        <a data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="cancelAttention(list[i-1].user2Id)">取消关注</a>
+                        <a v-if="list[i-1].isFollow" data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="cancelAttention(list[i-1])">取消关注</a>
+                            <a v-else data-v-0c56b7f6='' class='watch_btn' style="margin-right: 20px" @click="addAttention(list[i-1])">关注</a>
                     </li>
-                    <pagination v-show="total>10" :total="total" :page.sync="followerQuery.page" :limit.sync="followerQuery.limit" @pagination="getList" />
+                    <pagination v-show="total>10" :total="total" :page.sync="attentionQuery.page" :limit.sync="attentionQuery.limit" @pagination="getList" />
                 </div>
             </ul>
             </div>
@@ -37,12 +38,11 @@ export default {
             list: null,
             total: 0,
             pageSize: 0,
-            followerQuery: {
-                user2Id: undefined,
+            attentionQuery: {
+                userId: undefined,
                 page: 1,
                 limit: 10
             },
-            isFollow: true,
             attentionDate: {
                 user1Id: undefined,
                 user2Id: undefined
@@ -62,9 +62,10 @@ export default {
     },
     methods: {
         getList() {
-            this.followerQuery.user1Id = this.loginUser.id
-            allFollowersOfUser(this.followerQuery).then(response => {
+            this.attentionQuery.userId = this.loginUser.id
+            allFollowersOfUser(this.attentionQuery).then(response => {
                 this.list = response.data.pagingData.item
+                this.extendList(this.list)
                 this.total = this.list !== null ? this.list.length : 0
                 this.pageSize = response.data.pagingData.pageSize
             }).catch(response => {
@@ -74,6 +75,11 @@ export default {
                 })
             })
         },
+        extendList(list) {
+            for(let index in list) {
+                this.$set(list[index],"isFollow",true)
+            }
+        },
         enter() {
             let tareget = event.target
             tareget.style.background = '#f3f3f3'
@@ -82,11 +88,20 @@ export default {
               let tareget = event.target
             tareget.style.background = ''
         },
-        cancelAttention(user2Id) {
+        addAttention(user) {
             this.attentionDate.user1Id = this.loginUser.id
-            this.attentionDate.user2Id = user2Id
+            this.attentionDate.user2Id = user.id
+            attention(this.attentionDate).then(res => {
+                user.isFollow = true
+            }).catch(() => {
+                alert("关注失败")
+            })
+        },
+        cancelAttention(user) {
+            this.attentionDate.user1Id = this.loginUser.id
+            this.attentionDate.user2Id = user.id
             removeAttention(this.attentionDate).then(res => {
-                this.getList()
+                user.isFollow = false
             }).catch(() => {
                 alert("取消关注失败")
             })

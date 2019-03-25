@@ -13,9 +13,9 @@
                     <input type="hidden" name="commentArticleId" id="commentArticleId">
                     <input type="hidden" name="commentAuthorId" id="commentAuthorId">
                     <div class="comt-box">
-                        <textarea v-model="myComment" placeholder="写点什么..." class="input-block-level comt-area" name="commentContent" id="comment" cols="100%" rows="3" tabindex="1"></textarea>
+                        <textarea v-model="myComment.content" placeholder="写点什么..." class="input-block-level comt-area" name="commentContent" id="comment" cols="100%" rows="3" tabindex="1"></textarea>
                         <div class="comt-ctrl">
-                            <input class="btn btn-primary pull-right" type="button" id="addCommentBtn" tabindex="5" value="提交评论"/>
+                            <input class="btn btn-primary pull-right" type="button" id="addCommentBtn" tabindex="5" value="提交评论" @click="submitComment"/>
                             <div class="comt-tips pull-right">
                                 <div class="comt-tip comt-error" style="display: none;">#</div>
                             </div>
@@ -35,21 +35,22 @@
                     <p>还没有小伙伴吐槽</p>
                 </div>
                 <div v-else>
-                <!-- <b>4</b>个小伙伴在吐槽; -->
-                <li v-for="index in total" :key="index" class='comment odd alt thread-odd thread-alt depth-1'>
-                    <div class='c-avatar'>
-                        <a target='_blank' href=''>
-                            <img class='avatar avatar-54 photo avatar-default' height='54' width='54' src='@/images/default.jpg' style='display: block;'>
-                        </a>
-                        <div class='c-main'>
-                            {{ list[index-1].content }}
-                            <div class='c-meta'>
-                                <span class='c-author'>{{ list[index-1].nickName }}</span>
-                                {{ list[index-1].addTime }}
+                    <!-- <b>4</b>个小伙伴在吐槽; -->
+                    <li v-for="index in total" :key="index" class='comment odd alt thread-odd thread-alt depth-1'>
+                        <div class='c-avatar'>
+                            <a target='_blank' :href="'/blog/room/'+list[index-1].userId">
+                                <img v-if="list[index-1].user" class='avatar avatar-54 photo avatar-default' height='54' width='54' :src="list[index-1].user.headImage" style='display: block;'>
+                            </a>
+                            <div class='c-main'>
+                                {{ list[index-1].content }}
+                                <div class='c-meta'>
+                                    <a v-if="list[index-1].user" :href="'/blog/room/'+list[index-1].userId"><span class='c-author'>{{ list[index-1].user.nickName }}</span></a>
+                                    <span class='c-author'>{{ list[index-1].addTime }}</span>
+                                    <span class='c-author'>#{{ list[index-1].floor }}楼</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
                 </div>
             </ol>
         </div>
@@ -58,7 +59,8 @@
 
 
 <script>
-import { allComments } from '@/api/comment'
+import { allComments, createComment } from '@/api/comment'
+import { simpleUser } from '@/api/user'
 export default {
     name: 'Comment',
     props: [
@@ -68,7 +70,16 @@ export default {
         return { 
             list: null,
             total: 0,
-            myComment: undefined
+            myComment: {
+                articleId: undefined,
+                userId: undefined,
+                content: undefined
+            }
+        }
+    },
+    computed: {
+        loginUser() {
+            return this.$store.state.user.userInfo
         }
     },
     watch: {
@@ -77,12 +88,42 @@ export default {
     methods: {
         getList() {
             allComments(this.id).then(response => {
-                // alert(JSON.stringify(response.data))
                 this.list = response.data.data
-                this.total = this.list === null ? 0 : this.list.length
-                //   console.log(this.list)
+                this.extendList(this.list)
+                
+                // console.log(this.list)
             }).catch(response => {
-                // alert(JSON.stringify(response.data))
+                alert(response.data)
+            })
+        },
+        extendList(list) {
+            let i = 1
+            for(let index in list) {
+                simpleUser(list[index].userId).then(res => {
+                    let user = res.data.data
+                    this.$set(this.list[index],"user",user)
+                    
+                }).catch(res => {
+                    alert("获取评论中用户的头像和昵称出错")
+                })
+                if(i === list.length) {
+                    console.log(this.list)
+                    this.total = this.list === null ? 0 : this.list.length
+                }
+                i++
+                
+            }
+        },
+        submitComment() {
+            this.myComment.articleId = this.id
+            this.myComment.userId = this.loginUser.id
+            createComment(this.myComment).then(res => {
+                this.getList()
+            }).catch(res => {
+                this.$notify.error({
+                    title: '错误',
+                    message: '提交评论出现异常'
+                })
             })
         }
     }

@@ -38,4 +38,13 @@ export function allFansOfUser(data) {
       method: 'get',
       params: data
     })
-  }
+}
+
+
+export function allFollowers(user1Id) {
+  return request({
+    url: '/user/attention/attentions/all',
+    method: 'get',
+    params: { 'user1Id' : user1Id }
+  })
+}

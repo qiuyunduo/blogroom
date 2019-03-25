@@ -38,7 +38,7 @@ service.interceptors.response.use(
       refreshToken(response.headers.refresh_token)
     }
     const res = response.data
-    console.log(res)
+    // console.log(res)
 
     if (res.status.code !== 0){
 

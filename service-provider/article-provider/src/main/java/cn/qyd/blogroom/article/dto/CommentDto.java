@@ -17,12 +17,6 @@ public class CommentDto {
     @ApiModelProperty("评论者id")
     private Long userId;
 
-    @ApiModelProperty("评论者昵称")
-    private String nickName;
-
-    @ApiModelProperty("评论者头像")
-    private String headImage;
-
     @ApiModelProperty("评论内容")
     private String content;
 }

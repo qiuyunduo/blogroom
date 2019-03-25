@@ -22,6 +22,13 @@ export function detailUser(userId) {
   })
 }
 
+export function simpleUser(userId) {
+  return request({
+    url: '/user/user/simple/'+userId,
+    method: 'get'
+  })
+}
+
 
 export function updateUserBaseInfo(data) {
   return request({

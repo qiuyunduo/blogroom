@@ -20,6 +20,9 @@ public class ArticleDetailVo {
     @ApiModelProperty("文章作者id")
     private Long userId;
 
+    @ApiModelProperty("文章类别")
+    private Long classId;
+
     @ApiModelProperty("文章作者")
     private String author;
 
@@ -35,7 +38,13 @@ public class ArticleDetailVo {
     @ApiModelProperty("文章获赞次数")
     private Integer thumbs;
 
-    @ApiModelProperty("文章状态")
+    @ApiModelProperty("关键词")
+    private String keyword;
+
+    @ApiModelProperty("文章标题图片")
+    private String headPhoto;
+
+    @ApiModelProperty("文章状态（0.保存为草稿　1.提交审核）")
     private Integer status;
 
     @ApiModelProperty("文章时间")

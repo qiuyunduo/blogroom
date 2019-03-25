@@ -14,13 +14,10 @@ import javax.validation.constraints.NotNull;
 @ApiModel("查询用户的关注或粉丝Dto")
 public class AttentionQueryDto {
     @ApiModelProperty("获取用户关注设置值")
-    private Long user1Id;
-
-    @ApiModelProperty("获取用户粉丝设置值")
-    private Long user2Id;
+    private Long userId;
 
     @NotNull
     private Integer page;
 
-    private Integer limit = 5;
+    private Integer limit = 10;
 }

@@ -64,9 +64,9 @@ public class ArticleController {
         return Resp.succeed(articleVos);
     }
 
-    @PutMapping("/update")
+    @PostMapping("/update")
     @ApiOperation("修改博客文章内容")
-    public Resp updateArticle(ArticleDto dto) {
+    public Resp updateArticle(@RequestBody ArticleDto dto) {
         Boolean result = articleService.update(dto);
         return Resp.succeed(result);
     }

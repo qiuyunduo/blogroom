@@ -109,7 +109,7 @@ export default {
                                 name: 'fashionArticle',
                                 icon: "el-icon-edit",
                                 alias: "时尚博文管理",
-                                value: "/admin/manage/website/fashionArticle"
+                                value: "/admin/manage/website/fashionBlog"
                             }
                         },
                         {
@@ -148,7 +148,7 @@ export default {
                                 name: 'rankConfig',
                                 icon: "el-icon-edit",
                                 alias: "等级管理",
-                                value: "/admin/manage/website/rankConfig"
+                                value: "/admin/manage/integralConfig/ranks"
                             }
                         },
                         {
@@ -157,7 +157,7 @@ export default {
                                 name: 'integralConfig',
                                 icon: "el-icon-edit",
                                 alias: "积分配置",
-                                value: { path: "/admin/manage/website/integralConfig" }
+                                value: { path: "/admin/manage/integralConfig/integral" }
                             }
                         }
                     ]

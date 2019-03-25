@@ -93,6 +93,12 @@ export const constantRouterMap = [
         name: 'writing',
         meta: { title: '撰写博客', noCache: true },
       },
+      {
+        path: 'blog/article/edit/:articleId',
+        component: () => import('@/views/article/edit'),
+        name: 'update',
+        meta: { title: '编辑博客', noCache: true },
+      },
     ]
   },
   {
@@ -151,6 +157,36 @@ export const constantRouterMap = [
         name: 'unCheckArticle',
         meta: { title: '待审核文章管理', noCache: true }
       },
+      {
+        path: 'website/fashionBlog',
+        component: () => import('@/view_admin/websiteManager/fashionBlog'),
+        name: 'fashionBlog',
+        meta: { title: '时尚博文管理', noCache: true }
+      },
+      {
+        path: 'website/fashionBlogger',
+        component: () => import('@/view_admin/websiteManager/fashionBlogger'),
+        name: 'fashionBlogger',
+        meta: { title: '时尚博主管理', noCache: true }
+      },
+      {
+        path: 'website/friendlyLink',
+        component: () => import('@/view_admin/websiteManager/friendlyLink'),
+        name: 'friendlyLink',
+        meta: { title: '友情链接', noCache: true }
+      },
+      {
+        path: 'integralConfig/integral',
+        component: () => import('@/view_admin/integralManager/integralConfig'),
+        name: 'integral',
+        meta: { title: '积分管理', noCache: true }
+      },
+      {
+        path: 'integralConfig/ranks',
+        component: () => import('@/view_admin/integralManager/ranks'),
+        name: 'ranks',
+        meta: { title: '博客等级管理', noCache: true }
+      },
     ]
   },
   {
@@ -169,7 +205,11 @@ router.beforeEach((to, from, next) => {
   // alert(to.path)
   if(to.path.startsWith("/admin")) {
     if(to.path === '/admin/login') {
-      next()
+      if(store.state.website.isLogin) {
+        next('/admin/manage/index')
+      } else {
+        next()
+      }
     } else {
       if(store.state.website.isLogin) {
         next()

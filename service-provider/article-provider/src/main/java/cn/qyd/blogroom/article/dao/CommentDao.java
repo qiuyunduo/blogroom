@@ -11,5 +11,5 @@ import java.util.List;
  * @Date 19-2-25 下午10:54
  */
 public interface CommentDao extends JpaRepository<Comment, Long> {
-    List<Comment> findAllByArticleId(Long articleId, Sort sort);
+    List<Comment> findAllByArticleIdOrderByFloor(Long articleId, Sort sort);
 }

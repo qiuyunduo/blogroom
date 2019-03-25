@@ -30,6 +30,14 @@ export function createOne(data) {
   })
 }
 
+export function updateOne(data) {
+  return request({
+    url: '/article/article/update',
+    method: 'post',
+    data
+  })
+}
+
 export function deleteOne(id) {
   return request({
     url: '/article/article/delete/'+id,

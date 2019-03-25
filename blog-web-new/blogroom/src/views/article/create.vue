@@ -52,7 +52,7 @@
 
 <script> 
 import { uploadPath } from '@/api/storage'
-import { createOne } from '@/api/article'
+import { readOne, createOne } from '@/api/article'
 import { getAllClass } from '@/api/articleClass'
 import { Message, MessageBox } from 'element-ui'
 
@@ -141,7 +141,7 @@ export default {
               })
             }
 
-          alert(JSON.stringify(this.newArticle))
+          // alert(JSON.stringify(this.newArticle))
           } else {
             console.log('字段校验出错')
           }

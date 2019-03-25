@@ -77,6 +77,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Boolean update(ArticleDto dto) {
         Article article = findById(dto.getId());
+        article.setId(dto.getId());
         article.setClassId(dto.getClassId())
                 .setTitle(dto.getTitle())
                 .setIntroduction(dto.getIntroduction())
@@ -85,6 +86,7 @@ public class ArticleServiceImpl implements ArticleService {
                 .setStatus(dto.getStatus())
                 .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
                 .setUpdateTime(LocalDateTime.now());
+
         articleDao.save(article);
         return true;
     }
@@ -109,6 +111,7 @@ public class ArticleServiceImpl implements ArticleService {
             article.setStatus(statusDto.getStatus());
             if(statusDto.getStatus() == 2) {
                 article.setPublishTime(LocalDateTime.now());
+
             }
         }
 

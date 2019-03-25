@@ -37,19 +37,19 @@ public class UserController {
     @Autowired(required = false)
     private TokenUtil tokenUtil;
 
-    @GetMapping("createToken")
-    @ApiOperation("生成token，过期时间1分钟")
-    public Resp createToken(Long userId) {
-        String token = tokenUtil.createOrRefreshToken(userId);
-        return Resp.succeed(token);
-    }
-
-    @GetMapping("getUserId")
-    @ApiOperation("测试token过期时间是否自动检查，获得ｔｏｋｅｎ中userid")
-    public Resp validateToken(String token) {
-        Boolean userId = tokenUtil.validateToken(token);
-        return Resp.succeed(userId);
-    }
+//    @GetMapping("createToken")
+//    @ApiOperation("生成token，过期时间1分钟")
+//    public Resp createToken(Long userId) {
+//        String token = tokenUtil.createOrRefreshToken(userId);
+//        return Resp.succeed(token);
+//    }
+//
+//    @GetMapping("getUserId")
+//    @ApiOperation("测试token过期时间是否自动检查，获得ｔｏｋｅｎ中userid")
+//    public Resp validateToken(String token) {
+//        Boolean userId = tokenUtil.validateToken(token);
+//        return Resp.succeed(userId);
+//    }
 
     @GetMapping("/fashion")
     @ApiOperation("获取时尚博主")
@@ -120,6 +120,14 @@ public class UserController {
         User user = userService.findById(id);
         UserVo userVo = BeanMapper.map(user, UserVo.class);
         return Resp.succeed(userVo);
+    }
+
+    @GetMapping("/simple/{id}")
+    @ApiOperation("根据用户id获取用户昵称和头像")
+    public Resp selectSimple(@PathVariable("id")Long id){
+        User user = userService.findById(id);
+        SimpleUserVo simpleUserVo = BeanMapper.map(user, SimpleUserVo.class);
+        return Resp.succeed(simpleUserVo);
     }
 
     @GetMapping("/query")

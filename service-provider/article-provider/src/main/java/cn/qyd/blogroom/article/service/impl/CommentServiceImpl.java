@@ -1,6 +1,5 @@
 package cn.qyd.blogroom.article.service.impl;
 
-import cn.qyd.blogroom.article.dao.ArticleDao;
 import cn.qyd.blogroom.article.dao.CommentDao;
 import cn.qyd.blogroom.article.dto.CommentDto;
 import cn.qyd.blogroom.article.entity.Comment;
@@ -33,8 +32,6 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = new Comment();
         comment.setArticleId(dto.getArticleId())
                 .setUserId(dto.getUserId())
-                .setNickName(dto.getNickName())
-                .setHeadImage(dto.getHeadImage())
                 .setContent(dto.getContent())
                 .setFloor(floor)
                 .setAddTime(LocalDateTime.now());
@@ -51,7 +48,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<Comment> articleComments(Long articleId) {
         Sort sort = Sort.by(Sort.Order.desc("addTime"));
-        List<Comment> comments = commentDao.findAllByArticleId(articleId, sort);
+        List<Comment> comments = commentDao.findAllByArticleIdOrderByFloor(articleId, sort);
         return comments;
     }
 

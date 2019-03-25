@@ -1,5 +1,8 @@
 package cn.qyd.blogroom.user.service.impl;
 
+import cn.qyd.blogroom.common.resp.paging.PagingInfo;
+import cn.qyd.blogroom.common.utils.PagingUtil;
+import cn.qyd.blogroom.common.utils.dozer.BeanMapper;
 import cn.qyd.blogroom.user.dao.AttentionDao;
 import cn.qyd.blogroom.user.dto.AttentionDto;
 import cn.qyd.blogroom.user.dto.AttentionQueryDto;
@@ -7,18 +10,10 @@ import cn.qyd.blogroom.user.entity.Attention;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.AttentionService;
 import cn.qyd.blogroom.user.service.UserService;
+import cn.qyd.blogroom.user.vo.SimpleUserVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,15 +32,9 @@ public class AttentionServiceImpl implements AttentionService {
 
     @Override
     public Attention save(AttentionDto dto) {
-        User user1 = userService.findById(dto.getUser1Id());
-        User user2 = userService.findById(dto.getUser2Id());
         Attention attention = new Attention();
         attention.setUser1Id(dto.getUser1Id())
-                .setUser1Image(user1.getHeadImage())
-                .setUser1Name(user1.getNickName())
                 .setUser2Id(dto.getUser2Id())
-                .setUser2Image(user2.getHeadImage())
-                .setUser2Name(user2.getNickName())
                 .setAddTime(LocalDateTime.now());
 
         Attention result = attentionDao.save(attention);
@@ -58,12 +47,31 @@ public class AttentionServiceImpl implements AttentionService {
     }
 
     @Override
-    public Page<Attention> query(AttentionQueryDto dto) {
-        Pageable pageable = PageRequest.of(dto.getPage()-1,dto.getLimit());
-        AttentionQueryParam param = new AttentionQueryParam(dto);
-        Page<Attention> attentionPage = attentionDao.findAll(param,pageable);
-        return attentionPage;
+    public PagingInfo pageFans(AttentionQueryDto queryDto) {
+        List<SimpleUserVo> attentionVos = fansAll(queryDto.getUserId());
+
+        return PagingUtil.paging(queryDto.getPage(),queryDto.getLimit(),attentionVos);
     }
+
+    @Override
+    public PagingInfo pageFollowers(AttentionQueryDto queryDto) {
+        List<SimpleUserVo> attentionVos = followersAll(queryDto.getUserId());
+
+        return PagingUtil.paging(queryDto.getPage(),queryDto.getLimit(),attentionVos);
+    }
+
+    @Override
+    public List<SimpleUserVo> followersAll(Long user1Id) {
+        List<Long> ids = attentionDao.findIdsByUser1Id(user1Id);
+        return transAttentions(ids);
+    }
+
+    @Override
+    public List<SimpleUserVo> fansAll(Long user2Id) {
+        List<Long> ids = attentionDao.findIdsByUser2Id(user2Id);
+        return transAttentions(ids);
+    }
+
 
     @Override
     @Transactional
@@ -71,29 +79,48 @@ public class AttentionServiceImpl implements AttentionService {
         attentionDao.deleteByUser1IdAndUser2Id(dto.getUser1Id(),dto.getUser2Id());
     }
 
-    /**
-     * 查询条件
-     */
-    class AttentionQueryParam implements Specification {
-        AttentionQueryDto queryDto;
-        public AttentionQueryParam(AttentionQueryDto dto ){
-            this.queryDto=dto;
+    //将关注记录转为某用户所有的
+    public List<SimpleUserVo> transAttentions(List<Long> userIds) {
+        List<SimpleUserVo> attentionVos = new ArrayList<>();
+        for(int i = 0; i < userIds.size(); i++) {
+            String userId= String.valueOf(userIds.get(i));
+            User user = userService.findById(Long.valueOf(userId));
+            attentionVos.add(BeanMapper.map(user,SimpleUserVo.class));
         }
-
-        @Override
-        public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
-            List<Predicate> list = new ArrayList<Predicate>();
-            if(queryDto.getUser1Id() != null){
-                list.add(criteriaBuilder.equal(root.get("user1Id").as(Long.class), queryDto.getUser1Id()));
-            }
-            if(queryDto.getUser2Id() != null){
-                list.add(criteriaBuilder.equal(root.get("user2Id").as(Long.class), queryDto.getUser2Id()));
-            }
-
-            Predicate[] p = new Predicate[list.size()];
-            criteriaQuery.where(list.toArray(p));
-            criteriaQuery.orderBy(criteriaBuilder.desc(root.get("addTime").as(LocalDateTime.class)));
-            return criteriaQuery.getRestriction();
-        }
+        return attentionVos;
     }
+
+//    @Override
+//    public Page<Attention> query(AttentionQueryDto dto) {
+//        Pageable pageable = PageRequest.of(dto.getPage()-1,dto.getLimit());
+//        AttentionQueryParam param = new AttentionQueryParam(dto);
+//        Page<Attention> attentionPage = attentionDao.findAll(param,pageable);
+//        return attentionPage;
+//    }
+
+//    /**
+//     * 查询条件
+//     */
+//    class AttentionQueryParam implements Specification {
+//        AttentionQueryDto queryDto;
+//        public AttentionQueryParam(AttentionQueryDto dto ){
+//            this.queryDto=dto;
+//        }
+//
+//        @Override
+//        public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
+//            List<Predicate> list = new ArrayList<Predicate>();
+//            if(queryDto.getUser1Id() != null){
+//                list.add(criteriaBuilder.equal(root.get("user1Id").as(Long.class), queryDto.getUser1Id()));
+//            }
+//            if(queryDto.getUser2Id() != null){
+//                list.add(criteriaBuilder.equal(root.get("user2Id").as(Long.class), queryDto.getUser2Id()));
+//            }
+//
+//            Predicate[] p = new Predicate[list.size()];
+//            criteriaQuery.where(list.toArray(p));
+//            criteriaQuery.orderBy(criteriaBuilder.desc(root.get("addTime").as(LocalDateTime.class)));
+//            return criteriaQuery.getRestriction();
+//        }
+//    }
 }

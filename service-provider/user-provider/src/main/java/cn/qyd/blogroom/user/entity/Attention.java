@@ -22,19 +22,7 @@ public class Attention extends BaseEntity {
     @Column(name = "user1_id",columnDefinition = "mediumint(9) COMMENT '关注者id'")
     private Long user1Id;
 
-    @Column(name = "user1_name",columnDefinition = "varchar(32) COMMENT '关注者姓名'")
-    private String user1Name;
-
-    @Column(name = "user1_image",columnDefinition = "varchar(255) COMMENT '关注者头像'")
-    private String user1Image;
-
     @Column(name = "user2_id",columnDefinition = "mediumint(9) COMMENT '被关注者id'")
     private Long user2Id;
-
-    @Column(name = "user2_name",columnDefinition = "varchar(32) COMMENT '被关注者姓名'")
-    private String user2Name;
-
-    @Column(name = "user2_image",columnDefinition = "varchar(255) COMMENT '被关注者头像'")
-    private String user2Image;
 
 }

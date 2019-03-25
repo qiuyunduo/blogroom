@@ -25,12 +25,6 @@ public class Comment extends BaseEntity {
     @Column(name = "user_id",columnDefinition = "mediumint(9) COMMENT '评论者id'")
     private Long userId;
 
-    @Column(name = "nick_name",columnDefinition = "varchar(32) COMMENT '评论者昵称'")
-    private String nickName;
-
-    @Column(name = "head_image",columnDefinition = "varchar(255) COMMENT '评论者头像'")
-    private String headImage;
-
     @Column(name = "content",columnDefinition = "text COMMENT '评论内容'")
     private String content;
 
