@@ -60,31 +60,6 @@ public class BlogServiceImpl implements BlogService {
         return true;
     }
 
-//    @Override
-//    public Boolean updateBlog(BlogBaseInfoDto dto) {
-//        Blog blog = findById(dto.getId());
-//        if(dto.getVisit() != null && dto.getVisit() == true) {
-//            blog.setVisitNumber(blog.getVisitNumber()+1);
-//        }
-//        if(dto.getArticleNumberStatus() != null) {
-//            blog.setArticleNumber(dto.getArticleNumberStatus() == true
-//                    ? blog.getArticleNumber() + 1 : blog.getArticleNumber() -1);
-//        }
-//        if(dto.getCommentNumberStatus() != null) {
-//            blog.setCommentNumber(dto.getCommentNumberStatus() == true
-//                    ? blog.getCommentNumber() + 1 : blog.getCommentNumber() -1);
-//        }
-//        if(dto.getFansNumberStatus() != null) {
-//            blog.setFansNumber(dto.getFansNumberStatus() == true
-//                    ? blog.getFansNumber() + 1 : blog.getFansNumber() -1);
-//        }
-//        if(dto.getLikeNumberStatus() != null) {
-//            blog.setLikeNumber(dto.getLikeNumberStatus() == true
-//                    ? blog.getLikeNumber() + 1 : blog.getLikeNumber() -1);
-//        }
-//        blogDao.save(blog);
-//        return true;
-//    }
 
     @Override
     public Boolean updateBlogStatus(BlogStatusDto dto) {

@@ -8,4 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date 19-3-19 上午11:20
  **/
 public interface ThumbDao extends JpaRepository<Thumb,Long> {
+    Long countByAuthorId(Long id);
+
+    void deleteByUserIdAndArticleId(Long userId, Long articleId);
 }

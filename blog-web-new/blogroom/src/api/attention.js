@@ -48,3 +48,11 @@ export function allFollowers(user1Id) {
     params: { 'user1Id' : user1Id }
   })
 }
+
+export function countFans(userId) {
+  return request({
+    url: '/user/attention/fans/count',
+    method: 'get',
+    params: { 'userId':userId }
+  })
+}

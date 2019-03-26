@@ -64,6 +64,13 @@ public class AttentionController {
         return Resp.succeedPaging(result);
     }
 
+    @GetMapping("/fans/count")
+    @ApiOperation("获取某用户的粉丝数量")
+    public Resp countFans(Long userId) {
+        Long result = attentionService.countFansOfUser(userId);
+        return Resp.succeed(result);
+    }
+
     @GetMapping("/attentions")
     @ApiOperation("分页获取用户所有关注")
     public Resp attentions(AttentionQueryDto dto) {

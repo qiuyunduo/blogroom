@@ -72,6 +72,11 @@ public class AttentionServiceImpl implements AttentionService {
         return transAttentions(ids);
     }
 
+    @Override
+    public Long countFansOfUser(Long id) {
+        return attentionDao.countByUser2Id(id);
+    }
+
 
     @Override
     @Transactional

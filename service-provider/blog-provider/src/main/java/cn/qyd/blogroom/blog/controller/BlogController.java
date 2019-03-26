@@ -1,4 +1,5 @@
 package cn.qyd.blogroom.blog.controller;
+import cn.qyd.blogroom.blog.dto.BlogStatusDto;
 import cn.qyd.blogroom.blog.entity.Blog;
 import cn.qyd.blogroom.blog.service.BlogService;
 import cn.qyd.blogroom.common.resp.Resp;
@@ -25,10 +26,24 @@ public class BlogController {
         return Resp.succeed(blog);
     }
 
+    @PostMapping("/update")
+    @ApiOperation("新增博客账号")
+    public Resp updateOne(@RequestBody BlogStatusDto statusDto) {
+        Boolean result = blogService.updateBlogStatus(statusDto);
+        return Resp.succeed(result);
+    }
+
     @GetMapping("/room/{userId}")
     @ApiOperation("根据用户id获取该用户的博客账号")
     public Resp blogInfo(@PathVariable("userId") Long userId) {
         Blog blog = blogService.findByUserId(userId);
         return Resp.succeed(blog);
+    }
+
+    @GetMapping("/room/visit")
+    @ApiOperation("访客浏览博客")
+    public Resp visit(Long userId) {
+        Boolean result = blogService.updateBlogVisit(userId);
+        return Resp.succeed(result);
     }
 }

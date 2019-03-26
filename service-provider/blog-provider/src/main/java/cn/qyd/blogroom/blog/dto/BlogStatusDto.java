@@ -12,7 +12,5 @@ import lombok.Data;
 public class BlogStatusDto {
     private Long id;
 
-    private String blogName;
-
     private Integer status;
 }

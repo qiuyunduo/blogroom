@@ -25,19 +25,19 @@
             <div class="data-info d-flex item-tiling">
                 <dl class="text-center" title="0">
                     <dt>文章</dt>
-                    <dd><span class="count" id="wenzhang">{{ blogInfo.articleNumber }}</span></dd>
+                    <dd><span class="count" id="wenzhang">{{ countInfo.articleNumber }}</span></dd>
                 </dl>
                  <dl class="text-center" title="0">
                     <dt>粉丝</dt>
-                    <dd><span class="count" id="fensi">{{ blogInfo.fansNumber }}</span></dd>
+                    <dd><span class="count" id="fensi">{{ countInfo.fansNumber }}</span></dd>
                 </dl>
                 <dl class="text-center" title="0">
                     <dt>喜欢</dt>
-                    <dd><span class="count" id="xihuan">{{ blogInfo.likeNumber }}</span></dd>
+                    <dd><span class="count" id="xihuan">{{ countInfo.likeNumber }}</span></dd>
                 </dl>
                 <dl class="text-center" title="0">
                     <dt>评论</dt>
-                    <dd><span class="count" id="pinglun">{{ blogInfo.commentNumber }}</span></dd>
+                    <dd><span class="count" id="pinglun">{{ countInfo.commentNumber }}</span></dd>
                 </dl>
             </div>
             <div class="grade-box clearfix">
@@ -112,15 +112,26 @@
 import { detailUser } from "@/api/user"
 import { blogDetail } from "@/api/blog"
 import { rankDetail } from "@/api/rank"
-import { allFollowersOfUser, allFansOfUser, findOne, attention, removeAttention } from "@/api/attention"
+import { countArticles } from "@/api/article"
+import { countComment } from "@/api/comment"
+import { countThumb } from "@/api/thumb"
+import { allFollowersOfUser, allFansOfUser, findOne, attention, removeAttention, countFans } from "@/api/attention"
 export default {
     name: 'BaseInfo',
+    props: [
+        'id'
+    ],
     data() {
         return {
-            userId: undefined,
             blogInfo: {},
             userInfo: {},
             rankInfo: {},
+            countInfo: {
+                articleNumber: 0,
+                likeNumber: 0,
+                commentNumber: 0,
+                fansNumber: 0,
+            },
             followers: null,
             followersLength: 0,
             fans: null,
@@ -143,35 +154,11 @@ export default {
             return this.$store.state.user.isLogin
         }
     },
-    mounted() {
-        this.getall()
-    },
     methods: {
-        addAttention() {
-            attention(this.attentionDate).then(res => {
-                this.getall()
-                this.isFollow = true
-            }).catch(() => {
-                alert("关注失败")
-            })
-        },
-        cancelAttention() {
-            removeAttention(this.attentionDate).then(res => {
-                this.getall()
-                this.isFollow = false
-            }).catch(() => {
-                alert("取消关注失败")
-            })
-        },
-        isHaveFollowers(){
-            return this.followers === null || this.followers.length === 0
-        },
-        isHaveFans(){
-            return this.fans === null || this.fans.length === 0
-        },
         getall() {
             let that = this
             this.getUserId().then(function(data){
+                that.getCountInfo()
                 that.getUser()
                 that.getBlog()
                 that.getFollowers()
@@ -192,29 +179,53 @@ export default {
             let that = this
             let userInfo = this.$store.state.user.userInfo
             return new Promise(function(resolve,reject){
-                let id = that.$route.params.id
-                that.userId = id
                 if(that.isLogin) {
-                    if(id === userInfo.id.toString()) {
+                    if(that.id === userInfo.id.toString()) {
                         that.isOther = false
                     }
                     that.attentionDate.user1Id = userInfo.id.toString()
-                    that.attentionDate.user2Id = id
+                    that.attentionDate.user2Id = that.id
                     that.checkIsFollow()
                 }
-                that.attentionQuery.userId = id
+                that.attentionQuery.userId = that.id
                 resolve("sucess")
             })
         },
+        getCountInfo() {
+            countArticles(this.id).then(res => {
+                // console.log(res.data)
+                this.countInfo.articleNumber = res.data.data
+            }).catch(() => {
+                alert("统计文章数目出错")
+            })
+            countComment(this.id).then(res => {
+                // console.log(res.data)
+                this.countInfo.commentNumber = res.data.data
+            }).catch(() => {
+                alert("统计评论数目出错")
+            })
+            countThumb(this.id).then(res => {
+                // console.log(res.data)
+                this.countInfo.likeNumber = res.data.data
+            }).catch(() => {
+                alert("统计点赞数目出错")
+            })
+            countFans(this.id).then(res => {
+                // console.log(res.data)
+                this.countInfo.fansNumber = res.data.data
+            }).catch(() => {
+                alert("统计粉丝数目出错")
+            })
+        },
         getUser() {
-            detailUser(this.userId).then(res => {
+            detailUser(this.id).then(res => {
                 this.userInfo = res.data.data
             }).catch(() => {
 
             })
         },
         getBlog() {
-            blogDetail(this.userId).then(response => {
+            blogDetail(this.id).then(response => {
                 this.blogInfo = response.data.data
                 rankDetail(this.blogInfo.rankId).then(response1 => {
                     this.rankInfo = response1.data.data
@@ -260,10 +271,32 @@ export default {
                 str = str.substr(0,5) + "..."
             }
             return str
+        },
+        addAttention() {
+            attention(this.attentionDate).then(res => {
+                this.getall()
+                this.isFollow = true
+            }).catch(() => {
+                alert("关注失败")
+            })
+        },
+        cancelAttention() {
+            removeAttention(this.attentionDate).then(res => {
+                this.getall()
+                this.isFollow = false
+            }).catch(() => {
+                alert("取消关注失败")
+            })
+        },
+        isHaveFollowers(){
+            return this.followers === null || this.followers.length === 0
+        },
+        isHaveFans(){
+            return this.fans === null || this.fans.length === 0
         }
     },
     watch: {
-        '$route':'getall'
+        'id':'getall'
     },
 }
 </script>

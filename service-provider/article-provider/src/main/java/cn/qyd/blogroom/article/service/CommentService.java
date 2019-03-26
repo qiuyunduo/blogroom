@@ -14,6 +14,8 @@ public interface CommentService {
 
     List<Comment> articleComments(Long articleId);
 
+    Long countCommentsOfUser(Long id);
+
     Boolean update(Long id,String content);
 
     Boolean delete(Long id);

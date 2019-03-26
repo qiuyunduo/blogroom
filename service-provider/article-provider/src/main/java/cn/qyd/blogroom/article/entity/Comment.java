@@ -22,6 +22,9 @@ public class Comment extends BaseEntity {
     @Column(name = "article_id",columnDefinition = "mediumint(9) COMMENT '文章id'")
     private Long articleId;
 
+    @Column(name = "author_id",columnDefinition = "mediumint(9) COMMENT '作者id'")
+    private Long authorId;
+
     @Column(name = "user_id",columnDefinition = "mediumint(9) COMMENT '评论者id'")
     private Long userId;
 

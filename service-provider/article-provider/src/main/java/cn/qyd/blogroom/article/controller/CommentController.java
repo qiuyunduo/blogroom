@@ -53,4 +53,11 @@ public class CommentController {
         return Resp.succeed(result);
     }
 
+    @GetMapping("/count")
+    @ApiOperation("用户获得评论数")
+    public Resp countComment(Long userId) {
+        Long count = commentService.countCommentsOfUser(userId);
+        return Resp.succeed(count);
+    }
+
 }

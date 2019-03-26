@@ -75,11 +75,18 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional
+    public Long countArticlesOfUser(Long id) {
+        return articleDao.countByUserId(id);
+    }
+
+    @Override
     public Boolean update(ArticleDto dto) {
         Article article = findById(dto.getId());
         article.setId(dto.getId());
         article.setClassId(dto.getClassId())
                 .setTitle(dto.getTitle())
+                .setHeadPhoto(dto.getHeadPhoto())
                 .setIntroduction(dto.getIntroduction())
                 .setKeyword(dto.getKeyword())
                 .setContent(dto.getContent())

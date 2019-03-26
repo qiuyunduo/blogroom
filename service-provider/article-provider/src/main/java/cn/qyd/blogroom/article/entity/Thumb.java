@@ -22,6 +22,9 @@ public class Thumb extends BaseEntity {
     @Column(name = "article_id", columnDefinition = "mediumint(9) COMMENT '文章id'")
     private Long articleId;
 
+    @Column(name = "author_id",columnDefinition = "mediumint(9) COMMENT '作者id'")
+    private Long authorId;
+
     @Column(name = "user_id", columnDefinition = "mediumint(9) COMMENT '点赞者id'")
     private Long userId;
 }

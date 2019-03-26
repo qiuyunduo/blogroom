@@ -14,3 +14,11 @@ export function allComments(id) {
     method: 'get'
   })
 }
+
+export function countComment(userId) {
+  return request({
+    url: '/article/comment/count',
+    method: 'get',
+    params: { 'userId':userId }
+  })
+}

@@ -55,6 +55,11 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
+    public Long countCommentsOfUser(Long id) {
+        return commentDao.countByAuthorId(id);
+    }
+
+    @Override
     public Boolean update(Long id, String content) {
         Comment comment = findById(id);
         comment.setContent(content)

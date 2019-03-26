@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ArticleDao extends JpaRepository<Article,Long> {
     Page<Article> findAll(Specification<Article> specification, Pageable pageable);
+
+    Long countByUserId(Long id);
 }

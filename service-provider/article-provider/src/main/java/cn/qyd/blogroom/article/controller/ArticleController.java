@@ -56,6 +56,13 @@ public class ArticleController {
         return Resp.succeed(articleDetailVo);
     }
 
+    @GetMapping("/count")
+    @ApiOperation("用户撰写文章数")
+    public Resp countArticle(Long userId) {
+        Long count = articleService.countArticlesOfUser(userId);
+        return Resp.succeed(count);
+    }
+
     @GetMapping("/fashion")
     @ApiOperation("获取时尚博文")
     public Resp fashionArticles() {

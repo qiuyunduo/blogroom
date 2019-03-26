@@ -7,6 +7,7 @@ import cn.qyd.blogroom.article.service.ArticleService;
 import cn.qyd.blogroom.article.service.ThumbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,11 @@ public class ThumbServiceImpl implements ThumbService {
     private ArticleService articleService;
 
     @Override
+    public Long countThumbsOfUser(Long id) {
+        return thumbDao.countByAuthorId(id);
+    }
+
+    @Override
     public Boolean save(Long articleId, Long userId) {
         Thumb thumb = new Thumb();
         thumb.setArticleId(articleId)
@@ -35,5 +41,11 @@ public class ThumbServiceImpl implements ThumbService {
         articleService.updateStatus(statusDto);
 
         return true;
+    }
+
+    @Override
+    @Transactional
+    public void delete(Long articleId, Long userId) {
+        thumbDao.deleteByUserIdAndArticleId(userId,articleId);
     }
 }

@@ -25,6 +25,8 @@ public interface AttentionService {
 
     List<SimpleUserVo> fansAll(Long user2Id);
 
+    Long countFansOfUser(Long id);
+
     void delete(AttentionDto dto);
 
 //    Page<Attention> query(AttentionQueryDto dto);

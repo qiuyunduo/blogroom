@@ -19,10 +19,9 @@ public interface AttentionDao extends JpaRepository<Attention, Long> {
 
     @Query(value = "SELECT attention.user1_id FROM attention WHERE attention.user2_id= ?1", nativeQuery = true)
     List<Long> findIdsByUser2Id(Long user2Id);
-    //获取用户所有关注
-    List<Attention> findByUser1Id(Long user1Id);
-    //获取用户所有粉丝
-    List<Attention> findByUser2Id(Long user2Id);
+
+    Long countByUser2Id(Long id);
+
     Attention findByUser1IdAndUser2Id(Long user1Id, Long user2Id);
     void deleteByUser1IdAndUser2Id(Long user1Id, Long user2Id);
     Page<Attention> findAll(Specification<Attention> specification, Pageable pageable);

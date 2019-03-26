@@ -44,3 +44,12 @@ export function deleteOne(id) {
     method: 'post'
   })
 }
+
+export function countArticles(userId) {
+  return request({
+    url: '/article/article/count',
+    method: 'get',
+    params: { 'userId':userId }
+  })
+}
+

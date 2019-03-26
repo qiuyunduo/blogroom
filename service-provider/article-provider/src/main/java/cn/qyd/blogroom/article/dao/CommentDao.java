@@ -12,4 +12,6 @@ import java.util.List;
  */
 public interface CommentDao extends JpaRepository<Comment, Long> {
     List<Comment> findAllByArticleIdOrderByFloor(Long articleId, Sort sort);
+
+    Long countByAuthorId(Long id);
 }

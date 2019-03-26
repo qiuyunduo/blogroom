@@ -98,7 +98,6 @@ export default {
       if( id !== undefined && id !== null) {
         readOne(id).then(res => {
           this.newArticle　= res.data.data
-          alert(this.newArticle.status)
           let that = this
           UE.delEditor('editor');
           this.editor= window.UE.getEditor('editor',{onready:function(){

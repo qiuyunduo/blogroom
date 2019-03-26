@@ -41,6 +41,9 @@ export default {
         SimpleArticle,
         Pagination
     },
+    props: [
+        'id',
+    ],
     data() {
         return {
             list: null,
@@ -57,16 +60,9 @@ export default {
             }
         }
     },
-    created() {     
-        this.getList()
-    },
     methods: {
-        getUserId() {
-            let userId = this.$route.params.id
-            this.listQuery.userId = userId
-        },
         getList() {
-            this.getUserId()
+            this.listQuery.userId = this.id
             allArticles(this.listQuery).then(response => {
                 this.list = response.data.pagingData.item
                 this.total = response.data.pagingData.total
@@ -81,7 +77,7 @@ export default {
         }
     },
     watch: {
-        '$route':'getList'
+        'id':'getList'
     },
 }
 </script>

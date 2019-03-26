@@ -1,19 +1,18 @@
 <template>
+    <!-- 操作 -->
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
         <h1 class="page-header">友情链接管理 </h1>
         <div class="table-responsive" style="width:1400px">
             <div class="filter-container">
-                <el-button class="filter-item" type="primary" @click="toAdd" style="margin-left: 20px;margin-top: -10px">添加</el-button>
+                <el-button class="filter-item" type="primary" @click="toAdd" style="margin-left: 20px;margin-bottom:10px">添加</el-button>
             </div>
         <!-- 查询结果 -->
             <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
             <el-table-column align="center" width="100px" label="ID" prop="id"/>
 
-            <el-table-column align="center" width="100px" label="链接地址" prop="level"/>
+            <el-table-column align="center" label="链接地址" prop="url"/>
 
-            <el-table-column align="center" label="链接文本内容" prop="name"/>
-
-            <el-table-column align="center" label="链接图片" prop="integral"/>
+            <el-table-column align="center" label="链接文本内容" prop="content"/>
 
             <el-table-column align="center" label="操作" width="200" class-name="small-padding fixed-width">
                 <template slot-scope="scope">
