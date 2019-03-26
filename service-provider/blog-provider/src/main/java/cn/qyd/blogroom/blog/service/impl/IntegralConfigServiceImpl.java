@@ -1,6 +1,7 @@
 package cn.qyd.blogroom.blog.service.impl;
 
 import cn.qyd.blogroom.blog.dao.IntegralConfigDao;
+import cn.qyd.blogroom.blog.dto.IntegralConfigDto;
 import cn.qyd.blogroom.blog.entity.IntegralConfig;
 import cn.qyd.blogroom.blog.service.IntegralCongfigService;
 import cn.qyd.blogroom.common.exception.BusinessException;
@@ -23,7 +24,19 @@ public class IntegralConfigServiceImpl implements IntegralCongfigService {
     }
 
     @Override
-    public Boolean update(IntegralConfig integralConfig) {
-        return null;
+    public IntegralConfig findByType(Integer type) {
+        IntegralConfig integralConfig = integralConfigDao.findByType(type);
+        return integralConfig;
     }
+
+    @Override
+    public Boolean update(IntegralConfigDto dto) {
+        IntegralConfig integralConfig = integralConfigDao.findById(dto.getId()).get();
+        if(dto.getNumber() != null) {
+            integralConfig.setNumber(dto.getNumber());
+        }
+        integralConfigDao.save(integralConfig);
+        return true;
+    }
+
 }

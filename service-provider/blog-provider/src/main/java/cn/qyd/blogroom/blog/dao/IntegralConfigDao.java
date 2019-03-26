@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date 19-2-27 上午10:39
  **/
 public interface IntegralConfigDao extends JpaRepository<IntegralConfig,Long> {
+    IntegralConfig findByType(Integer type);
 }

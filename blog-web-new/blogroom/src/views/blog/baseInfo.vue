@@ -60,8 +60,8 @@
                     </dd>
                 </dl>
                 <dl title="2978609">
-                    <dt>排名：</dt>
-                    <dd>297万+</dd>
+                    <dt>访问：</dt>
+                    <dd>{{ blogInfo.visitNumber }}  </dd>
                 </dl>
             </div>
         </div>

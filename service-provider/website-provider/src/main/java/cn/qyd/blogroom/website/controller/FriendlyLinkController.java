@@ -1,16 +1,14 @@
 package cn.qyd.blogroom.website.controller;
 
-import cn.qyd.blogroom.client.user.UserClient;
 import cn.qyd.blogroom.common.resp.Resp;
+import cn.qyd.blogroom.website.dto.FriendlyLinkDto;
 import cn.qyd.blogroom.website.entity.FriendlyLink;
 import cn.qyd.blogroom.website.service.FriendlyLinkService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +20,7 @@ import java.util.List;
 @RequestMapping("/friendly/links")
 @Api(tags = "网站友情链接模块")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class WebsiteController {
+public class FriendlyLinkController {
     private final FriendlyLinkService linkService;
 
     @GetMapping("/all")
@@ -32,4 +30,24 @@ public class WebsiteController {
         return Resp.succeed(friendlyLinks);
     }
 
+    @PostMapping("/create")
+    @ApiOperation("获取所有友情链接")
+    public Resp createLink(@RequestBody FriendlyLinkDto dto) {
+        FriendlyLink friendlyLink = linkService.addOne(dto);
+        return Resp.succeed(friendlyLink);
+    }
+
+    @PostMapping("/update")
+    @ApiOperation("获取所有友情链接")
+    public Resp updateLink(@RequestBody FriendlyLinkDto dto) {
+        Boolean result = linkService.updateOne(dto);
+        return Resp.succeed(result);
+    }
+
+    @PostMapping("/remove/{linkId}")
+    @ApiOperation("删除友情链接")
+    public Resp deleteLink(@PathVariable("linkId")Long linkId) {
+        Boolean result = linkService.delOne(linkId);
+        return Resp.succeed(result);
+    }
 }

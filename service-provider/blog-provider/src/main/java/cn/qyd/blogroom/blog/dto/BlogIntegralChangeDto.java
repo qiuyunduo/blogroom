@@ -15,6 +15,4 @@ public class BlogIntegralChangeDto {
     private Integer integral;
 
     private Long rankId;
-
-    private Integer ranking;
 }

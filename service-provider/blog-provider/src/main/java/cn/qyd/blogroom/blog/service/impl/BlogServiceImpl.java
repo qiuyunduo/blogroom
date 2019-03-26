@@ -1,15 +1,12 @@
 package cn.qyd.blogroom.blog.service.impl;
 
 import cn.qyd.blogroom.blog.dao.BlogDao;
-import cn.qyd.blogroom.blog.dto.BlogBaseInfoDto;
-import cn.qyd.blogroom.blog.dto.BlogDto;
 import cn.qyd.blogroom.blog.dto.BlogIntegralChangeDto;
 import cn.qyd.blogroom.blog.dto.BlogStatusDto;
 import cn.qyd.blogroom.blog.entity.Blog;
 import cn.qyd.blogroom.blog.service.BlogService;
 import cn.qyd.blogroom.common.exception.BusinessException;
 import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,15 +25,9 @@ public class BlogServiceImpl implements BlogService {
     public Blog save(Long userId) {
         Blog blog = new Blog();
         blog.setUserId(userId)
-                .setFansNumber(0)
-                .setArticleNumber(0)
-                .setCommentNumber(0)
-                .setIntegral(0)
-                .setLikeNumber(0)
                 .setRankId(1l)
                 .setStatus(0)
                 .setVisitNumber(0)
-                .setRanking(0)
                 .setAddTime(LocalDateTime.now());
         Blog result = blogDao.save(blog);
         return result;
@@ -57,38 +48,43 @@ public class BlogServiceImpl implements BlogService {
         if(dto.getRankId() != null) {
             blog.setRankId(dto.getRankId());
         }
-        if(dto.getRanking() != null) {
-            blog.setRanking(dto.getRanking());
-        }
         blogDao.save(blog);
         return true;
     }
 
     @Override
-    public Boolean updateBlog(BlogBaseInfoDto dto) {
-        Blog blog = findById(dto.getId());
-        if(dto.getVisit() != null && dto.getVisit() == true) {
-            blog.setVisitNumber(blog.getVisitNumber()+1);
-        }
-        if(dto.getArticleNumberStatus() != null) {
-            blog.setArticleNumber(dto.getArticleNumberStatus() == true
-                    ? blog.getArticleNumber() + 1 : blog.getArticleNumber() -1);
-        }
-        if(dto.getCommentNumberStatus() != null) {
-            blog.setCommentNumber(dto.getCommentNumberStatus() == true
-                    ? blog.getCommentNumber() + 1 : blog.getCommentNumber() -1);
-        }
-        if(dto.getFansNumberStatus() != null) {
-            blog.setFansNumber(dto.getFansNumberStatus() == true
-                    ? blog.getFansNumber() + 1 : blog.getFansNumber() -1);
-        }
-        if(dto.getLikeNumberStatus() != null) {
-            blog.setLikeNumber(dto.getLikeNumberStatus() == true
-                    ? blog.getLikeNumber() + 1 : blog.getLikeNumber() -1);
-        }
+    public Boolean updateBlogVisit(Long id) {
+        Blog blog = findById(id);
+        blog.setVisitNumber(blog.getVisitNumber()+1);
         blogDao.save(blog);
         return true;
     }
+
+//    @Override
+//    public Boolean updateBlog(BlogBaseInfoDto dto) {
+//        Blog blog = findById(dto.getId());
+//        if(dto.getVisit() != null && dto.getVisit() == true) {
+//            blog.setVisitNumber(blog.getVisitNumber()+1);
+//        }
+//        if(dto.getArticleNumberStatus() != null) {
+//            blog.setArticleNumber(dto.getArticleNumberStatus() == true
+//                    ? blog.getArticleNumber() + 1 : blog.getArticleNumber() -1);
+//        }
+//        if(dto.getCommentNumberStatus() != null) {
+//            blog.setCommentNumber(dto.getCommentNumberStatus() == true
+//                    ? blog.getCommentNumber() + 1 : blog.getCommentNumber() -1);
+//        }
+//        if(dto.getFansNumberStatus() != null) {
+//            blog.setFansNumber(dto.getFansNumberStatus() == true
+//                    ? blog.getFansNumber() + 1 : blog.getFansNumber() -1);
+//        }
+//        if(dto.getLikeNumberStatus() != null) {
+//            blog.setLikeNumber(dto.getLikeNumberStatus() == true
+//                    ? blog.getLikeNumber() + 1 : blog.getLikeNumber() -1);
+//        }
+//        blogDao.save(blog);
+//        return true;
+//    }
 
     @Override
     public Boolean updateBlogStatus(BlogStatusDto dto) {

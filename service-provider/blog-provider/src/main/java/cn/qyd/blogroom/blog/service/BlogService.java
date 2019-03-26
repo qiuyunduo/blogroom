@@ -1,7 +1,5 @@
 package cn.qyd.blogroom.blog.service;
 
-import cn.qyd.blogroom.blog.dto.BlogBaseInfoDto;
-import cn.qyd.blogroom.blog.dto.BlogDto;
 import cn.qyd.blogroom.blog.dto.BlogIntegralChangeDto;
 import cn.qyd.blogroom.blog.dto.BlogStatusDto;
 import cn.qyd.blogroom.blog.entity.Blog;
@@ -13,7 +11,7 @@ public interface BlogService {
 
     Boolean updateIntegral(BlogIntegralChangeDto dto);
 
-    Boolean updateBlog(BlogBaseInfoDto dto);
+    Boolean updateBlogVisit(Long id);
 
     Boolean updateBlogStatus(BlogStatusDto dto);
 }

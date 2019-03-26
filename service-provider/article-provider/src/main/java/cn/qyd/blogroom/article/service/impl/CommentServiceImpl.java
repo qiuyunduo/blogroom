@@ -2,6 +2,7 @@ package cn.qyd.blogroom.article.service.impl;
 
 import cn.qyd.blogroom.article.dao.CommentDao;
 import cn.qyd.blogroom.article.dto.CommentDto;
+import cn.qyd.blogroom.article.entity.Article;
 import cn.qyd.blogroom.article.entity.Comment;
 import cn.qyd.blogroom.article.service.CommentService;
 import cn.qyd.blogroom.common.exception.BusinessException;
@@ -36,6 +37,7 @@ public class CommentServiceImpl implements CommentService {
                 .setFloor(floor)
                 .setAddTime(LocalDateTime.now());
         Comment result = commentDao.save(comment);
+        Article article = articleService.findById(dto.getArticleId());
         return result;
     }
 

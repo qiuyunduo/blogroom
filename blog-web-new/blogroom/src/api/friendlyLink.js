@@ -7,3 +7,23 @@ export function all() {
   })
 }
 
+export function addLink(data) {
+  return request({
+    url: '/website/friendly/links/create',
+    method: 'post'
+  })
+}
+
+export function updateLink(data) {
+  return request({
+    url: '/website/friendly/links/update',
+    method: 'post'
+  })
+}
+
+export function delLink(linkId) {
+  return request({
+    url: '/website/friendly/links/remove/'+linkId,
+    method: 'post',
+  })
+}
