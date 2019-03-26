@@ -10,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface ThumbDao extends JpaRepository<Thumb,Long> {
     Long countByAuthorId(Long id);
 
-    void deleteByUserIdAndArticleId(Long userId, Long articleId);
+    Thumb findByUserIdAndArticleId(Long userId, Long articleId);
 }

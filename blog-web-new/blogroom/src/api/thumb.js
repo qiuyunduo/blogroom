@@ -1,16 +1,26 @@
 import request from '@/utils/request'
 
-export function addOne() {
+export function addOne(data) {
   return request({
     url: '/article/thumb/save',
-    method: 'post'
+    method: 'post',
+    data
   })
 }
 
-export function delOne() {
+export function findThumb(articleId, userId) {
+  return request({
+    url: '/article/thumb/find',
+    method: 'get',
+    params: { 'articleId': articleId, 'userId': userId }
+  })
+}
+
+export function delOne(id,articleId) {
   return request({
     url: '/article/thumb/remove',
-    method: 'post'
+    method: 'post',
+    params: { 'id': id, 'articleId':articleId }
   })
 }
 

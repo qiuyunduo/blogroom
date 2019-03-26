@@ -9,17 +9,14 @@ import lombok.Data;
  * @Date 19-2-25 下午10:16
  */
 @Data
-@ApiModel("添加评论dto")
-public class CommentDto {
+@ApiModel("添加点赞dto")
+public class ThumbDto {
     @ApiModelProperty("文章id")
     private Long articleId;
 
     @ApiModelProperty("作者id")
     private Long authorId;
 
-    @ApiModelProperty("评论者id")
+    @ApiModelProperty("点赞者id")
     private Long userId;
-
-    @ApiModelProperty("评论内容")
-    private String content;
 }

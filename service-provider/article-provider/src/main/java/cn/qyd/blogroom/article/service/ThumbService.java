@@ -1,5 +1,8 @@
 package cn.qyd.blogroom.article.service;
 
+import cn.qyd.blogroom.article.dto.ThumbDto;
+import cn.qyd.blogroom.article.entity.Thumb;
+
 /**
  * @Author qyd
  * @Date 19-3-19 上午11:21
@@ -7,7 +10,9 @@ package cn.qyd.blogroom.article.service;
 public interface ThumbService {
     Long countThumbsOfUser(Long id);
 
-    Boolean save(Long articleId, Long userId);
+    Thumb save(ThumbDto dto);
 
-    void delete(Long articleId, Long userId);
+    Thumb findOne(Long articleId, Long userId);
+
+    void delete(Long id, Long articleId);
 }

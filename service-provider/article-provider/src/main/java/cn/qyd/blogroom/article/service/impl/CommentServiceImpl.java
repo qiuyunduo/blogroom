@@ -1,6 +1,7 @@
 package cn.qyd.blogroom.article.service.impl;
 
 import cn.qyd.blogroom.article.dao.CommentDao;
+import cn.qyd.blogroom.article.dto.ArticleStatusDto;
 import cn.qyd.blogroom.article.dto.CommentDto;
 import cn.qyd.blogroom.article.entity.Article;
 import cn.qyd.blogroom.article.entity.Comment;
@@ -33,11 +34,16 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = new Comment();
         comment.setArticleId(dto.getArticleId())
                 .setUserId(dto.getUserId())
+                .setAuthorId(dto.getAuthorId())
                 .setContent(dto.getContent())
                 .setFloor(floor)
                 .setAddTime(LocalDateTime.now());
         Comment result = commentDao.save(comment);
-        Article article = articleService.findById(dto.getArticleId());
+
+        ArticleStatusDto statusDto = new ArticleStatusDto();
+        statusDto.setId(dto.getArticleId());
+        statusDto.setAddComments(true);
+        articleService.updateStatus(statusDto);
         return result;
     }
 
@@ -71,8 +77,13 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
+    public Boolean delete(Long id, Long articleId) {
+        findById(id);
         commentDao.deleteById(id);
+        ArticleStatusDto statusDto = new ArticleStatusDto();
+        statusDto.setId(articleId);
+        statusDto.setAddComments(true);
+        articleService.updateStatus(statusDto);
         return true;
     }
 }

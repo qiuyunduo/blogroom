@@ -2,6 +2,7 @@ package cn.qyd.blogroom.article.service.impl;
 
 import cn.qyd.blogroom.article.dao.ThumbDao;
 import cn.qyd.blogroom.article.dto.ArticleStatusDto;
+import cn.qyd.blogroom.article.dto.ThumbDto;
 import cn.qyd.blogroom.article.entity.Thumb;
 import cn.qyd.blogroom.article.service.ArticleService;
 import cn.qyd.blogroom.article.service.ThumbService;
@@ -29,23 +30,34 @@ public class ThumbServiceImpl implements ThumbService {
     }
 
     @Override
-    public Boolean save(Long articleId, Long userId) {
+    public Thumb save(ThumbDto dto) {
         Thumb thumb = new Thumb();
-        thumb.setArticleId(articleId)
-                .setUserId(userId)
+        thumb.setArticleId(dto.getArticleId())
+                .setAuthorId(dto.getAuthorId())
+                .setUserId(dto.getUserId())
                 .setAddTime(LocalDateTime.now());
 
-        thumbDao.save(thumb);
+        Thumb result = thumbDao.save(thumb);
         ArticleStatusDto statusDto = new ArticleStatusDto();
+        statusDto.setId(dto.getArticleId());
         statusDto.setAddThumbs(true);
         articleService.updateStatus(statusDto);
 
-        return true;
+        return result;
     }
 
     @Override
-    @Transactional
-    public void delete(Long articleId, Long userId) {
-        thumbDao.deleteByUserIdAndArticleId(userId,articleId);
+    public Thumb findOne(Long articleId, Long userId) {
+        Thumb thumb = thumbDao.findByUserIdAndArticleId(userId, articleId);
+        return thumb;
+    }
+
+    @Override
+    public void delete(Long id, Long articleId) {
+        ArticleStatusDto statusDto = new ArticleStatusDto();
+        statusDto.setId(articleId);
+        statusDto.setAddThumbs(true);
+        articleService.updateStatus(statusDto);
+        thumbDao.deleteById(id);
     }
 }

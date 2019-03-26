@@ -18,5 +18,5 @@ public interface CommentService {
 
     Boolean update(Long id,String content);
 
-    Boolean delete(Long id);
+    Boolean delete(Long id, Long articleId);
 }

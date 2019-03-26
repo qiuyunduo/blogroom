@@ -64,7 +64,8 @@ import { simpleUser } from '@/api/user'
 export default {
     name: 'Comment',
     props: [
-        'id'
+        'id',
+        'userId'
     ],
     data() {
         return { 
@@ -72,6 +73,7 @@ export default {
             total: 0,
             myComment: {
                 articleId: undefined,
+                authorId: undefined,
                 userId: undefined,
                 content: undefined
             }
@@ -116,6 +118,7 @@ export default {
         },
         submitComment() {
             this.myComment.articleId = this.id
+            this.myComment.authorId = this.userId
             this.myComment.userId = this.loginUser.id
             createComment(this.myComment).then(res => {
                 this.getList()

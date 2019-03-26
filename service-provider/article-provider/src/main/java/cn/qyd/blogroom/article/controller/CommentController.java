@@ -48,8 +48,8 @@ public class CommentController {
 
     @DeleteMapping("/delete")
     @ApiOperation("删除评论")
-    public Resp deleteCommet(Long id) {
-        Boolean result = commentService.delete(id);
+    public Resp deleteCommet(Long id, Long articleId) {
+        Boolean result = commentService.delete(id,articleId);
         return Resp.succeed(result);
     }
 

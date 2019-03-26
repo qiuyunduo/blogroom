@@ -1,14 +1,13 @@
 package cn.qyd.blogroom.article.controller;
 
+import cn.qyd.blogroom.article.dto.ThumbDto;
+import cn.qyd.blogroom.article.entity.Thumb;
 import cn.qyd.blogroom.article.service.ThumbService;
 import cn.qyd.blogroom.common.resp.Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author qyd
@@ -23,15 +22,22 @@ public class ThumbController {
 
     @PostMapping("/save")
     @ApiOperation("用户点赞")
-    public Resp addThumb(Long articleId, Long userId) {
-        Boolean save = thumbService.save(articleId, userId);
-        return Resp.succeed(save);
+    public Resp addThumb(@RequestBody ThumbDto dto) {
+        Thumb result = thumbService.save(dto);
+        return Resp.succeed(result);
+    }
+
+    @GetMapping("/find")
+    @ApiOperation("根据文章id和用户id查找是否点赞")
+    public Resp findThumb(Long articleId, Long userId) {
+        Thumb thumb = thumbService.findOne(articleId,userId);
+        return Resp.succeed(thumb);
     }
 
     @PostMapping("/remove")
     @ApiOperation("取消点赞")
-    public Resp delThumb(Long articleId, Long userId) {
-        thumbService.delete(userId, articleId);
+    public Resp delThumb(Long id, Long articleId) {
+        thumbService.delete(id,articleId);
         return Resp.succeed(true);
     }
 
