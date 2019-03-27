@@ -24,9 +24,26 @@ export default {
             id: undefined,
         }
     },
+    computed: {
+        isLogin() {
+            return this.$store.state.user.isLogin
+        },
+        loginUser() {
+            return this.$store.state.user.userInfo
+        }
+    },
     mounted() {
         this.id = this.$route.params.id
-        this.addVisit()
+        if(this.isLogin) {
+            // alert(typeof(this.loginUser.id))
+            // alert(typeof(this.id))
+            if(this.loginUser.id.toString() !== this.id) {
+                this.addVisit()
+            }
+        } else {
+            this.addVisit()
+        }
+        
     },
     methods: {
         addVisit() {

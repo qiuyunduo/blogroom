@@ -6,10 +6,7 @@ import cn.qyd.blogroom.common.utils.Formater;
 import cn.qyd.blogroom.common.utils.MD5Util;
 import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.user.dao.UserDao;
-import cn.qyd.blogroom.user.dto.UpdatePwdDto;
-import cn.qyd.blogroom.user.dto.UserDto;
-import cn.qyd.blogroom.user.dto.UserQueryDto;
-import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
+import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
 import cn.qyd.blogroom.user.vo.LoginUser;
@@ -174,9 +171,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean updateStatus(Long id, Integer status) {
-        User user = findById(id);
-        user.setStatus(status);
+    public Boolean updateStatus(UserUpdateStatusDto dto) {
+        User user = findById(dto.getUserId());
+        user.setStatus(dto.getStatus());
         userDao.save(user);
         return true;
     }

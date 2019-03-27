@@ -11,6 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HeaderUtil {
+
+    /**
+     * 获取Admin_Login
+     */
+    public static String getAdminLogin() {
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = attributes.getRequest();
+        String isLoign = request.getHeader(Constant.ADMIN_IS_LOGIN);
+        if (StringUtils.isNotBlank(isLoign)) {
+            return isLoign;
+        }
+        return null;
+    }
     /**
      * 获取Token
      */

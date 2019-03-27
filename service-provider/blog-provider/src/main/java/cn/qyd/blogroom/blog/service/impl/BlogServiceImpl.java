@@ -27,6 +27,7 @@ public class BlogServiceImpl implements BlogService {
         blog.setUserId(userId)
                 .setRankId(1l)
                 .setStatus(0)
+                .setIntegral(0)
                 .setVisitNumber(0)
                 .setAddTime(LocalDateTime.now());
         Blog result = blogDao.save(blog);
@@ -54,7 +55,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Boolean updateBlogVisit(Long id) {
-        Blog blog = findById(id);
+        Blog blog = findByUserId(id);
         blog.setVisitNumber(blog.getVisitNumber()+1);
         blogDao.save(blog);
         return true;
@@ -63,11 +64,8 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Boolean updateBlogStatus(BlogStatusDto dto) {
-        Blog blog = findById(dto.getId());
-        if(dto.getStatus() != null) {
-            blog.setStatus(dto.getStatus());
-        }
-
+        Blog blog = findByUserId(dto.getUserId());
+        blog.setStatus(dto.getStatus());
         blogDao.save(blog);
         return true;
     }

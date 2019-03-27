@@ -5,10 +5,7 @@ import cn.qyd.blogroom.common.resp.paging.PagingInfo;
 import cn.qyd.blogroom.common.utils.PagingUtil;
 import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.common.utils.dozer.BeanMapper;
-import cn.qyd.blogroom.user.dto.UpdatePwdDto;
-import cn.qyd.blogroom.user.dto.UserDto;
-import cn.qyd.blogroom.user.dto.UserQueryDto;
-import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
+import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.service.UserService;
 import cn.qyd.blogroom.user.vo.LoginUser;
@@ -137,5 +134,12 @@ public class UserController {
         PagingInfo pageInfo = PagingUtil.page(resultPage);
         pageInfo.setItem(BeanMapper.mapList(pageInfo.getItem(),UserVo.class));
         return Resp.succeedPaging(pageInfo);
+    }
+
+    @PostMapping("/updateStatus")
+    @ApiOperation("更新用户状态")
+    public Resp updateStatus(@RequestBody UserUpdateStatusDto dto) {
+        Boolean result = userService.updateStatus(dto);
+        return Resp.succeed(result);
     }
 }

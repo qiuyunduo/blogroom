@@ -53,3 +53,11 @@ export function updatePwd(data) {
     params: data
   })
 }
+
+export function updateUserStatus(data) {
+  return request({
+    url: '/user/user/updateStatus',
+    method: 'post',
+    data
+  })
+}

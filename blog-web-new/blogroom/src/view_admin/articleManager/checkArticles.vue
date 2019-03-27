@@ -18,7 +18,7 @@
       <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
         <el-table-column align="center" width="100px" label="ID" prop="id"/>
 
-        <el-table-column align="center" width="100px" label="标题" prop="title"/>
+        <el-table-column align="center" width="300px" label="标题" prop="title"/>
 
         <el-table-column align="center" label="作者" prop="author"/>
 
@@ -42,10 +42,11 @@
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="操作" width="200" class-name="small-padding fixed-width">
+        <el-table-column align="center" label="操作" width="300" class-name="small-padding fixed-width">
           <template slot-scope="scope">
-            <el-button type="primary" size="mini" @click="getDetail(scope.row)">编辑</el-button>
-            <el-button type="primary" size="mini" @click="getDetail(scope.row)">详情</el-button>
+            <el-button type="primary" size="mini"><a :href="'/article/'+scope.row.id" style="color: white;text-decoration:none" target="_blank">查看</a></el-button>
+            <el-button type="primary" size="mini" @click="getDetail(scope.row.id)">编辑</el-button>
+            <el-button type="primary" size="mini" @click="delArticle(scope.row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -56,9 +57,10 @@
 </template>
 
 <script>
-import { allArticles } from '@/api/article'
+import { allArticles, deleteOne } from '@/api/article'
 import Pagination from '@/components/Pagination'
 import { getAllClass } from '@/api/articleClass'
+import { Message } from 'element-ui'
 
 const statusMap = {
   0: '待审核',
@@ -89,8 +91,10 @@ export default {
     Pagination
   },
   mounted() {
-    this.getClassMap()
-    this.getList()
+    let that = this
+    this.getClassMap().then(function(data){
+        that.getList()
+    });
   },
   methods: {
     getList() {
@@ -114,22 +118,42 @@ export default {
       this.listQuery.userId = undefined
       this.listQuery.classId = undefined
     },
-    getDetail() {
-
+    getDetail(articleId) {
+      this.$router.push({path: '/admin/manage/article/edit', query:{ 'id': articleId }})
+    },
+    delArticle(article) {
+      this.$confirm('删除文章　“'+article.title+'”　, 是否删除?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+      }).then(() => {
+        deleteOne(article.id).then(res => {
+          Message({
+            message: '成功删除　“' + article.title + '”　',
+            type: 'success',
+            duration: 2 * 1000
+          })
+          this.getList()
+        }).catch(() => alert("删除失败"))
+      }).catch(() => {})
     },
     getClassMap() {
-      getAllClass().then(response => {
+      let that = this
+      return new Promise(function(resolve,reject){
+        getAllClass().then(response => {
             let classMap = response.data.data
             for(let index in classMap) {
-              this.classMap[classMap[index].id] = classMap[index].name
+              that.classMap[classMap[index].id] = classMap[index].name
             }
+            resolve("sucess")
         }).catch(() => {
-            this.$notify.error({
+            that.$notify.error({
                 title: '异常',
                 message: '获取文章类别出错'
             })
         })
-    },
+      })
+    }
   },
 }
 </script>

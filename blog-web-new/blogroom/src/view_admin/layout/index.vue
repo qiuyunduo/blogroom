@@ -89,9 +89,19 @@ export default {
                         id: 5,
                         name: "user",
                         icon: "el-icon-message",
-                        value: '/admin/manage/user',
                         alias: "用户管理"
-                    }
+                    },
+                    childs: [
+                        {
+                            entity: {
+                                id: 51,
+                                name: 'user',
+                                icon: "el-icon-edit",
+                                alias: "用户管理",
+                                value: "/admin/manage/user"
+                            }
+                        },
+                    ]
                 },
                 {
                 //一级
@@ -103,24 +113,24 @@ export default {
                     },
                 //二级
                     childs: [
-                        {
-                            entity: {
-                                id: 7,
-                                name: 'fashionArticle',
-                                icon: "el-icon-edit",
-                                alias: "时尚博文管理",
-                                value: "/admin/manage/website/fashionBlog"
-                            }
-                        },
-                        {
-                            entity: {
-                                id: 8,
-                                name: 'edit',
-                                icon: "el-icon-edit",
-                                alias: "时尚博主管理",
-                                value: { path: "/admin/manage/website/fashionBlogger" }
-                            }
-                        },
+                        // {
+                        //     entity: {
+                        //         id: 7,
+                        //         name: 'fashionArticle',
+                        //         icon: "el-icon-edit",
+                        //         alias: "时尚博文管理",
+                        //         value: "/admin/manage/website/fashionBlog"
+                        //     }
+                        // },
+                        // {
+                        //     entity: {
+                        //         id: 8,
+                        //         name: 'edit',
+                        //         icon: "el-icon-edit",
+                        //         alias: "时尚博主管理",
+                        //         value: { path: "/admin/manage/website/fashionBlogger" }
+                        //     }
+                        // },
                         {
                             entity: {
                                 id: 9,
@@ -148,7 +158,7 @@ export default {
                                 name: 'rankConfig',
                                 icon: "el-icon-edit",
                                 alias: "等级管理",
-                                value: "/admin/manage/integralConfig/ranks"
+                                value: "/admin/manage/ranks"
                             }
                         },
                         {
@@ -157,7 +167,16 @@ export default {
                                 name: 'integralConfig',
                                 icon: "el-icon-edit",
                                 alias: "积分配置",
-                                value: { path: "/admin/manage/integralConfig/integral" }
+                                value: { path: "/admin/manage/integral/config" }
+                            }
+                        },
+                        {
+                            entity: {
+                                id: 13,
+                                name: 'integralLog',
+                                icon: "el-icon-edit",
+                                alias: "积分记录",
+                                value: { path: "/admin/manage/integral/log" }
                             }
                         }
                     ]

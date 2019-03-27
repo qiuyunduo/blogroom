@@ -18,6 +18,9 @@ public class UserVo {
     @ApiModelProperty("用户id")
     private Long id;
 
+    @ApiModelProperty("用户账号")
+    private String account;
+
     @ApiModelProperty("用户名")
     private String nickName;
 

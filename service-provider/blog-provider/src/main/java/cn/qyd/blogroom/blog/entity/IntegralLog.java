@@ -19,11 +19,11 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 public class IntegralLog extends BaseEntity {
-    @Column(name = "user_id",columnDefinition = "mediumint(9) COMMENT '博客id'")
-    private Long userId;
+    @Column(name = "blog_id",columnDefinition = "mediumint(9) COMMENT '博客id'")
+    private Long blogId;
 
-    @Column(name = "type_id",columnDefinition = "mediumint(9) COMMENT '变动类型id'")
-    private Long typeId;
+    @Column(name = "type",columnDefinition = "mediumint(9) COMMENT '变动类型'")
+    private Long type;
 
     @Column(name = "article_id",columnDefinition = "mediumint(9) COMMENT '如果是因为文章而产生积分变动，文章id'")
     private Long articleId;

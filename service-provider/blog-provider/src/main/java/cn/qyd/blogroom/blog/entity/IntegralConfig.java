@@ -22,8 +22,8 @@ public class IntegralConfig extends BaseEntity {
     @Column(name = "type",columnDefinition = "int(2) COMMENT '积分变动类型'")
     private Integer type;
 
-    @Column(name = "describe",columnDefinition = "varchar(20) COMMENT '积分变动描述'")
-    private String describe;
+    @Column(name = "illustrate",columnDefinition = "varchar(20) COMMENT '积分变动描述'")
+    private String illustrate;
 
     @Column(name = "number",columnDefinition = "int(5) COMMENT '改变积分数量'")
     private Integer number;

@@ -8,7 +8,7 @@
                 <div class="account-form">
                     <div>
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <input type="text" name="account" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" class="account-input" id="account" placeholder="账号名称" v-model="registerInfo.account">
+                        <input type="text" name="account" ref="raccount" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" class="account-input" placeholder="账号名称" v-model="registerInfo.account" autofocus>
                     </div>
                     <div class="account-line"></div>
                     <div>
@@ -68,6 +68,9 @@ export default {
         openRegisterForm() {
             this.loading = false
             this.registerFormShow = true
+            this.$nextTick(function() {
+                this.$refs.raccount.focus()
+            })
         },
         closeRegisterForm() {
             this.registerFormShow = false

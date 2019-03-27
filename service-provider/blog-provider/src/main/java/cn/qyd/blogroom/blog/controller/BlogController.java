@@ -27,7 +27,7 @@ public class BlogController {
     }
 
     @PostMapping("/update")
-    @ApiOperation("新增博客账号")
+    @ApiOperation("修改博客账号状态")
     public Resp updateOne(@RequestBody BlogStatusDto statusDto) {
         Boolean result = blogService.updateBlogStatus(statusDto);
         return Resp.succeed(result);

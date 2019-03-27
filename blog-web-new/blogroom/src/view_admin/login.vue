@@ -8,7 +8,7 @@
         <span class="svg-container svg-container_login">
           <svg-icon icon-class="user" />
         </span>
-        <el-input v-model="loginForm.username" name="username" type="text" auto-complete="on" placeholder="username" />
+        <el-input v-model="loginForm.username" name="username" autofocus type="text" auto-complete="on" placeholder="username" />
       </el-form-item>
 
       <el-form-item prop="password">

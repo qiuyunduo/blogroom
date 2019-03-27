@@ -9,6 +9,8 @@ import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Author qyd
  * @Date 19-2-27 上午11:35
@@ -17,6 +19,13 @@ import org.springframework.stereotype.Service;
 public class IntegralConfigServiceImpl implements IntegralCongfigService {
     @Autowired
     private IntegralConfigDao integralConfigDao;
+
+    @Override
+    public List<IntegralConfig> all() {
+        List<IntegralConfig> result = integralConfigDao.findAll();
+        return result;
+    }
+
     @Override
     public IntegralConfig findById(Long id) {
         return integralConfigDao.findById(id)

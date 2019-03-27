@@ -39,37 +39,37 @@
               <td>管理员个数:</td>
               <td>1 人</td>
               <td>服务器软件:</td>
-              <td>Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9</td>
+              <td>Springboot内嵌Apache Tomcat/8.5.32</td>
             </tr>
             <tr>
               <td>浏览器:</td>
-              <td>Chrome47</td>
-              <td>JSP版本:</td>
-              <td>5.6.1</td>
+              <td>Chrome</td>
+              <td>Springboot版本:</td>
+              <td>2.0.4.RELEASE</td>
             </tr>
             <tr>
               <td>操作系统:</td>
-              <td>Linux/td>
+              <td>Linux</td>
               <td>JAVA运行方式:</td>
               <td>CGI-FCGI</td>
             </tr>
             <tr>
               <td>登录者IP:</td>
-              <td>::1:55570</td>
+              <td>192.168.1.167</td>
               <td>MYSQL版本:</td>
-              <td>5.5.40</td>
+              <td>5.7.25</td>
             </tr>
             <tr>
               <td>程序版本:</td>
-              <td class="version">YlsatCMS 1.0 <font size="-6" color="#BBB">(20160108160215)</font></td>
+              <td class="version">BlogRoom 1.0 <font size="-6" color="#BBB">(20190327)</font></td>
               <td>上传文件:</td>
-              <td>可以 <font size="-6" color="#BBB">(最大文件：2M ，表单：8M )</font></td>
+              <td>可以 <font size="-6" color="#BBB">(最大文件：2M )</font></td>
             </tr>
             <tr>
               <td>程序编码:</td>
               <td>UTF-8</td>
               <td>当前时间:</td>
-              <td>2016-01-08 15:50:30</td>
+              <td>{{ nowTime }}</td>
             </tr>
           </tbody>
           <tfoot>
@@ -99,6 +99,40 @@
 
 export default {
     name: 'index',
+    data() {
+      return {
+        timer: null,
+        nowTime: undefined,
+      }
+    },
+    mounted() {
+      this.nowTimes()
+    },
+    methods: {
+      // 获取当前时间函数
+      timeFormate(timeStamp) {
+          let year = new Date(timeStamp).getFullYear()
+          let month =new Date(timeStamp).getMonth() + 1 < 10? "0" + (new Date(timeStamp).getMonth() + 1): new Date(timeStamp).getMonth() + 1
+          let date =new Date(timeStamp).getDate() < 10? "0" + new Date(timeStamp).getDate(): new Date(timeStamp).getDate()
+          let hh =new Date(timeStamp).getHours() < 10? "0" + new Date(timeStamp).getHours(): new Date(timeStamp).getHours()
+          let mm =new Date(timeStamp).getMinutes() < 10? "0" + new Date(timeStamp).getMinutes(): new Date(timeStamp).getMinutes()
+          let ss =new Date(timeStamp).getSeconds() < 10? "0" + new Date(timeStamp).getSeconds(): new Date(timeStamp).getSeconds()
+          this.nowTime = year + "-" + month + "-" + date +" "+" "+hh+":"+mm+":"+ ss
+        },
+        // 定时器函数
+        nowTimes(){
+          let _this = this;
+          this.timeFormate(new Date) //声明一个变量指向vue实例this,保证作用域一致
+          this.timer = setInterval(function() {
+            _this.timeFormate(new Date)
+          }, 1000)
+        }
+    },
+    beforeDestroy () {
+      if(this.timer) {
+        clearInterval(this.timer);//在vue实例销毁钱，清除我们的定时器
+      }
+    }
 }
 </script>
 

@@ -2,6 +2,7 @@ import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import store from '@/store'
 import { getToken, refreshToken, getUserInfo } from '@/utils/auth'
+// import { isLogin } from '@/utils/adminAuth'
 
 // create an axios instance
 const service = axios.create({
@@ -21,6 +22,10 @@ service.interceptors.request.use(
       config.headers['User_Id'] = getUserInfo().id
       // alert(config.method)
     }
+
+    // if(isLogin()) {
+    //   config.headers['Admin_Login'] = true
+    // }
     return config
   },
   error => {

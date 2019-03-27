@@ -8,7 +8,7 @@
             <div class="account-form">
                 <div>
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" name="lusername" class="account-input" placeholder="账号" v-model="loginInfo.account">
+                <input type="text" name="lusername" ref="account" class="account-input" placeholder="账号" v-model="loginInfo.account">
                 <div id="error_tip_lusername" class="error-tip"></div>
                 </div>
 
@@ -46,6 +46,9 @@ export default {
         openLoginForm() {
             this.resetLoginInfo()
             this.loginFormShow = true
+            this.$nextTick(function() {
+                this.$refs.account.focus()
+            })
         },
 
         closeLoginForm() {

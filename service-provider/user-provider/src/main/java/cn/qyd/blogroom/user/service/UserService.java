@@ -1,9 +1,6 @@
 package cn.qyd.blogroom.user.service;
 
-import cn.qyd.blogroom.user.dto.UpdatePwdDto;
-import cn.qyd.blogroom.user.dto.UserDto;
-import cn.qyd.blogroom.user.dto.UserQueryDto;
-import cn.qyd.blogroom.user.dto.UserUpdateInfoDto;
+import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.springframework.data.domain.Page;
@@ -40,7 +37,7 @@ public interface UserService {
 
     Boolean update(UserUpdateInfoDto infoDto);
 
-    Boolean updateStatus(Long id, Integer status);
+    Boolean updateStatus(UserUpdateStatusDto dto);
 
     Boolean delete(Long id);
 

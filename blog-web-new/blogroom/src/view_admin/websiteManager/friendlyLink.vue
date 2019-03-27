@@ -93,7 +93,6 @@ export default {
                 this.listLoading = false
             }).catch(() => {
                 this.list = []
-                this.total = 0
                 this.listLoading = false
             })
         },

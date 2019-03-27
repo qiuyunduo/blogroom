@@ -5,12 +5,12 @@ import lombok.Data;
 
 /**
  * @Author qyd
- * @Date 19-2-27 上午10:13
+ * @Date 19-3-27 下午2:18
  **/
 @Data
-@ApiModel("更新博客状态")
-public class BlogStatusDto {
+@ApiModel("博客添加积分")
+public class IntegralLogDto {
     private Long userId;
-
-    private Integer status;
+    private Long type;
+    private Long articleId;
 }

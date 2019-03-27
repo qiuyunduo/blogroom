@@ -176,13 +176,19 @@ export const constantRouterMap = [
         meta: { title: '友情链接', noCache: true }
       },
       {
-        path: 'integralConfig/integral',
+        path: 'integral/config',
         component: () => import('@/view_admin/integralManager/integralConfig'),
         name: 'integral',
         meta: { title: '积分管理', noCache: true }
       },
       {
-        path: 'integralConfig/ranks',
+        path: 'integral/log',
+        component: () => import('@/view_admin/integralManager/integralLog'),
+        name: 'integral',
+        meta: { title: '积分管理', noCache: true }
+      },
+      {
+        path: 'ranks',
         component: () => import('@/view_admin/integralManager/ranks'),
         name: 'ranks',
         meta: { title: '博客等级管理', noCache: true }

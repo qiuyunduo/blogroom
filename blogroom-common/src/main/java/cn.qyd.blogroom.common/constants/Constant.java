@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
  * Created by xiongyikai on 2018/1/31.
  */
 public class Constant {
+    public static final String ADMIN_IS_LOGIN = "Admin_Login";
 
     public static final String REDIS_TOKEN_KEY_PREFIX = "loginUser_";
     // 用户Token key
