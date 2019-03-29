@@ -126,19 +126,27 @@ export default {
       getCountInfo() {
         countUser().then(res => {
           this.countInfo.userNumber = res.data.data
-        }).catch(() => "获取用户总数出错")
+        }).catch(() => {
+          console.error("获取用户总数出错")
+        })
 
         countAllArticle().then(res => {
           this.countInfo.articleNumber = res.data.data
-        }).catch(() => "获取文章总数出错")
+        }).catch(() => {
+          console.error("获取文章总数出错")
+        })
 
         countAllComment().then(res => {
           this.countInfo.commentNumber = res.data.data
-        }).catch(() => "获取评论总数出错")
+        }).catch(() => {
+          console.error("获取评论总数出错")
+        })
 
         countFriendlyLink().then(res => {
           this.countInfo.friendlyLinkNumber = res.data.data
-        }).catch(() => "获取友链总数出错");
+        }).catch(() => {
+          console.error("获取友链总数出错")
+        })
       },
       // 获取当前时间函数
       timeFormate(timeStamp) {

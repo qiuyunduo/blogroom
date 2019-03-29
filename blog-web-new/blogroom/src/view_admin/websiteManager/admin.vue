@@ -144,7 +144,10 @@ export default {
                 this.updateDialog = false
                 this.getList()
             }).catch(res => {
-                alert("修改管理员出错")
+                this.$notify.error({
+                    title: '错误',
+                    message: '修改管理员出错'
+                })
             })
         },
         toAdd() {
@@ -162,7 +165,10 @@ export default {
                 this.addDialog = false
                 this.getList()
             }).catch(res => {
-                alert("添加管理员出错")
+                this.$notify.error({
+                    title: '错误',
+                    message: '添加管理员出错'
+                })
             })
         },
         delOne(admin){
@@ -175,7 +181,10 @@ export default {
                 destoryAdmin(admin.id).then(res => {
                     this.getList()
                 }).catch(res => {
-                    alert("删除管理员出错")
+                    this.$notify.error({
+                        title: '错误',
+                        message: '删除管理员出错'
+                    })
                 })
             }).catch(() => {})
         }

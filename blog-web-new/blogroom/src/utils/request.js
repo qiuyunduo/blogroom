@@ -39,7 +39,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     if(response.headers.refresh_token !== undefined) {
-      alert(response.headers.refresh_token)
+      // alert(response.headers.refresh_token)
       refreshToken(response.headers.refresh_token)
     }
     const res = response.data
@@ -53,6 +53,7 @@ service.interceptors.response.use(
           type: 'error'
         }).then(() => {
           store.dispatch('LogOut')
+          return Promise.reject(res)
         })
       }　else if (res.status.code === 212) {
         MessageBox.alert('系统未登录，请重新登录', '错误', {
@@ -60,6 +61,7 @@ service.interceptors.response.use(
           type: 'error'
         }).then(() => {
           store.dispatch('LogOut')
+          return Promise.reject(res)
         })
       } else if (res.status.code === 213) {
         Message({
@@ -67,9 +69,11 @@ service.interceptors.response.use(
           type: 'error',
           duration: 2 * 1000
         })
-      }else {
+        return Promise.reject(res)
+      } else {
         return Promise.reject(res)
       }
+     
     } else {
       return response
     }

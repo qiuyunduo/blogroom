@@ -129,7 +129,12 @@ export default {
               duration: 2 * 1000
             })
             this.getList()
-          }).catch(() => alert("删除失败"))
+          }).catch(() => {
+            this.$notify.error({
+              title: '错误',
+              message: '文章删除失败'
+            })
+          })
         }).catch(() => {})
     },
     getClassMap() {
@@ -142,10 +147,7 @@ export default {
             }
             resolve("sucess")
         }).catch(() => {
-            that.$notify.error({
-                title: '异常',
-                message: '获取文章类别出错'
-            })
+            console.error("获取文章类别出错")
         })
       })
     }

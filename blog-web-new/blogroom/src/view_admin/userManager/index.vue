@@ -235,12 +235,9 @@ export default {
             this.rankInfo = response1.data.data
             this.detailDialog = true
         }).catch(response1 => {
-            this.$notify.error({
-            title: '错误',
-            message: '用户博客等级获取出错'
-            })
+          console.error("用户博客等级获取出错")
         })
-      }).catch(() => { alert('获取博客信息出错') })
+      }).catch(() => { console.error("获取博客信息出错") })
       this.getCountInfo(user.id)
     },
     getCountInfo(id) {
@@ -248,25 +245,25 @@ export default {
           // console.log(res.data)
           this.countInfo.articleNumber = res.data.data
       }).catch(() => {
-          alert("统计文章数目出错")
+          console.error("统计文章数目出错")
       })
       countComment(id).then(res => {
           // console.log(res.data)
           this.countInfo.commentNumber = res.data.data
       }).catch(() => {
-          alert("统计评论数目出错")
+          console.error("统计评论数目出错")
       })
       countThumb(id).then(res => {
           // console.log(res.data)
           this.countInfo.likeNumber = res.data.data
       }).catch(() => {
-          alert("统计点赞数目出错")
+          console.error("统计点赞数目出错")
       })
       countFans(id).then(res => {
           // console.log(res.data)
           this.countInfo.fansNumber = res.data.data
       }).catch(() => {
-          alert("统计粉丝数目出错")
+          console.error("统计粉丝数目出错")
       })
     },
     updateStatus(user,status) {
@@ -278,8 +275,18 @@ export default {
             message: '用户状态更新成功'
           })
           user.status = status
-        }).catch(() => { alert('更新博客状态状态出错') })
-      }).catch(() => { alert('更新用户状态出错') })
+        }).catch(() => { 
+          this.$notify.success({
+            title: '错误',
+            message: '更新博客状态状态出错'
+          })
+        })
+      }).catch(() => { 
+        this.$notify.success({
+          title: '错误',
+          message: '更新用户状态出错'
+        })
+      })
       
     },
     transTIme(initTime) {

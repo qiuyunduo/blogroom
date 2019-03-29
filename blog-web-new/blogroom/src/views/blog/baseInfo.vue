@@ -171,7 +171,7 @@ export default {
                         this.isFollow = true
                 }
             }).catch(() => {
-                alert("获取双方关系发生异常")
+                console.error("获取双方关系发生异常")
             })
         },
         
@@ -196,25 +196,25 @@ export default {
                 // console.log(res.data)
                 this.countInfo.articleNumber = res.data.data
             }).catch(() => {
-                alert("统计文章数目出错")
+                console.error("统计文章数目出错")
             })
             countComment(this.id).then(res => {
                 // console.log(res.data)
                 this.countInfo.commentNumber = res.data.data
             }).catch(() => {
-                alert("统计评论数目出错")
+                console.error("统计评论数目出错")
             })
             countThumb(this.id).then(res => {
                 // console.log(res.data)
                 this.countInfo.likeNumber = res.data.data
             }).catch(() => {
-                alert("统计点赞数目出错")
+                console.error("统计点赞数目出错")
             })
             countFans(this.id).then(res => {
                 // console.log(res.data)
                 this.countInfo.fansNumber = res.data.data
             }).catch(() => {
-                alert("统计粉丝数目出错")
+                console.error("统计粉丝数目出错")
             })
         },
         getUser() {
@@ -230,17 +230,11 @@ export default {
                 rankDetail(this.blogInfo.rankId).then(response1 => {
                     this.rankInfo = response1.data.data
                 }).catch(response1 => {
-                    this.$notify.error({
-                    title: '错误',
-                    message: '用户博客等级获取出错'
-                    })
+                    console.error("用户博客等级获取出错")
                 })
                 // console.log(this.blogInfo)
             }).catch(response => {
-                this.$notify.error({
-                title: '错误',
-                message: '用户博客信息获取出错'
-                })
+                console.error("用户博客信息获取出错")
             })
         },
         getFollowers() {
@@ -248,10 +242,7 @@ export default {
                 this.followers = response.data.pagingData.item
                 this.followersLength = this.followers !== null ? this.followers.length : 0
             }).catch(response => {
-            this.$notify.error({
-              title: '错误',
-              message: '用户关注获取出错'
-            })
+                console.error("用户关注获取出错")
           })
         },
         getFans() {
@@ -259,10 +250,7 @@ export default {
                 this.fans = response.data.pagingData.item
                 this.fansLength = this.fans !== null ? this.fans.length : 0
             }).catch(response => {
-            this.$notify.error({
-              title: '错误',
-              message: '用户粉丝获取出错'
-            })
+                console.error("用户粉丝获取出错")
           })
         },
         splitText(str) {
@@ -277,7 +265,7 @@ export default {
                 this.getall()
                 this.isFollow = true
             }).catch(() => {
-                alert("关注失败")
+                console.error("关注失败")
             })
         },
         cancelAttention() {
@@ -285,7 +273,7 @@ export default {
                 this.getall()
                 this.isFollow = false
             }).catch(() => {
-                alert("取消关注失败")
+                console.error("取消关注失败")
             })
         },
         isHaveFollowers(){

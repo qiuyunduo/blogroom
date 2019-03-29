@@ -106,7 +106,7 @@ export default {
           // this.editor.setContent(this.newArticle.content,true)
           console.log(this.newArticle)
         }).catch(res => {
-          alert("获取文章出错")
+          console.error("文章信息获取出错")
         })
       }
     },
@@ -116,10 +116,7 @@ export default {
             this.classMap = response.data.data
             this.mapLength = this.classMap.length
         }).catch(() => {
-            this.$notify.error({
-                title: '异常',
-                message: '获取文章类别出错'
-            })
+          console.error("获取文章类别出错")
         })
       },
       onHandleRemove() {
@@ -162,7 +159,7 @@ export default {
               })
             }
           } else {
-            console.log('字段校验出错')
+            console.error('字段校验出错')
           }
         })
       },

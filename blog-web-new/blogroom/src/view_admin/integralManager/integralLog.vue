@@ -24,6 +24,7 @@
               {{ typeMap[scope.row.type] }}
           </template>
       </el-table-column>
+      <el-table-column align="center" label="积分变动数额" prop="changeNumber"/>
       <el-table-column align="center" label="文章id" prop="articleId"/>
       <el-table-column align="center" label="积分变动时间" prop="addTime"/>
     </el-table>
@@ -53,6 +54,7 @@ export default {
         blogId: undefined,
         type: undefined,
         articleId: undefined,
+        changeNumber: undefined,
         startTime: undefined,
         endTime: undefined
       },

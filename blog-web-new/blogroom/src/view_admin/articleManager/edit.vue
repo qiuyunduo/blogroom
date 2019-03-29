@@ -138,13 +138,10 @@ export default {
     },
     getClassMap() {
       getAllClass().then(response => {
-          this.classMap = response.data.data
-          this.mapLength = this.classMap.length
+        this.classMap = response.data.data
+        this.mapLength = this.classMap.length
       }).catch(() => {
-          this.$notify.error({
-              title: '异常',
-              message: '获取文章类别出错'
-          })
+        console.error("获取文章类别出错")
       })
     },
     onHandleRemove() {
@@ -178,7 +175,7 @@ export default {
                     type: 'success',
                     duration: 2 * 1000
                   })
-                }).catch(() => { alert("增加积分出错")　})
+                }).catch(() => { console.error("增加积分出错")　})
                 this.updateArticle()
               }).catch(() => {})
             } else {
@@ -186,7 +183,7 @@ export default {
             }
           }
         } else {
-          console.log('字段校验出错')
+          console.error('字段校验出错')
         }
       })
     },

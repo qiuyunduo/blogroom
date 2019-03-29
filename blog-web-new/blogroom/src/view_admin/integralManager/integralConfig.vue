@@ -87,8 +87,10 @@ export default {
                 this.getConfigs()
                 this.updateDialog = false
             }).catch(res => {
-                console.log(res.data)
-                alert("配置更新出现异常")
+                this.$notify.error({
+                    title: '错误',
+                    message: '配置更新出现异常'
+                })
             })
         }
   }

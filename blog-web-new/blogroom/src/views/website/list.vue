@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <div class="loading" v-if="total === undefined"><img src="../../images/loading.gif" width="100px" height="100px" style="margin-left:400px;margin-top:300px"/></div>
+        <div class="loading" v-if="total === -1"><img src="../../images/loading.gif" width="100px" height="100px" style="margin-left:400px;margin-top:300px"/></div>
         <div class="blankA" v-if="total === 0"></div>
         <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]"/>
         <pagination v-show="total>10" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             list: null,
-            total: undefined,
+            total: -1,
             pageSize: 0,
             listQuery: {
                 classId: undefined,
@@ -54,11 +54,8 @@ export default {
                 this.pageSize = response.data.pagingData.pageSize
                 console.log(this.list)
             }).catch(response => {
-            // this.$notify.error({
-            //   title: '错误',
-            //   message: '文章信息获取出错'
-            // })
-          })
+                console.error("文章信息获取出错")
+            })
         }
     },
     watch: {

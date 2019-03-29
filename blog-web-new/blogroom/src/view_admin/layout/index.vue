@@ -207,7 +207,6 @@ export default {
                             }
                         }
             this.menuData[3].childs.push(adminManage)
-            console.log(this.menuData[3].childs)
         }
     },
 

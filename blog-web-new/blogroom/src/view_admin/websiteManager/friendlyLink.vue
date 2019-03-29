@@ -113,7 +113,10 @@ export default {
                 this.updateDialog = false
                 this.getList()
             }).catch(res => {
-                alert("修改链接出错")
+                this.$notify.success({
+                    title: '异常',
+                    message: '修改链接出错'
+                })
             })
         },
         toAdd() {
@@ -127,7 +130,10 @@ export default {
                 this.addDialog = false
                 this.getList()
             }).catch(res => {
-                alert("添加链接出错")
+                this.$notify.success({
+                    title: '异常',
+                    message: '添加链接出错'
+                })
             })
         },
         delOne(link){
@@ -139,7 +145,10 @@ export default {
                 delLink(link.id).then(res => {
                     this.getList()
                 }).catch(res => {
-                    alert("删除链接出错")
+                    this.$notify.success({
+                        title: '异常',
+                        message: '删除链接出错'
+                    })
                 })
             }).catch(() => {})
         }

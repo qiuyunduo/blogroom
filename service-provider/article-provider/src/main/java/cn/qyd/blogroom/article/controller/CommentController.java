@@ -4,6 +4,7 @@ import cn.qyd.blogroom.article.dto.CommentDto;
 import cn.qyd.blogroom.article.entity.Comment;
 import cn.qyd.blogroom.article.service.CommentService;
 import cn.qyd.blogroom.article.vo.CommentVo;
+import cn.qyd.blogroom.common.annotations.CheckLogin;
 import cn.qyd.blogroom.common.resp.Resp;
 import cn.qyd.blogroom.common.utils.dozer.BeanMapper;
 import io.swagger.annotations.Api;
@@ -26,6 +27,7 @@ public class CommentController {
 
     @PostMapping("/save")
     @ApiOperation("用户添加评论")
+    @CheckLogin
     public Resp addComment(@RequestBody CommentDto commentDto) {
         Comment comment = commentService.save(commentDto);
         return Resp.succeed(comment);

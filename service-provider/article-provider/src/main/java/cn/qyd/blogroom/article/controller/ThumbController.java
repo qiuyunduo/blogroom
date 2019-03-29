@@ -3,6 +3,7 @@ package cn.qyd.blogroom.article.controller;
 import cn.qyd.blogroom.article.dto.ThumbDto;
 import cn.qyd.blogroom.article.entity.Thumb;
 import cn.qyd.blogroom.article.service.ThumbService;
+import cn.qyd.blogroom.common.annotations.CheckLogin;
 import cn.qyd.blogroom.common.resp.Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,6 +23,7 @@ public class ThumbController {
 
     @PostMapping("/save")
     @ApiOperation("用户点赞")
+    @CheckLogin
     public Resp addThumb(@RequestBody ThumbDto dto) {
         Thumb result = thumbService.save(dto);
         return Resp.succeed(result);

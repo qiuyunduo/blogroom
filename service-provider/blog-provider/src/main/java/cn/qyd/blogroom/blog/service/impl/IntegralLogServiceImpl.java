@@ -58,6 +58,7 @@ public class IntegralLogServiceImpl implements IntegralLogService {
         IntegralLog integralLog = new IntegralLog();
         integralLog.setArticleId(integralLogDto.getArticleId())
                 .setBlogId(blog.getId())
+                .setChangeNumber(number)
                 .setType(integralLogDto.getType())
                 .setAddTime(LocalDateTime.now());
         IntegralLog result = integralLogDao.save(integralLog);

@@ -27,4 +27,7 @@ public class IntegralLog extends BaseEntity {
 
     @Column(name = "article_id",columnDefinition = "mediumint(9) COMMENT '如果是因为文章而产生积分变动，文章id'")
     private Long articleId;
+
+    @Column(name = "changeNumber",columnDefinition = "mediumint(9) COMMENT '如果是因为文章而产生积分变动，文章id'")
+    private Integer changeNumber;
 }

@@ -32,7 +32,7 @@
                     <a :href="'/article/'+id+'?action=comment'">{{  comments }}评论</a>
                 </span>
                 <span class='muted'> 
-                    <a :href="'/article/'+id+'?action=thumb'" data-action='ding' data-id='393' id='Addlike' class='action' @click="toThumb(id)">
+                    <a :href="'/article/'+id+'?action=thumb'" data-action='ding' data-id='393' id='Addlike' class='action'>
                         <i class='fa fa-heart-o'></i>
                         <span class='count'>{{  thumbs }}</span>
                         喜欢

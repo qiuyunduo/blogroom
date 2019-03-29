@@ -123,10 +123,11 @@ export default {
             createComment(this.myComment).then(res => {
                 this.getList()
             }).catch(res => {
-                this.$notify.error({
-                    title: '错误',
-                    message: '提交评论出现异常'
-                })
+                
+                // this.$notify.error({
+                //     title: '错误',
+                //     message: '提交评论出现异常'
+                // })
             })
         }
     }

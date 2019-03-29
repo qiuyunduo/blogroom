@@ -213,7 +213,7 @@ export default {
                     duration: 1 * 1000
                 })
             }).catch(() => {
-                alert("更新用户信息出错")
+                console.error("更新用户信息出错")
                 
             })
         },
@@ -247,7 +247,7 @@ export default {
                     duration: 1 * 1000
                 })
             }).catch(res => {
-                alert("图片地址保存到数据库失败")
+                console.error("图片地址保存到数据库失败")
             })
         },
     },  

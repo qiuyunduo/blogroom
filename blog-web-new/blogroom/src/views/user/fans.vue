@@ -72,7 +72,7 @@ export default {
                     that.followers = res.data.data
                     resolve("sucess")
                 }).catch(res => {
-                    alert("获取用户所有关注出错")
+                    console.error("获取用户所有关注出错")
                 })
             })
         },
@@ -85,10 +85,7 @@ export default {
                 this.pageSize = response.data.pagingData.pageSize
                 // console.log(this.list)
             }).catch(response => {
-                this.$notify.error({
-                title: '错误',
-                message: '用户粉丝获取出错'
-                })
+                console.error('用户粉丝获取出错')
             })
         },
         extendList(list) {
@@ -121,7 +118,7 @@ export default {
             attention(this.attentionDate).then(res => {
                 user.isFollow = true
             }).catch(() => {
-                alert("关注失败")
+                console.error("关注失败")
             })
         },
         cancelAttention(user) {
@@ -130,7 +127,7 @@ export default {
             removeAttention(this.attentionDate).then(res => {
                 user.isFollow = false
             }).catch(() => {
-                alert("取消关注失败")
+                console.error("取消关注失败")
             })
         },
     },

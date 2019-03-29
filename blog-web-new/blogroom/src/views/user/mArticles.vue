@@ -98,10 +98,7 @@ export default {
                 this.pageSize = response.data.pagingData.pageSize
                 console.log(this.list)
             }).catch(response => {
-                this.$notify.error({
-                title: '错误',
-                message: '用户文章信息获取出错'
-                })
+                console.error('用户文章信息获取出错')
           })
         },
         radioChange(value) {
@@ -126,8 +123,8 @@ export default {
                     })
                 }).catch(res => {
                     this.$notify.error({
-                        title: '修改失败',
-                        message: res.status.msg
+                        title: '错误',
+                        message: '文章删除失败'
                     })
                 })
             }).catch(() => {})

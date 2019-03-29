@@ -131,7 +131,7 @@ export default {
 				this.detailInfo.thumbs++
 				this.isThumb = true
 				this.thumbData = res.data.data
-			}).catch(() => {})
+			}).catch(() => { alert("sd") })
 		},
 		removeThumb() {
 			delOne(this.thumbData.id,this.detailInfo.id).then(res => {

@@ -69,10 +69,7 @@ export default {
                 this.total = this.list !== null ? this.list.length : 0
                 this.pageSize = response.data.pagingData.pageSize
             }).catch(response => {
-                this.$notify.error({
-                title: '错误',
-                message: '用户关注获取出错'
-                })
+                console.error('用户关注获取出错')
             })
         },
         extendList(list) {
@@ -94,7 +91,7 @@ export default {
             attention(this.attentionDate).then(res => {
                 user.isFollow = true
             }).catch(() => {
-                alert("关注失败")
+                console.error("关注失败")
             })
         },
         cancelAttention(user) {
@@ -103,7 +100,7 @@ export default {
             removeAttention(this.attentionDate).then(res => {
                 user.isFollow = false
             }).catch(() => {
-                alert("取消关注失败")
+                console.error("取消关注失败")
             })
         },
     },

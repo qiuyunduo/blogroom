@@ -137,7 +137,10 @@ export default {
                 this.updateDialog = false
                 this.getList()
             }).catch(res => {
-                alert("等级修改出现异常")
+                this.$notify.error({
+                    title: '错误',
+                    message: '等级修改出现异常'
+                })
             })
         }
   }

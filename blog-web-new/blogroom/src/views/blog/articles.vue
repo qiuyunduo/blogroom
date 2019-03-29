@@ -69,11 +69,8 @@ export default {
                 this.pageSize = response.data.pagingData.pageSize
                 // console.log(this.list)
             }).catch(response => {
-            this.$notify.error({
-              title: '错误',
-              message: '文章信息获取出错'
+                console.error("文章信息获取出错")
             })
-          })
         }
     },
     watch: {

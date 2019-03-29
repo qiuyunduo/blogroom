@@ -45,10 +45,7 @@
 
 <script>
 export default {
-    name: 'About',
-    mounted() {
-        alert(this.$store.state.user.token)
-    },
+    name: 'About'
 }
 </script>
 
