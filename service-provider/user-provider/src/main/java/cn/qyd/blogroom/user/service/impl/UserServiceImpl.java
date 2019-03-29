@@ -66,6 +66,9 @@ public class UserServiceImpl implements UserService {
     public LoginUser login(String account, String password) {
         User user = userDao.findByAccount(account);
         if(user != null){
+            if(user.getStatus() == 1) {
+                throw BusinessException.fail(FrontRespEnum.USER_ACCOUNT_LOCK);
+            }
             if(!user.getPassword().equals(MD5Util.getMD5(password))){
                 throw BusinessException.fail(FrontRespEnum.LOGIN_PWD_ERROR);
             }

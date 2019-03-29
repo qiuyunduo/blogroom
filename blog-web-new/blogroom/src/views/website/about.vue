@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="top_nav">
-            <div id="top_nav_left">«<a href="index.html" title="返回网站首页">首页</a></div>
+            <div id="top_nav_left">«<a href="/index" title="返回网站首页">首页</a></div>
         </div>
         <div>
             <div id="main">
