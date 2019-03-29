@@ -142,4 +142,11 @@ public class UserController {
         Boolean result = userService.updateStatus(dto);
         return Resp.succeed(result);
     }
+
+    @GetMapping("/countAll")
+    @ApiOperation("获取网站所有用户数量")
+    public Resp countAll() {
+        Long result = userService.countAll();
+        return Resp.succeed(result);
+    }
 }

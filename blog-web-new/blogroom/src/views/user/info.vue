@@ -119,6 +119,7 @@
 <script>
 import { uploadPath } from '@/api/storage'
 import { detailUser, updateUserBaseInfo, updateHeadImage } from '@/api/user'
+import { updateAuthor } from '@/api/article'
 import { Message } from 'element-ui'
 
 const sexMap = {
@@ -187,7 +188,15 @@ export default {
         handleUpload() {
             this.$refs.imageUpload.submit()
         },
-        updateData() {
+        updateArticlesAuthor() {
+            let _this = this
+            return new Promise(function(resolve,reject) {
+                updateAuthor(_this.updateInfo.nickName,_this.userInfo.id).then(res => {
+                    resolve("成功")
+                }).catch(() => { reject("昵称发生改变，更新用户文章中作者名字出错") })
+            })
+        },
+        updateUser() {
             updateUserBaseInfo(this.updateInfo).then(res => {
                 this.userInfo.nickName = this.updateInfo.nickName
                 this.userInfo.sex = this.updateInfo.sex
@@ -197,7 +206,6 @@ export default {
                 this.userInfo.description = this.updateInfo.description
                 this.$store.dispatch('setUserInfo', this.userInfo)
                 this.getUserInfo()
-
                 this.updateDialog = false
                 this.$notify.success({
                     title: '成功',
@@ -205,9 +213,20 @@ export default {
                     duration: 1 * 1000
                 })
             }).catch(() => {
-                alert("chuxian ")
+                alert("更新用户信息出错")
                 
             })
+        },
+        updateData() {
+            if(this.updateInfo.nickName !== this.userInfo.nickName) {
+                let _this = this
+                this.updateArticlesAuthor().then(function(data) {
+                    // alert(data)
+                    _this.updateUser()
+                })
+            } else {
+                this.updateUser()
+            }
         },
         updateImage() {
             if(this.newHeadImage === undefined) {

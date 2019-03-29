@@ -81,6 +81,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public Long countAll() {
+        return articleDao.countByStatus(2);
+    }
+
+    @Override
     public Boolean update(ArticleDto dto) {
         Article article = findById(dto.getId());
         article.setId(dto.getId());
@@ -123,6 +128,13 @@ public class ArticleServiceImpl implements ArticleService {
         }
 
         articleDao.save(article);
+        return true;
+    }
+
+    @Override
+    @Transactional
+    public Boolean updateAuthor(String author, Long userId) {
+        articleDao.updateAuthorByUserId(author,userId);
         return true;
     }
 

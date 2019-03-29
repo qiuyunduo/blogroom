@@ -1,13 +1,14 @@
-import { isLogin, getAdminInfo, setAdminInfo, removeAdminInfo } from '@/utils/adminAuth'
+import { isAdminLogin, getAdminInfo, setAdminInfo, removeAdminInfo } from '@/utils/adminAuth'
+import { loginOut } from '@/api/admin'
 
 const website = {
   state: {
-    isLogin: isLogin(),
+    isAdminLogin: isAdminLogin(),
     adminInfo: getAdminInfo()
   },
   mutations: {
-    SET_ISLOGIN: (state, data) => {
-      state.isLogin = data
+    SET_IS_ADMIN_LOGIN: (state, data) => {
+      state.isAdminLogin = data
     },
     SET_ADMININFO: (state, adminInfo) => {
       state.adminInfo = adminInfo
@@ -16,19 +17,21 @@ const website = {
   actions: {
     setAdminInfo({ commit },adminInfo) {
       return new Promise((resolve,reject) => {
-        commit('SET_ISLOGIN',true)
         commit('SET_ADMININFO',adminInfo)
         setAdminInfo(adminInfo)
         resolve()
       })
     },
-    adminLogout({ commit }) {
-      return new Promise((resolve, reject) => {
-          removeAdminInfo()
-          commit('SET_ISLOGIN',false)
-          resolve()
+    adminLogout({ commit, state }) {
+      let adminId = state.adminInfo.id
+      loginOut(adminId).then(res => {
+        removeAdminInfo()
+        commit('SET_IS_ADMIN_LOGIN',false)
+        window.location.href = "http://localhost:9000/admin/login"
+      }).catch(() => {
+         alert("后台登出错误") 
       })
-    },
+    }
   }
 }
 

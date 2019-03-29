@@ -59,4 +59,9 @@ public class FriendlyLinkServicelImpl implements FriendlyLinkService {
         friendlyLinkDao.deleteById(id);
         return true;
     }
+
+    @Override
+    public Long countAll() {
+        return friendlyLinkDao.count();
+    }
 }

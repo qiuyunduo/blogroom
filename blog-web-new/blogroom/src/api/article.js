@@ -22,6 +22,14 @@ export function readOne(id) {
   })
 }
 
+export function updateAuthor(author,userId) {
+  return request({
+    url: '/article/article/updateAuthor',
+    method: 'post',
+    params: { 'author': author, 'userId': userId }
+  })
+}
+
 export function createOne(data) {
   return request({
     url: '/article/article/save',
@@ -50,6 +58,13 @@ export function countArticles(userId) {
     url: '/article/article/count',
     method: 'get',
     params: { 'userId':userId }
+  })
+}
+
+export function countAllArticle() {
+  return request({
+    url: '/article/article/countAll',
+    method: 'get'
   })
 }
 

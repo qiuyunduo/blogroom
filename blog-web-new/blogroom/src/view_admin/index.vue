@@ -3,27 +3,27 @@
       <h1 class="page-header">信息总览</h1>
       <div class="row placeholders">
         <div class="col-xs-6 col-sm-3 placeholder">
+          <h4>用户</h4>
+          <span class="text-muted">{{ countInfo.userNumber }} 名</span> </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
           <h4>文章</h4>
-          <span class="text-muted">15 条</span> </div>
+          <span class="text-muted">{{ countInfo.articleNumber }} 条</span> </div>
         <div class="col-xs-6 col-sm-3 placeholder">
           <h4>评论</h4>
-          <span class="text-muted">28 条</span> </div>
+          <span class="text-muted">{{ countInfo.commentNumber }} 条</span> </div>
         <div class="col-xs-6 col-sm-3 placeholder">
           <h4>友链</h4>
-          <span class="text-muted">4 条</span> </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <h4>访问量</h4>
-          <span class="text-muted">12312</span> </div>
+          <span class="text-muted">{{ countInfo.friendlyLinkNumber }} 条</span> </div>
       </div>
       <h1 class="page-header">状态</h1>
       <div class="table-responsive">
         <table class="table table-striped table-hover">
           <tbody>
             <tr>
-              <td>登录者: <span>admin</span>，这是您第 <span>13</span> 次登录</td>
+              <td>登录者: <span>{{ loginAdmin.name }}</span>，这是您第 <span>{{ loginAdmin.loginNumber }}</span> 次登录</td>
             </tr>
             <tr>
-              <td>上次登录时间: 2016-01-08 15:50:28 , 上次登录IP: ::1:55570</td>
+              <td>上次登录时间: {{ loginAdmin.lastLoginTime }} , 上次登录IP: {{ loginAdmin.lastLoginIp }}</td>
             </tr>
           </tbody>
         </table>
@@ -96,19 +96,50 @@
 </template>
 
 <script>
-
+import { countUser } from "@/api/user"
+import { countAllArticle } from "@/api/article"
+import { countAllComment } from "@/api/comment"
+import { countFriendlyLink } from '@/api/friendlyLink'
 export default {
     name: 'index',
     data() {
       return {
         timer: null,
         nowTime: undefined,
+        countInfo: {
+          userNumber: undefined,
+          articleNumber: undefined,
+          commentNumber: undefined,
+          friendlyLinkNumber: undefined
+        }
+      }
+    },
+    computed: {
+      loginAdmin() {
+        return this.$store.state.website.adminInfo
       }
     },
     mounted() {
       this.nowTimes()
     },
     methods: {
+      getCountInfo() {
+        countUser().then(res => {
+          this.countInfo.userNumber = res.data.data
+        }).catch(() => "获取用户总数出错")
+
+        countAllArticle().then(res => {
+          this.countInfo.articleNumber = res.data.data
+        }).catch(() => "获取文章总数出错")
+
+        countAllComment().then(res => {
+          this.countInfo.commentNumber = res.data.data
+        }).catch(() => "获取评论总数出错")
+
+        countFriendlyLink().then(res => {
+          this.countInfo.friendlyLinkNumber = res.data.data
+        }).catch(() => "获取友链总数出错");
+      },
       // 获取当前时间函数
       timeFormate(timeStamp) {
           let year = new Date(timeStamp).getFullYear()
@@ -122,6 +153,7 @@ export default {
         // 定时器函数
         nowTimes(){
           let _this = this;
+           this.getCountInfo()
           this.timeFormate(new Date) //声明一个变量指向vue实例this,保证作用域一致
           this.timer = setInterval(function() {
             _this.timeFormate(new Date)

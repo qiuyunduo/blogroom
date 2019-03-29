@@ -30,6 +30,13 @@ public class FriendlyLinkController {
         return Resp.succeed(friendlyLinks);
     }
 
+    @GetMapping("/countAll")
+    @ApiOperation("获取所有友链数量")
+    public Resp countAll() {
+        Long result = linkService.countAll();
+        return Resp.succeed(result);
+    }
+
     @PostMapping("/create")
     @ApiOperation("获取所有友情链接")
     public Resp createLink(@RequestBody FriendlyLinkDto dto) {

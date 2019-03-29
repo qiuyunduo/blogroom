@@ -176,16 +176,22 @@ export const constantRouterMap = [
         meta: { title: '友情链接', noCache: true }
       },
       {
+        path: 'website/admin',
+        component: () => import('@/view_admin/websiteManager/admin'),
+        name: 'admin',
+        meta: { title: '管理员', noCache: true }
+      },
+      {
         path: 'integral/config',
         component: () => import('@/view_admin/integralManager/integralConfig'),
-        name: 'integral',
-        meta: { title: '积分管理', noCache: true }
+        name: 'integralConif',
+        meta: { title: '积分配置管理', noCache: true }
       },
       {
         path: 'integral/log',
         component: () => import('@/view_admin/integralManager/integralLog'),
-        name: 'integral',
-        meta: { title: '积分管理', noCache: true }
+        name: 'integralLog',
+        meta: { title: '积分记录管理', noCache: true }
       },
       {
         path: 'ranks',
@@ -206,18 +212,19 @@ let router = new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
-
+//前端控制管理员是否登录
 router.beforeEach((to, from, next) => {
+  // console.log(store.state.website.isAdminLogin)
   // alert(to.path)
   if(to.path.startsWith("/admin")) {
     if(to.path === '/admin/login') {
-      if(store.state.website.isLogin) {
+      if(store.state.website.isAdminLogin) {
         next('/admin/manage/index')
       } else {
         next()
       }
     } else {
-      if(store.state.website.isLogin) {
+      if(store.state.website.isAdminLogin) {
         next()
       } else {
         next('/admin/login')

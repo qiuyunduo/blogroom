@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * @Author qyd
@@ -44,6 +45,12 @@ public class Admin extends BaseEntity {
     @Column(name = "status",columnDefinition = "varchar(32) COMMENT '状态（0. 正常　1.锁定　2.注销）'")
     private Integer status;
 
+    @Column(name = "login_number",columnDefinition = "varchar(32) COMMENT '总共登录次数'")
+    private Integer loginNumber;
+
     @Column(name = "last_login_ip",columnDefinition = "varchar(32) COMMENT '最近一次的登录地址'")
     private String lastLoginIp;
+
+    @Column(name = "last_login_time",columnDefinition = "varchar(32) COMMENT '最近一次的登录时间'")
+    private LocalDateTime lastLoginTime;
 }

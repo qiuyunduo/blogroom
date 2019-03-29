@@ -30,6 +30,11 @@ export default {
         AdminHead,
         NavMenu
     },
+    computed: {
+        loginAdmin() {
+            return this.$store.state.website.adminInfo
+        }
+    },
     data() {
         return {
             activeIndex: 'index',
@@ -184,6 +189,28 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.setMenu()
+    },
+    methods: {
+        setMenu() {
+            if(this.loginAdmin.status.toString() === '1'){
+                return
+            }
+            let adminManage = {
+                            entity: {
+                                id: 61,
+                                name: 'admin',
+                                icon: "el-icon-edit",
+                                alias: "管理员",
+                                value: "/admin/manage/website/admin"
+                            }
+                        }
+            this.menuData[3].childs.push(adminManage)
+            console.log(this.menuData[3].childs)
+        }
+    },
+
 }
 </script>
 

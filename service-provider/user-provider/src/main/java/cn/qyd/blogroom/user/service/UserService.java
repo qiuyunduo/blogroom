@@ -29,6 +29,8 @@ public interface UserService {
 
     List<User> fashionUser();
 
+    Long countAll();
+
     Boolean updateImage(Long userId, String newImage);
 
     Boolean updatePassword(UpdatePwdDto dto);

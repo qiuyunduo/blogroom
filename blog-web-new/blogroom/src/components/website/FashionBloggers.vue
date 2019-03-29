@@ -1,6 +1,6 @@
 <template>
     <div class="widget widget_archive">
-        <div class="title"><h2>时尚博主</h2></div>
+        <div class="title"><h2>萌新博主</h2></div>
         <ul id="goodauthor">
         <!--时尚博主-->
             <li v-for="index in total" :key="index">

@@ -22,3 +22,10 @@ export function countComment(userId) {
     params: { 'userId':userId }
   })
 }
+
+export function countAllComment() {
+  return request({
+    url: '/article/comment/countAll',
+    method: 'get'
+  })
+}

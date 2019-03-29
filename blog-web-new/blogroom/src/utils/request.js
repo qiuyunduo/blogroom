@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import store from '@/store'
-import { getToken, refreshToken, getUserInfo } from '@/utils/auth'
+import { isLogin, getToken, refreshToken, getUserInfo } from '@/utils/auth'
 // import { isLogin } from '@/utils/adminAuth'
 
 // create an axios instance
@@ -14,7 +14,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // Do something before request is sent
-    if (store.state.user.isLogin) {
+    if (isLogin()) {
       // 让每个请求携带token
       // alert(getToken())
       // alert(getUserInfo())

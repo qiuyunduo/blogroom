@@ -16,6 +16,8 @@ public interface CommentService {
 
     Long countCommentsOfUser(Long id);
 
+    Long countAll();
+
     Boolean update(Long id,String content);
 
     Boolean delete(Long id, Long articleId);

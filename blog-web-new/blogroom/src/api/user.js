@@ -61,3 +61,10 @@ export function updateUserStatus(data) {
     data
   })
 }
+
+export function countUser() {
+  return request({
+    url: '/user/user/countAll',
+    method: 'get'
+  })
+}

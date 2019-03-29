@@ -3,6 +3,7 @@ package cn.qyd.blogroom.user.service.impl;
 import cn.qyd.blogroom.common.exception.BusinessException;
 import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
 import cn.qyd.blogroom.common.utils.Formater;
+import cn.qyd.blogroom.common.utils.IpUtil;
 import cn.qyd.blogroom.common.utils.MD5Util;
 import cn.qyd.blogroom.common.utils.TokenUtil;
 import cn.qyd.blogroom.user.dao.UserDao;
@@ -55,6 +56,9 @@ public class UserServiceImpl implements UserService {
                 .setStatus(0)
                 .setAddTime(LocalDateTime.now());
         User result = userDao.save(user);
+        if(result.getLastLoginIp() == null) {
+            result.setLastLoginIp(IpUtil.getIP());
+        }
         return result;
     }
 
@@ -90,6 +94,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean logout(Long userId) {
+        User user = findById(userId);
+        userDao.save(user.setLastLoginIp(IpUtil.getIP()));
         Boolean result = tokenUtil.removeToken(userId);
         return result;
     }
@@ -126,6 +132,11 @@ public class UserServiceImpl implements UserService {
         UserQueryParam param = new UserQueryParam(queryDto);
         Page<User> page = userDao.findAll(param,pageable);
         return page.getContent();
+    }
+
+    @Override
+    public Long countAll() {
+        return userDao.count();
     }
 
     @Override

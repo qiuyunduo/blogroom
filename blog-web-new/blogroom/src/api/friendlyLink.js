@@ -27,3 +27,10 @@ export function delLink(linkId) {
     method: 'post',
   })
 }
+
+export function countFriendlyLink() {
+  return request({
+    url: '/website/friendly/links/countAll',
+    method: 'get'
+  })
+}

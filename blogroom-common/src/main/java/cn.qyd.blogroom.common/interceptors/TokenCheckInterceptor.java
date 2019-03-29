@@ -67,7 +67,7 @@ public class TokenCheckInterceptor implements HandlerInterceptor {
     public String getRefreshToken(Long userId, String token) {
         String refreshToken = tokenUtil.createOrRefreshToken(userId);
         Jedis jedis = jedisPool.getResource();
-        jedis.set("asd","asd");
+        //setnx用于控制并发请求刷新token时只刷新一次
         if(jedis.setnx(token,refreshToken) == 0) {
             refreshToken = tokenUtil.getRefreshToken(token);
         } else {

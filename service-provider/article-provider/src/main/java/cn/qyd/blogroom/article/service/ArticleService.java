@@ -23,9 +23,13 @@ public interface ArticleService {
 
     Long countArticlesOfUser(Long id);
 
+    Long countAll();
+
     Boolean update(ArticleDto dto);
 
     Boolean updateStatus(ArticleStatusDto statusDto);
+
+    Boolean updateAuthor(String author, Long userId);
 
     Boolean delete(Long id);
 }

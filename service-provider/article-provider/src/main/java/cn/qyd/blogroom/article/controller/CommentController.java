@@ -60,4 +60,11 @@ public class CommentController {
         return Resp.succeed(count);
     }
 
+    @GetMapping("/countAll")
+    @ApiOperation("用户获得评论数")
+    public Resp countAll() {
+        Long count = commentService.countAll();
+        return Resp.succeed(count);
+    }
+
 }

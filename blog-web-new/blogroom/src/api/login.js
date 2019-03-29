@@ -8,14 +8,6 @@ export function login(data) {
   })
 }
 
-export function adminLogin(data) {
-  return request({
-    url: '/website/admin/login',
-    method: 'post',
-    params: { 'name': data.username, 'password': data.password }
-  })
-}
-
 export function register(data) {
   return request({
     url: '/user/user/register',

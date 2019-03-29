@@ -19,4 +19,7 @@ public class AdminDto {
 
     @ApiModelProperty("注册邮箱")
     private String email;
+
+    @ApiModelProperty("管理员身份")
+    private Integer status;
 }

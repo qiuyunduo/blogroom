@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { adminLogin } from '@/api/login'
+import { login } from '@/api/admin'
 export default {
   name: 'Login',
   data() {
@@ -40,8 +40,8 @@ export default {
       }
     }
     const validatePassword = (rule, value, callback) => {
-      if (value.length < 5) {
-        callback(new Error('管理员密码长度应大于5'))
+      if (value.length < 2) {
+        callback(new Error('管理员密码长度应大于2'))
       } else {
         callback()
       }
@@ -71,8 +71,9 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid && !this.loading) {
           this.loading = true
-          adminLogin(this.loginForm).then(response => {
+          login(this.loginForm).then(response => {
             this.loading = false
+            this.$store.commit('SET_IS_ADMIN_LOGIN',true)
             this.$store.dispatch('setAdminInfo',response.data.data)
             console.log(response.data.data)
             this.$router.push("/admin/manage/index")

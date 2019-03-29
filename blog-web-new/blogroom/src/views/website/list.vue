@@ -1,5 +1,6 @@
 <template>
     <div class="content">
+        <div class="loading" v-if="total === undefined"><img src="../../images/loading.gif" width="100px" height="100px" style="margin-left:400px;margin-top:300px"/></div>
         <div class="blankA" v-if="total === 0"></div>
         <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]"/>
         <pagination v-show="total>10" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
@@ -21,7 +22,7 @@ export default {
     data() {
         return {
             list: null,
-            total: 0,
+            total: undefined,
             pageSize: 0,
             listQuery: {
                 classId: undefined,
@@ -74,6 +75,12 @@ export default {
     background-color:rgb(255, 255, 255);
     width: 100%;
     height: 700px;
+    align-content: center;
+}
+.loading {
+    background: white;
+    width: 100%;
+    height: 800px;
     align-content: center;
 }
 </style>

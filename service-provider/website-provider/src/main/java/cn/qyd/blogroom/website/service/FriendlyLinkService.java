@@ -12,4 +12,6 @@ public interface FriendlyLinkService {
     Boolean updateOne(FriendlyLinkDto dto);
 
     Boolean delOne(Long id);
+
+    Long countAll();
 }

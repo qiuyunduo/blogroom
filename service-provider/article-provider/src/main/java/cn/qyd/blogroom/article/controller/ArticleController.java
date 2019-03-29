@@ -63,6 +63,13 @@ public class ArticleController {
         return Resp.succeed(count);
     }
 
+    @GetMapping("/countAll")
+    @ApiOperation("网站所有文章数")
+    public Resp countAll() {
+        Long count = articleService.countAll();
+        return Resp.succeed(count);
+    }
+
     @GetMapping("/fashion")
     @ApiOperation("获取时尚博文")
     public Resp fashionArticles() {
@@ -75,6 +82,13 @@ public class ArticleController {
     @ApiOperation("修改博客文章内容")
     public Resp updateArticle(@RequestBody ArticleDto dto) {
         Boolean result = articleService.update(dto);
+        return Resp.succeed(result);
+    }
+
+    @PostMapping("/updateAuthor")
+    @ApiOperation("修改用户所有文章中的作者名称")
+    public Resp updateArticle(String author, Long userId) {
+        Boolean result = articleService.updateAuthor(author,userId);
         return Resp.succeed(result);
     }
 

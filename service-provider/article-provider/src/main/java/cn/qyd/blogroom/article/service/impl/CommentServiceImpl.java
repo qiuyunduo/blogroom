@@ -66,6 +66,11 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
+    public Long countAll() {
+        return commentDao.count();
+    }
+
+    @Override
     public Boolean update(Long id, String content) {
         Comment comment = findById(id);
         comment.setContent(content)
