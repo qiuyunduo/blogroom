@@ -2,11 +2,14 @@ package cn.qyd.blogroom.user.controller;
 
 import cn.qyd.blogroom.common.resp.Resp;
 import cn.qyd.blogroom.common.resp.paging.PagingInfo;
+import cn.qyd.blogroom.common.utils.CaptchaUtil;
 import cn.qyd.blogroom.common.utils.PagingUtil;
 import cn.qyd.blogroom.common.utils.TokenUtil;
+import cn.qyd.blogroom.common.utils.ToolUtil;
 import cn.qyd.blogroom.common.utils.dozer.BeanMapper;
 import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
+import cn.qyd.blogroom.user.enums.TypeEnum;
 import cn.qyd.blogroom.user.service.UserService;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import cn.qyd.blogroom.user.vo.SimpleUserVo;
@@ -30,23 +33,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
-    @Autowired(required = false)
-    private TokenUtil tokenUtil;
-
-//    @GetMapping("createToken")
-//    @ApiOperation("生成token，过期时间1分钟")
-//    public Resp createToken(Long userId) {
-//        String token = tokenUtil.createOrRefreshToken(userId);
-//        return Resp.succeed(token);
-//    }
-//
-//    @GetMapping("getUserId")
-//    @ApiOperation("测试token过期时间是否自动检查，获得ｔｏｋｅｎ中userid")
-//    public Resp validateToken(String token) {
-//        Boolean userId = tokenUtil.validateToken(token);
-//        return Resp.succeed(userId);
-//    }
 
     @GetMapping("/fashion")
     @ApiOperation("获取时尚博主")
@@ -148,5 +134,20 @@ public class UserController {
     public Resp countAll() {
         Long result = userService.countAll();
         return Resp.succeed(result);
+    }
+
+    @GetMapping("/validateCode")
+    @ApiOperation("发送邮箱验证码")
+    public Resp sendRegisterEmialCode(String email,Integer type) {
+        userService.sendValidateCode(email,type);
+        return Resp.succeed();
+    }
+
+    @GetMapping("/validateCode/resetPassword")
+    @ApiOperation("重置密码邮箱验证码")
+    public Resp sendResetPwdEmialCode() {
+        String randomNumberString = ToolUtil.getRandomNumberString(6);
+        CaptchaUtil.sendEmail("qiuyunduo@m-chain.com",randomNumberString);
+        return Resp.succeed();
     }
 }

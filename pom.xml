@@ -83,6 +83,13 @@
             <version>${commons-lang3.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jodd/jodd-mail -->
+        <dependency>
+            <groupId>org.jodd</groupId>
+            <artifactId>jodd-mail</artifactId>
+            <version>5.0.6</version>
+        </dependency>
+
 
     </dependencies>
 

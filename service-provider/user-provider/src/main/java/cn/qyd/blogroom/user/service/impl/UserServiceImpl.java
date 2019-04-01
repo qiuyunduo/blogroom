@@ -2,13 +2,11 @@ package cn.qyd.blogroom.user.service.impl;
 
 import cn.qyd.blogroom.common.exception.BusinessException;
 import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
-import cn.qyd.blogroom.common.utils.Formater;
-import cn.qyd.blogroom.common.utils.IpUtil;
-import cn.qyd.blogroom.common.utils.MD5Util;
-import cn.qyd.blogroom.common.utils.TokenUtil;
+import cn.qyd.blogroom.common.utils.*;
 import cn.qyd.blogroom.user.dao.UserDao;
 import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
+import cn.qyd.blogroom.user.enums.TypeEnum;
 import cn.qyd.blogroom.user.service.UserService;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.apache.commons.lang3.StringUtils;
@@ -87,6 +85,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public LoginUser register(UserDto dto) {
+        if (userDao.findByAccount(dto.getAccount()) != null) {
+            throw BusinessException.fail(FrontRespEnum.ACCOUNT_EXIST);
+        }
+        if (userDao.findByEmail(dto.getEmail()) != null){
+            throw BusinessException.fail(FrontRespEnum.EMAIL_EXIST);
+        }
         User user = save(dto);
         String token = tokenUtil.createOrRefreshToken(user.getId());
         LoginUser loginUser = new LoginUser();
@@ -163,8 +167,28 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean resetPassword(Long id, String password) {
-        User user = findById(id);
+    public Boolean sendValidateCode(String email, Integer type) {
+        String code = ToolUtil.getRandomNumberString(6);
+        String content = TypeEnum.getDescByCode(type) + code;
+        if(type == 1) {
+            if(findByEmail(email) == null) {
+                throw BusinessException.fail(FrontRespEnum.EMAIL_EXIST);
+            }
+        }
+        if(type == 2) {
+            if(findByEmail(email) == null) {
+                throw BusinessException.fail(FrontRespEnum.EMAIL_NOT_EXIST);
+            }
+        }
+
+        CaptchaUtil.sendEmail(email,content);
+
+        return true;
+    }
+
+    @Override
+    public Boolean resetPassword(String email, String password) {
+        User user = findByEmail(email);
         user.setPassword(MD5Util.getMD5(password));
         userDao.save(user);
         return true;

@@ -1,15 +1,27 @@
 <template>
     <div v-if="loginFormShow" class="pop" id="login">
-        <div class="pop-wp" style="left: 50%;">
-            <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close">×</a>
+        <div class="pop-wp" style="left: 50%;height:250px">
+            <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">登录</div>
 
-            <form id="loginForm">
+            <el-form :model="loginInfo" ref="numberValidateForm" label-width="50px" class="demo-ruleForm">
+                <el-form-item label="账号:">
+                    <el-input v-model="loginInfo.account" auto-complete="off" class="account-input" v-focus></el-input>
+                </el-form-item>
+                <el-form-item label="密码:">
+                    <el-input v-model="loginInfo.password" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item style="margin-top:-20px">
+                        <span class="fr"><a href="http://yuedu.fm/retrieve/" class="red-link" target="_blank">忘记密码</a></span>
+                    <button type="button" class="account-btn" @click="doLogin()">登 录</button>
+                </el-form-item>
+            </el-form>
+
+            <!-- <form id="loginForm">
             <div class="account-form">
                 <div>
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <input type="text" name="lusername" ref="account" class="account-input" placeholder="账号" v-model="loginInfo.account">
-                <div id="error_tip_lusername" class="error-tip"></div>
                 </div>
 
                 <div class="account-line"></div>
@@ -17,14 +29,13 @@
                 <div>
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input type="password" name="lpassword" class="account-input" placeholder="密码" v-model="loginInfo.password">
-                <div id="error_tip_lpassword" class="error-tip"></div>
                 </div>
             </div>
             <div class="account-other">
                 <span class="fr"><a href="http://yuedu.fm/retrieve/" class="red-link" target="_blank">忘记密码</a></span>
             </div>
             <button type="button" class="account-btn" @click="doLogin()">登 录</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </template>
@@ -39,6 +50,16 @@ export default {
             loginInfo: {
                 account: undefined,
                 password: undefined
+            }
+        }
+    },
+    directives: {
+        // 注册一个局部的自定义指令 v-focus
+        focus: {
+            // 指令的定义
+            inserted: function (el) {
+            // 聚焦元素
+            el.querySelector('input').focus()
             }
         }
     },

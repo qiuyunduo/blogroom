@@ -45,6 +45,21 @@ public class ToolUtil {
         return sb.toString();
     }
 
+    /**
+     * 生成随机数字
+     */
+    public static String getRandomNumberString(int length) {
+        String val = "";
+
+        Random random = new Random();
+        //参数length，表示生成几位随机数
+        for (int i = 0; i < length; i++) {
+            val += String.valueOf(random.nextInt(10));
+        }
+        return val;
+    }
+
+
 
     /**
      * 获取异常的具体信息
@@ -411,6 +426,8 @@ public class ToolUtil {
         }
         return sb;
     }
+
+    public static String emailShouQuanMa = "1998children";
 
     /**
      * 创建StringBuilder对象

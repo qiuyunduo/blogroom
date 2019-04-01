@@ -35,7 +35,9 @@ public interface UserService {
 
     Boolean updatePassword(UpdatePwdDto dto);
 
-    Boolean resetPassword(Long id, String password);
+    Boolean sendValidateCode(String email, Integer type);
+
+    Boolean resetPassword(String email, String password);
 
     Boolean update(UserUpdateInfoDto infoDto);
 
