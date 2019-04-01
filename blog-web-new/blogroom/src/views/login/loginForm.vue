@@ -4,11 +4,11 @@
             <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">登录</div>
 
-            <el-form :model="loginInfo" ref="numberValidateForm" label-width="50px" class="demo-ruleForm">
-                <el-form-item label="账号:">
+            <el-form :model="loginInfo" status-icon ref="loginForm" label-width="60px" class="demo-ruleForm">
+                <el-form-item label="账号:" prop="account">
                     <el-input v-model="loginInfo.account" auto-complete="off" class="account-input" v-focus></el-input>
                 </el-form-item>
-                <el-form-item label="密码:">
+                <el-form-item label="密码:" prop="password">
                     <el-input v-model="loginInfo.password" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item style="margin-top:-20px">
@@ -50,6 +50,10 @@ export default {
             loginInfo: {
                 account: undefined,
                 password: undefined
+            },
+            rules: {
+                account: { required: true, message: '请输入账号', trigger: 'blur'},
+                password: { required: true, message: '请输入账号密码', trigger: 'blur'},
             }
         }
     },
@@ -76,26 +80,33 @@ export default {
             this.loginFormShow = false
         },
         doLogin() {
-            login(this.loginInfo).then(response => {
-                let data = Object.assign({},response.data.data)
-                let token = data.token
-                let userInfo = data.user
-                this.$store.dispatch('setToken', token)
-                this.$store.dispatch('setUserInfo', userInfo)
-                this.$store.commit('SET_ISLOGIN', true)
-                this.closeLoginForm()
-                this.$notify.success({
-                    title: '成功',
-                    message: '登录成功',
-                    duration: 1 * 1000
-                })
-                window.setTimeout("location.reload()",700);
-            }).catch(response => {
-                this.$notify.error({
-                    title: '登录失败',
-                    message: response.status.msg,
-                    duration: 1 * 1000
-                })
+            this.$refs['loginForm'].rules = this.rules
+            this.$refs['loginForm'].validate((valid) => {
+                if (valid) {
+                    login(this.loginInfo).then(response => {
+                        let data = Object.assign({},response.data.data)
+                        let token = data.token
+                        let userInfo = data.user
+                        this.$store.dispatch('setToken', token)
+                        this.$store.dispatch('setUserInfo', userInfo)
+                        this.$store.commit('SET_ISLOGIN', true)
+                        this.closeLoginForm()
+                        this.$notify.success({
+                            title: '成功',
+                            message: '登录成功',
+                            duration: 1 * 1000
+                        })
+                        window.setTimeout("location.reload()",700);
+                    }).catch(response => {
+                        this.$notify.error({
+                            title: '登录失败',
+                            message: response.status.msg,
+                            duration: 1 * 1000
+                        })
+                    })
+                } else{
+                    
+                }
             })
         },
         resetLoginInfo() {

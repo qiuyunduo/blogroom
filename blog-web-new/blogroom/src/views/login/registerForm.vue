@@ -4,11 +4,11 @@
         <div class="pop-wp" style="left: 50%;width:300px;height:230px">
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册</div>
-            <el-form :model="registerInfo" ref="firstForm" label-width="50px" class="demo-ruleForm">
-                <el-form-item label="账号:">
+            <el-form :model="registerInfo" ref="accountForm" label-width="60px" class="demo-ruleForm">
+                <el-form-item label="账号:" prop="account">
                     <el-input v-model="registerInfo.account" auto-complete="off" v-focus></el-input>
                 </el-form-item>
-                <el-form-item label="昵称:">
+                <el-form-item label="昵称:" prop="nickName">
                     <el-input v-model="registerInfo.nickName" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item>
@@ -18,13 +18,32 @@
         </div>
     </div>
 
+    <div v-else-if="registerFormShow === 2" class="pop" id="register">
+        <div class="pop-wp" style="left: 50%;width:300px">
+            <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
+            <div class="pop-title">注册(填写密码)</div>
+
+            <el-form :model="registerInfo" ref="passwordForm" label-width="90px" class="demo-ruleForm">
+                <el-form-item label="密码:" prop="password">
+                    <el-input v-model="registerInfo.password" auto-complete="off"></el-input>
+                </el-form-item>
+
+                <el-form-item label="确认密码:" prop="rePassword">
+                    <el-input v-model="registerInfo.rePassword" auto-complete="off"></el-input>
+                </el-form-item>
+                <button type="button" class="account-btn" style="width:100px;margin-right:40px" @click="preFoot">上一步</button>
+                 <button type="button" class="account-btn" style="width:100px" @click="nextFoot">下一步</button>
+            </el-form>
+        </div>
+    </div>
+
     <div v-else-if="registerFormShow === 3" class="pop" id="register">
         <div class="pop-wp" style="left: 50%;width:300px">
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册(验证邮箱)</div>
 
-            <el-form :model="registerInfo" ref="secondForm" label-width="60px" class="demo-ruleForm">
-                <el-form-item label="邮箱:">
+            <el-form :model="registerInfo" ref="emailForm" label-width="60px" class="demo-ruleForm">
+                <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="registerInfo.email" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="验证码:">
@@ -37,25 +56,6 @@
                     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 </button>
                  <button v-else type="button" class="account-btn" style="width:100px" @click="doRegister()">注册</button>
-            </el-form>
-        </div>
-    </div>
-
-    <div v-else-if="registerFormShow === 2" class="pop" id="register">
-        <div class="pop-wp" style="left: 50%;width:300px">
-            <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
-            <div class="pop-title">注册(填写密码)</div>
-
-            <el-form :model="registerInfo" ref="threeForm" label-width="80px" class="demo-ruleForm">
-                <el-form-item label="密码:">
-                    <el-input v-model="registerInfo.password" auto-complete="off"></el-input>
-                </el-form-item>
-
-                <el-form-item label="确认密码:">
-                    <el-input v-model="rePassword" auto-complete="off"></el-input>
-                </el-form-item>
-                <button type="button" class="account-btn" style="width:100px;margin-right:40px" @click="preFoot">上一步</button>
-                 <button type="button" class="account-btn" style="width:100px" @click="nextFoot">下一步</button>
             </el-form>
         </div>
     </div>
@@ -119,10 +119,18 @@ export default {
                 account: undefined,
                 nickName: undefined,
                 password: undefined,
+                rePassword: undefined,
                 email: undefined
             },
             validateCode: undefined,
             rePassword: undefined,
+            rules: {
+                account: { required: true, message: '请输入账号', trigger: 'blur' },
+                nickName: { required: true, message: '请输入昵称', trigger: 'blur' },
+                password: { required: true, message: '请输入账号密码', trigger: 'blur' },
+                rePassword: { required: true, message: '请输入确认密码', trigger: 'blur' },
+                email: { required: true, message: '请输入注册邮箱', trigger: 'blur' }
+            }
         }
     },
     directives: {
@@ -149,8 +157,25 @@ export default {
         preFoot() {
             this.registerFormShow--
         },
-        nextFoot() {
-            this.registerFormShow++
+        nextFoot() { 
+            if(this.registerFormShow === 1) {
+                this.$refs['accountForm'].rules = this.rules
+                this.$refs['accountForm'].validate((valid) => {
+                    if (valid) {
+                        this.registerFormShow++
+                    }
+                })
+            }
+
+            if(this.registerFormShow === 2) {
+                this.$refs['passwordForm'].rules = this.rules
+                this.$refs['passwordForm'].validate((valid) => {
+                    if (valid) {
+                        this.registerFormShow++
+                    }
+                })
+            }
+            
         },
         checkFiled() {
             if(this.registerInfo.password !== this.rePassword) {
