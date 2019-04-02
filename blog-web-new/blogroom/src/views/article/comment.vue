@@ -121,13 +121,13 @@ export default {
             this.myComment.authorId = this.userId
             this.myComment.userId = this.loginUser.id
             createComment(this.myComment).then(res => {
+                this.myComment.content = undefined
                 this.getList()
             }).catch(res => {
-                
-                // this.$notify.error({
-                //     title: '错误',
-                //     message: '提交评论出现异常'
-                // })
+                this.$notify.error({
+                    title: '错误',
+                    message: '提交评论出现异常'
+                })
             })
         }
     }

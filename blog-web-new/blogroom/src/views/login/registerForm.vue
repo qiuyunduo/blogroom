@@ -4,7 +4,7 @@
         <div class="pop-wp" style="left: 50%;width:300px;height:230px">
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册</div>
-            <el-form :model="registerInfo" ref="accountForm" label-width="60px" class="demo-ruleForm">
+            <el-form :model="registerInfo" status-icon :rules="accountRules" ref="accountForm" label-width="60px" class="demo-ruleForm">
                 <el-form-item label="账号:" prop="account">
                     <el-input v-model="registerInfo.account" auto-complete="off" v-focus></el-input>
                 </el-form-item>
@@ -23,7 +23,7 @@
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册(填写密码)</div>
 
-            <el-form :model="registerInfo" ref="passwordForm" label-width="90px" class="demo-ruleForm">
+            <el-form :model="registerInfo" status-icon :rules="passwordRules" ref="passwordForm" label-width="90px" class="demo-ruleForm">
                 <el-form-item label="密码:" prop="password">
                     <el-input v-model="registerInfo.password" auto-complete="off"></el-input>
                 </el-form-item>
@@ -42,7 +42,7 @@
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册(验证邮箱)</div>
 
-            <el-form :model="registerInfo" ref="emailForm" label-width="60px" class="demo-ruleForm">
+            <el-form :model="registerInfo" status-icon :rules="emailRules" ref="emailForm" label-width="60px" class="demo-ruleForm">
                 <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="registerInfo.email" auto-complete="off"></el-input>
                 </el-form-item>
@@ -59,49 +59,6 @@
             </el-form>
         </div>
     </div>
-
-            <!-- <form id="registerForm" novalidate="novalidate">
-                <div class="account-form">
-                    <div>
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        <input type="text" name="account" ref="raccount" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" class="account-input" placeholder="账号名称" v-model="registerInfo.account" autofocus>
-                        <div　style="display:inline;padding-top:10px">
-                            <svg-icon iconClass="success" style="width:30px;height:30px;float:right;margin-top:10px"></svg-icon>
-                        </div>
-                    </div>
-                    
-
-                    <div class="account-line"></div>
-                    <div>
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" name="nickName" class="account-input" id="account" placeholder="昵称" v-model="registerInfo.nickName">
-                    </div>
-                    <div class="account-line"></div>
-                    <div>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="text" name="userEmail" class="account-input" placeholder="邮箱" v-model="registerInfo.email">
-                    </div>
-                    <div class="account-line"></div>
-                    <div>
-                        <i class="fa fa-key fa-fw" aria-hidden="true"></i>
-                        <input type="password" name="userPwd" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" id="rpassword" class="account-input" placeholder="密码" v-model="registerInfo.password">
-                    </div>
-                    <div class="account-line"></div>
-                    <div>
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                        <input type="password" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" name="repassword" class="account-input" placeholder="确认密码" v-model="rePassword">
-                    </div>
-                </div>
-                <div class="account-other">
-                    <label><input type="checkbox" name="angree" id="angree" value="1" checked="true"> 我已认真阅读并同意博客屋的<a href="/" class="red-link" target="_blank">《使用协议》</a></label>
-                    <div id="error_tip_angree" class="error-tip"></div>
-                </div>
-                
-                <button v-if="loading" type="button" class="account-btn" @click="doRegister()">
-                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                </button>
-                <button v-else type="button" class="account-btn" @click="doRegister()">注册</button>
-            </form> -->
       
 </template>
 
@@ -124,11 +81,15 @@ export default {
             },
             validateCode: undefined,
             rePassword: undefined,
-            rules: {
+            accountRules: {
                 account: { required: true, message: '请输入账号', trigger: 'blur' },
                 nickName: { required: true, message: '请输入昵称', trigger: 'blur' },
+            },
+            passwordRules: {
                 password: { required: true, message: '请输入账号密码', trigger: 'blur' },
                 rePassword: { required: true, message: '请输入确认密码', trigger: 'blur' },
+            },
+            emailRules: {
                 email: { required: true, message: '请输入注册邮箱', trigger: 'blur' }
             }
         }
@@ -159,7 +120,6 @@ export default {
         },
         nextFoot() { 
             if(this.registerFormShow === 1) {
-                this.$refs['accountForm'].rules = this.rules
                 this.$refs['accountForm'].validate((valid) => {
                     if (valid) {
                         this.registerFormShow++
@@ -168,7 +128,6 @@ export default {
             }
 
             if(this.registerFormShow === 2) {
-                this.$refs['passwordForm'].rules = this.rules
                 this.$refs['passwordForm'].validate((valid) => {
                     if (valid) {
                         this.registerFormShow++

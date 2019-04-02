@@ -9,7 +9,7 @@
                     <el-input v-model="loginInfo.account" auto-complete="off" class="account-input" v-focus></el-input>
                 </el-form-item>
                 <el-form-item label="密码:" prop="password">
-                    <el-input v-model="loginInfo.password" auto-complete="off"></el-input>
+                    <el-input type="password" v-model="loginInfo.password" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item style="margin-top:-20px">
                         <span class="fr"><a href="http://yuedu.fm/retrieve/" class="red-link" target="_blank">忘记密码</a></span>

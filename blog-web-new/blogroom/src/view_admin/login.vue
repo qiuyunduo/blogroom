@@ -17,7 +17,8 @@
         </span>
         <el-input :type="passwordType" v-model="loginForm.password" name="password" auto-complete="on" placeholder="password" @keyup.enter.native="handleLogin" />
         <span class="show-pwd" @click="showPwd">
-          <svg-icon icon-class="eye" />
+          <svg-icon v-if="passwordType === 'password'" icon-class="open-eye" />
+          <svg-icon v-else icon-class="eye" />
         </span>
       </el-form-item>
 

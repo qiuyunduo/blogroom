@@ -161,7 +161,6 @@ public class UserServiceImpl implements UserService {
             user.setPassword(MD5Util.getMD5(dto.getNewPassword()));
             userDao.save(user);
         }else {
-            throw BusinessException.fail(FrontRespEnum.THE_OLD_PASSWORD_ERROR);
         }
         return true;
     }

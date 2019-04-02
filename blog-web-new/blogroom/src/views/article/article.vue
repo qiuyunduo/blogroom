@@ -73,6 +73,9 @@ export default {
 		}
 	},
 	computed: {
+		isLogin() {
+			return this.$store.state.user.isLogin
+		},
 		loginUser() {
 			return this.$store.state.user.userInfo
 		}
@@ -112,15 +115,19 @@ export default {
 			readOne(id).then(response => {
 				this.detailInfo = response.data.data
 				// console.log(this.detailInfo)
-				findThumb(this.detailInfo.id,this.loginUser.id).then(res => {
-					if(res.data.data !== null && res.data.data !== undefined) {
-						this.thumbData = res.data.data
-						this.isThumb = true
-					}
-				}).catch(() => {})
+				if(this.isLogin) {
+					this.checkIsThumb()
+				}
 			}).catch(response => {})			
 		},
-		
+		checkIsThumb() {
+			findThumb(this.detailInfo.id,this.loginUser.id).then(res => {
+				if(res.data.data !== null && res.data.data !== undefined) {
+					this.thumbData = res.data.data
+					this.isThumb = true
+				}
+			}).catch(() => {})
+		},
 		addThumb() {
 			this.thumbData.id = undefined
 			this.thumbData.articleId = this.detailInfo.id
