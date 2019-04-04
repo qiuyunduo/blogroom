@@ -8,6 +8,7 @@ import cn.qyd.blogroom.user.dto.*;
 import cn.qyd.blogroom.user.entity.User;
 import cn.qyd.blogroom.user.enums.TypeEnum;
 import cn.qyd.blogroom.user.service.UserService;
+import cn.qyd.blogroom.user.utils.StorageValidateCode;
 import cn.qyd.blogroom.user.vo.LoginUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,9 @@ public class UserServiceImpl implements UserService {
     @Autowired(required = false)
     private TokenUtil tokenUtil;
 
+    @Autowired(required = false)
+    private StorageValidateCode storageValidateCode;
+
     @Value("${user.default.headImage}")
     private String defaultImage;
 
@@ -51,6 +55,7 @@ public class UserServiceImpl implements UserService {
                 .setPassword(MD5Util.getMD5(dto.getPassword()))
                 .setEmail(dto.getEmail())
                 .setHeadImage(defaultImage)
+                .setSex(0)
                 .setStatus(0)
                 .setAddTime(LocalDateTime.now());
         User result = userDao.save(user);
@@ -85,12 +90,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public LoginUser register(UserDto dto) {
-        if (userDao.findByAccount(dto.getAccount()) != null) {
-            throw BusinessException.fail(FrontRespEnum.ACCOUNT_EXIST);
-        }
-        if (userDao.findByEmail(dto.getEmail()) != null){
-            throw BusinessException.fail(FrontRespEnum.EMAIL_EXIST);
-        }
         User user = save(dto);
         String token = tokenUtil.createOrRefreshToken(user.getId());
         LoginUser loginUser = new LoginUser();
@@ -108,6 +107,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findByAccount(String account) {
+        User user = userDao.findByAccount(account);
+        if (user != null) {
+            throw BusinessException.fail(FrontRespEnum.ACCOUNT_EXIST);
+        }
+        return user;
+    }
+
+    @Override
     public User findById(Long id) {
         return userDao.findById(id)
                 .orElseThrow(() -> BusinessException.fail(FrontRespEnum.THE_USER_NOT_EXIST));
@@ -115,7 +123,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByEmail(String email) {
-        return userDao.findByEmail(email);
+        User user = userDao.findByEmail(email);
+        if (user != null){
+            throw BusinessException.fail(FrontRespEnum.EMAIL_EXIST);
+        }
+        return user;
     }
 
     @Override
@@ -170,14 +182,16 @@ public class UserServiceImpl implements UserService {
         String code = ToolUtil.getRandomNumberString(6);
         String content = TypeEnum.getDescByCode(type) + code;
         if(type == 1) {
-            if(findByEmail(email) == null) {
+            if(userDao.findByEmail(email) != null) {
                 throw BusinessException.fail(FrontRespEnum.EMAIL_EXIST);
             }
+            storageValidateCode.setRegisterValidateCode(email,code);
         }
         if(type == 2) {
-            if(findByEmail(email) == null) {
+            if(userDao.findByEmail(email) == null) {
                 throw BusinessException.fail(FrontRespEnum.EMAIL_NOT_EXIST);
             }
+            storageValidateCode.setResetPwdValidateCode(email,code);
         }
 
         CaptchaUtil.sendEmail(email,content);
@@ -186,8 +200,23 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Boolean validateCode(String email, Integer type, String code) {
+        if(type == 1) {
+            if(!storageValidateCode.checkRegisterValidateCode(email,code)) {
+                throw BusinessException.fail(FrontRespEnum.VERIFICATION_CODE_ERROR);
+            }
+        }
+        if(type == 2) {
+            if(!storageValidateCode.checkResetPwdValidateCode(email,code)) {
+                throw BusinessException.fail(FrontRespEnum.VERIFICATION_CODE_ERROR);
+            }
+        }
+        return true;
+    }
+
+    @Override
     public Boolean resetPassword(String email, String password) {
-        User user = findByEmail(email);
+        User user = userDao.findByEmail(email);
         user.setPassword(MD5Util.getMD5(password));
         userDao.save(user);
         return true;

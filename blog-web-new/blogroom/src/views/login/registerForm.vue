@@ -25,14 +25,20 @@
 
             <el-form :model="registerInfo" status-icon :rules="passwordRules" ref="passwordForm" label-width="90px" class="demo-ruleForm">
                 <el-form-item label="密码:" prop="password">
-                    <el-input v-model="registerInfo.password" auto-complete="off"></el-input>
+                    <el-input :type="password1" v-model="registerInfo.password" auto-complete="off" style="width:180px"></el-input>
+                    <span class="show-pwd" @click="showPwd1()">
+                        <svg-icon icon-class="eye" />
+                    </span>
                 </el-form-item>
 
-                <el-form-item label="确认密码:" prop="rePassword">
-                    <el-input v-model="registerInfo.rePassword" auto-complete="off"></el-input>
+                <el-form-item label="确认密码:">
+                    <el-input :type="password2" v-model="rePassword" auto-complete="off" style="width:180px"></el-input>
+                    <span class="show-pwd" @click="showPwd2()">
+                        <svg-icon icon-class="eye" />
+                    </span>
                 </el-form-item>
                 <button type="button" class="account-btn" style="width:100px;margin-right:40px" @click="preFoot">上一步</button>
-                 <button type="button" class="account-btn" style="width:100px" @click="nextFoot">下一步</button>
+                <button type="button" class="account-btn" style="width:100px" @click="nextFoot">下一步</button>
             </el-form>
         </div>
     </div>
@@ -46,16 +52,14 @@
                 <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="registerInfo.email" auto-complete="off"></el-input>
                 </el-form-item>
-                <el-form-item label="验证码:">
-                    <el-input v-model="registerInfo.email" style="width:120px" auto-complete="off"></el-input>
-                    <el-button style="margin-top:-10px">获取验证码</el-button>
+                <el-form-item label="验证码:" prop="validateCode">
+                    <el-input v-model="validateCode" style="width:120px" auto-complete="off"></el-input>
+                    <el-button v-if="isSendCode" style="margin-top:-10px;width:100px" disabled>{{ codeTime}}</el-button>
+                    <el-button v-else style="margin-top:-10px;width:100px" @click="sendCode()">获取验证码</el-button>
                 </el-form-item>
-                 <label><input type="checkbox" name="angree" id="angree" value="1" checked="true" readonly> 我已认真阅读并同意博客屋的<a href="/" class="red-link" target="_blank">《使用协议》</a></label>
-                <button type="button" class="account-btn" style="width:100px;margin-right:40px" @click="preFoot">上一步</button>
-                <button v-if="loading" type="button" class="account-btn" style="width:80px" @click="doRegister()">
-                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                </button>
-                 <button v-else type="button" class="account-btn" style="width:100px" @click="doRegister()">注册</button>
+                <label><input type="checkbox" name="angree" id="angree" value="1" checked="true" readonly> 我已认真阅读并同意博客屋的<a href="/" class="red-link" target="_blank">《使用协议》</a></label>
+                 <button type="button" class="account-btn" style="width:100px;margin-right:40px" @click="preFoot">上一步</button>
+                 <el-button style="width:100px" @click="doRegister()" :disabled="!isSendCode">注册</el-button>
             </el-form>
         </div>
     </div>
@@ -63,7 +67,7 @@
 </template>
 
 <script>
-import { register } from '@/api/login'
+import { register, sendValidateCode, checkValidateCode, checkAccount, checkEmail } from "@/api/login"
 import { addBlog } from '@/api/blog'
 
 export default {
@@ -80,7 +84,13 @@ export default {
                 email: undefined
             },
             validateCode: undefined,
+            isSendCode: false,
             rePassword: undefined,
+            type: 1,
+            codeTime: 60,
+            myTimer: undefined,
+            password1: 'password',
+            password2: 'password',
             accountRules: {
                 account: { required: true, message: '请输入账号', trigger: 'blur' },
                 nickName: { required: true, message: '请输入昵称', trigger: 'blur' },
@@ -91,7 +101,8 @@ export default {
             },
             emailRules: {
                 email: { required: true, message: '请输入注册邮箱', trigger: 'blur' }
-            }
+            },
+            myTimer: undefined
         }
     },
     directives: {
@@ -122,7 +133,15 @@ export default {
             if(this.registerFormShow === 1) {
                 this.$refs['accountForm'].validate((valid) => {
                     if (valid) {
-                        this.registerFormShow++
+                        checkAccount(this.registerInfo.account).then(res => {
+                            this.registerFormShow++
+                        }).catch(res => {
+                            this.$notify.error({
+                                title: "错误",
+                                message: res.status.msg,
+                                type: 'error'
+                            })
+                        })
                     }
                 })
             }
@@ -130,7 +149,13 @@ export default {
             if(this.registerFormShow === 2) {
                 this.$refs['passwordForm'].validate((valid) => {
                     if (valid) {
-                        this.registerFormShow++
+                        console.log(this.registerInfo.password)
+                        console.log(this.rePassword)
+                        if(this.registerInfo.password !== this.rePassword) {
+                            alert("两次密码不一致")
+                        } else {
+                            this.registerFormShow++
+                        }
                     }
                 })
             }
@@ -147,35 +172,83 @@ export default {
             }
             return true
         },
+
+        showPwd1() {
+            if (this.password1 === 'password') {
+                this.password1 = ''
+            } else {
+                this.password1 = 'password'
+            }
+        },
+        showPwd2() {
+            if (this.password2 === 'password') {
+                this.password2 = ''
+            } else {
+                this.password2 = 'password'
+            }
+        },
+
         doRegister() {
             // this.loading = true
-            // if(this.checkFiled()) {
-            //     register(this.registerInfo).then(res => {
-            //         let data = res.data.data
-            //         let token = data.token
-            //         let userInfo = data.user
-            //         //为该用户生成一个博客账号
-            //         addBlog(userInfo.id).then(res => {
-            //             this.$store.dispatch('setToken', token)
-            //             this.$store.dispatch('setUserInfo', userInfo)
-            //             this.$store.commit('SET_ISLOGIN', true)
-            //             this.closeRegisterForm()
-            //             this.$notify.success({
-            //                 title: '成功',
-            //                 message: '注册成功'
-            //             })
-            //         }).catch(() => {
-            //             this.loading = false
-            //         })
-            //     }).catch(() => {
-            //         this.loading = false
-            //         this.$notify.error({
-            //             title: '异常',
-            //             message: '注册失败'
-            //         })
-            //     })
-            // }
+            checkValidateCode(this.registerInfo.email,this.type,this.validateCode).then(res => {
+                register(this.registerInfo).then(res => {
+                    let data = res.data.data
+                    let token = data.token
+                    let userInfo = data.user
+                    //为该用户生成一个博客账号
+                    addBlog(userInfo.id).then(res => {
+                        this.$store.dispatch('setToken', token)
+                        this.$store.dispatch('setUserInfo', userInfo)
+                        this.$store.commit('SET_ISLOGIN', true)
+                        this.closeRegisterForm()
+                        this.$notify.success({
+                            title: '成功',
+                            message: '注册成功'
+                        })
+                    }).catch(() => {
+                        this.loading = false
+                    })
+                }).catch(() => {
+                    this.loading = false
+                    this.$notify.error({
+                        title: '异常',
+                        message: '注册失败'
+                    })
+                })
+            }).catch(() => {
+                alert("验证码错误")
+            })
         },
+
+        sendCode() {
+            if(this.registerInfo.email !== undefined) {
+                sendValidateCode(this.registerInfo.email,this.type).then(res => {
+                    this.isSendCode = true
+                    this.expireTimes()
+                }).catch(res => {
+                    console.log(res)
+                    this.$notify.error({
+                        title: "异常",
+                        message: res.status.msg,
+                        type: 'error'
+                    })
+                })
+            } else {
+                alert("请输入您的邮箱,进行注册验证")
+            }
+        },
+
+         // 定时器函数
+        expireTimes(){
+          let _this = this;
+          this.myTimer = setInterval(function() {
+            _this.codeTime--
+            if(_this.codeTime === 0) {
+                _this.isSendCode = false
+                clearInterval(_this.myTimer)
+            }
+          }, 1000)
+        }
     },
 }
 </script>

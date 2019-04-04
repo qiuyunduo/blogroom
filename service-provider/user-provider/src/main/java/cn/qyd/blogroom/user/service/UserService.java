@@ -19,6 +19,8 @@ public interface UserService {
 
     Boolean logout(Long userId);
 
+    User findByAccount(String account);
+
     User findById(Long id);
 
     User findByEmail(String email);
@@ -36,6 +38,8 @@ public interface UserService {
     Boolean updatePassword(UpdatePwdDto dto);
 
     Boolean sendValidateCode(String email, Integer type);
+
+    Boolean validateCode(String email, Integer type, String code);
 
     Boolean resetPassword(String email, String password);
 

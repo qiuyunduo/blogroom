@@ -2,7 +2,7 @@ package cn.qyd.blogroom.user.enums;
 
 public enum TypeEnum {
     REGISTER(1,"欢迎您注册博客屋账号，若非本人操作请忽略，您的验证码为： "),
-    RESET_PASSWORD(2,"博客屋网站提醒您，您正在进行重置密码操作，若非本人操作请忽略，您的验证码为： "),
+    RESET_PASSWORD(2,"您正在进行重置密码操作，若非本人操作请忽略，您的验证码为： "),
     ;
 
     private Integer code;

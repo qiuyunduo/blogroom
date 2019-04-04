@@ -10,7 +10,7 @@ public enum FrontRespEnum implements CodeAndMessage {
     EMAIL_EXIST(203,"邮箱已经存在"),
     MOBILE_NOT_EXIST(204,"手机号不存在"),
     EMAIL_NOT_EXIST(205,"邮箱不存在"),
-    VERIFICATION_CODE_NOT_NULL(206,"验证码不能为空"),
+    VERIFICATION_CODE_ERROR(206,"验证码错误"),
 
     USER_EXIT(207,"用户名已经存在"),
     LOGIN_TYPE_ERROR(208,"登录类型错误"),

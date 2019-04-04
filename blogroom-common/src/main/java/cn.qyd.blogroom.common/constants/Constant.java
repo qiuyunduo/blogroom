@@ -18,27 +18,26 @@ public class Constant {
     public static final String USER_ID_KEY = "User_Id";
     // 刷新token
     public static final String REFRESH_TOKEN_KEY = "refresh_token";
-    // token 前缀
-    public static final String TOKEN_PREFIX = "Bearer ";
 
+    public static final String PREFIX_REGISTER_EMAIL_VALIDATE_CODE = "register_code_";
+    public static final String PREFIX_RESET_PASSWORD_EMAIL_VALIDATE_CODE = "reset_password_code_";
+//    // token 前缀
+//    public static final String TOKEN_PREFIX = "Bearer ";
+//
+//
+//    public static final String RIPPLE_ERROR = "error";
 
-    public static final String RIPPLE_ERROR = "error";
-
-    //定义线程池大小,默认为(CPU+1)*2
-    public static int Thread_SIZE = (Runtime.getRuntime().availableProcessors() + 1) * 2;
-
-    //设计一个线程池，方便执行线程任务
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    public static ExecutorService executorService = new ThreadPoolExecutor(Thread_SIZE, Thread_SIZE, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
-
-    public static final String LOCALE = "locale";
-    public static final String EN_US = "en_US";
-    public static final String ZH_CN = "zh_CN";
+//    //定义线程池大小,默认为(CPU+1)*2
+//    public static int Thread_SIZE = (Runtime.getRuntime().availableProcessors() + 1) * 2;
+//
+//    //设计一个线程池，方便执行线程任务
+//    @SuppressWarnings({"rawtypes", "unchecked"})
+//    public static ExecutorService executorService = new ThreadPoolExecutor(Thread_SIZE, Thread_SIZE, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
 
     // 验证码发送周期 1分钟
     public static final Long SEND_PERIOD = 60 * 1000L;
     // 验证码有效时间
-    public static final Long CAPTCHA_EXPIRE = 10 * 60 * 1000L;
+    public static final Long CAPTCHA_EXPIRE =  60 * 1000L;
     // 验证码长度
     public static final Integer CAPTCHA_LENGTH = 6;
 

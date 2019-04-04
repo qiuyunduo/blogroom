@@ -136,18 +136,37 @@ public class UserController {
         return Resp.succeed(result);
     }
 
-    @GetMapping("/validateCode")
+    @PostMapping("/send/validateCode")
     @ApiOperation("发送邮箱验证码")
-    public Resp sendRegisterEmialCode(String email,Integer type) {
+    public Resp sendmailCode(String email,Integer type) {
         userService.sendValidateCode(email,type);
         return Resp.succeed();
     }
 
-    @GetMapping("/validateCode/resetPassword")
-    @ApiOperation("重置密码邮箱验证码")
-    public Resp sendResetPwdEmialCode() {
-        String randomNumberString = ToolUtil.getRandomNumberString(6);
-        CaptchaUtil.sendEmail("qiuyunduo@m-chain.com",randomNumberString);
+    @PostMapping("/check/validateCode")
+    @ApiOperation("发送邮箱验证码")
+    public Resp  checkEmailCode(String email,Integer type,String code) {
+        userService.validateCode(email,type,code);
+        return Resp.succeed();
+    }
+
+    @PostMapping("/resetPassword")
+    @ApiOperation("重置密码")
+    public Resp sendResetPwdEmialCode(String email,String password) {
+        userService.resetPassword(email,password);
+        return Resp.succeed();
+    }
+
+    @GetMapping("/checkAccount")
+    @ApiOperation("check Account")
+    public Resp checkRegisterAccount(String account) {
+        userService.findByAccount(account);
+        return Resp.succeed();
+    }
+    @GetMapping("/checkEmail")
+    @ApiOperation("check Email")
+    public Resp checkRegisterEmail(String email) {
+        userService.findByEmail(email);
         return Resp.succeed();
     }
 }

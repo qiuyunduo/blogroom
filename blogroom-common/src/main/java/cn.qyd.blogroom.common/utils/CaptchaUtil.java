@@ -18,24 +18,24 @@ public class CaptchaUtil {
      */
     public static boolean sendEmail(String email, String content) {
 
-        Email emails = Email.create()
-                .from(EMAIL)
-                .to(email)
-                .subject("BlogRoom")
-                .textMessage(content);
-
-        SmtpServer smtpServer = MailServer.create()
-                .host(EMAIL_HOST)
-                .port(EMAIL_PORT)
-                .auth(EMAIL, ToolUtil.emailShouQuanMa)
-                .ssl(true)
-                .buildSmtpMailServer();
-
-
-        SendMailSession session = smtpServer.createSession();
-        session.open();
-        session.sendMail(emails);
-        session.close();
+//        Email emails = Email.create()
+//                .from(EMAIL)
+//                .to(email)
+//                .subject("BlogRoom")
+//                .textMessage(content);
+//
+//        SmtpServer smtpServer = MailServer.create()
+//                .host(EMAIL_HOST)
+//                .port(EMAIL_PORT)
+//                .auth(EMAIL, ToolUtil.emailShouQuanMa)
+//                .ssl(true)
+//                .buildSmtpMailServer();
+//
+//
+//        SendMailSession session = smtpServer.createSession();
+//        session.open();
+//        session.sendMail(emails);
+//        session.close();
 
         return true;
     }
