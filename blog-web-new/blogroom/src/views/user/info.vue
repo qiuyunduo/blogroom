@@ -63,7 +63,7 @@
 
         <!-- 修改头像对话框 -->
         <el-dialog :title="'修改头像'" :visible.sync="imageDialog">
-            <div style="padding-left:300px;padding-top:50px;background:#f3f3f3">
+            <div style="padding-left:25%;padding-top:50px;background:#f3f3f3">
                 <div>
                     <el-upload
                     class="avatar-uploader"
@@ -84,11 +84,11 @@
 
         <!-- 编辑对话框 -->
         <el-dialog :title="'修改信息'" :visible.sync="updateDialog">
-            <el-form :rules="rules" :model="updateInfo" status-icon label-position="left" label-width="100px" style="width: 400px; margin-left:50px;">
-                <el-form-item label="昵称" prop="nickName">
+            <el-form :rules="rules" :model="updateInfo" status-icon label-position="left" label-width="100px" style="width: 80%; margin-left:50px;">
+                <el-form-item label="昵称"  style="width:100%" prop="nickName">
                     <el-input v-model="updateInfo.nickName"/>
                 </el-form-item>
-                <el-form-item label="性别" prop="sex">
+                <el-form-item label="性别" style="width:100%" prop="sex">
                     <el-select v-model="updateInfo.sex">
                         <el-option :value="0" label=" "/>
                         <el-option :value="1" label="男"/>
@@ -105,10 +105,10 @@
                     <el-input v-model="updateInfo.occupation"/>
                 </el-form-item>
                 <el-form-item label="简介" prop="description">
-                    <textarea v-model="updateInfo.description" style="height:100px;width:500px" placeholder="简单的介绍一下自己吧!..."/>
+                    <textarea v-model="updateInfo.description" style="height:100px;width:100%" placeholder="简单的介绍一下自己吧!..."/>
                 </el-form-item>
             </el-form>
-            <div slot="footer" class="dialog-footer">
+            <div slot="footer" class="dialog-footer" style="padding-right:40%">
                 <el-button @click="updateDialog = false">取消</el-button>
                 <el-button type="primary" @click="updateData">确定</el-button>
             </div>

@@ -5,15 +5,16 @@
 
             <div class="row">
                 <el-menu
-                style="width: 300px;height:800px;float:left;background-color:#EDEDED"
+                style="width: 15%;background-color:#EDEDED;position:fixed"
                 background-color="#EDEDED"
                 text-color="blank"
                 :default-active="activeIndex"
+                unique-opened
                 router
                 >
                 <NavMenu :navMenus="menuData"></NavMenu>
                 </el-menu>
-                <div style="float:left;width:1600px;margin-left:-200px">
+                <div style="float:left;width:100%;">
                 <router-view/>
                 </div>
             </div>

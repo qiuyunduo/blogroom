@@ -4,13 +4,13 @@
 
     <!-- 查询和其他操作 -->
     <div class="filter-container">
-      <el-input v-model="listQuery.blogId" clearable class="filter-item" style="width: 200px" placeholder="博客id"/>
-      <el-input v-model="listQuery.articleId" clearable class="filter-item" style="width: 200px" placeholder="文章id"/>
-      <el-select v-model="listQuery.type" style="width: 200px" class="filter-item" placeholder="积分变动类型">
+      <el-input v-model="listQuery.blogId" clearable class="filter-item" style="width: 100px" placeholder="博客id"/>
+      <el-input v-model="listQuery.articleId" clearable class="filter-item" style="width: 100px" placeholder="文章id"/>
+      <el-select v-model="listQuery.type" style="width: 150px" class="filter-item" placeholder="积分变动类型">
         <el-option v-for="(key, value) in typeMap" :key="key" :label="key" :value="value"/>
       </el-select>
-      <el-date-picker v-model="listQuery.startTime" type="datetime" placeholder="开始日期" value-format="yyyy-MM-dd HH:mm:SS"/>
-      <el-date-picker v-model="listQuery.endTime" type="datetime" placeholder="结束日期" value-format="yyyy-MM-dd HH:mm:SS" />
+      <el-date-picker v-model="listQuery.startTime" type="datetime" style="width: 150px" placeholder="开始日期" value-format="yyyy-MM-dd HH:mm:SS"/>
+      <el-date-picker v-model="listQuery.endTime" type="datetime" style="width: 150px" placeholder="结束日期" value-format="yyyy-MM-dd HH:mm:SS" />
       <el-button class="filter-item" type="primary" icon="el-icon-search" @click="queryAll" style="margin-left: 20px;margin-top: -10px">查找</el-button>
       <el-button class="filter-item" type="primary" @click="resetQuery" style="margin-left: 20px;margin-top: -10px">重置</el-button>
     </div>

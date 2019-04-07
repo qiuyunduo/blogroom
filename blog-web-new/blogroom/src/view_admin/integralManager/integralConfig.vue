@@ -1,7 +1,7 @@
 <template>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
         <h1 class="page-header">博客积分配置管理 </h1>
-        <div class="table-responsive" style="width:1400px">
+        <div class="table-responsive" style="width:100%">
             <div class="filter-container">
                 <!-- <el-button class="filter-item" type="primary" @click="toAdd" style="margin-left: 20px;margin-bottom:10px">添加</el-button> -->
             </div>

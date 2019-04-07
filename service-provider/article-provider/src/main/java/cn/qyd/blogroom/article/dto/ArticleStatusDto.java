@@ -21,6 +21,6 @@ public class ArticleStatusDto {
     private Boolean addComments;
     @ApiModelProperty("文章评论数是否-1")
     private Boolean removeComments;
-    @ApiModelProperty("文章状态(0.保存为草稿1.提交审核2.审核成功发布3.审核失败)")
-    private Integer status;
+//    @ApiModelProperty("文章状态(0.保存为草稿1.提交审核2.审核成功发布3.审核失败)")
+//    private Integer status;
 }

@@ -4,7 +4,7 @@
             <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">登录</div>
 
-            <el-form :model="loginInfo" status-icon ref="loginForm"  label-width="60px" class="demo-ruleForm">
+            <el-form :model="loginInfo" ref="loginForm"  label-width="60px" class="demo-ruleForm">
                 <el-form-item label="账号:" prop="account">
                     <el-input v-model="loginInfo.account" auto-complete="off" class="account-input" v-focus></el-input>
                 </el-form-item>
@@ -24,7 +24,7 @@
             <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">重置密码(验证邮箱)</div>
 
-            <el-form status-icon ref="emailForm" label-width="70px" class="demo-ruleForm">
+            <el-form ref="emailForm" label-width="70px" class="demo-ruleForm">
                 <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="email" auto-complete="off"></el-input>
                 </el-form-item>
@@ -44,7 +44,7 @@
             <a @click="closeLoginForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">重置密码(设置新密码)</div>
 
-            <el-form  status-icon ref="passwordForm" label-width="90px" class="demo-ruleForm">
+            <el-form  ref="passwordForm" label-width="90px" class="demo-ruleForm">
                 <el-form-item label="密码:" prop="password">
                     <el-input :type="password1" v-model="password" style="width:180px" auto-complete="off"></el-input>
                     <span class="show-pwd" @click="showPwd1()">
@@ -84,12 +84,6 @@ export default {
             password1: 'password',
             password2: 'password',
             codeTime: 60,
-            // rules: {
-            //     account: undefined,
-            //     password: undefined,
-            //     email: { required: true, message: '请输入邮箱', trigger: 'blue'},
-            //     validateCode: { required: true, message: '请输入验证码', trigger: 'blue'},
-            // },
             myTimer: undefined,
         }
     },
@@ -113,37 +107,42 @@ export default {
             this.loginFormShow = 0
         },
         doLogin() {
-            // this.rules.account = { required: true, message: '请输入账号', trigger: 'blur'}
-            // this.rules.password = { required: true, message: '请输入账号密码', trigger: 'blur'}
-            // this.$refs['loginForm'].validate((valid) => {
-            //     if (valid) {
-                console.log(this.loginInfo)
-                if(this.loginInfo.account !== undefined || this.loginInfo.password !== undefined) {
-                    login(this.loginInfo).then(response => {
-                        let data = Object.assign({},response.data.data)
-                        let token = data.token
-                        let userInfo = data.user
-                        this.$store.dispatch('setToken', token)
-                        this.$store.dispatch('setUserInfo', userInfo)
-                        this.$store.commit('SET_ISLOGIN', true)
-                        this.closeLoginForm()
-                        this.$notify.success({
-                            title: '成功',
-                            message: '登录成功',
-                            duration: 1 * 1000
-                        })
-                        window.setTimeout("location.reload()",700);
-                    }).catch(response => {
-                        this.$notify.error({
-                            title: '登录失败',
-                            message: response.status.msg,
-                            duration: 1 * 1000
-                        })
+            if(this.checkLoginFiled()){
+                login(this.loginInfo).then(response => {
+                    let data = Object.assign({},response.data.data)
+                    let token = data.token
+                    let userInfo = data.user
+                    this.$store.dispatch('setToken', token)
+                    this.$store.dispatch('setUserInfo', userInfo)
+                    this.$store.commit('SET_ISLOGIN', true)
+                    this.closeLoginForm()
+                    this.$notify.success({
+                        title: '成功',
+                        message: '登录成功',
+                        duration: 1 * 1000
                     })
-                } else{
-                    alert("账号或密码不能为空")
-                }
-            // })
+                    window.setTimeout("location.reload()",700);
+                }).catch(response => {
+                    this.$notify.error({
+                        title: '登录失败',
+                        message: response.status.msg,
+                        duration: 1 * 1000
+                    })
+                })
+            }
+        },
+        checkLoginFiled() {
+            let account = this.loginInfo.account
+            let password = this.loginInfo.password
+            if(account === undefined || account === null || account === '') {
+                alert("请输入账号")
+                return false
+            }
+            if(password === undefined || password === null || password === '') {
+                alert("请输入账号密码")
+                return false
+            }
+            return true
         },
         resetLoginInfo() {
             this.loginInfo.account = undefined
@@ -153,7 +152,7 @@ export default {
             this.loginFormShow = 2
         },
         sendCode() {
-            if(this.email !== undefined) {
+            if(this.checkEmail()){
                 sendValidateCode(this.email,this.type).then(res => {
                     this.isSendCode = true
                     this.expireTimes()
@@ -164,12 +163,28 @@ export default {
                         type: 'error'
                     })
                 })
-            } else {
-                alert("请输入邮箱")
             }
         },
+        checkEmail() {
+            let email = this.email
+            if(email === undefined || email === null || email ==='') {
+                alert("请输入邮箱")
+                return false
+            }
+            let regex = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
+            if(!regex.test(this.email)) {
+                alert("请输入正确的邮箱")
+                return false
+            }
+
+            return true
+        },
         validateEven() {
-            if(this.email !== undefined && this.validateCode !== undefined) {
+            if(this.checkEmail()){
+                if(this.validateCode === undefined) {
+                    alert("请输入验证码")
+                    return
+                }
                 checkValidateCode(this.email,this.type,this.validateCode).then(res => {
                     this.loginFormShow = 3
                 }).catch(res => {
@@ -179,9 +194,7 @@ export default {
                         type: 'error'
                     })
                 })
-            } else {
-                alert("请输入验证码")
-            }  
+            }
         },
 
         showPwd1() {
@@ -199,8 +212,26 @@ export default {
             }
         },
 
+        checkPassword() {
+            if(this.password === undefined) {
+                alert("请输入新的密码")
+                return false
+            }
+            if(this.rePassword === undefined) { 
+                alert("请输入确认密码")
+                return false
+            }
+
+            if(this.rePassword !== this.password){
+                alert("两次密码不一致")
+                return false
+            }
+
+            return true
+        },
+
         sureReset() {
-            if(this.password !== undefined && this.rePassword === this.password) {
+            if(this.checkPassword()){
                 resetPwd(this.email,this.password).then(res => {
                     this.$confirm('重置密码成功,是否去登录', '提示', {
                         confirmButtonText: '确定',
@@ -215,10 +246,7 @@ export default {
                 }).catch(res => {
                     console.error("重置密码失败")
                 })
-            } else{
-                alert("两次密码不一致")
-            }
-            
+            } 
         },
 
         // 定时器函数
@@ -236,3 +264,4 @@ export default {
     }
 }
 </script>
+

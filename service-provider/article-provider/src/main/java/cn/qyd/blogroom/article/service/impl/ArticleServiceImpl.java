@@ -33,6 +33,8 @@ public class ArticleServiceImpl implements ArticleService {
     public Article save(ArticleDto dto) {
         LocalDateTime now = LocalDateTime.now();
         Article article = new Article();
+        article.setAddTime(now);
+        article.setUpdateTime(now);
         article.setClassId(dto.getClassId())
                 .setUserId(dto.getUserId())
                 .setAuthor(dto.getAuthor())
@@ -44,8 +46,7 @@ public class ArticleServiceImpl implements ArticleService {
                 .setComments(0)
                 .setThumbs(0)
                 .setStatus(dto.getStatus())
-                .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
-                .setUpdateTime(now);
+                .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null);
         Article result = articleDao.save(article);
         return result;
     }
@@ -87,7 +88,14 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Boolean update(ArticleDto dto) {
+        LocalDateTime now = LocalDateTime.now();
         Article article = findById(dto.getId());
+        if(dto.getStatus() == 1) {
+            article.setSubmitTime(now);
+        }
+        if(dto.getStatus() == 2) {
+            article.setPublishTime(now);
+        }
         article.setId(dto.getId());
         article.setClassId(dto.getClassId())
                 .setTitle(dto.getTitle())
@@ -96,7 +104,6 @@ public class ArticleServiceImpl implements ArticleService {
                 .setKeyword(dto.getKeyword())
                 .setContent(dto.getContent())
                 .setStatus(dto.getStatus())
-                .setSubmitTime(dto.getStatus() == 1 ? LocalDateTime.now() : null)
                 .setUpdateTime(LocalDateTime.now());
 
         articleDao.save(article);
@@ -118,14 +125,14 @@ public class ArticleServiceImpl implements ArticleService {
         if(statusDto.getRemoveThumbs() != null && statusDto.getRemoveThumbs()) {
             article.setThumbs(article.getThumbs() - 1);
         }
-
-        if(statusDto.getStatus() != null){
-            article.setStatus(statusDto.getStatus());
-            if(statusDto.getStatus() == 2) {
-                article.setPublishTime(LocalDateTime.now());
-
-            }
-        }
+//
+//        if(statusDto.getStatus() != null){
+//            article.setStatus(statusDto.getStatus());
+//            if(statusDto.getStatus() == 2) {
+//                article.setPublishTime(LocalDateTime.now());
+//
+//            }
+//        }
 
         articleDao.save(article);
         return true;

@@ -1,7 +1,7 @@
 <template>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
         <h1 class="page-header">博客等级管理 </h1>
-        <div class="table-responsive" style="width:1400px">
+        <div class="table-responsive" style="width:100%">
         <!-- 查询结果 -->
             <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
             <el-table-column align="center" width="100px" label="ID" prop="id"/>

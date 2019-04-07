@@ -7,9 +7,9 @@ public enum FrontRespEnum implements CodeAndMessage {
      */
     REGISTER_TYPE_ERROR(201,"注册类型错误"),
     ACCOUNT_EXIST(202,"账号已经存在"),
-    EMAIL_EXIST(203,"邮箱已经存在"),
+    EMAIL_EXIST(203,"邮箱已经注册"),
     MOBILE_NOT_EXIST(204,"手机号不存在"),
-    EMAIL_NOT_EXIST(205,"邮箱不存在"),
+    EMAIL_NOT_EXIST(205,"邮箱未注册"),
     VERIFICATION_CODE_ERROR(206,"验证码错误"),
 
     USER_EXIT(207,"用户名已经存在"),

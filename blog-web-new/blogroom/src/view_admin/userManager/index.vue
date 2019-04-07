@@ -15,7 +15,7 @@
 
     <!-- 查询结果 -->
     <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
-      <el-table-column align="center" width="100px" label="ID" prop="id"/>
+      <el-table-column align="center" width="60px" label="ID" prop="id"/>
       <el-table-column align="center" width="100px" label="账号" prop="account"/>
       <el-table-column align="center" width="100px" label="昵称" prop="nickName"/>
       <el-table-column align="center" label="头像" prop="headImage">
@@ -38,7 +38,7 @@
       </el-table-column>
       <el-table-column align="center" label="注册时间" prop="addTime"/>
       <el-table-column align="center" label="最近登录ip" prop="lastLoginIp"/>
-      <el-table-column align="center" label="操作" width="200" class-name="small-padding fixed-width">
+      <el-table-column align="center" label="操作" width="150" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button type="primary" size="mini" @click="getDetail(scope.row)">详情</el-button>
           <el-button v-if="scope.row.status === 0" type="primary" size="mini" @click="updateStatus(scope.row,1)">禁用</el-button>

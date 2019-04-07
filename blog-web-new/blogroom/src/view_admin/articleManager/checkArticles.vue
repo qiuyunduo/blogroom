@@ -1,7 +1,7 @@
 <template>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
     <h1 class="page-header">已审核文章管理 </h1>
-    <div class="table-responsive" style="width:1400px">
+    <div class="table-responsive" style="width:100%">
       <!-- 查询和其他操作 -->
       <div class="filter-container">
         <el-input v-model="listQuery.title" clearable class="filter-item" style="width: 200px" placeholder="文章标题"/>
@@ -16,9 +16,9 @@
 
       <!-- 查询结果 -->
       <el-table v-loading="listLoading" :data="list" size="small" element-loading-text="正在查询中。。。" border fit highlight-current-row>
-        <el-table-column align="center" width="100px" label="ID" prop="id"/>
+        <el-table-column align="center"  label="ID" prop="id"/>
 
-        <el-table-column align="center" width="300px" label="标题" prop="title"/>
+        <el-table-column align="center" label="标题" prop="title"/>
 
         <el-table-column align="center" label="作者" prop="author"/>
 
@@ -37,14 +37,19 @@
         <el-table-column align="center" label="发布时间" prop="publishTime"/>
 
         <el-table-column align="center" label="状态" prop="status">
-          <template>
-            <el-tag>已发布</el-tag>
+          <template slot-scope="scope">
+            <el-tag>{{ statusMap[scope.row.status] }}</el-tag>
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="操作" width="300" class-name="small-padding fixed-width">
+        <el-table-column align="center" label="操作" width="70px" class-name="small-padding fixed-width">
           <template slot-scope="scope">
             <el-button type="primary" size="mini"><a :href="'/article/'+scope.row.id" style="color: white;text-decoration:none" target="_blank">查看</a></el-button>
+          </template>
+        </el-table-column>
+
+        <el-table-column align="center" label="操作" width="150px" class-name="small-padding fixed-width">
+          <template slot-scope="scope">
             <el-button type="primary" size="mini" @click="getDetail(scope.row.id)">编辑</el-button>
             <el-button type="primary" size="mini" @click="delArticle(scope.row)">删除</el-button>
           </template>
@@ -63,9 +68,9 @@ import { getAllClass } from '@/api/articleClass'
 import { Message } from 'element-ui'
 
 const statusMap = {
-  0: '待审核',
-  1: '审核通过',
-  2: '审核失败'
+  0: '草稿',
+  1: '待审核',
+  2: '已发布'
 }
 
 export default {

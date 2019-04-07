@@ -4,7 +4,7 @@
         <div class="pop-wp" style="left: 50%;width:300px;height:230px">
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册</div>
-            <el-form :model="registerInfo" status-icon :rules="accountRules" ref="accountForm" label-width="60px" class="demo-ruleForm">
+            <el-form :model="registerInfo" ref="accountForm" label-width="60px" class="demo-ruleForm">
                 <el-form-item label="账号:" prop="account">
                     <el-input v-model="registerInfo.account" auto-complete="off" v-focus></el-input>
                 </el-form-item>
@@ -23,7 +23,7 @@
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册(填写密码)</div>
 
-            <el-form :model="registerInfo" status-icon :rules="passwordRules" ref="passwordForm" label-width="90px" class="demo-ruleForm">
+            <el-form :model="registerInfo" ref="passwordForm" label-width="90px" class="demo-ruleForm">
                 <el-form-item label="密码:" prop="password">
                     <el-input :type="password1" v-model="registerInfo.password" auto-complete="off" style="width:180px"></el-input>
                     <span class="show-pwd" @click="showPwd1()">
@@ -48,7 +48,7 @@
             <a @click="closeRegisterForm()" rel="nofollow" title="关闭" class="pop-close" href="javascript:;" style="cursor:default">×</a>
             <div class="pop-title">注册(验证邮箱)</div>
 
-            <el-form :model="registerInfo" status-icon :rules="emailRules" ref="emailForm" label-width="60px" class="demo-ruleForm">
+            <el-form :model="registerInfo" ref="emailForm" label-width="60px" class="demo-ruleForm">
                 <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="registerInfo.email" auto-complete="off"></el-input>
                 </el-form-item>
@@ -80,7 +80,6 @@ export default {
                 account: undefined,
                 nickName: undefined,
                 password: undefined,
-                rePassword: undefined,
                 email: undefined
             },
             validateCode: undefined,
@@ -91,17 +90,6 @@ export default {
             myTimer: undefined,
             password1: 'password',
             password2: 'password',
-            accountRules: {
-                account: { required: true, message: '请输入账号', trigger: 'blur' },
-                nickName: { required: true, message: '请输入昵称', trigger: 'blur' },
-            },
-            passwordRules: {
-                password: { required: true, message: '请输入账号密码', trigger: 'blur' },
-                rePassword: { required: true, message: '请输入确认密码', trigger: 'blur' },
-            },
-            emailRules: {
-                email: { required: true, message: '请输入注册邮箱', trigger: 'blur' }
-            },
             myTimer: undefined
         }
     },
@@ -129,50 +117,55 @@ export default {
         preFoot() {
             this.registerFormShow--
         },
-        nextFoot() { 
+         nextFoot() { 
             if(this.registerFormShow === 1) {
-                this.$refs['accountForm'].validate((valid) => {
-                    if (valid) {
-                        checkAccount(this.registerInfo.account).then(res => {
-                            this.registerFormShow++
-                        }).catch(res => {
-                            this.$notify.error({
-                                title: "错误",
-                                message: res.status.msg,
-                                type: 'error'
-                            })
-                        })
-                    }
-                })
+                this.checkFirst()
             }
 
             if(this.registerFormShow === 2) {
-                this.$refs['passwordForm'].validate((valid) => {
-                    if (valid) {
-                        console.log(this.registerInfo.password)
-                        console.log(this.rePassword)
-                        if(this.registerInfo.password !== this.rePassword) {
-                            alert("两次密码不一致")
-                        } else {
-                            this.registerFormShow++
-                        }
-                    }
-                })
+                this.checkSecond()
             }
             
         },
-        checkFiled() {
-            if(this.registerInfo.password !== this.rePassword) {
-                this.$notify.error({
-                    title: '参数错误',
-                    message: '确认密码出错'
-                })
-                this.loading = false
-                return false
+        checkFirst() {
+            let account = this.registerInfo.account
+            if(account === undefined || account === null || account === ''){
+                alert("请输入注册账号，用于您今后的登录")
+                return
             }
-            return true
+            let nickName = this.registerInfo.nickName
+            if(nickName === undefined || nickName === null || nickName === '') {
+                alert("请输入您的昵称")
+                return
+            }
+            checkAccount(this.registerInfo.account).then(res => {
+                this.registerFormShow++
+            }).catch(res => {
+                this.$notify.error({
+                    title: "错误",
+                    message: res.status.msg,
+                    type: 'error'
+                })
+            })
         },
+        checkSecond() {
+            let password = this.registerInfo.password
+            if(password === undefined || password === null || password === '') {
+                alert("请输入您的密码")
+                return
+            }
+            let rePassword = this.rePassword
+            if(rePassword === undefined || rePassword === null || rePassword === '') {
+                alert("请输入确认密码")
+                return
+            }
 
+            if(this.registerInfo.password !== this.rePassword) {
+               alert("两次密码不一致")
+               return
+            }
+            this.registerFormShow++
+        },
         showPwd1() {
             if (this.password1 === 'password') {
                 this.password1 = ''
@@ -189,39 +182,67 @@ export default {
         },
 
         doRegister() {
-            // this.loading = true
-            checkValidateCode(this.registerInfo.email,this.type,this.validateCode).then(res => {
-                register(this.registerInfo).then(res => {
-                    let data = res.data.data
-                    let token = data.token
-                    let userInfo = data.user
-                    //为该用户生成一个博客账号
-                    addBlog(userInfo.id).then(res => {
-                        this.$store.dispatch('setToken', token)
-                        this.$store.dispatch('setUserInfo', userInfo)
-                        this.$store.commit('SET_ISLOGIN', true)
-                        this.closeRegisterForm()
-                        this.$notify.success({
-                            title: '成功',
-                            message: '注册成功'
+            if(this.beforeRegister()){
+                checkValidateCode(this.registerInfo.email,this.type,this.validateCode).then(res => {
+                    register(this.registerInfo).then(res => {
+                        let data = res.data.data
+                        let token = data.token
+                        let userInfo = data.user
+                        //为该用户生成一个博客账号
+                        addBlog(userInfo.id).then(res => {
+                            this.$store.dispatch('setToken', token)
+                            this.$store.dispatch('setUserInfo', userInfo)
+                            this.$store.commit('SET_ISLOGIN', true)
+                            this.closeRegisterForm()
+                            this.$notify.success({
+                                title: '成功',
+                                message: '注册成功'
+                            })
+                        }).catch(() => {
+                            this.loading = false
                         })
                     }).catch(() => {
                         this.loading = false
+                        this.$notify.error({
+                            title: '异常',
+                            message: '注册失败'
+                        })
                     })
                 }).catch(() => {
-                    this.loading = false
-                    this.$notify.error({
-                        title: '异常',
-                        message: '注册失败'
-                    })
+                    alert("验证码错误")
                 })
-            }).catch(() => {
-                alert("验证码错误")
-            })
+            }
+        },
+
+        beforeRegister() {
+            if(checkEmail()) {
+                let code = this.validateCode
+                if(code === undefined || code === null || code === '') {
+                    alert("请输入您的验证码")
+                    return false
+                }
+            }
+
+            return true
+        },
+
+        checkEmail() {
+            let email = this.registerInfo.email
+            if(email === undefined || email === null || email === '') {
+                alert("请输入注册邮箱")
+                return false
+            }
+            // console.log(this.registerInfo)
+            let regex = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
+            if(!regex.test(email)) {
+                alert("请输入正确的邮箱格式")
+                return false
+            }
+            return true
         },
 
         sendCode() {
-            if(this.registerInfo.email !== undefined) {
+            if(this.checkEmail()) {
                 sendValidateCode(this.registerInfo.email,this.type).then(res => {
                     this.isSendCode = true
                     this.expireTimes()
@@ -233,9 +254,7 @@ export default {
                         type: 'error'
                     })
                 })
-            } else {
-                alert("请输入您的邮箱,进行注册验证")
-            }
+            } 
         },
 
          // 定时器函数

@@ -4,30 +4,28 @@
 
       <div class="myLeftDiv">
         <el-form-item label="文章标题：" prop="title">
-          <el-input v-model="newArticle.title" clearable class="filter-item" style="width: 1000px;" placeholder="文章标题"/>
+          <el-input v-model="newArticle.title" clearable class="filter-item" style="width: 100%;" placeholder="文章标题"/>
         </el-form-item>
 
         <el-form-item label="文章内容：" >
-          <div id="editor" type="text/plain" style="width:1000px;height:450px"></div>
+          <div id="editor" type="text/plain" style="width:100p%;height:450px"></div>
         </el-form-item>
 
         <el-form-item label="文章标签：" prop="keyword">
-        <el-input v-model="newArticle.keyword" clearable class="filter-item" style="width: 1000px;" placeholder="关键字，多个标签请用英文逗号；隔开"/>
+        <el-input v-model="newArticle.keyword" clearable class="filter-item" style="width: 100%;" placeholder="关键字，多个标签请用英文逗号；隔开"/>
         </el-form-item>
       </div>
 
     
 
       <div class="myRightDiv">
-          <el-form-item style="margin-top:270px;width:500px;height:100px">
-            <label class="el-form-item__label" style="text-align:left;float: none;">文章栏目：</label>
-            <el-select v-model="newArticle.classId" style="width: 300px;" placeholder="文章分类">
+          <el-form-item label="文章栏目：">
+            <el-select v-model="newArticle.classId" style="" placeholder="文章分类">
               <el-option v-for="index in mapLength" :key="index" :label="classMap[index-1].name" :value="classMap[index-1].id"/>
             </el-select>
           </el-form-item>
 
-          <el-form-item style="width:500px;height:100px"  prop="headPhoto">
-            <label class="el-form-item__label" style="float: none;display:inline;text-align:left">标题图片：</label>
+          <el-form-item  label="标题图片：" prop="headPhoto">
             <el-upload
             class="avatar-uploader"
             :action="uploadPath"
@@ -40,11 +38,11 @@
             </el-upload>
           </el-form-item>
 
-          <el-form-item style="margin-left: 100px;margin-top:450px">
+          <el-form-item style="margin-top:50%">
             <el-button type="danger" @click="save(0)">保存为草稿</el-button>
             <el-button type="danger" @click="save(1)">发布博客</el-button>
           </el-form-item>
-      </div>
+      </div>1070
     </el-form>
 
   </div>
@@ -181,15 +179,15 @@ export default {
 </script>
 <style scoped>
 .myLeftDiv{
-  width:500px;
-  height: 805px;
-  margin-left:200px
+  width:60%;
+  height: 100%;
+  margin-left:5%
 }
 .myRightDiv{
-  width:500px;
-  height: 773px;
-  margin-left: 1300px;
-  margin-top: -1070px;
+  position:absolute;
+  width:50%;
+  margin-left: 65%;
+  margin-top: -61%;
 }
 
 .avatar-uploader .el-upload {

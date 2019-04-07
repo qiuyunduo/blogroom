@@ -11,7 +11,7 @@
             <div class="form-group">
               <label for="article-title" class="sr-only">标题</label>
               <el-form-item prop="title">
-                <el-input v-model="newArticle.title" clearable class="filter-item" style="width: 970px;" placeholder="文章标题" autofocus/>
+                <el-input v-model="newArticle.title" clearable class="filter-item" style="width: 100%;" placeholder="文章标题" autofocus/>
               </el-form-item>
             </div>
             <div class="form-group">
@@ -22,7 +22,7 @@
               <h2 class="add-article-box-title"><span>文章标签</span></h2>
               <div class="add-article-box-content" style="height:80px">
                 <el-form-item prop="keyword">
-                  <el-input v-model="newArticle.keyword" clearable class="filter-item" style="width: 950px;" placeholder="关键字，多个标签请用英文逗号；隔开"/>
+                  <el-input v-model="newArticle.keyword" clearable class="filter-item" style="width:100%;" placeholder="关键字，多个标签请用英文逗号；隔开"/>
                 </el-form-item>
               </div>
             </div>
@@ -31,10 +31,10 @@
           <div class="col-md-3">
             <h1 class="page-header">操作</h1>
             <div>
-              <h2 class="add-article-box-title"><span>栏目</span></h2>
+              <!-- <h2 class="add-article-box-title"><span>栏目</span></h2> -->
                 
-                <el-form-item style="width:500px;height:100px" prop="classId">
-                  <el-select v-model="newArticle.classId" style="width: 300px" placeholder="文章分类">
+                <el-form-item style="width:100%;height:80px" prop="classId">
+                  <el-select v-model="newArticle.classId"  placeholder="文章分类">
                     <el-option v-for="index in mapLength" :key="index" :label="classMap[index-1].name" :value="classMap[index-1].id" style="padding-left:20px"/>
                   </el-select>
                 </el-form-item>
@@ -44,7 +44,7 @@
               <h2 class="add-article-box-title">
                 <span>标题图片</span>
               </h2>
-              <el-form-item style="width:300px;height:100px"  prop="headPhoto">
+              <el-form-item  prop="headPhoto">
                 <el-upload
                 class="avatar-uploader"
                 :action="uploadPath"
@@ -59,10 +59,10 @@
             </div>
 
             <div>
-              <el-form-item style="margin-left: 20px;margin-top:400px">
+              <el-form-item style="margin-top:400px">
                 <el-button v-show="newArticle.status === 1" style="width: 80px;border-radius:4px" @click="save(2)">同意发布</el-button>
                 <el-button v-show="newArticle.status !== undefined" style="width: 80px;border-radius:4px;" @click="save()">保存修改</el-button>
-                <el-button style="width: 80px;border-radius:4px" @click="goback()">返回</el-button>
+                <el-button style="width: 50px;border-radius:4px" @click="goback()">返回</el-button>
               </el-form-item>
             </div>
           </div>
@@ -176,10 +176,10 @@ export default {
                     duration: 2 * 1000
                   })
                 }).catch(() => { console.error("增加积分出错")　})
-                this.updateArticle()
+                this.updateArticle(status)
               }).catch(() => {})
             } else {
-              this.updateArticle()
+              this.updateArticle(status)
             }
           }
         } else {
@@ -187,9 +187,10 @@ export default {
         }
       })
     },
-    updateArticle(){
+    updateArticle(status){
       updateOne(this.newArticle).then(response => {
         let article = response.data.data
+        let now = this.timeFormate(new Date)
         if(status === undefined) {
           Message({
             message: "文章更新已保存: "+now,
@@ -269,14 +270,14 @@ export default {
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
-  width: 300px;
-  height: 300px;
-  line-height: 300px;
+  width: 750%;
+  height: 200px;
+  line-height: 200px;
   text-align: center;
 }
 .avatar {
-  width: 300px;
-  height: 300px;
+  width: 230px;
+  height: 200px;
   display: block;
 }
 </style>
