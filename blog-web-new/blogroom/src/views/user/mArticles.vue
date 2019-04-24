@@ -15,7 +15,7 @@
 
             </div>
             <div class="content-wrap">
-                <div class="content">
+                <div class="content" style="margin-bottom:50px">
                     <!--所有文章和分页；-->
                     <div class="blankA" v-if="total === 0"></div>
                     <simple-article v-for="index in pageSize" :key="index" v-bind="list[index-1]" style="width: 100%;padding:20px;margin-top:5px">

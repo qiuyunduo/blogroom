@@ -38,7 +38,7 @@
             </el-upload>
           </el-form-item>
 
-          <el-form-item style="margin-top:50%">
+          <el-form-item style="margin-top:30%">
             <el-button v-show="newArticle.status === 0" type="danger" @click="save(1)">发布博客</el-button>
             <el-button type="danger" @click="save()">保存修改</el-button>
             <el-button @click="goback()">返回</el-button>
@@ -206,7 +206,7 @@ export default {
   position:absolute;
   width:50%;
   margin-left: 65%;
-  margin-top: -61%;
+  margin-top: -41%;
 }
 
 .avatar-uploader .el-upload {

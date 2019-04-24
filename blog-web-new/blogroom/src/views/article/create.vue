@@ -38,11 +38,11 @@
             </el-upload>
           </el-form-item>
 
-          <el-form-item style="margin-top:50%">
+          <el-form-item style="margin-top:30%">
             <el-button type="danger" @click="save(0)">保存为草稿</el-button>
             <el-button type="danger" @click="save(1)">发布博客</el-button>
           </el-form-item>
-      </div>1070
+      </div>
     </el-form>
 
   </div>
@@ -187,7 +187,7 @@ export default {
   position:absolute;
   width:50%;
   margin-left: 65%;
-  margin-top: -61%;
+  margin-top: -41%;
 }
 
 .avatar-uploader .el-upload {
