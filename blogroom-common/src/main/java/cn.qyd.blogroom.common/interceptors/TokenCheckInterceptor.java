@@ -29,6 +29,11 @@ public class TokenCheckInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+//        System.out.println("进入TokenCheckInterceptor");
+//        if(request.getMethod().equals("OPTIONS")) {
+//            response.setStatus(response.SC_OK);
+//            return true;
+//        }
         String token = HeaderUtil.getUserToken();
         Long userId;
         if(StringUtils.isEmpty(token)){

@@ -14,8 +14,6 @@
     <modules>
         <module>server-eureka</module>
         <module>server-gateway</module>
-        <module>server-hystrix</module>
-        <module>server-zipkin</module>
     </modules>
 
 </project>

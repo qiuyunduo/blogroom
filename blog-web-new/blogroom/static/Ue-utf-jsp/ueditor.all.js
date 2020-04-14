@@ -24552,11 +24552,6 @@ UE.plugin.register('simpleupload', function (){
                     }
                 }
 
-                function test() {
-                    alert("Sdsd")
-                    alert(JSON.stringify(me.document.getElementById(loadingId)));
-                }
-
                 /* 判断后端配置是否没有加载成功 */
                 if (!me.getOpt('imageActionName')) {
                     errorHandler(me.getLang('autoupload.errorLoadConfig'));
@@ -24591,8 +24586,8 @@ UE.plugin.register('simpleupload', function (){
                         // console.log(xhr.responseText);
                         var response = JSON.parse(xhr.responseText);
                         if(response.state === 'SUCCESS' ){
-                            // console.log(loadingId);
-                            var url = "http://localhost:9000/static/ueditorUpload/" + response.url;
+                            
+                            var url ="http://localhost:8089/ueditorUpload/" + response.url;
                             // me.execCommand('inserthtml', '<img id="' + loadingId + '" src="http://localhost:9000/static/ueditorUpload/' + response.url + '" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
                             // console.log(me.document.getElementById(loadingId));
                             // me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');

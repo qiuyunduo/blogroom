@@ -2,13 +2,9 @@ package cn.qyd.blogroom.website.ueditor;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.core.io.DefaultResourceLoader;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +12,7 @@ public final class ConfigManager {
     private final String rootPath;
 //    private final String originalPath = "config.json";
 //    private final String contextPath;
-    private static final String configFileName = "./config.json";
+    private static final String configFileName = "classpath:/config.json";
 //    private String parentPath = null;
     private JSONObject jsonConfig = null;
     private static final String SCRAWL_FILE_NAME = "scrawl";
@@ -144,8 +140,11 @@ public final class ConfigManager {
         StringBuilder builder = new StringBuilder();
 
         try {
-            InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "UTF-8");
-            BufferedReader bfReader = new BufferedReader(reader);
+//            InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "UTF-8");
+//            BufferedReader bfReader = new BufferedReader(reader);
+            DefaultResourceLoader loader = new DefaultResourceLoader();
+            InputStream stream = loader.getResource(configFileName).getInputStream();
+            BufferedReader bfReader = new BufferedReader(new InputStreamReader(stream,"UTF-8"));
             String tmpContent = null;
 
             while((tmpContent = bfReader.readLine()) != null) {

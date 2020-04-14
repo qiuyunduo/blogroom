@@ -21,7 +21,8 @@ public class UeditorController {
     @ApiOperation("test")
     public void getUEditorConfig( HttpServletRequest request,HttpServletResponse response){
 //        response.setContentType("application/json");
-        String rootPath = "./blog-web-new/blogroom/static/ueditorUpload/";
+//        String rootPath = "./blog-web-new/blogroom/static/ueditorUpload/";
+        String rootPath = "/home/qiuyunduo/nginxRepository/ueditorUpload/";
         try {
             String exec = new ActionEnter(request, rootPath).exec();
             PrintWriter writer = response.getWriter();

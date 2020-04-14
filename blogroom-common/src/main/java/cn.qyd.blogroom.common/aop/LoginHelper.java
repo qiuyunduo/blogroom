@@ -3,6 +3,7 @@ package cn.qyd.blogroom.common.aop;
 import cn.qyd.blogroom.common.constants.Constant;
 import cn.qyd.blogroom.common.exception.BusinessException;
 import cn.qyd.blogroom.common.resp.code.FrontRespEnum;
+import cn.qyd.blogroom.common.utils.HeaderUtil;
 import cn.qyd.blogroom.common.utils.TokenUtil;
 import jdk.nashorn.internal.parser.Token;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
 
 /**
  * @Author qyd
@@ -32,6 +34,9 @@ public class LoginHelper {
 
     }
 
+    @Autowired
+    private HttpServletRequest request;
+
 //    @Pointcut("execution(* cn.qyd.blogroom.*.controller.*.*(..))")
 //    public void login1(){
 //
@@ -39,9 +44,9 @@ public class LoginHelper {
 
     @Before("login()")
     public void authUser() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String token = request.getHeader(Constant.USER_TOKEN_KEY);
-        if(StringUtils.isEmpty(token)) {
+        System.out.println(request.getMethod());
+        String token = HeaderUtil.getUserToken();
+        if(token == null) {
             throw BusinessException.fail(FrontRespEnum.LOGIN_ACCOUNT_EXIST);
         }
     }

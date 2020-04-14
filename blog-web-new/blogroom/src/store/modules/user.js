@@ -25,8 +25,8 @@ const user = {
       setToken(token)
     },
     setUserInfo({ commit },userInfo) {
-        commit('SET_USERINFO',userInfo)
-        setUserInfo(userInfo)
+      commit('SET_USERINFO',userInfo)
+      setUserInfo(userInfo)
     },
 
     // 登出
@@ -37,7 +37,7 @@ const user = {
         removeToken()
         removeUserInfo()
         commit('SET_ISLOGIN',false)
-        window.location.href = "http://localhost:9000/index"
+        window.location.href = "/"
       }).catch(() => {
         alert('登出出现异常')
       })

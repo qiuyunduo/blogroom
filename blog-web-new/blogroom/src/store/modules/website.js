@@ -27,7 +27,7 @@ const website = {
       loginOut(adminId).then(res => {
         removeAdminInfo()
         commit('SET_IS_ADMIN_LOGIN',false)
-        window.location.href = "http://localhost:9000/admin/login"
+        window.location.href = "/admin/login"
       }).catch(() => {
          alert("后台登出错误") 
       })

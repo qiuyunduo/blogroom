@@ -27,6 +27,7 @@
             <el-form ref="emailForm" label-width="70px" class="demo-ruleForm">
                 <el-form-item label="邮箱:" prop="email">
                     <el-input v-model="email" auto-complete="off"></el-input>
+                    <!-- <el-input v-mode="phone" auto-complete="on"></el-input>-->
                 </el-form-item>
                 <el-form-item label="验证码:" prop="validateCode">
                     <el-input v-model="validateCode" style="width:120px" auto-complete="off"></el-input>
@@ -109,7 +110,9 @@ export default {
         doLogin() {
             if(this.checkLoginFiled()){
                 login(this.loginInfo).then(response => {
-                    let data = Object.assign({},response.data.data)
+                    let data = {};
+                    Object.assign(data,response.data.data)
+                    console.log(data)
                     let token = data.token
                     let userInfo = data.user
                     this.$store.dispatch('setToken', token)

@@ -117,7 +117,7 @@ export const constantRouterMap = [
   {
     path: '/admin/login',
     component: () => import('@/view_admin/login'),
-    name: 'admin',
+    name: 'adminLogin',
     meta: { title: '管理员登录', noCache: true },
   },
 
@@ -208,14 +208,13 @@ export const constantRouterMap = [
 ]
 
 let router = new Router({
+  // base: '/blogroom/',
   mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
 //前端控制管理员是否登录
 router.beforeEach((to, from, next) => {
-  // console.log(store.state.website.isAdminLogin)
-  // alert(to.path)
   if(to.path.startsWith("/admin")) {
     if(to.path === '/admin/login') {
       if(store.state.website.isAdminLogin) {

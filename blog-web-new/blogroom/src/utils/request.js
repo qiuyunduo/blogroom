@@ -2,12 +2,12 @@ import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import store from '@/store'
 import { isLogin, getToken, refreshToken, getUserInfo } from '@/utils/auth'
-// import { isLogin } from '@/utils/adminAuth'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: process.env.BASE_API, // api 的 base_url
-  timeout: 10000 // request timeout
+  // baseURL: process.env.BASE_API, // api 的 base_url
+  baseURL: '/api', // api 的 base_url
+  timeout: 100000 // request timeout
 })
 
 // request interceptor
@@ -16,16 +16,9 @@ service.interceptors.request.use(
     // Do something before request is sent
     if (isLogin()) {
       // 让每个请求携带token
-      // alert(getToken())
-      // alert(getUserInfo())
       config.headers['User_Access_Token'] = getToken()
       config.headers['User_Id'] = getUserInfo().id
-      // alert(config.method)
     }
-
-    // if(isLogin()) {
-    //   config.headers['Admin_Login'] = true
-    // }
     return config
   },
   error => {
@@ -39,11 +32,9 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     if(response.headers.refresh_token !== undefined) {
-      // alert(response.headers.refresh_token)
       refreshToken(response.headers.refresh_token)
     }
     const res = response.data
-    // console.log(res)
 
     if (res.status.code !== 0){
 

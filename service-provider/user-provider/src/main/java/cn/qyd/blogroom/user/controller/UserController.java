@@ -144,7 +144,7 @@ public class UserController {
     }
 
     @PostMapping("/check/validateCode")
-    @ApiOperation("发送邮箱验证码")
+    @ApiOperation("验证邮箱验证码")
     public Resp  checkEmailCode(String email,Integer type,String code) {
         userService.validateCode(email,type,code);
         return Resp.succeed();

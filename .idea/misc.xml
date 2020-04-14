@@ -12,14 +12,17 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/../gataway/bookserver/pom.xml" />
-        <option value="$PROJECT_DIR$/../gataway/firstrouter/pom.xml" />
-        <option value="$PROJECT_DIR$/../gataway/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-base/server-gataway/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-base/server-gateway1/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-base/server-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/blogroom-base/server-zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-project/blogroom-common/pom.xml" />
         <option value="$PROJECT_DIR$/blogroom-project/pom.xml" />
         <option value="$PROJECT_DIR$/project-base/pom.xml" />
+        <option value="$PROJECT_DIR$/service-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/bookserver/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/firstrouter/pom.xml" />
+        <option value="$PROJECT_DIR$/../gataway/pom.xml" />
       </set>
     </option>
   </component>

@@ -28,6 +28,7 @@ export function setAdminInfo(adminInfo) {
 export function removeAdminInfo() {
     return Cookies.remove(adminInfoKey)
 }
+//export function registerModule
 
 // export function getToken() {
 //     return Cookies.get(tokenKey)
@@ -36,7 +37,6 @@ export function removeAdminInfo() {
 // export function setToken(token) {
 //     return Cookies.set(tokenKey,token)
 // }
-
 // export function removeToken() {
 //     return Cookies.remove(tokenKey)
 // }

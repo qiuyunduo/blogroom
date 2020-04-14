@@ -127,7 +127,7 @@ export default {
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(() => {
-                  window.location.href = "http://localhost:9000/article/"+article.id
+                  window.location.href = "/article/"+article.id
                 }).catch(() => {
                   window.location.reload()
                 })
